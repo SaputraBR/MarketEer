@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MarketEer</title>
-  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
         </svg>            
       </span>
       <div class="w-full flex overflow-hidden">
-        <img class="object-contain w-full h-full" src="img/2208_w023_n003_2842b_p1_2842.jpg" alt="">
+        <img class="object-contain w-full h-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="">
         <!--<img class="object-contain w-full h-full" src="img/28480458_7415772.jpg" alt="">-->
       </div>
       <span class="w-12 self-center">
@@ -63,10 +63,39 @@
       </span>
     </section>
 
-    <section class="">
-      <div class="grid grid-cols-4 px-4">
+    <section class="w-full container mx-auto">
+      <h1 class="text-4xl font-semibold mb-2 ml-4">Best Offers</h1>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
+        <div class="overflow-hidden shadow-md bg-white m-2">
+          <div class="container">
+            <div class="seller flex" >
+              <p class="absolute z-10 ml-4 self-center font-semibold">Best Seller</p>
+            </div>
+            
+          </div>
+          <img class="w-full" src="../public/img/Google-Pixel-7-Pro.jpg" alt="Sunset in the mountains">
+          <div class="pt-4 px-6">
+            <div class="font-bold text-xl mb-2">Nokia N73</div>
+            <span class="flex flex-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
+              </svg>
+              <p class="mx-2 text-md self-center">Rp 999.999.999</p>
+              <p class="text-sm line-through self-center text-secondary">Rp 1.500.000</p>              
+            </span>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Snapdragon 888</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">4 GB RAM</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">4400 mAh</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">128 GB Memory</span>
+          </div>
+          
+        </div>
+
         <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="img/pisang.jpg" alt="Sunset in the mountains">
+          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p class="text-gray-700 text-base">
@@ -85,7 +114,7 @@
         </div>
 
         <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="img/pisang.jpg" alt="Sunset in the mountains">
+          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p class="text-gray-700 text-base">
@@ -104,7 +133,7 @@
         </div>
 
         <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="img/pisang.jpg" alt="Sunset in the mountains">
+          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p class="text-gray-700 text-base">
@@ -123,26 +152,7 @@
         </div>
 
         <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="img/pisang.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-              eaque, exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-          </div>
-        </div>
-
-        <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="img/pisang.jpg" alt="Sunset in the mountains">
+          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p class="text-gray-700 text-base">
@@ -163,10 +173,10 @@
     </section>
   </main>
 
-  <footer class="pt-16 bgcok"> 
+  <footer class="mt-16 pt-16 bgcok"> 
     <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-6 gap-4">
       <div class="col-span-1 md:col-span-4 lg:col-span-2">
-        <img class="w-52 h-52 self-center" src="img/1.png" alt="">
+        <img class="w-52 h-52 self-center" src="../public/img/1.png" alt="">
       </div>
       
       <div class="text-white">
@@ -193,7 +203,7 @@
         <p>category</p>
       </div>
     </div>
-    <div class="text-xs max-w-7xl border-t mx-auto py-6 mt-16 text-center">kopirek MarketEer</div>
+    <div class="text-xs border-t mx-auto py-6 mt-16 text-center">kopirek MarketEer</div>
   </footer>
 
 </body>

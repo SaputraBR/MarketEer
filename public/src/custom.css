@@ -1,26 +1,4 @@
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
 
-@media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-}
-  
-@media (min-width: 992px) {
-    .container {
-      max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-      max-width: 1140px;
-    }
-}
 
 #homeNav {
     background-color: #fa8c00;
@@ -33,7 +11,7 @@
     -moz-text-fill-color: transparent
 }
 
-#menuSide:active{
+#menuSide:active {
     background-color: #fa8c00 !important;
     color: #fff !important;
 }
@@ -47,18 +25,21 @@
   background-color: #ff4800;
 }
 
-.bg-aesthetic{
-    background-image: url(img/background-1.png);
+.bg-aesthetic {
+    background-image: url("../img/background-1.png");
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     opacity: .999999;
     width: 100%;
     height: 100%;
 }
 
-.bg-white-gradient{
+.bg-white-gradient {
     background-image: linear-gradient(to bottom, rgba(241, 245, 249, .01), rgba(241, 245, 249, .3), rgba(241, 245, 249, 1));
     width: 100%;
     height: 30%;
@@ -79,8 +60,33 @@
     border-radius: 0.25rem;
 }
 
-.trirong{
+.seller {
+    width: 100%;
+    height: 5%;
+    background: transparent;
+    position: relative;
+}
+  
+.seller:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 30px solid #ff4800;
+    border-right: 120px solid #2ee3e8;
+    border-radius: 0px 0px 50px 0px ;
+    width: 10px;
+    height: 100%;
+    z-index: 2;
+}
+
+.text-secondary {
+    color: #2d3133 !important;
+}
+
+.trirong {
     font-family: 'Sulphur Point', sans-serif;
 }
+
 
 
