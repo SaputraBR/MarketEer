@@ -8,35 +8,45 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-slate-100">
-  <nav class="sticky flex flex-col bg-transparent">
-    <div class="flex justify-between h-14 w-full px-12 font-semibold bg-transparent">
-      <div class="trirong text-[#fa8c00] self-center">
+  <nav class="bg-transparent top-0 z-10 flex flex-col py-1 text-[#fa8c00]" id="navMain">
+    <div class="flex justify-between h-14 w-full px-12 font-semibold">
+      <div class="trirong self-center">
         <p class="text-4xl">MarketEer</p>
       </div>
-      <ul class="hidden sm:hidden lg:flex text-2xl trirong text-[#fa8c00] self-center">
+      <ul class="hidden sm:hidden lg:flex text-2xl trirong self-center ">
         <li class="px-2">fashion</li>
         <li class="px-2">gadgets</li>
         <li class="px-2">personal care</li>
         <li class="px-2">electronics</li>
-        <li class="px-2" id="homeNav">home</li>
-        <li class="px-2 text-white">tools</li>
+        <li class="px-2">home</li> <!--id="homeNav"-->
+        <li class="px-2">tools</li>
       </ul>
-      <div class="flex pl-20 trirong self-center text-white">
-        <span class="mx-1">
+      <div class="flex trirong self-center">
+        <div class="flex flex-wrap">
+          <span class="inline-block bg-white rounded-full shadow px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">Log In</span>
+          <span class="inline-block bg-blue-600 rounded-full shadow px-6 py-2 text-sm font-semibold text-white mr-2 mb-2">Sign Up</span>
+        </div>
+
+        <!--<span class="mx-1" id="">        
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>          
+          </svg>
+          <div class="hidden">
+            <a href="">login</a>
+          </div>          
         </span>
         <span class="mx-1">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
-        </span>
+        </span>-->
       </div>
     </div>
   </nav>
@@ -46,166 +56,335 @@
       <div></div>
     </section>
 
-    <section class="col-span-4 mt-20 mb-28 px-4 flex bg-amber-600/[.2] w-full h-64 ">
-      <span class="w-12 self-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-        </svg>            
+    <section class="col-span-4 my-14 bg-amber-200/[.5] flex w-full h-64 ">
+      <span class="w-20 h-full flex justify-center">
+        <i class="fa-solid fa-chevron-left fa-3x self-center" id="prevButton"></i>      
       </span>
-      <div class="w-full flex overflow-hidden">
-        <img class="object-contain w-full h-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="">
-        <!--<img class="object-contain w-full h-full" src="img/28480458_7415772.jpg" alt="">-->
+      <div class="w-full flex relative overflow-hidden slider">
+        <div class="slide w-full h-full">
+          <a href="#" target="_blanks">
+            <img class="object-cover w-full h-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="">
+          </a>
+        </div>
+        <div class="slide w-full h-full">
+          <a href="#" target="_blanks">
+            <img class="object-cover w-full h-full" src="../public/img/7943208.jpg" alt="">
+          </a>
+        </div>
+        <div class="slide w-full h-full">
+          <a href="#" target="_blanks">
+            <img class="object-cover w-full h-full" src="../public/img/16221025_5725317.jpg" alt="">
+          </a>
+        </div>
       </div>
-      <span class="w-12 self-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-           <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-        </svg>            
+      <span class="w-20 h-full flex justify-center">
+        <i class="fa-solid fa-chevron-right fa-3x self-center" id="nextButton"></i>
       </span>
     </section>
 
-    <section class="w-full container mx-auto">
+    <section class="w-full container mx-auto" id="best-offer">
       <h1 class="text-4xl font-semibold mb-2 ml-4">Best Offers</h1>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
-        <div class="overflow-hidden shadow-md bg-white m-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
+        <div class="rounded-lg shadow-md bg-white m-2">
           <div class="container">
-            <div class="seller flex" >
-              <p class="absolute z-10 ml-4 self-center font-semibold">Best Seller</p>
-            </div>
-            
+            <div class="relative flex justify-center seller" >
+              <p class="self-center font-semibold text-white">Best Seller</p>
+            </div> 
           </div>
-          <img class="w-full" src="../public/img/Google-Pixel-7-Pro.jpg" alt="Sunset in the mountains">
-          <div class="pt-4 px-6">
-            <div class="font-bold text-xl mb-2">Nokia N73</div>
-            <span class="flex flex-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
-              </svg>
-              <p class="mx-2 text-md self-center">Rp 999.999.999</p>
-              <p class="text-sm line-through self-center text-secondary">Rp 1.500.000</p>              
+          <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
+            <img class="object-contain h-full mx-auto" src="../public/img/Google-Pixel-7-Pro.jpg" alt="Sunset in the mountains">
+          </div>
+          <div class="h-24 pt-4 px-6">
+            <div class="font-bold text-xl mb-2">Google Pixel 7 Pro 12/512GB</div>
+            <span class="flex flex-wrap mb-1">
+              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">42%</span>
+              <p class="mx-2 text-sm line-through self-center text-secondary">Rp1.500.000</p>              
             </span>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Snapdragon 888</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">4 GB RAM</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">4400 mAh</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">128 GB Memory</span>
-          </div>
-          
-        </div>
-
-        <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-              eaque, exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+            <p class="text-lg font-semibold self-center">Rp14.999.999</p>
           </div>
         </div>
 
-        <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-              eaque, exercitationem praesentium nihil.
-            </p>
+        <div class="rounded-lg shadow-md bg-white m-2">
+          <div class="container">
+            <div class="relative flex justify-center favorite">
+              <p class="self-center font-semibold text-white">Favorite</p>
+            </div>
           </div>
-          <div class="px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+          <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
+            <img class="object-contain h-full mx-auto" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
           </div>
-        </div>
-
-        <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-              eaque, exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+          <div class="pt-4 px-6">
+            <div class="font-bold text-xl mb-2">Polo Bear by Ralph Lauren M/L/XL/XXL</div>
+            <span class="flex flex-wrap mb-1">
+              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">38%</span>
+              <p class="mx-2 text-sm line-through self-center text-secondary">Rp2.430.000</p>              
+            </span>
+            <p class="text-lg font-semibold self-center">Rp20.999.999</p>
           </div>
         </div>
 
-        <div class="rounded overflow-hidden shadow-md bg-white m-2 border-solid border-2 border-slate-100">
-          <img class="w-full" src="../public/img/pisang.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-              eaque, exercitationem praesentium nihil.
-            </p>
+        <div class="rounded-lg shadow-md bg-white m-2">
+          <div class="container">
+              <div class="relative flex justify-center men">
+                <p class="self-center font-semibold text-white">Men</p>
+              </div>
           </div>
-          <div class="px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+          <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
+            <img class="object-contain h-full mx-auto" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
+          </div>
+          <div class="pt-4 px-6">
+            <div class="font-bold text-xl mb-2">Air Jordan 7 Retro SE Men's Shoes 40-47</div>
+            <span class="flex flex-wrap mb-1">
+              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">15%</span>
+              <p class="mx-2 text-sm line-through self-center text-secondary">Rp983.000</p>              
+            </span>
+            <p class="text-lg font-semibold self-center">Rp3.999.999</p>
+          </div>
+        </div>
+
+        <div class="rounded-lg shadow-md bg-white m-2">
+          <div class="container">
+              <div class="women flex justify-center">
+                <p class="self-center font-semibold text-white">Women</p>
+              </div>
+          </div>
+          <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
+            <img class="object-contain h-full mx-auto" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
+          </div>
+          <div class="pt-4 px-6">
+            <div class="font-bold text-xl mb-2">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</div>
+            <span class="flex flex-wrap mb-1">
+              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">23%</span>
+              <p class="mx-2 text-sm line-through self-center text-secondary">Rp435.900</p>              
+            </span>
+            <p class="text-lg font-semibold self-center">Rp517.209.000</p>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="w-full container mx-auto mt-12" id="main-shop">
+      <h1 class="text-3xl font-semibold mb-2 ml-4">Trends</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+
+        <div class="rounded shadow-xl bg-white m-2">
+          <img class="h-3/5 w-full object-cover" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+            <div class="px-6 my-2">
+              <p class="font-semibold text-lg">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+            </div>
+            <div class="px-6 mb-1">
+              <span class="flex flex-wrap">
+                <i class="fa fa-star self-center text-[#fac800]"></i>
+                <p class="self-center mx-1">4.8</p>
+                <p class="self-center text-sm text-black/[.7]">(161290)</p>
+              </span>
+            </div>
+            <div class="px-6 mt-1">
+              <span class="flex flex-wrap mb-2">  
+                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+              </span>
+            </div>
+        </div>
+      </div>    
+    </section>
+
   </main>
 
   <footer class="mt-16 pt-16 bgcok"> 
-    <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-6 gap-4">
-      <div class="col-span-1 md:col-span-4 lg:col-span-2">
+    <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 gap-6">
+      <div class="col-span-1 md:col-span-3 lg:col-span-2">
         <img class="w-52 h-52 self-center" src="../public/img/1.png" alt="">
       </div>
       
       <div class="text-white">
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
+        <h1 class="text-xl font-bold mb-2">Products</h1>
+        <div class="hidden sm:flex flex-col">
+          <a href="#">Foods</a>
+          <a href="#">Fashion</a>
+          <a href="#">Gadgets</a>
+          <a href="#">Personal care</a>
+          <a href="#">Electronics</a>
+          <a href="#">Home</a>
+          <a href="#">Tools</a>
+        </div>
       </div>
 
       <div class="text-white">
-        <p>category</p>
-        <p>category</p>
-        <p>category</p>
-        <p>category</p>
-        <p>category</p>
+        <h1 class="text-xl font-bold mb-2">Customer Services</h1>
+        <div class="hidden sm:flex flex-col">
+          <a href="">Help Center</a>
+          <a href="">Privacy & Security</a>
+          <a href="">Terms of Use</a>
+        </div>
       </div>
 
       <div class="text-white">
-        <p>category</p>
-        <p>category</p>
-        <p>category</p>
-        <p>category</p>
-        <p>category</p>
+        <h1 class="text-xl font-bold mb-2">MarketEer</h1>
+        <div class="hidden sm:flex flex-col">
+          <a href="">About Us</a>
+          <a href="">Contacts</a>
+          <a href="">Community</a>
+        </div>
       </div>
     </div>
-    <div class="text-xs border-t mx-auto py-6 mt-16 text-center">kopirek MarketEer</div>
+    <div class="text white text-sm font-semibold border-t max-w-7xl mx-auto py-6 mt-16 text-center">kopirek &copy; MarketEer 2022</div>
   </footer>
+  <script>
+    window.onscroll = function() {navbar()}
 
+    function navbar(){
+      const navbar = document.getElementById('navMain');
+
+      if(document.body.scrollTop > 5){
+        navbar.classList.add('sticky', 'bgcok', 'text-white')
+        navbar.classList.remove('bg-transparent', 'text-[#fa8c00]')
+      } else {
+        navbar.classList.remove('sticky', 'bgcok', 'text-white')
+        navbar.classList.add('text-[#fa8c00]')
+      }
+    }
+  </script>
+  <script type="text/javascript" src="../public/src/custom.js"></script>
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
-
 </html>

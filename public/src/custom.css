@@ -1,4 +1,6 @@
-
+/*i {
+    color: rgb(255, 255, 255);
+}*/
 
 #homeNav {
     background-color: #fa8c00;
@@ -19,6 +21,16 @@
 #menuSide:hover {
     background-color: rgba(255, 255, 255, .3) !important;
     color: #fff !important;
+}
+
+#prevButton,
+#nextButton {
+    cursor: pointer;
+}
+
+#prevButton:active,
+#nextButton:active {
+    color: rgba(0, 0, 0, .5);
 }
 
 .bgcok {
@@ -60,24 +72,30 @@
     border-radius: 0.25rem;
 }
 
-.seller {
-    width: 100%;
-    height: 5%;
-    background: transparent;
-    position: relative;
+.favorite {
+    width: 120px;
+    height: 30px;
+    background-color: #ff008c;
+    border-radius: 0px 0px 25px 0px;
 }
-  
-.seller:after {
-    content: '';
+
+.men {
+    width: 120px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 0px 0px 25px 0px;
+}
+
+.seller {
+    width: 120px;
+    height: 30px;
+    background-color: #02eeff;
+    border-radius: 0px 0px 25px 0px;
+}
+
+.slide {
     position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 30px solid #ff4800;
-    border-right: 120px solid #2ee3e8;
-    border-radius: 0px 0px 50px 0px ;
-    width: 10px;
-    height: 100%;
-    z-index: 2;
+    transition: all 0.5s;
 }
 
 .text-secondary {
@@ -88,5 +106,11 @@
     font-family: 'Sulphur Point', sans-serif;
 }
 
+.women {
+    width: 120px;
+    height: 30px;
+    background-color: rgb(255, 0, 234);
+    border-radius: 0px 0px 25px 0px;
+}
 
 
