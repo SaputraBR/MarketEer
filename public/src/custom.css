@@ -1,6 +1,6 @@
 /*i {
     color: rgb(255, 255, 255);
-}*/
+}/*
 
 #adminArea {
     background: #fab300;
@@ -10,7 +10,7 @@
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent
-}
+}*/
 
 #homeNav {
     /*background-color: #fa8c00;
@@ -122,6 +122,13 @@
     height: 30px;
     background-color: rgb(255, 0, 234);
     border-radius: 0px 0px 25px 0px;
+}
+
+@media (min-width: 900px) {
+    .item-nav {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
 }
 
 
