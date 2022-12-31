@@ -1,3 +1,4 @@
+//slider store
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 const slided   = document.querySelectorAll('.slide');

@@ -330,7 +330,7 @@
 
   </main>
 
-  <footer class="mt-16 pt-16 bgcok"> 
+  <footer class="mt-16 pt-16 bg-main"> 
     <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 gap-6">
       <div class="col-span-1 md:col-span-3 lg:col-span-2">
         <img class="w-52 h-52 self-center" src="../public/img/1.png" alt="">
@@ -376,10 +376,10 @@
       const navbar = document.getElementById('navMain');
 
       if(document.body.scrollTop > 5){
-        navbar.classList.add('sticky', 'bgcok', 'text-white')
+        navbar.classList.add('sticky', 'bg-main', 'text-white')
         navbar.classList.remove('bg-transparent', 'text-[#fa8c00]')
       } else {
-        navbar.classList.remove('sticky', 'bgcok', 'text-white')
+        navbar.classList.remove('sticky', 'bg-main', 'text-white')
         navbar.classList.add('text-[#fa8c00]')
       }
     }
