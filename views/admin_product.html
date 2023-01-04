@@ -35,7 +35,7 @@
                     </span>
                     <p class="hidden md:block">Product</p>
                 </a>
-                <a href="#" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_category.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
@@ -43,7 +43,7 @@
                     </span>
                     <p class="hidden md:block">Category</p>
                 </a>
-                <a href="#" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_ship.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
@@ -87,19 +87,19 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <header class="h-16">
-            <div class="flex h-full w-full text-[#fa8c00]" id="adminArea">
-                <p class="text-4xl font-bold self-center mt-4 mx-4 w-full border-b-2 border-slate-800">List Product</p>
+        <header class="h-16 mt-4 mx-4">
+            <div class="h-full w-full text-[#fa8c00]" id="adminArea">
+                <p class="text-4xl font-bold self-center w-full border-b-2 border-slate-800">List Product</p>
             </div>
-            <div></div>
         </header>
 
         <section class="mx-4 mt-4">
+
             <div class="flex mb-8">
                 <h1 class="text-2xl mr-2">1</h1>
                 <div class="grid grid-cols-4 gap-4 bg-[#89a7b1] p-2 rounded-lg overflow-hidden">
-                    <div class="col-span-1 w-full">
-                        <img class="relative" src="../public/img/nike-jordan.jpg" alt="">
+                    <div class="col-span-1">
+                        <img class="relative object-cover h-full w-full" src="../public/img/nike-jordan.jpg" alt="">
                     </div>
                     <div class="col-span-3 ml-2 mr-4 mt-3">
                         <p class="text-xl font-semibold text-w mb-2">Air Jordan 7 Retro SE Men's Shoes 40-47</p>
@@ -132,29 +132,33 @@
                                 <p>Fashion Pria</p>
                                 <p>50</p>
                                 <p>10</p>
-                                <!--<p>EU 40 EU 40.5 EU 41 EU 42 EU 42.5 EU 43 EU 44 EU 44.5 EU 45 EU 45.5 EU 46 EU 47 EU 47.5</p>-->
                             </span>
-                            <div class="flex col-span-5">
-                                <a href="#" class="bg-amber-200 px-2 py-1 mr-2 rounded-lg font-semibold text-white bg-[#059b9a] hover:bg-[#09b1b1]">
+                            <div class="flex col-span-5 mt-1 mb-3">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#059b9a] hover:bg-[#09b1b1]">
                                     view
                                 </a>
-                                <a href="#" class="bg-amber-200 px-2 py-1 mr-2 rounded-lg font-semibold text-white bg-[#005bc5] hover:bg-[#006ae2]">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#005bc5] hover:bg-[#006ae2]">
                                     edit
                                 </a>
-                                <a href="#" class="bg-amber-200 px-2 py-1 rounded-lg font-semibold text-white bg-[#fd0a54] hover:bg-[#ff2b6b]">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#fd0a54] hover:bg-[#ff2b6b]">
                                     delete
                                 </a>
+                                <div class="mr-3 button r" id="button-1">
+                                    <input type="checkbox" class="checkbox">
+                                    <div class="knobs"></div>
+                                    <div class="layer"></div>
+                                  </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex">
+            <div class="flex mb-8">
                 <h1 class="text-2xl mr-2">2</h1>
                 <div class="grid grid-cols-4 gap-4 bg-[#89a7b1] p-2 rounded-lg overflow-hidden">
-                    <div class="col-span-1 w-full">
-                        <img class="relative" src="../public/img/Google-Pixel-7-Pro.jpg" alt="">
+                    <div class="col-span-1">
+                        <img class="relative object-cover h-full w-full" src="../public/img/Google-Pixel-7-Pro.jpg" alt="">
                     </div>
                     <div class="col-span-3 ml-2 mr-4 mt-3">
                         <p class="text-xl font-semibold text-w mb-2">Google Pixel 7 Pro 12/512GB</p>
@@ -187,26 +191,241 @@
                                 <p>Gadgets</p>
                                 <p>13</p>
                                 <p>4</p>
-                                <!--<p>EU 40 EU 40.5 EU 41 EU 42 EU 42.5 EU 43 EU 44 EU 44.5 EU 45 EU 45.5 EU 46 EU 47 EU 47.5</p>-->
                             </span>
-                            <div class="flex col-span-5">
-                                <a href="#" class="bg-amber-200 px-2 py-1 mr-2 rounded-lg font-semibold text-white bg-[#059b9a] hover:bg-[#09b1b1]">
+                            <div class="flex col-span-5 mt-1 mb-3">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#059b9a] hover:bg-[#09b1b1]">
                                     view
                                 </a>
-                                <a href="#" class="bg-amber-200 px-2 py-1 mr-2 rounded-lg font-semibold text-white bg-[#005bc5] hover:bg-[#006ae2]">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#005bc5] hover:bg-[#006ae2]">
                                     edit
                                 </a>
-                                <a href="#" class="bg-amber-200 px-2 py-1 rounded-lg font-semibold text-white bg-[#fd0a54] hover:bg-[#ff2b6b]">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#fd0a54] hover:bg-[#ff2b6b]">
                                     delete
                                 </a>
+                                <div class="mr-3 button r" id="button-1">
+                                    <input type="checkbox" class="checkbox">
+                                    <div class="knobs"></div>
+                                    <div class="layer"></div>
+                                  </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="flex mb-8">
+                <h1 class="text-2xl mr-2">3</h1>
+                <div class="grid grid-cols-4 gap-4 bg-[#89a7b1] p-2 rounded-lg overflow-hidden">
+                    <div class="col-span-1">
+                        <img class="relative object-cover h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="">
+                    </div>
+                    <div class="col-span-3 ml-2 mr-4 mt-3">
+                        <p class="text-xl font-semibold text-w mb-2">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</p>
+                        <div class="grid grid-cols-5 gap-3">
+                            <div class="col-span-1">
+                                <span class="flex">
+                                    <p>Harga Asli</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Harga Diskon</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Kategori</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Stok</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Terjual</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                            </div>
+                            <span class="col-span-4">
+                                <p>Rp3.999.999</p>
+                                <p>Rp983.000</p>
+                                <p>Fashion Wanita</p>
+                                <p>10</p>
+                                <p>2</p>
+                            </span>
+                            <div class="flex col-span-5 mt-1 mb-3">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#059b9a] hover:bg-[#09b1b1]">
+                                    view
+                                </a>
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#005bc5] hover:bg-[#006ae2]">
+                                    edit
+                                </a>
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#fd0a54] hover:bg-[#ff2b6b]">
+                                    delete
+                                </a>
+                                <div class="mr-3 button r" id="button-1">
+                                    <input type="checkbox" class="checkbox">
+                                    <div class="knobs"></div>
+                                    <div class="layer"></div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex mb-8">
+                <h1 class="text-2xl mr-2">4</h1>
+                <div class="grid grid-cols-4 gap-4 bg-[#89a7b1] p-2 rounded-lg overflow-hidden">
+                    <div class="col-span-1">
+                        <img class="relative object-cover h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="">
+                    </div>
+                    <div class="col-span-3 ml-2 mr-4 mt-3">
+                        <p class="text-xl font-semibold text-w mb-2">Polo Bear by Ralph Lauren M/L/XL/XXL</p>
+                        <div class="grid grid-cols-5 gap-3">
+                            <div class="col-span-1">
+                                <span class="flex">
+                                    <p>Harga Asli</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Harga Diskon</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Kategori</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Stok</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                                <span class="flex">
+                                    <p>Terjual</p>
+                                    <p class="ml-auto">:</p>
+                                </span>
+                            </div>
+                            <span class="col-span-4">
+                                <p>Rp20.999.999</p>
+                                <p>Rp2.430.000</p>
+                                <p>Fashion Pria</p>
+                                <p>23</p>
+                                <p>8</p>
+                            </span>
+                            <div class="flex col-span-5 mt-1 mb-3">
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#059b9a] hover:bg-[#09b1b1]">
+                                    view
+                                </a>
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#005bc5] hover:bg-[#006ae2]">
+                                    edit
+                                </a>
+                                <a href="#" class="bg-amber-200 px-2 py-1 mr-3 rounded-lg font-semibold text-white bg-[#fd0a54] hover:bg-[#ff2b6b]">
+                                    delete
+                                </a>
+                                <div class="mr-3 button r" id="button-1">
+                                    <input type="checkbox" class="checkbox">
+                                    <div class="knobs"></div>
+                                    <div class="layer"></div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
             
     </main>
+    <style>
+        .knobs, .layer
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .button
+        {
+            position: relative;
+            width: 74px;
+            height: 36px;
+            overflow: hidden;
+        }
+        
+        .button.r, .button.r .layer
+        {
+            border-radius: 100px;
+        }
+        
+        .button.b2
+        {
+            border-radius: 2px;
+        }
+        
+        .checkbox
+        {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 3;
+        }
+        
+        .knobs
+        {
+            z-index: 2;
+        }
+        
+        .layer
+        {
+            width: 100%;
+            background-color: #ebf7fc;
+            transition: 0.3s ease all;
+            z-index: 1;
+        }
+        
+        /* Button 1 */
+        #button-1 .knobs:before
+        {
+            content: 'ON';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 30px;
+            height: 29px;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+            padding: 9px 4px;
+            background-color: #03A9F4;
+            border-radius: 50%;
+            transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+        }
+        
+        #button-1 .checkbox:checked + .knobs:before
+        {
+            content: 'OFF';
+            left: 40px;
+            background-color: #f44336;
+        }
+        
+        #button-1 .checkbox:checked ~ .layer
+        {
+            background-color: #fcebeb;
+        }
+        
+        #button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+        {
+            transition: 0.3s ease all;
+        }
+        
+            </style>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
 </body>
