@@ -42,15 +42,15 @@
                     </span>
                     <p class="hidden md:block">Category</p>
                 </a>
-                <a href="admin_ship.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_order.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-                        </svg>                                                                                     
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>                                                                                                             
                     </span>
-                    <p class="hidden md:block">Shipping</p>
+                    <p class="hidden md:block">Order</p>
                 </a>
-                <a href="#" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_wallet.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
@@ -86,44 +86,159 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <header class="h-64 w-full px-4 py-8 rounded-lg bg-[#fa8c00]"> 
-            <div class="flex justify-center w-full mb-8">
-                <div class="mr-8 self-center">
-                    <span class="flex justify-center bg-[#ff5386] hover:bg-[#df4e7a] rounded-xl mx-auto p-6 w-24">
+        <header class="h-64 w-full px-4 py-8 my-4 rounded-lg bg-[#fa8c00]"> 
+            <div class="grid grid-cols-6 mb-8 mx-20 flex justify-items-center">
+                <div class="w-full">
+                    <span class="flex justify-center bg-[#f3ffcf] hover:bg-[#dbe6bc] rounded-xl mx-4 p-6">
+                        <i class="fa-solid fa-cart-flatbed fa-2x"></i>
+                    </span>
+                    <p class="flex justify-center font-semibold text-xl">pesanan</p>
+                </div>
+                <div class="w-full">
+                    <span class="flex justify-center bg-[#f3ffcf] hover:bg-[#dbe6bc] rounded-xl mx-4 p-6">
                         <i class="fa-solid fa-money-bill fa-2x"></i>
                     </span>
                     <p class="flex justify-center font-semibold text-xl">pembayaran</p>
                 </div>
-                <div class="mr-8 self-center">
-                    <span  class="flex justify-center bg-[#ff5386] hover:bg-[#df4e7a] rounded-xl mx-auto p-6 w-24">
+                <div class="w-full">
+                    <span  class="flex justify-center bg-[#f3ffcf] hover:bg-[#dbe6bc] rounded-xl mx-4 p-6">
                         <i class="fa-solid fa-box-open fa-2x"></i>
                     </span>
                     <p class="flex justify-center font-semibold text-xl mx-auto">dikemas</p>
                 </div>
-                <div class="mr-8 self-center">
-                    <span class="flex justify-center bg-[#ff5386] hover:bg-[#df4e7a] rounded-xl mx-auto p-6 w-24">
+                <div class="w-full">
+                    <span class="flex justify-center bg-[#f3ffcf] hover:bg-[#dbe6bc] rounded-xl mx-4 p-6">
                         <i class="fa-solid fa-truck-fast fa-2x"></i>
                     </span>
                     <p class="flex justify-center font-semibold text-xl">dikirim</p>
                 </div>
-                <div class="mr-8 self-center">
-                    <span class="flex justify-center bg-[#ff5386] hover:bg-[#df4e7a] rounded-xl mx-auto p-6 w-24">
+                <div class="w-full">
+                    <span class="flex justify-center bg-[#f3ffcf] hover:bg-[#dbe6bc] rounded-xl mx-4 p-6">
                         <i class="fa-solid fa-box fa-2x"></i>
                     </span>
                     <p class="flex justify-center font-semibold text-xl">diterima</p>
                 </div>
-                <div class="mr-8 self-center">
-                    <span class="flex justify-center bg-[#ff5386] hover:bg-[#df4e7a] rounded-xl mx-auto p-6 w-24">
+                <div class="w-full">
+                    <span class="flex justify-center bg-[#f3ffcf] hover:bg-[#dbe6bc] rounded-xl mx-4 p-6">
                         <i class="fa-sharp fa-solid fa-star fa-2x"></i>
                     </span>
                     <p class="flex justify-center font-semibold text-xl">penilaian</p>
                 </div>
             </div>
-            <div class="flex justify-center">
-                <input type="text" placeholder="cari..." class="h-10 rounded-lg px-2">
+            <div class="w-full">
+                <div class="flex justify-center">
+                    <input type="text" placeholder="cari kode transaksi..." class="w-2/4 rounded-l-lg px-2">
+                    <button type="submit" class="h-10 rounded-r-lg bg-white px-4 flex hover:bg-slate-300">
+                        <i class="fa-solid fa-magnifying-glass self-center"></i>
+                    </button>
+                </div>
             </div>
-            
         </header>
+
+        <section class="my-8 bg-gray-300 rounded-lg">
+            <div class="grid grid-cols-12 border-b border-white">
+                <p class="col-span-1 border-r-2 flex justify-center p-4">No</p>
+                <p class="col-span-2 border-r-2 flex justify-center p-4">Id Transaksi</p>
+                <p class="col-span-6 border-r-2 flex justify-center p-4">Alamat</p>
+                <p class="col-span-3 border-r-2 flex justify-center p-4">Status</p>
+            </div>
+            <div class="">
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">1</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                        <a href="#">23010601</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="#">Lövsångaregatan 29, 214 59 Malmö, Swedia</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="#" class="py-1 px-2 rounded-lg bg-red-600 text-white font-semibold">menunggu pembayaran</a>
+                    </p>
+                </div>
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">2</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                        <a href="#">23010602</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="#">ólstaðarhlíð 8, 105 Reykjavík, Islandia</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="#" class="py-1 px-2 rounded-lg bg-teal-600 text-white font-semibold">dikemas</a>
+                    </p>
+                </div>
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">3</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                        <a href="#">23010603</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="#">Beco da Cruz Vermelha 2, Portimão, Portugal</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="#" class="py-1 px-2 rounded-lg bg-teal-600 text-white font-semibold">dikirim</a>
+                    </p>
+                </div>
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">4</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                       <a href="#">23010604</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="#">8 Riverside Dr, Milnerton, Cape Town, 7441, Afrika Sel.</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="#" class="py-1 px-2 rounded-lg bg-blue-600 text-white font-semibold">diterima</a>
+                    </p>
+                </div>
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">5</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                       <a href="#">23010605</a></p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                       <a href="#">Avenida Principal, La Rinconada 21355, Peru</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="#" class="py-1 px-2 rounded-lg bg-blue-600 text-white font-semibold">selesai</a>
+                    </p>
+                </div>
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">6</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                       <a href="#">23010606</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="#">Isla Trinidad 1548, V9410FFH Ushuaia, Tierra del Fuego, Argentin</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="#" class="py-1 px-2 rounded-lg bg-amber-600 text-white font-semibold">menunggu konfirmasi</a>
+                    </p>
+                </div>
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">7</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                        <a href="#">23010607</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="#">3VJM+8R, Ilimanaq, Greenland</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                       <a href="#" class="py-1 px-2 rounded-lg bg-red-600 text-white font-semibold">dibatalkan</a>
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-center mt-8 pb-4">
+                <a href="#" class="mr-2 self-center">
+                    <i class="fa-solid fa-chevron-left fa-lg"></i>
+                </a>
+                <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">1</a>
+                <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">2</a>
+                <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">3</a>
+                <a href="#" class="mr-2 self-center">
+                    <i class="fa-solid fa-chevron-right fa-lg"></i>
+                </a>
+            </div>
+        </section>
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
