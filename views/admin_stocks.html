@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -34,21 +36,13 @@
                     </span>
                     <p class="hidden md:block">Stocks</p>
                 </a>
-                <a href="admin_product.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
-                    <span class="mx-auto md:mr-2 md:ml-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                        </svg>                      
-                    </span>
-                    <p class="hidden md:block">Product</p>
-                </a>
-                <a href="admin_category.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_inventory.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
                         </svg>                                                  
                     </span>
-                    <p class="hidden md:block">Category</p>
+                    <p class="hidden md:block">Inventory</p>
                 </a>
                 <a href="admin_order.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
@@ -94,7 +88,129 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
+        <header class="h-72 max-h-min bg-amber-500 p-8 mx-8">
+            <div class="grid grid-rows-3 p-1 gap-8 h-full">
+                <div class="row-span-2 grid grid-cols-3 border-b-2 border-white">
+                    <div class="col-span-1 grid grid-rows-2 h-full">
+                        <div class="row-span-1 relative flex justify-center">
+                            <h1 class="self-center p font-bold">10</h1>
+                        </div>
+                        <div class="row-span-1 flex justify-center">
+                            <p class="font-bold text-xl exo ">IN</p>
+                            <!--<i class="fa-solid fa-arrow-down fa-2x text-[#00ff6a]"></i>-->
+                        </div>
+                    </div>
+                    <div class="col-span-1 grid grid-rows-2 h-full">
+                        <div class="row-span-1 flex justify-center">
+                            <h1 class="self-center p">455</h1>
+                        </div>
+                        <div class="row-span-1 flex justify-center">
+                            <p class="font-bold text-xl exo">STOCKS</p>
+                        </div>
+                    </div>
+                    <div class="col-span-1 grid grid-rows-2 h-full">
+                        <div class="row-span-1 relative flex justify-center">
+                            <h1 class="self-center p font-bold">50</h1>
+                        </div>
+                        <div class="row-span-1 flex justify-center">
+                            <p class="font-bold text-xl exo">OUT</p>
+                            <!--<i class="fa-solid fa-arrow-up fa-2x mr-1 text-[red]"></i>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row-span-1">
+                    <div class="flex justify-center">
+                        <h1 class="font-bold text-5xl exo mb-1">Rp30.005.121.602,00</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+        <section class="mx-8 mt-10">
+            <div class="flex justify-center">
+                <div class="py-2 px-6 mr-6 rounded-lg exo font-semibold bg-slate-400">
+                    STOCK IN
+                </div>
+                <div class="py-2 px-4 mr-6 rounded-lg exo font-semibold bg-slate-400">
+                    ALL SUPPLIES
+                </div>
+                <div class="py-2 px-4 rounded-lg exo font-semibold bg-slate-400">
+                    STOCK OUT
+                </div>
+            </div>
+
+            <section class="my-8 bg-slate-400 rounded-lg">
+                <div class="grid grid-cols-12 border-b border-white">
+                    <p class="col-span-1 border-r-2 flex justify-center p-4">No</p>
+                    <p class="col-span-7 border-r-2 flex justify-center p-4">Nama Barang</p>
+                    <p class="col-span-1 border-r-2 flex justify-center p-4">In</p>
+                    <p class="col-span-1 border-r-2 flex justify-center p-4">Out</p>
+                    <p class="col-span-1 border-r-2 flex justify-center p-4">Stok</p>
+                    <p class="col-span-1 border-r-2 flex justify-center p-4">Kondisi</p>
+                </div>
+                <div class="">
+                    <div class="grid grid-cols-12 border-b-2">
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">1</p>
+                        </div>
+                        <div class="col-span-7 p-4">
+                            <a href="#" class="exo font-semibold">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">20</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">10</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">50</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">ON</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 border-b-2">
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">2</p>
+                        </div>
+                        <div class="col-span-7 p-4">
+                            <a href="#" class="exo font-semibold">Google Pixel 7 Pro 12/512GB</a>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">5</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">4</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">13</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">ON</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 border-b-2">
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">3</p>
+                        </div>
+                        <div class="col-span-7 p-4">
+                            <a href="#" class="exo font-semibold">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">2</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">2</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">10</p>
+                        </div>
+                        <div class="col-span-1 p-4 flex justify-center">
+                            <p class="exo font-semibold">ON</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
