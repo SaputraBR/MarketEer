@@ -6,10 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .show {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -87,130 +90,105 @@
         </aside>
     </nav>
 
-    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <header class="h-72 max-h-min bg-amber-500 p-8 mx-8">
-            <div class="grid grid-rows-3 p-1 gap-8 h-full">
-                <div class="row-span-2 grid grid-cols-3 border-b-2 border-white">
-                    <div class="col-span-1 grid grid-rows-2 h-full">
-                        <div class="row-span-1 relative flex justify-center">
-                            <h1 class="self-center p font-bold">10</h1>
-                        </div>
-                        <div class="row-span-1 flex justify-center">
-                            <p class="font-bold text-xl exo ">IN</p>
-                            <!--<i class="fa-solid fa-arrow-down fa-2x text-[#00ff6a]"></i>-->
+    <main class="w-10/12 h-full md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
+        <section class="w-full h-full py-10 px-14 rounded-lg bg-gray-300">
+            <form action="">
+                <div class="mt-4">
+                    <div class="flex mb-4">
+                        <input type="text" placeholder="cari kode produk..." class="w-2/4 rounded-l-lg px-2 bg-white border border-white focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        <button type="submit" class="h-10 rounded-r-lg bg-white px-4 flex hover:bg-slate-300">
+                            <i class="fa-solid fa-magnifying-glass self-center"></i>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-2 self-center">Nama Produk</div>
+                        <div class="col-span-10 flex">
+                            <p class="self-center mr-3">:</p>
+                            <input type="text" name="harga-hpp" id="number1" class="rounded-md px-2 py-1 w-1/3 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                         </div>
                     </div>
-                    <div class="col-span-1 grid grid-rows-2 h-full">
-                        <div class="row-span-1 flex justify-center">
-                            <h1 class="self-center p">455</h1>
-                        </div>
-                        <div class="row-span-1 flex justify-center">
-                            <p class="font-bold text-xl exo">STOCKS</p>
-                        </div>
-                    </div>
-                    <div class="col-span-1 grid grid-rows-2 h-full">
-                        <div class="row-span-1 relative flex justify-center">
-                            <h1 class="self-center p font-bold">50</h1>
-                        </div>
-                        <div class="row-span-1 flex justify-center">
-                            <p class="font-bold text-xl exo">OUT</p>
-                            <!--<i class="fa-solid fa-arrow-up fa-2x mr-1 text-[red]"></i>-->
+                    <div class="grid grid-cols-12 mt-2">
+                        <div class="col-span-2 self-center">Barcode</div>
+                        <div class="col-span-10 flex">
+                            <p class="self-center mr-3">:</p>
+                            <input type="text" name="harga-hpp" id="number1" class="rounded-md px-2 py-1 w-1/3 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                         </div>
                     </div>
-                </div>
-                <div class="row-span-1">
-                    <div class="flex justify-center">
-                        <h1 class="font-bold text-5xl exo mb-1">Rp30.005.121.602,00</h1>
+                    <div class="grid grid-cols-12 mt-2">
+                        <div class="col-span-2 self-center">Hpp</div>
+                        <div class="col-span-10 flex">
+                            <p class="self-center mr-3">:</p>
+                            <input type="text" name="harga-hpp" id="number1" class="rounded-md px-2 py-1 w-1/3 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
                     </div>
-                </div>
-            </div>
-        </header>
+                    <div class="grid grid-cols-12 mt-2">
+                        <div class="col-span-2 self-center">Harga Jual</div>
+                        <div class="col-span-10 flex">
+                            <p class="self-center mr-3">:</p>
+                            <input type="text" name="harga-hpp" id="number1" class="rounded-md px-2 py-1 w-1/3 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 mt-2">
+                        <div class="col-span-2 self-center">Harga Diskon</div>
+                        <div class="col-span-10 flex">
+                            <p class="self-center mr-3">:</p>
+                            <input type="text" name="harga-hpp" id="number1" class="rounded-md px-2 py-1 w-1/3 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 mt-2">
+                        <div class="col-span-2 self-center">Program Diskon</div>
+                        <div class="col-span-10 flex">
+                            <p class="self-center mr-3">:</p>
+                            <select name="program-diskon" id="program-diskon" class="rounded-md px-2 py-1 w-1/3 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                <option value="" class="font-semibold bg-slate-600 text-white"></option>
+                                <option value="Daily Offers" class="font-semibold bg-slate-600 text-white">Daily Offers</option>
+                                <option value="Best Offers" class="font-semibold bg-slate-600 text-white">Best Offers</option>
+                                <option value="Trends" class="font-semibold bg-slate-600 text-white">Trends</option>
+                            </select>
+                            <!--<div class="flex relative w-1/3" id="dropdown">
+                                <input type="" name="harga-hpp" id="number1" class="rounded-md px-2 py-1 w-full bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">    
+                                <button type="button" class="absolute right-0 mr-2 self-center" id="drop-btn" onclick="dropdown()">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div class="bg-slate-500 text-white absolute w-full mt-9 hidden" id="dropdown-content">
+                                    <p class="px-4 py-2 hover:bg-slate-400">Daily Offers</p>
+                                    <p class="px-4 py-2 hover:bg-slate-400">Best Offers</p>
+                                    <p class="px-4 py-2 hover:bg-slate-400">Trends</p>
+                                </div>-->
+                            </div>
+                        </div>
 
-        <section class="mx-8 mt-10">
-            <div class="flex justify-center">
-                <a href="admin_stocks_in.html" class="py-2 px-6 mr-6 rounded-lg exo font-semibold bg-slate-400 hover:bg-slate-500">
-                    STOCK IN
-                </a>
-                <a href="admin_stocks_out.html" class="py-2 px-4 rounded-lg exo font-semibold bg-slate-400 hover:bg-slate-500">
-                    STOCK OUT
-                </a>
-            </div>
+                    </div>
 
-            <div class="my-8 bg-slate-400 rounded-lg">
-                <div class="grid grid-cols-12 border-b border-white">
-                    <p class="col-span-1 border-r-2 flex justify-center p-4">No</p>
-                    <p class="col-span-7 border-r-2 flex justify-center p-4">Nama Barang</p>
-                    <p class="col-span-1 border-r-2 flex justify-center p-4">In</p>
-                    <p class="col-span-1 border-r-2 flex justify-center p-4">Out</p>
-                    <p class="col-span-1 border-r-2 flex justify-center p-4">Stok</p>
-                    <p class="col-span-1 border-r-2 flex justify-center p-4">Kondisi</p>
                 </div>
-                <div class="">
-                    <div class="grid grid-cols-12 border-b-2">
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">1</p>
-                        </div>
-                        <div class="col-span-7 p-4">
-                            <a href="#" class="exo font-semibold">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">20</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">10</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">50</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">ON</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-12 border-b-2">
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">2</p>
-                        </div>
-                        <div class="col-span-7 p-4">
-                            <a href="#" class="exo font-semibold">Google Pixel 7 Pro 12/512GB</a>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">5</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">4</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">13</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">ON</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-12 border-b-2">
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">3</p>
-                        </div>
-                        <div class="col-span-7 p-4">
-                            <a href="#" class="exo font-semibold">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">2</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">2</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">10</p>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">ON</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="flex mt-8">
+                    <button type="submit" class="mr-4 px-4 py-2 bg-[#ff950b] hover:bg-[#f28900] rounded-lg text-white font-semibold">simpan</button>
+                    <button type="button" class="px-4 py-2 bg-[#ff950b] hover:bg-[#f28900] rounded-lg text-white font-semibold">batal</button>
+                </div>        
+            </form>
         </section>
     </main>
 
+    <script>
+        function dropdown() {
+            document.getElementById('dropdown-content').classList.toggle('show');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('#drop-btn')) {
+                var content = document.getElementById('dropdown-content');
+                var i;
+                for (i = 0; i < content.length; i++) {
+                    var klik = content[i];
+                    if (klik.classList.toggle.contains('show')) {
+                        klik.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
     <script type="text/javascript" src="../public/src/admin.js"></script>
 </body>
-  
+
+</html>
