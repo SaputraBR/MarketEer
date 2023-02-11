@@ -6,8 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -88,75 +86,40 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-
-        <section class="mx-4 mt-6">
-            <section class="my-8 bg-slate-400 rounded-lg">
-                <div class="grid grid-cols-12 border-b border-white">
-                    <p class="col-span-3 border-r-2 flex justify-center p-4">Id Transaksi</p>
-                    <p class="col-span-6 border-r-2 flex justify-center p-4">Nama Barang</p>
-                    <p class="col-span-1 border-r-2 flex justify-center p-4">Out</p>
-                    <p class="col-span-2 flex justify-center p-4">Tgl</p>
+        <section class="mt-4 bg-gray-300 rounded-lg">
+            <div class="grid grid-cols-12 border-b border-white">
+                <p class="col-span-1 border-r-2 flex justify-center p-4">No</p>
+                <p class="col-span-2 border-r-2 flex justify-center p-4">Id Transaksi</p>
+                <p class="col-span-6 border-r-2 flex justify-center p-4">Alamat</p>
+                <p class="col-span-3 border-r-2 flex justify-center p-4">Status</p>
+            </div>
+            <div class="">
+                <div class="grid grid-cols-12 border-b-2">
+                    <p class="col-span-1 p-4 flex justify-center">6</p>
+                    <p class="col-span-2 p-4 flex justify-center">
+                       <a href="admin_order_pesanan_konfirmasi.html">FK23010606</a>
+                    </p>
+                    <p class="col-span-6 p-4 flex justify-center">
+                        <a href="admin_order_pesanan_konfirmasi.html">Isla Trinidad 1548, V9410FFH Ushuaia, Tierra del Fuego, Argentin</a>
+                    </p>
+                    <p class="col-span-3 p-4 flex justify-center">
+                        <a href="admin_order_pesanan_konfirmasi.html" class="py-1 px-2 rounded-lg bg-amber-600 text-white font-semibold">menunggu konfirmasi</a>
+                    </p>
                 </div>
-                <div class="">
-                    <div class="grid grid-cols-12 border-b-2">
-                        <div class="col-span-3 p-4 flex justify-center">
-                            <p class="exo font-semibold">FK23010605</p>
-                        </div>
-                        <div class="col-span-6 p-4">
-                            <a href="admin_stocks_out_product.html" class="exo font-semibold">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">1</p>
-                        </div>
-                        <div class="col-span-2 p-4 flex justify-center">
-                            <p class="exo font-semibold text-sm">06/01/23</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-12 border-b-2">
-                        <div class="col-span-3 p-4 flex justify-center">
-                            <p class="exo font-semibold">FK23010602</p>
-                        </div>
-                        <div class="col-span-6 p-4">
-                            <a href="admin_stocks_out_product.html" class="exo font-semibold">Google Pixel 7 Pro 12/512GB</a>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">1</p>
-                        </div>
-                        <div class="col-span-2 p-4 flex justify-center">
-                            <p class="exo font-semibold text-sm">06/01/23</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-12 border-b-2">
-                        <div class="col-span-3 p-4 flex justify-center">
-                            <p class="exo font-semibold">FK23010603</p>
-                        </div>
-                        <div class="col-span-6 p-4">
-                            <a href="admin_stocks_out_product.html" class="exo font-semibold">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
-                        </div>
-                        <div class="col-span-1 p-4 flex justify-center">
-                            <p class="exo font-semibold">1</p>
-                        </div>
-                        <div class="col-span-2 p-4 flex justify-center">
-                            <p class="exo font-semibold text-sm">06/01/23</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="flex justify-center mt-8 pb-4">
-                <a href="#" class="mr-2 self-center">
-                    <i class="fa-solid fa-chevron-left fa-lg"></i>
-                </a>
-                <a href="#" class="p-2 bg-[#ff950b] hover:bg-[#df7e00] text-white rounded-lg mr-2">1</a>
-                <a href="#" class="p-2 bg-[#ff950b] hover:bg-[#df7e00] text-white rounded-lg mr-2">2</a>
-                <a href="#" class="p-2 bg-[#ff950b] hover:bg-[#df7e00] text-white rounded-lg mr-2">3</a>
-                <a href="#" class="mr-2 self-center">
-                    <i class="fa-solid fa-chevron-right fa-lg"></i>
-                </a>
             </div>
         </section>
+        <div class="flex justify-center mt-8 pb-4">
+            <a href="#" class="mr-2 self-center">
+                <i class="fa-solid fa-chevron-left fa-lg"></i>
+            </a>
+            <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">1</a>
+            <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">2</a>
+            <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">3</a>
+            <a href="#" class="mr-2 self-center">
+                <i class="fa-solid fa-chevron-right fa-lg"></i>
+            </a>
+        </div>
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
 </body>
-  
