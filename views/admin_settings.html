@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -110,13 +115,13 @@
                         <p class="ml-auto font-semibold">Profil Picture</p>
                         <img src="../public/img/pisang.jpg" id="PP" class="rounded-full border-2 border-slate-800 h-full w-full object-scale-down" alt="">
                         <div class="absolute bottom-0 ml-4">
-                            <button class="flex px-4 py-1 rounded-md font-semibold bg-amber-300 shadow-xl hover:bg-amber-400">
+                            <button class="dropbtn flex px-4 py-1 rounded-sm font-semibold bg-amber-300 shadow-xl hover:bg-amber-400" id="button-down" onclick="myFunction()">
                                 <i class="self-center fa-solid fa-pencil mr-1"></i>
                                 <p>edit</p>    
                             </button>
-                            <div class="absolute mt-2 bg-slate-200 rounded-md">
-                                <button class="border border-black w-full">aaaaaa</button>
-                                <button class="border border-t-0 border-black w-full">aaaaaa</button>
+                            <div class="absolute mt-1 bg-slate-200 rounded-sm hidden drop-content" id="drop-content">
+                                <button class="w-full py-1 font-semibold hover:bg-slate-300">change</button>
+                                <button class="w-full py-1 font-semibold hover:bg-slate-300">delete</button>
                             </div>
                         </div>
                     </div>
@@ -174,6 +179,25 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
+
+        function myFunction() {
+        document.getElementById("drop-content").classList.toggle("hidden");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("drop-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+
         function pas() {
             var eye   = document.getElementById('fa-eye');
             var slash = document.getElementById('fa-eye-slash');
