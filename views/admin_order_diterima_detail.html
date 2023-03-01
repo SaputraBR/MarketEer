@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -85,41 +87,102 @@
         </aside>
     </nav>
 
-    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <section class="mt-4 bg-gray-300 rounded-lg">
-            <div class="grid grid-cols-12 border-b border-white">
-                <p class="col-span-1 border-r-2 flex justify-center p-4">No</p>
-                <p class="col-span-2 border-r-2 flex justify-center p-4">Id Transaksi</p>
-                <p class="col-span-6 border-r-2 flex justify-center p-4">Alamat</p>
-                <p class="col-span-3 border-r-2 flex justify-center p-4">Status</p>
-            </div>
-            <div class="">
-                <div class="grid grid-cols-12 border-b-2">
-                    <p class="col-span-1 p-4 flex justify-center">1</p>
-                    <p class="col-span-2 p-4 flex justify-center">
-                        <a href="admin_order_diterima_detail.html">FK23010606</a>
-                    </p>
-                    <p class="col-span-6 p-4 flex justify-center">
-                        <a href="admin_order_diterima_detail.html">Isla Trinidad 1548, V9410FFH Ushuaia, Tierra del Fuego, Argentin</a>
-                    </p>
-                    <p class="col-span-3 p-4 flex justify-center">
-                        <a href="admin_order_diterima_detail.html" class="py-1 px-2 rounded-lg bg-blue-600 text-white font-semibold">diterima</a>
-                    </p>
+    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
+        <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
+            <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
+                <h1 class="text-xl mb-1">Detail customer</h1>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-2">nama</div>
+                    <div class="col-span-10">Emon Lusk</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-2">alamat</div>
+                    <div class="col-span-10">Isla Trinidad 1548, V9410FFH Ushuaia, Tierra del Fuego, Argentina</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-2">no. hp</div>
+                    <div class="col-span-10">085268732122</div>
                 </div>
             </div>
+            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <h1 class="text-xl mb-2">Detail pesanan</h1>
+                <div class="flex mt-2">
+                    <div class="w-1/2 flex">
+                        <div class="w-1/5">
+                            <img class="w-full" src="../public/img/nike-jordan.jpg" alt="">
+                        </div>
+                        <div class="ml-2 w-4/5">
+                            <p>Air Jordan 7 Retro SE Men's Shoes 40-47</p>
+                            <p class="text-sm font-normal">1 barang x Rp3.999.999</p>
+                        </div>
+                    </div>
+                    <div class="w-1/2 flex">
+                        <div class="w-1/5">
+                            <img class="w-full" src="../public/img/1655699125.jpeg" alt="">
+                        </div>
+                        <div class="ml-2 w-4/5">
+                            <p>Scarlett Whitening Body Lotion by Felicya Angelista Romansa</p>
+                            <p class="text-sm font-normal">1 barang x Rp75.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <h1 class="text-xl mb-2">Pembayaran</h1>
+                <div class="grid grid-cols-12 mb-2">
+                    <div class="col-span-3">Metode pembayaran</div>
+                    <div class="col-span-9">BRIVa</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-3">Subtotal</div>
+                    <div class="col-span-9">Rp4.074.000,00</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-3">Ongkos kirim</div>
+                    <div class="col-span-9">Rp1.000.000,00</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-3 flex">Diskon Ongkos kirim<i class="fa-solid fa-minus ml-auto self-center"></i></div>
+                    <div class="col-span-9">Rp1.000,00</div>
+                </div>
+                <div class="grid grid-cols-12 mt-2">
+                    <div class="col-span-3">Total</div>
+                    <div class="col-span-9">Rp5.073.000,00</div>
+                </div>
+            </div>
+            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <h1 class="text-xl mb-2">Pengiriman & Penilaian</h1>
+                <div class="grid grid-cols-12 mt-2">
+                    <div class="col-span-3">Pilihan Pengiriman</div>
+                    <div class="col-span-9">FedEx</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-3">Dikirim</div>
+                    <div class="col-span-9">8 Jan 2023</div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-3">Diterima</div>
+                    <div class="col-span-9">10 Jan 2023</div>
+                </div>
+                <div class="grid grid-cols-12 mt-2">
+                    <div class="col-span-3">Penilaian</div>
+                    <p class="font-semibold col-span-9"><i class="fa-solid fa-star mr-1"></i>4.5</p>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-3">Ulasan</div>
+                    <div class="col-span-9 mt-1">
+                        <textarea class="w-full px-3 py-2 font-normal rounded-lg border-none focus:border-none focus:outline-none" name="" id="" cols="" rows="5">Alhamdulilah kurirnya selamat sampai rumah saya...</textarea>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex mt-4">
+                <button class="py-2 px-4 bg-[#ff950b] hover:bg-[#ff9f21] font-semibold">hapus</button>
+                <button class="py-2 px-4 bg-white hover:bg-gray-200 ml-4 font-semibold">kembali</button>
+            </div>
         </section>
-        <div class="flex justify-center mt-8 pb-4">
-            <a href="#" class="mr-2 self-center">
-                <i class="fa-solid fa-chevron-left fa-lg"></i>
-            </a>
-            <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">1</a>
-            <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">2</a>
-            <a href="#" class="p-2 bg-blue-400 hover:bg-blue-300 rounded-lg mr-2">3</a>
-            <a href="#" class="mr-2 self-center">
-                <i class="fa-solid fa-chevron-right fa-lg"></i>
-            </a>
-        </div>
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
 </body>
+  

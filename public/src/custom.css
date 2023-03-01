@@ -64,6 +64,11 @@
     margin-top: auto;
 }
 
+.ukuran-focus {
+  background-color: #00e5ff !important;
+  color: #131621;
+}
+
 .delete-pesan:hover {
     border: #ff1100 solid 2px;
     color: #fff;
