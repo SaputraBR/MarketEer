@@ -86,83 +86,50 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <header class="h-44 bg-[#0033ff] rounded-lg p-2">
-            <div class="h-full w-full border-white border-2 rounded-lg">
-                <div class="h-28 pt-4">
-                    <p class="flex justify-center text-xl text-white font-bold">saldo akun</p>
-                    <p class="flex justify-center text-4xl text-white font-bold">Rp 29.735.720.462,00</p>
-                </div>
-
-                <div class="grid grid-cols-2">
-                    <div class="col-span-1 h-32 mx-4 pt-2 bg-neutral-400 rounded-lg">
-                        <a href="#" class="flex items-center justify-center">
-                            <i class="self-center fa-solid fa-arrow-down fa-lg mr-1 text-[#00ff6a]"></i>
-                            <p class="font-semibold text-white text-lg">pemasukan</p>
-                        </a>
-                        <p class="flex justify-center mt-4 font-bold text-white text-3xl">Rp 0</p>
-                    </div>
-                    <div class="col-span-1 h-32 mx-4 pt-2 bg-neutral-400 rounded-lg">
-                        <a href="#" class="flex items-center justify-center"> 
-                            <i class="fa-solid fa-arrow-up fa-lg mr-1 text-[red]"></i>
-                            <p class="flex justify-center font-semibold text-white text-lg">pengeluaran</p>
-                        </a>
-                        <p class="flex justify-center mt-4 font-bold text-white text-3xl">Rp 5.623.738.217,00</p>
+        <div class="p-4 bg-slate-400">
+            <header class="w-2/3 mx-auto rounded-lg p-2 bg-white">
+                <p class="flex justify-center text-xl text-[#0033ff] font-bold">Cari Mutasi</p>
+                <div class="mt-2 ml-4">
+                    <p class="font-semibold">Tanggal Awal</p>
+                    <div class="flex mt-1">
+                        <input class="w-2/3 p-2 rounded-md bg-slate-100 focus:border-sky-500 focus:ring-sky-500 focus:ring-2 focus:outline-none" type="date" name="date" placeholder="dd-mm-yyyy" min="2020-01-01" max="2099-12-31">
                     </div>
                 </div>
-            </div>
-        </header>
+                <div class="mt-4 ml-4">
+                    <p class="font-semibold">Tanggal Akhir</p>
+                    <div class="flex mt-1">
+                        <input class="w-2/3 p-2 rounded-md bg-slate-100 focus:border-sky-500 focus:ring-sky-500 focus:ring-2 focus:outline-none" type="date" name="date" placeholder="dd-mm-yyyy" min="2020-01-01" max="2099-12-31">
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-center">
+                    <button class="w-28 px-2 py-1 bg-[#0033ff] rounded-md text-lg text-white">Cari</button>
+                </div>
+            </header>
+    
+            <section class="mt-10 pt-2 pb-4 px-4 h-auto rounded-lg bg-white">
+                <div class="bg-slate-200 mt-2 rounded-md py-4 px-8">
+                    <div class="flex">
+                        <p class="font-semibold">SALE PAYOFF</p>
+                        <div class="flex ml-auto">
+                            <i class="fa-solid fa-plus self-center fa-sm mr-1"></i>
+                            <p class="text-lg">Rp2.014.200,00</p>
+                        </div>
+                    </div>
+                    <p class="text-sm border-b border-black">01/02/2023 | 18:23:03 WIB</p>
+                </div>
+                <div class="bg-slate-200 mt-2 rounded-md py-4 px-8">
+                    <div class="flex">
+                        <p class="font-semibold">CASHOUT</p>
+                        <div class="flex ml-auto">
+                            <i class="fa-solid fa-plus self-center fa-sm mr-1"></i>
+                            <p class="text-lg">Rp500.000,00</p>
+                        </div>
+                    </div>
+                    <p class="text-sm border-b border-black">11/02/2023 | 12:33:13 WIB</p>
+                </div>
+            </section>
+        </div>
 
-        <section class="mt-32 p-2 h-auto rounded-lg border-[#0033ff] border-2">
-            <div class="flex justify-center w-full mt-2">
-                <div class="w-auto mr-4">
-                    <a href="#" target="_blank" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-regular fa-calendar-days fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">aktivitas</p>
-                </div>
-                <div class="w-auto mr-4">
-                    <a href="#" target="_blank" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-solid fa-money-bill-transfer fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">transfer</p>
-                </div>
-                <div class="w-auto mr-4">
-                    <a href="admin_wallet_mutasi.html" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-solid fa-file-lines fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">mutasi</p>
-                </div>
-                <div class="w-auto mr-4">
-                    <a href="" target="_blank" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-solid fa-user fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">akun</p>
-                </div>
-            </div>
-
-            <div class="mt-6 mb-2">
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">Rekening</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">13420834</p>
-                </div>
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">Nama</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">Roberto Di Gianncolo</p>
-                </div>
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">Alamat</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">RP5H+MGR, Salm Alzwaher 28713, Arab Saudi</p>
-                </div>
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">No Handphone</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">081828872010</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
