@@ -86,83 +86,59 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <header class="h-44 bg-[#0033ff] rounded-lg p-2">
-            <div class="h-full w-full border-white border-2 rounded-lg">
-                <div class="h-28 pt-4">
-                    <p class="flex justify-center text-xl text-white font-bold">saldo akun</p>
-                    <p class="flex justify-center text-4xl text-white font-bold">Rp 29.735.720.462,00</p>
-                </div>
-
-                <div class="grid grid-cols-2">
-                    <div class="col-span-1 h-32 mx-4 pt-2 bg-neutral-400 rounded-lg">
-                        <a href="#" class="flex items-center justify-center">
-                            <i class="self-center fa-solid fa-arrow-down fa-lg mr-1 text-[#00ff6a]"></i>
-                            <p class="font-semibold text-white text-lg">pemasukan</p>
-                        </a>
-                        <p class="flex justify-center mt-4 font-bold text-white text-3xl">Rp 0</p>
+        <div class="p-4 rounded-lg bg-slate-400">
+            <div class="bg-white rounded-md">
+                <h1 class="text-2xl font-bold text-[#0029ce] p-4 border-b-4 border-slate-400">AKUN</h1>
+                <div class="mt-4 mb-2 px-4 pt-2 pb-4 border-b-4 border-slate-400">
+                    <div class="grid grid-cols-12">
+                        <p class="font-semibold col-span-2">Rekening</p>
+                        <p class="font-semibold col-span-1 mx-auto">:</p>
+                        <p class="font-semibold col-span-9">13420834</p>
                     </div>
-                    <div class="col-span-1 h-32 mx-4 pt-2 bg-neutral-400 rounded-lg">
-                        <a href="#" class="flex items-center justify-center"> 
-                            <i class="fa-solid fa-arrow-up fa-lg mr-1 text-[red]"></i>
-                            <p class="flex justify-center font-semibold text-white text-lg">pengeluaran</p>
-                        </a>
-                        <p class="flex justify-center mt-4 font-bold text-white text-3xl">Rp 5.623.738.217,00</p>
+                    <div class="grid grid-cols-12">
+                        <p class="font-semibold col-span-2">Nama</p>
+                        <p class="font-semibold col-span-1 mx-auto">:</p>
+                        <p class="font-semibold col-span-9">Roberto Di Gianncolo</p>
+                    </div>
+                    <div class="grid grid-cols-12">
+                        <p class="font-semibold col-span-2">Alamat</p>
+                        <p class="font-semibold col-span-1 mx-auto">:</p>
+                        <p class="font-semibold col-span-9">RP5H+MGR, Salm Alzwaher 28713, Arab Saudi</p>
+                    </div>
+                    <div class="grid grid-cols-12">
+                        <p class="font-semibold col-span-2">No Handphone</p>
+                        <p class="font-semibold col-span-1 mx-auto">:</p>
+                        <p class="font-semibold col-span-9">081828872010</p>
                     </div>
                 </div>
-            </div>
-        </header>
+                <div class="mt-4 mb-2 px-4 pt-2 pb-4">
+                    <form action="">
+                        <div class="grid grid-cols-12">
+                            <label for="nama" class="font-semibold self-center col-span-1">PIN</label>
+                            <input type="password" name="nama" class="col-span-11 w-1/4 ml-3 mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none" value="133543" disabled>
+                        </div>
 
-        <section class="mt-32 p-2 h-auto rounded-lg border-[#0033ff] border-2">
-            <div class="flex justify-center w-full mt-2">
-                <div class="w-auto mr-4">
-                    <a href="#" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-regular fa-calendar-days fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">aktivitas</p>
-                </div>
-                <div class="w-auto mr-4">
-                    <a href="admin_wallet_transfer.html" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-solid fa-money-bill-transfer fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">transfer</p>
-                </div>
-                <div class="w-auto mr-4">
-                    <a href="admin_wallet_mutasi.html" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-solid fa-file-lines fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">mutasi</p>
-                </div>
-                <div class="w-auto mr-4">
-                    <a href="admin_wallet_akun.html" class="flex justify-center bg-[#0033ff] hover:bg-[#0029ce] rounded-xl w-16 p-4">
-                        <i class="fa-solid fa-user fa-2x text-gray-200"></i>
-                    </a>
-                    <p class="flex justify-center font-semibold cursor-default">akun</p>
-                </div>
-            </div>
+                        <p class="text-lg font-semibold mt-6 mb-2">Ubah PIN</p>
+                        
+                        <div class="grid grid-cols-12">
+                            <label for="nama" class="font-semibold self-center col-span-1">PIN baru</label>
+                            <input type="password" name="nama" class="col-span-11 w-1/4 ml-3 mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none" value="133543">
+                        </div>
+                        
+                        <div class="grid grid-cols-12 mt-2">
+                            <label for="nama" class="font-semibold self-center col-span-1">Konfirmasi</label>
+                            <input type="password" name="nama" class="col-span-11 w-1/4 ml-3 mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none" value="133543">
+                        </div>
 
-            <div class="mt-6 mb-2">
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">Rekening</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">13420834</p>
-                </div>
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">Nama</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">Roberto Di Gianncolo</p>
-                </div>
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">Alamat</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">RP5H+MGR, Salm Alzwaher 28713, Arab Saudi</p>
-                </div>
-                <div class="grid grid-cols-12">
-                    <p class="font-semibold col-span-2">No Handphone</p>
-                    <p class="font-semibold col-span-1 mx-auto">:</p>
-                    <p class="font-semibold col-span-9">081828872010</p>
+                        <div class="mt-6">
+                            <button type="submit" class="py-2 px-4 rounded-sm text-white font-semibold bg-[#0029ce]">ubah</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
