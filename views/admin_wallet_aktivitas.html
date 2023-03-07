@@ -86,69 +86,38 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <div class="p-4 rounded-lg bg-slate-400">
-            <div class="bg-white rounded-md">
-                <h1 class="text-2xl font-bold text-[#0029ce] p-4 border-b-4 border-slate-400">AKUN</h1>
-                <div class="mt-4 mb-2 px-4 pt-2 pb-4 border-b-4 border-slate-400 relative">
-                    <a class="absolute right-0 top-0 mr-3 flex hover:text-[#0029ce]" href="admin_wallet_akun_edit.html">
-                        <i class="self-center fa-solid fa-pencil text-[blue]"></i>
-                        <p class="self-center font-semibold text-[blue]">edit</p>
-                    </a>
-                    <div class="grid grid-cols-12">
-                        <p class="font-semibold col-span-1">No Rek</p>
-                        <p class="font-semibold col-span-1 mx-auto">:</p>
-                        <p class="font-semibold col-span-10">13420834</p>
-                    </div>
-                    <div class="grid grid-cols-12">
-                        <p class="font-semibold col-span-1">Nama</p>
-                        <p class="font-semibold col-span-1 mx-auto">:</p>
-                        <p class="font-semibold col-span-10">Roberto Di Gianncolo</p>
-                    </div>
-                    <div class="grid grid-cols-12">
-                        <p class="font-semibold col-span-1">Alamat</p>
-                        <p class="font-semibold col-span-1 mx-auto">:</p>
-                        <p class="font-semibold col-span-10">RP5H+MGR, Salm Alzwaher 28713, Arab Saudi</p>
-                    </div>
-                    <div class="grid grid-cols-12">
-                        <p class="font-semibold col-span-1">No Telp</p>
-                        <p class="font-semibold col-span-1 mx-auto">:</p>
-                        <p class="font-semibold col-span-10">081828872010</p>
-                    </div>
-                    <div class="grid grid-cols-12">
-                        <p class="font-semibold col-span-1">Email</p>
-                        <p class="font-semibold col-span-1 mx-auto">:</p>
-                        <p class="font-semibold col-span-10">robertoDG@gmail.com</p>
-                    </div>
-                </div>
-                <div class="mt-4 mb-2 px-4 pt-2 pb-4">
-                    <form action="">
-                        <div class="grid grid-cols-12">
-                            <label for="nama" class="font-semibold self-center col-span-1">PIN</label>
-                            <input type="password" name="nama" class="col-span-11 w-1/4 ml-3 mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none" value="133543" disabled>
-                        </div>
-
-                        <p class="text-lg font-semibold mt-6 mb-2">Ubah PIN</p>
-                        
-                        <div class="grid grid-cols-12">
-                            <label for="nama" class="font-semibold self-center col-span-1">PIN baru</label>
-                            <input type="password" name="nama" class="col-span-11 w-1/4 ml-3 mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+        <div class="p-4 bg-slate-400">
+            <p class="py-2 px-8 flex justify-center bg-white text-xl text-[#0033ff] font-bold">aktivitas</p>
+            <div class="bg-white mt-2 py-2 px-4">
+                <div class="bg-gray-200 flex py-2 px-6"> 
+                    <div class="w-1/12 self-center">
+                        <div class="bg-[#4193ff5b] w-20 h-20 rounded-full flex justify-center">
+                            <i class="fa-solid fa-money-bill-transfer fa-xl text-[blue] self-center"></i>
                         </div>
                         
-                        <div class="grid grid-cols-12 mt-2">
-                            <label for="nama" class="font-semibold self-center col-span-1">Konfirmasi</label>
-                            <input type="password" name="nama" class="col-span-11 w-1/4 ml-3 mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    </div>
+                    <div class="w-1/2 ml-8">
+                        <h1 class="font-semibold text-lg mb-1">Transfer</h1>
+                        <div class="flex">
+                            <p>BRI</p>
+                            <p class="mx-1">-</p>
+                            <p>02153331546</p>
                         </div>
-
-                        <div class="mt-6">
-                            <button type="submit" class="py-2 px-4 rounded-sm text-white font-semibold bg-[#0029ce]">ubah</button>
-                        </div>
-                    </form>
-
+                        <p>202301200001</p>
+                        <p class="text-sm mt-1 font-semibold">20 Jan 2023 14:55</p>
+                    </div>
+                    <div class="ml-auto self-center mr-4">
+                        <div class="py-2 px-4 bg-neutral-400">sukses</div>
+                    </div>
                 </div>
             </div>
         </div>
 
     </main>
-
+    <style>
+        .c{
+            color: #4193ff5b;
+        }
+    </style>
     <script type="text/javascript" src="../public/src/admin.js"></script>
 </body>
