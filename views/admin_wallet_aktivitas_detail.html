@@ -86,54 +86,38 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <div class="p-4 bg-slate-400">
-            <p class="py-2 px-8 flex justify-center bg-white text-xl text-[#0033ff] font-bold">Aktivitas</p>
-            <div class="bg-white mt-2 p-4">
-                <a href="" class="bg-slate-100 mt-1 mb-2 rounded-md flex py-2 px-4"> 
-                    <div class="w-1/12 self-center">
-                        <div class="bg-[#aed1fd5b] w-20 h-20 rounded-full flex justify-center">
-                            <i class="fa-solid fa-money-bill-transfer fa-xl text-[blue] self-center"></i>
-                        </div>                        
-                    </div>
-                    <div class="w-1/2 ml-6">
-                        <h1 class="font-semibold text-lg mb-1">Transfer</h1>
-                        <div class="flex">
-                            <p>BRI</p>
-                            <p class="mx-1">-</p>
-                            <p>02153331546</p>
-                        </div>
-                        <p>202301200001</p>
-                        <p class="text-sm mt-1 font-semibold">20 Jan 2023 14:55</p>
-                    </div>
-                    <div class="ml-auto self-center mr-4">
-                        <div class="py-1 px-4 rounded-sm bg-[#10d37e] text-white font-semibold">sukses</div>
-                    </div>
-                </a>
-
-                <a href="admin_wallet_aktivitas_detail.html" class="bg-slate-100 mt-1 mb-2 rounded-md flex py-2 px-4"> 
-                    <div class="w-1/12 self-center">
-                        <div class="bg-[#aed1fd5b] w-20 h-20 rounded-full flex justify-center">
-                            <i class="fa-solid fa-wallet fa-xl text-[blue] self-center"></i>
-                        </div>                        
-                    </div>
-                    <div class="w-1/2 ml-6">
-                        <h1 class="font-semibold text-lg mb-1">Dompet Digital</h1>
-                        <div class="flex">
-                            <p>DANA</p>
-                            <p class="mx-1">-</p>
-                            <p>087743825691</p>
-                        </div>
-                        <p>202301150001</p>
-                        <p class="text-sm mt-1 font-semibold">15 Jan 2023 20:14</p>
-                    </div>
-                    <div class="ml-auto self-center mr-4">
-                        <div class="py-1 px-4 rounded-sm bg-[#10d37e] text-white font-semibold">sukses</div>
-                    </div>
-                </a>
+        <div class="bg-[#0033ff] h-48 flex justify-center relative">
+            <div class="w-24 h-24 bg-white rounded-full bottom-0 absolute flex justify-center z-10">
+                <i class="fa-solid fa-check fa-3x self-center"></i>
+            </div>
+            <div class="bg-slate-100 w-3/4 md:w-2/3 h-64 mt-36 flex">
+                <div class="flex relative">
+                    <div class="d"></div>
+                </div>
             </div>
         </div>
-
+        <div class="bg-slate-400 h-full ">
+            
+        </div>
     </main>
 
+    <style>
+        .c{
+            width: 25px;
+            height: 25px;
+            background: linear-gradient(180deg, blue 50%, #e2e8f0 50%);
+            border-radius: 25px 25px 0 0;
+        }
+
+        .d{
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(180deg, #0033ff 50%, #0033ff 50%);
+            border-radius: 0 0 25px 25px;
+            transform: translate(-50%, -50%);
+            margin: 0 0 0 0;
+            z-index: 1;
+        }
+    </style>
     <script type="text/javascript" src="../public/src/admin.js"></script>
 </body>
