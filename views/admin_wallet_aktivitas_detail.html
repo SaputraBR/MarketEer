@@ -90,14 +90,57 @@
             <div class="w-24 h-24 bg-white rounded-full bottom-0 absolute flex justify-center z-10">
                 <i class="fa-solid fa-check fa-3x self-center"></i>
             </div>
-            <div class="bg-slate-100 w-3/4 md:w-2/3 h-64 mt-36 flex">
-                <div class="flex relative">
-                    <div class="d"></div>
+           <div class="d w-3/4 md:w-2/3 h-64 bottom-0 absolute"></div>
+        </div>
+        <div class="bg-slate-300 h-full relative flex justify-center">
+            <div class="bg-[#f1f5f9] w-3/4 md:w-2/3 h-auto pb-10 top-0 absolute">                
+                <div class="mt-8 px-10">
+                    <h1 class="mb-10 text-3xl font-bold flex justify-center">Transaksi Berhasil</h1>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Tanggal</p>
+                        <p class="font-semibold col-span-9 ml-auto">20 Jan 2023 | 14:55</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">No Transaksi</p>
+                        <p class="font-semibold col-span-9 ml-auto">202301200001</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Jenis Transaksi</p>
+                        <p class="font-semibold col-span-9 ml-auto">Topup Saldo DANA</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Bank Tujuan</p>
+                        <p class="font-semibold col-span-9 ml-auto">BRI</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Nomor Tujuan</p>
+                        <p class="font-semibold col-span-9 ml-auto">02153331546</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Nama Tujuan</p>
+                        <p class="font-semibold col-span-9 ml-auto">SINGODIMEDJO</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Keterangan</p>
+                        <p class="font-semibold col-span-9 ml-auto">Kurang Terang</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-4 text-xl">
+                        <p class="font-semibold col-span-3">Nominal</p>
+                        <p class="font-semibold col-span-9 ml-auto">Rp50.000.000.000,00</p>
+                    </div>
+                    <div class="grid grid-cols-12 mb-8 text-xl">
+                        <p class="font-semibold col-span-3">Biaya Admin</p>
+                        <p class="font-semibold col-span-9 ml-auto">Rp49.999.999.999,00</p>
+                    </div>
+
+                    <div class="w-full border-2 border-dashed border-black"></div>
+
+                    <div class="grid grid-cols-12 mt-4 text-2xl font-bold">
+                        <p class="col-span-3">Total</p>
+                        <p class="col-span-9 ml-auto">Rp1</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="bg-slate-400 h-full ">
-            
         </div>
     </main>
 
@@ -105,18 +148,16 @@
         .c{
             width: 25px;
             height: 25px;
-            background: linear-gradient(180deg, blue 50%, #e2e8f0 50%);
+            background: linear-gradient(180deg, #0033ff 50%, #e2e8f0 50%);
             border-radius: 25px 25px 0 0;
         }
 
         .d{
-            width: 50px;
+            --size: 11.8px;
             height: 50px;
-            background: linear-gradient(180deg, #0033ff 50%, #0033ff 50%);
-            border-radius: 0 0 25px 25px;
-            transform: translate(-50%, -50%);
-            margin: 0 0 0 0;
-            z-index: 1;
+            
+            background:
+                radial-gradient(var(--size) at 50% 0px,#0033ff 99%, #f1f5f9 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
         }
     </style>
     <script type="text/javascript" src="../public/src/admin.js"></script>
