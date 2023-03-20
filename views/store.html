@@ -56,46 +56,48 @@
       <div></div>
     </section>
 
-    <section class="container col-span-4 my-14 mx-auto bg-amber-200/[.5] flex w-full h-64 ">
-      <span class="w-20 h-full flex justify-center">
-        <i class="fa-solid fa-chevron-left fa-3x self-center" id="prevButton"></i>      
-      </span>
-      <div class="w-full flex relative overflow-hidden slider">
-        <div class="slide w-full h-full">
+    <section class="container w-full h-60 relative my-14 mx-auto bg-amber-200/[.5] flex carousel-slide flex relative overflow-hidden">
+      <div class="slide">
           <a href="#" target="_blanks">
             <img class="object-cover w-full h-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="">
           </a>
-        </div>
-        <div class="slide w-full h-full">
+      </div>
+      <div class="slide">
           <a href="#" target="_blanks">
             <img class="object-cover w-full h-full" src="../public/img/7943208.jpg" alt="">
           </a>
-        </div>
-        <div class="slide w-full h-full">
+      </div>
+      <div class="slide">
           <a href="#" target="_blanks">
             <img class="object-cover w-full h-full" src="../public/img/16221025_5725317.jpg" alt="">
           </a>
-        </div>
       </div>
-      <span class="w-20 h-full flex justify-center">
-        <i class="fa-solid fa-chevron-right fa-3x self-center" id="nextButton"></i>
+      <span class="w-20 h-20 ml-2 flex justify-center self-center prevButton left-0 absolute rounded-full bg-white hover:bg-white/[.8]">
+        <i class="fa-solid fa-chevron-left fa-3x self-center text-[#ff4800]"></i>      
+      </span>
+      <span class="w-20 h-20 mr-2 flex justify-center self-center nextButton right-0 absolute rounded-full bg-white hover:bg-white/[.8]">
+        <i class="fa-solid fa-chevron-right fa-3x self-center text-[#ff4800]"></i>
       </span>
     </section>
 
-    <section class="w-full container mx-auto" id="best-offer">
+    <section class="w-full h-full container mx-auto" id="best-offer">
       <h1 class="text-4xl font-semibold mb-2 ml-4">Best Offers</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
-        <div class="rounded-lg shadow-md bg-white m-2">
-          <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 h-1/5 relative">
+        <div class="rounded-lg shadow-md bg-gray-400 mt-1 mx-2 h-auto">
+          <div class="container hover:cursor-default">
             <div class="relative flex justify-center seller" >
               <p class="self-center font-semibold text-white">Best Seller</p>
             </div> 
           </div>
-          <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-            <img class="object-contain h-full mx-auto" src="../public/img/Google-Pixel-7-Pro.jpg" alt="Sunset in the mountains">
-          </div>
+          <a href="#" class="">
+            <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
+              <img class="object-cover h-full mx-auto" src="../public/img/Google-Pixel-7-Pro.jpg" alt="Sunset in the mountains">
+            </div>
+          </a>
           <div class="h-24 pt-4 px-6">
-            <div class="font-bold text-xl mb-2">Google Pixel 7 Pro 12/512GB</div>
+            <div class="font-bold text-xl mb-2">
+              <a href="#" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
+            </div>
             <span class="flex flex-wrap mb-1">
               <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">42%</span>
               <p class="mx-2 text-sm line-through self-center text-secondary">Rp1.500.000</p>              
@@ -104,7 +106,7 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white m-2">
+        <div class="rounded-lg shadow-md bg-white mt-1 mx-2 h-auto">
           <div class="container">
             <div class="relative flex justify-center favorite">
               <p class="self-center font-semibold text-white">Favorite</p>
@@ -123,7 +125,7 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white m-2">
+        <div class="rounded-lg shadow-md bg-white mt-1 mx-2 h-auto">
           <div class="container">
               <div class="relative flex justify-center men">
                 <p class="self-center font-semibold text-white">Men</p>
@@ -142,7 +144,7 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white m-2">
+        <div class="rounded-lg shadow-md bg-gray-400 mt-1 mx-2 h-auto">
           <div class="container">
               <div class="women flex justify-center">
                 <p class="self-center font-semibold text-white">Women</p>
@@ -151,7 +153,7 @@
           <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
             <img class="object-contain h-full mx-auto" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
           </div>
-          <div class="pt-4 px-6">
+          <div class="py-4 px-6">
             <div class="font-bold text-xl mb-2">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</div>
             <span class="flex flex-wrap mb-1">
               <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">23%</span>
@@ -163,7 +165,7 @@
       </div>
     </section>
 
-    <section class="w-full container mx-auto mt-12" id="daily-offer">
+    <section class="w-full h-full container mx-auto mt-12" id="daily-offer">
       <h1 class="text-3xl font-semibold mb-2 ml-4">Daily Offers</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
         <div class="rounded shadow-xl bg-white m-2">
@@ -534,6 +536,7 @@
     </div>
     <div class="text white text-sm font-semibold border-t max-w-7xl mx-auto py-6 mt-16 text-center">kopirek &copy; MarketEer 2022</div>
   </footer>
+
   <script>
     window.onscroll = function() {navbar()}
 
@@ -548,8 +551,118 @@
         navbar.classList.add('text-[#fa8c00]')
       }
     }
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.carousel-slide').forEach((carousel) => {
+
+        carousel.querySelector('.prevButton').addEventListener('click', (e) => {
+          minusItem(carousel);
+        });
+
+        carousel.querySelector('.nextButton').addEventListener('click', () => {
+          plusItem(carousel);
+        });
+
+        insertDots(carousel);
+
+        carousel.querySelectorAll('.dot').forEach((dot) => {
+          dot.addEventListener('click', (e) => {
+            let item = Array.prototype.indexOf.call(
+              e.target.parentNode.children,
+              e.target
+            );
+
+            showItems(carousel, item);
+          });
+        });
+
+        showItems(carousel, 0);
+
+      });
+    });
+
+    function insertDots(carousel) {
+      const dots = document.createElement('div');
+      dots.classList.add('dots');
+
+      carousel.append(dots);
+
+      carousel.querySelectorAll('.slide').forEach((elem) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+
+        carousel.querySelector('.dots').append(dot)
+      });
+    }
+
+    function plusItem(carousel) {
+      let item = currentItem(carousel);
+
+      carousel.querySelectorAll('.slide')[item].nextElementSibling.classList.contains('slide')
+        ? showItems(carousel, item + 1)
+        : showItems(carousel, 0);
+    }
+
+    function minusItem(carousel) {
+      let item = currentItem(carousel);
+
+      carousel.querySelectorAll('.slide')[item].previousElementSibling != null
+      ? showItems(carousel, item - 1)
+      : showItems(carousel, carousel.querySelectorAll('.slide').length - 1);
+    }
+
+    function currentItem(carousel) {
+      return [...carousel.querySelectorAll('.slide')].findIndex(
+        (item) => item.style.display == "block"
+      );
+    }
+
+    function showItems(carousel, item) {
+      if (carousel.querySelectorAll('.slide')[currentItem(carousel)] != undefined)
+          carousel.querySelectorAll('.slide')[currentItem(carousel)].style.display = 'none';
+          carousel.querySelectorAll('.slide')[item].style.display = 'block';
+
+      if (carousel.querySelector('.dot.active') != null)
+          carousel.querySelector('.dot.active').classList.remove('active');
+          carousel.querySelectorAll('.dot')[item].classList.add('active');
+     }
+
+
+    /*slider store
+      const prevButton = document.getElementById('prevButton');
+      const nextButton = document.getElementById('nextButton');
+      const slided   = document.querySelectorAll('.slide');
+      let curSlide   = 0; 
+      let maxSlide   = slided.length - 1;
+
+      slided.forEach((slide, indx) => {
+          slide.style.transform = `translateX(${indx * 100}%)`;
+      });
+
+      nextButton.addEventListener('click', function(){
+          if(curSlide === maxSlide){
+              curSlide = 0;
+          } else {
+              curSlide++;
+          };
+
+          slided.forEach((slide, indx) => {
+              slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+          })
+      })
+
+      prevButton.addEventListener('click', function(){
+          if(curSlide === 0){
+              curSlide = maxSlide;
+          } else {
+              curSlide--;
+          };
+
+          slided.forEach((slide, indx) => {
+              slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+          })
+      })*/
   </script>
-  <script type="text/javascript" src="../public/src/custom.js"></script>
-  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 </html>
