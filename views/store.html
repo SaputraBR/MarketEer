@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -11,42 +10,86 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .show {
+      display: block;
+    }
+  </style>
 </head>
 
 <body class="bg-slate-100">
-  <nav class="bg-transparent top-0 z-10 flex flex-col py-1 text-[#fa8c00]" id="navMain">
-    <div class="flex justify-between h-14 w-full px-12 font-semibold">
+  <nav class="top-0 z-10 bg-main flex flex-col text-white sticky" id="navMain">
+    <div class="h-6 w-full flex bg-gray-300 top-0 sticky">
+      <div class="flex ml-auto mr-4 text-black"> 
+        <a href="" class="mr-2 hover:text-[#ff2f00]">Language</a>
+        <a href="" class="mr-2 hover:text-[#ff2f00]">Help Center</a>
+        <a href="" class="flex mr-2 hover:text-[#ff2f00]">
+          <span class="self-center" id="">        
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg> 
+          </span>
+          <p class="">Akun</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-between h-20 w-full px-12 font-semibold">
       <div class="trirong self-center">
         <p class="text-4xl">MarketEer</p>
       </div>
-      <ul class="hidden sm:hidden lg:flex text-2xl trirong self-center ">
-        <li class="px-2">fashion</li>
-        <li class="px-2">gadgets</li>
-        <li class="px-2">personal care</li>
-        <li class="px-2">electronics</li>
-        <li class="px-2">home</li> <!--id="homeNav"-->
-        <li class="px-2" id="homeNav">tools</li>
-      </ul>
-      <div class="flex trirong self-center">
-        <div class="flex flex-wrap">
-          <span class="inline-block bg-white rounded-full shadow px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">Log In</span>
-          <span class="inline-block bg-blue-600 rounded-full shadow px-6 py-2 text-sm font-semibold text-white mr-2 mb-2">Sign Up</span>
+      <form class="w-7/12 h-full">
+        <div class="h-full flex relative">
+            <button id="dropdown-button" onclick="myFunction()" data-dropdown-toggle="dropdown" class="self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+              All categories
+              <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div id="dropdown-category" class="w-36 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow left-0 absolute mt-16">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">fashion</button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">personal care</button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">gadgets</button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">electronics</button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">home</button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">tools</button>
+                </li>
+              </ul>
+            </div>
+            <div class="relative w-full self-center">
+                <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border border-gray-300 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" placeholder="Cari barang..." required>
+                <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </div>
         </div>
-
-        <!--<span class="mx-1" id="">        
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <div class="hidden">
-            <a href="">login</a>
-          </div>          
+      </form>
+      <div class="flex trirong self-center text-white">
+        <span class="mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>          
         </span>
-        <span class="mx-1">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </span>-->
+        <span class="ml-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+          </svg>  
+        </span>
       </div>
     </div>
   </nav>
@@ -80,21 +123,21 @@
       </span>
     </section>
 
-    <section class="w-full h-full container mx-auto" id="best-offer">
+    <section class="w-full mx-auto" id="best-offer">
       <h1 class="text-4xl font-semibold mb-2 ml-4">Best Offers</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 h-1/5 relative">
-        <div class="rounded-lg shadow-md bg-gray-400 mt-1 mx-2 h-auto">
-          <div class="container hover:cursor-default">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 relative">
+        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+          <div class="container top-0 absolute hover:cursor-default">
             <div class="relative flex justify-center seller" >
               <p class="self-center font-semibold text-white">Best Seller</p>
             </div> 
           </div>
           <a href="#" class="">
             <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-cover h-full mx-auto" src="../public/img/Google-Pixel-7-Pro.jpg" alt="Sunset in the mountains">
+              <img class="object-cover h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
             </div>
           </a>
-          <div class="h-24 pt-4 px-6">
+          <div class="mt-5 px-6">
             <div class="font-bold text-xl mb-2">
               <a href="#" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
             </div>
@@ -106,16 +149,16 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white mt-1 mx-2 h-auto">
-          <div class="container">
+        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+          <div class="container top-0 absolute hover:cursor-default">
             <div class="relative flex justify-center favorite">
               <p class="self-center font-semibold text-white">Favorite</p>
             </div>
           </div>
-          <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-            <img class="object-contain h-full mx-auto" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
-          </div>
-          <div class="pt-4 px-6">
+            <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
+              <img class="object-cover h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
+            </div>
+          <div class="h-auto mt-5 px-6">
             <div class="font-bold text-xl mb-2">Polo Bear by Ralph Lauren M/L/XL/XXL</div>
             <span class="flex flex-wrap mb-1">
               <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">38%</span>
@@ -125,16 +168,16 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white mt-1 mx-2 h-auto">
-          <div class="container">
+        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+          <div class="container top-0 absolute hover:cursor-default">
               <div class="relative flex justify-center men">
                 <p class="self-center font-semibold text-white">Men</p>
               </div>
           </div>
           <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-            <img class="object-contain h-full mx-auto" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
+            <img class="object-cover h-full w-full" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
           </div>
-          <div class="pt-4 px-6">
+          <div class="h-auto mt-5 px-6">
             <div class="font-bold text-xl mb-2">Air Jordan 7 Retro SE Men's Shoes 40-47</div>
             <span class="flex flex-wrap mb-1">
               <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">15%</span>
@@ -144,14 +187,14 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-gray-400 mt-1 mx-2 h-auto">
-          <div class="container">
+        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2  relative">
+          <div class="container absolute top-0">
               <div class="women flex justify-center">
                 <p class="self-center font-semibold text-white">Women</p>
               </div>
           </div>
           <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-            <img class="object-contain h-full mx-auto" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
+            <img class="object-cover h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
           </div>
           <div class="py-4 px-6">
             <div class="font-bold text-xl mb-2">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</div>
@@ -165,7 +208,7 @@
       </div>
     </section>
 
-    <section class="w-full h-full container mx-auto mt-12" id="daily-offer">
+    <section class="w-full h-auto mx-auto mt-12" id="daily-offer">
       <h1 class="text-3xl font-semibold mb-2 ml-4">Daily Offers</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
         <div class="rounded shadow-xl bg-white m-2">
@@ -330,7 +373,7 @@
       </div>    
     </section>
 
-    <section class="w-full container mx-auto mt-12" id="trends">
+    <section class="w-full h-auto mx-auto mt-12" id="trends">
       <h1 class="text-3xl font-semibold mb-2 ml-4">Trends</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
         <div class="rounded shadow-xl bg-white m-2">
@@ -538,7 +581,7 @@
   </footer>
 
   <script>
-    window.onscroll = function() {navbar()}
+   /* window.onscroll = function() {navbar()}
 
     function navbar(){
       const navbar = document.getElementById('navMain');
@@ -550,7 +593,26 @@
         navbar.classList.remove('sticky', 'bg-main', 'text-white')
         navbar.classList.add('text-[#fa8c00]')
       }
-    }
+    }*/
+
+
+    function myFunction() {
+            document.getElementById("dropdown-category").classList.toggle("hidden");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                var dropdowns = document.getElementsByClassName("drop-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+                }
+            }
+        }
 
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -628,41 +690,6 @@
           carousel.querySelectorAll('.dot')[item].classList.add('active');
      }
 
-
-    /*slider store
-      const prevButton = document.getElementById('prevButton');
-      const nextButton = document.getElementById('nextButton');
-      const slided   = document.querySelectorAll('.slide');
-      let curSlide   = 0; 
-      let maxSlide   = slided.length - 1;
-
-      slided.forEach((slide, indx) => {
-          slide.style.transform = `translateX(${indx * 100}%)`;
-      });
-
-      nextButton.addEventListener('click', function(){
-          if(curSlide === maxSlide){
-              curSlide = 0;
-          } else {
-              curSlide++;
-          };
-
-          slided.forEach((slide, indx) => {
-              slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-          })
-      })
-
-      prevButton.addEventListener('click', function(){
-          if(curSlide === 0){
-              curSlide = maxSlide;
-          } else {
-              curSlide--;
-          };
-
-          slided.forEach((slide, indx) => {
-              slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-          })
-      })*/
   </script>
 </body>
 </html>
