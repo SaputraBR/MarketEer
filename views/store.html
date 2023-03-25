@@ -10,22 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .show {
-      display: block;
-    }
-  </style>
 </head>
 
 <body class="bg-slate-100">
   <nav class="top-0 z-10 bg-main flex flex-col text-white sticky" id="navMain">
-    <div class="h-6 w-full flex bg-gray-300 top-0 sticky">
-      <div class="flex ml-auto mr-4 text-black"> 
+    <div class="h-5 w-full flex bg-gray-300 top-0 sticky">
+      <div class="flex ml-auto mr-4 text-black text-sm"> 
         <a href="" class="mr-2 hover:text-[#ff2f00]">Language</a>
         <a href="" class="mr-2 hover:text-[#ff2f00]">Help Center</a>
         <a href="" class="flex mr-2 hover:text-[#ff2f00]">
           <span class="self-center" id="">        
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg> 
           </span>
@@ -34,14 +29,15 @@
       </div>
     </div>
 
-    <div class="flex justify-between h-20 w-full px-12 font-semibold">
+    <div class="flex justify-between h-20 w-auto px-6 md:px-16 lg:px-24 font-semibold ">
       <div class="trirong self-center">
-        <p class="text-4xl">MarketEer</p>
+        <a href="store.html" class="text-3xl sm:text-4xl">MarketEer</a>
       </div>
-      <form class="w-7/12 h-full">
-        <div class="h-full flex relative">
-            <button id="dropdown-button" onclick="myFunction()" data-dropdown-toggle="dropdown" class="self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
-              All categories
+      <form class="w-8/12 h-full">
+        <div class="h-full flex relative mx-4">
+            <button id="dropdown-button" onclick="myFunction()" data-dropdown-toggle="dropdown" class="self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+              <p class="hidden sm:block">All categories</p>
+              <p class="block sm:hidden">All</p>
               <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
               </svg>
@@ -80,23 +76,22 @@
         </div>
       </form>
       <div class="flex trirong self-center text-white">
-        <span class="mr-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+        <a href="#" class="mr-1 sm:ml-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 sm:w-9 sm:h-9">
             <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
           </svg>          
-        </span>
-        <span class="ml-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+        </a>
+        <a href="#" class="ml-1 sm:ml-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 sm:w-9 sm:h-9">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
           </svg>  
-        </span>
+        </a>
       </div>
     </div>
   </nav>
 
   <main class="">
     <section class="flex absolute top-0 bg-aesthetic -z-10 h-full" >
-      <div></div>
     </section>
 
     <section class="container w-full h-60 relative my-14 mx-auto bg-amber-200/[.5] flex carousel-slide flex relative overflow-hidden">
@@ -132,14 +127,14 @@
               <p class="self-center font-semibold text-white">Best Seller</p>
             </div> 
           </div>
-          <a href="#" class="">
+          <a href="store_product.html" class="">
             <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
               <img class="object-cover h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
             </div>
           </a>
           <div class="mt-5 px-6">
             <div class="font-bold text-xl mb-2">
-              <a href="#" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
+              <a href="store_product.html" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
             </div>
             <span class="flex flex-wrap mb-1">
               <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">42%</span>
@@ -548,7 +543,7 @@
       
       <div class="text-white">
         <h1 class="text-xl font-bold mb-2">Products</h1>
-        <div class="hidden sm:flex flex-col">
+        <div class="flex flex-col">
           <a href="#">Foods</a>
           <a href="#">Fashion</a>
           <a href="#">Gadgets</a>
@@ -561,7 +556,7 @@
 
       <div class="text-white">
         <h1 class="text-xl font-bold mb-2">Customer Services</h1>
-        <div class="hidden sm:flex flex-col">
+        <div class="flex flex-col">
           <a href="">Help Center</a>
           <a href="">Privacy & Security</a>
           <a href="">Terms of Use</a>
@@ -570,7 +565,7 @@
 
       <div class="text-white">
         <h1 class="text-xl font-bold mb-2">MarketEer</h1>
-        <div class="hidden sm:flex flex-col">
+        <div class="flex flex-col">
           <a href="">About Us</a>
           <a href="">Contacts</a>
           <a href="">Community</a>
