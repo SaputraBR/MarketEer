@@ -12,7 +12,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-100">
+<body class="bg-slate-100 max-w-screen-2xl mx-auto">
   <nav class="top-0 z-10 bg-main flex flex-col text-white sticky" id="navMain">
     <div class="h-5 w-full flex bg-gray-300 top-0 sticky">
       <div class="flex ml-auto mr-4 text-black text-sm"> 
@@ -91,7 +91,7 @@
   </nav>
 
   <main class="">
-    <section class="flex absolute top-0 bg-aesthetic -z-10 h-full" >
+    <section class="flex absolute top-0 bg-aesthetic -z-10 h-full max-w-screen-2xl" >
     </section>
 
     <section class="container w-full h-60 relative my-14 mx-auto bg-amber-200/[.5] flex carousel-slide flex relative overflow-hidden">
@@ -602,12 +602,12 @@
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+                  if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                  }
                 }
-                }
+              }
             }
-        }
 
 
     document.addEventListener('DOMContentLoaded', () => {
