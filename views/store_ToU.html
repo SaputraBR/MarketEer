@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MarketEer</title>
+    <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 max-w-screen-2xl mx-auto">
+    <nav class="top-0 z-10 bg-main flex flex-col text-white sticky" id="navMain">
+        <div class="h-5 w-full flex bg-gray-300 top-0 sticky">
+        </div>
+    
+        <div class="flex justify-between h-20 w-auto px-6 md:px-16 lg:px-24 font-semibold ">
+            <div class="trirong self-center">
+                <a href="store.html" class="text-3xl sm:text-4xl">MarketEer</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="w-full bg-gray-100">
+        <div class="grid grid-cols-4">
+            <div class="col-span-1 px-6 mt-8 relative">
+                <div class="bg-white border-2 border-sky-300 sticky top-28 divide-y divide-gray-400">
+                    <div class="px-3 py-1 font-semibold hover:bg-slate-200" id="aboutBtn" onclick="aboutScroll()">About</div>  
+                    <div class="px-3 py-1 font-semibold hover:bg-slate-200" id="termBtn" onclick="termScroll()">Terms of Use</div>  
+                    <div class="px-3 py-1 font-semibold hover:bg-slate-200" id="privacyBtn" onclick="privacyScroll()">Privacy & Security</div>  
+                    <div class="px-3 py-1 font-semibold hover:bg-slate-200" id="helpBtn" onclick="helpScroll()">Help & Contact</div>  
+                </div>
+            </div>
+            <div class="col-span-3 mt-8 pr-14 h-full">
+                <div class="bg-white border-2 border-sky-300 px-6 py-4">
+                    <div id="about">
+                        <p class="font-bold text-xl">About</p>
+
+                        <p class="mb-1">At MarketEer, we create pathways to connect millions of sellers and buyers in more than 190 markets around the world. Our technology empowers our customers, providing everyone the opportunity to grow and thrive — no matter who they are or where they are in the world. And the ripple effect of our work creates waves of change for our customers, our company, our communities and our planet.</p>
+
+                        <p>We strive to build community and connections through ecommerce. As part of this journey, we make selling and buying equitable and attainable for all – with a goal to empower everyone, everywhere to grow, thrive and succeed on our global marketplace while making meaningful choices for their purchases and businesses.</p>
+                    </div>
+
+                    <div class="mt-6" id="term">
+                        <p class="font-bold text-xl">Terms of Use</p>
+                        <p class="mb-1">Last updated: September 14, 2022</p>
+
+                        <p class="mb-1">Welcome to MarketEer.com. MarketEer.com Services LLC and/or its affiliates ("MarketEer") provide website features and other products and services to you when you visit or shop at MarketEer.com, use MarketEer products or services, use MarketEer applications for mobile, or use software provided by MarketEer in connection with any of the foregoing (collectively, "MarketEer Services"). By using the MarketEer Services, you agree, on behalf of yourself and all members of your household and others who use any Service under your account, to the following conditions.</p>
+        
+                        <p>Please read these conditions carefully.</p>
+                        <p>We offer a wide range of MarketEer Services, and sometimes additional terms may apply. When you use an MarketEer Service (for example, Your Profile, Gift Cards, MarketEer Video, Your Media Library, MarketEer devices, or MarketEer applications) you also will be subject to the guidelines, terms and agreements applicable to that MarketEer Service ("Service Terms"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.</p>
+                    </div>                
+
+                    <div class="mt-6" id="privacy">
+                       <p class="font-bold text-xl">Privacy & Security</p>
+
+                       <ol class="list-decimal list-inside mt-1">
+                           <p>Untuk menjaga keamanan akun MarketEer kamu dan mencegah penipuan oleh pihak yang tidak bertanggung jawab, pastikan Anda memahami panduan keamanan  berikut:</p>
+                       <li class="font-semibold mt-1">Rahasiakan Kode atau PIN</li>
+                       <p>Kode verifikasi atau kode one-time password (OTP) adalah informasi rahasia, jangan sampai kamu terpancing untuk memberikannya ke pihak manapun termasuk kepada yang mengaku sebagai karyawan MarketEer, ya.</p>
+                       <li class="font-semibold mt-1">Transfer dana sesuai dengan nominal transaksi</li>
+                       <p>Saat melakukan pembayaran, lakukan transfer dana hanya ke rekening resmi MarketEer sesuai dengan nominal total tagihan di halaman pembayaran. Jangan melakukan transfer dana dengan nominal yang berbeda atau melakukan transfer ke rekening Penjual secara langsung.</p>
+                       <li class="font-semibold mt-1">Rahasiakan data pribadi</li>
+                       <p>Hindari juga untuk memberitahukan data pribadi kamu serta data penting, seperti bukti pembayaran, ke Penjual maupun ke pihak yang mengaku sebagai karyawan MarketEer. Simpan bukti pembayaran kamu sampai transaksi selesai</p>
+                       <li class="font-semibold mt-1">Waspada akun penipuan</li>
+                       <p>Mohon berhati-hati apabila Anda mendapatkan pesan dari seseorang untuk mengakses suatu link tertentu. Website resmi MarketEer hanya ada di <a href="store.html" class="text-sky-600">https://www.marketeer.com</a>.</p>
+                       <li class="font-semibold mt-1">Ganti password</li>
+                       <p>Lakukan penggantian password akun MarketEer kamu secara berkala. Usahakan jangan menggunakan password yang sama dengan akun Anda yang lain, ya. Kamu juga bisa mengatur password dengan menggunakan simbol dan minimal mencapai 8 karakter. Hindari penggunaan nama pribadi atau username. Apabila kamu lupa kata sandi</p>
+                       <li class="font-semibold mt-1">Waspada informasi hoax</li>
+                       <p>MarketEer akan menyampaikan informasi tentang promo, undian, dan info lain melalui media resmi seperti website, blog, Twitter, Instagram, dan Facebook yang terverifikasi. Users diharapkan untuk berhati-hati apabila mendapatkan informasi yang mengatasnamakan MarketEer di luar media resmi.</p>
+                        </ol>
+                    </div>
+
+                    <div class="mt-6" id="help">
+                        <h1 class="text-xl font-bold mb-4">Any question or suggestion</h1>
+                        <div class="grid grid-cols-3 divide-x divide-gray-400">
+                            <div class="col-span-1">
+                                <span class="flex justify-center">
+                                    <i class="fa-brands fa-whatsapp fa-3x text-green-600"></i>
+                                </span>
+                                <p class="flex justify-center font-semibold text-xl mt-3">0847-1455-7698</p>
+                            </div>
+                            <div class="col-span-1">
+                                <span class="flex justify-center">
+                                    <i class="fa-solid fa-envelope fa-3x text-[#e40000]"></i>
+                                </span>
+                                <p class="flex justify-center font-semibold text-xl mt-3">help@marketeer.com</p>
+                            </div>
+                            <div class="col-span-1">
+                                <span class="flex justify-center">
+                                    <i class="fa-solid fa-phone fa-3x"></i>
+                                </span>
+                                <p class="flex justify-center font-semibold text-xl mt-3">0211 15498635</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="mt-16 pt-16 bg-main"> 
+        <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 gap-6">
+            <div class="col-span-1 md:col-span-3 lg:col-span-2">
+                <img class="w-52 h-52 self-center" src="../public/img/1.png" alt="">
+            </div>
+          
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">Products</h1>
+                <div class="flex flex-col">
+                    <a href="#">Foods</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Gadgets</a>
+                    <a href="#">Personal care</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Home</a>
+                    <a href="#">Tools</a>
+                </div>
+            </div>
+    
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">Customer Services</h1>
+                <div class="flex flex-col">
+                    <a href="store_ToU.html">Help Center</a>
+                    <a href="store_ToU.html">Privacy & Security</a>
+                    <a href="store_ToU.html">Terms of Use</a>
+                </div>
+            </div>
+    
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">MarketEer</h1>
+                <div class="flex flex-col">
+                    <a href="store_ToU.html">About Us</a>
+                    <a href="store_ToU.html">Contacts</a>
+                </div>
+            </div>
+        </div>
+        <div class="text white text-sm font-semibold border-t max-w-7xl mx-auto py-6 mt-16 text-center">kopirek &copy; MarketEer 2022</div>
+    </footer>
+
+    <script>
+        function aboutScroll() {
+            var about = document.getElementById('about');
+            var headerOffset = 110;
+            var elementPosition = about.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top:  offsetPosition,
+                behavior: "smooth"
+            });
+        }
+        
+        function termScroll() {
+            var term = document.getElementById('term');
+            var headerOffset = 110;
+            var elementPosition = term.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top:  offsetPosition,
+                behavior: "smooth"
+            });
+        }
+
+        function privacyScroll() {
+            var privacy = document.getElementById('privacy');
+            var headerOffset = 110;
+            var elementPosition = privacy.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top:  offsetPosition,
+                behavior: "smooth"
+            });
+        }
+
+        function helpScroll() {
+            var term = document.getElementById('help');
+            var headerOffset = 110;
+            var elementPosition = help.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top:  offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>
