@@ -18,7 +18,7 @@
       <div class="flex ml-auto mr-4 text-black text-sm"> 
         <a href="store_ToU.html" class="mr-2 hover:text-[#ff2f00]">About</a>
         <a href="store_ToU.html" class="mr-2 hover:text-[#ff2f00]">Help Center</a>
-        <a href="" class="flex mr-2 hover:text-[#ff2f00]">
+        <a href="store_login.html" class="flex mr-2 hover:text-[#ff2f00]">
           <span class="self-center" id="">        
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -31,7 +31,10 @@
 
     <div class="flex justify-between h-20 w-auto px-6 md:px-16 lg:px-24 font-semibold ">
       <div class="trirong self-center">
-        <a href="store.html" class="text-3xl sm:text-4xl">MarketEer</a>
+        <a href="store.html" class="text-3xl hidden sm:block sm:text-4xl">MarketEer</a>
+        <a href="store.html" class="h-full flex w-16 block sm:hidden">
+          <img src="../public/img/MARKETEER_CROPED.png" alt="" class="w-full self-center object-cover">
+        </a>
       </div>
       <form class="w-8/12 h-full">
         <div class="h-full flex relative mx-4">
@@ -95,7 +98,7 @@
     <section class="flex absolute top-0 bg-aesthetic -z-10 h-full max-w-screen-2xl" >
     </section>
 
-    <section class="container w-full h-60 relative my-14 mx-auto bg-amber-200/[.5] flex carousel-slide flex relative overflow-hidden">
+    <section class="container w-full h-40 sm:h-60 relative my-14 mx-auto bg-amber-200/[.5] flex carousel-slide flex relative overflow-hidden">
       <div class="slide">
           <a href="#" target="_blanks">
             <img class="object-cover w-full h-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="">
@@ -111,29 +114,29 @@
             <img class="object-cover w-full h-full" src="../public/img/16221025_5725317.jpg" alt="">
           </a>
       </div>
-      <span class="w-20 h-20 ml-2 flex justify-center self-center prevButton left-0 absolute rounded-full bg-white hover:bg-white/[.8]">
-        <i class="fa-solid fa-chevron-left fa-3x self-center text-[#ff4800]"></i>      
+      <span class="w-12 h-12 sm:w-20 sm:h-20 ml-2 flex justify-center self-center prevButton left-0 absolute rounded-full bg-white hover:bg-white/[.8]">
+        <i class="fa-solid fa-chevron-left fa-2x self-center text-[#ff4800]"></i>      
       </span>
-      <span class="w-20 h-20 mr-2 flex justify-center self-center nextButton right-0 absolute rounded-full bg-white hover:bg-white/[.8]">
-        <i class="fa-solid fa-chevron-right fa-3x self-center text-[#ff4800]"></i>
+      <span class="w-12 h-12 sm:w-20 sm:h-20 mr-2 flex justify-center self-center nextButton right-0 absolute rounded-full bg-white hover:bg-white/[.8]">
+        <i class="fa-solid fa-chevron-right fa-2x self-center text-[#ff4800]"></i>
       </span>
     </section>
 
-    <section class="w-full mx-auto" id="best-offer">
+    <section class="w-full h-auto mx-auto" id="best-offer">
       <h1 class="text-4xl font-semibold mb-2 ml-4">Best Offers</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 relative">
-        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
           <div class="container top-0 absolute hover:cursor-default">
             <div class="relative flex justify-center seller" >
               <p class="self-center font-semibold text-white">Best Seller</p>
             </div> 
           </div>
           <a href="store_product.html" class="">
-            <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-cover h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
+            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+              <img class="object-contain h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
             </div>
           </a>
-          <div class="mt-5 px-6">
+          <div class="h-auto py-4 px-6">
             <div class="font-bold text-xl mb-2">
               <a href="store_product.html" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
             </div>
@@ -145,18 +148,18 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
           <div class="container top-0 absolute hover:cursor-default">
             <div class="relative flex justify-center favorite">
               <p class="self-center font-semibold text-white">Favorite</p>
             </div>
           </div>
           <a href="store_product.html" class="">
-            <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-cover h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
+            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+              <img class="object-contain h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
             </div>
           </a>
-          <div class="h-auto mt-5 px-6">
+          <div class="h-auto py-4 px-6">
             <div class="font-bold text-xl mb-2">
               <a href="store_product.html" class="hover:underline underline-offset-1">Polo Bear by Ralph Lauren M/L/XL/XXL</a>
             </div>
@@ -168,18 +171,18 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
           <div class="container top-0 absolute hover:cursor-default">
               <div class="relative flex justify-center men">
                 <p class="self-center font-semibold text-white">Men</p>
               </div>
           </div>
           <a href="store_product.html" class="">
-            <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-cover h-full w-full" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
+            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+              <img class="object-contain h-full w-full" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
             </div>
           </a>
-          <div class="h-auto mt-5 px-6">
+          <div class="h-auto py-4 px-6">
             <div class="font-bold text-xl mb-2">
               <a href="store_product.html" class="hover:underline underline-offset-1">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
             </div>
@@ -191,18 +194,18 @@
           </div>
         </div>
 
-        <div class="rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2  relative">
+        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
           <div class="container absolute top-0">
               <div class="women flex justify-center">
                 <p class="self-center font-semibold text-white">Women</p>
               </div>
           </div>
           <a href="store_product.html" class="">
-            <div class="h-3/4 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-cover h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
+            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+              <img class="object-contain h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
             </div>
           </a>
-          <div class="py-4 px-6">
+          <div class="h-auto py-4 px-6">
             <div class="font-bold text-xl mb-2">
               <a href="store_product.html" class="hover:underline underline-offset-1">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
             </div>
