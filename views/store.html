@@ -4,12 +4,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MarketEer</title>
   <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
+  <link rel="stylesheet" type="text/css" href="../public/src/store.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: wrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card {
+    display: inline-block;
+  }
+  </style>
 </head>
 
 <body class="bg-slate-100 max-w-screen-2xl mx-auto">
@@ -32,7 +45,7 @@
     <div class="flex justify-between h-20 w-auto px-6 md:px-16 lg:px-24 font-semibold ">
       <div class="trirong self-center">
         <a href="store.html" class="text-3xl hidden sm:block sm:text-4xl">MarketEer</a>
-        <a href="store.html" class="h-full flex w-16 block sm:hidden">
+        <a href="store.html" class="h-full flex w-12 block sm:hidden">
           <img src="../public/img/MARKETEER_CROPED.png" alt="" class="w-full self-center object-cover">
         </a>
       </div>
@@ -122,102 +135,198 @@
       </span>
     </section>
 
-    <section class="w-full h-auto mx-auto" id="best-offer">
+    <section class="container mx-auto w-full h-auto">
       <h1 class="text-4xl font-semibold mb-2 ml-4">Best Offers</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 relative">
-        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
-          <div class="container top-0 absolute hover:cursor-default">
-            <div class="relative flex justify-center seller" >
-              <p class="self-center font-semibold text-white">Best Seller</p>
-            </div> 
-          </div>
-          <a href="store_product.html" class="">
-            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-contain h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
+      <section class="scrolling-wrapper w-full h-auto mx-auto" id="best-offer">
+        <div class="inline-flex h-auto w-auto sm:grid sm:grid-cols-2 md:grid-cols-4">
+          <div class="w-64 sm:w-auto sm:col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container top-0 absolute hover:cursor-default">
+              <div class="relative flex justify-center seller" >
+                <p class="self-center font-semibold text-white">Best Seller</p>
+              </div> 
             </div>
-          </a>
-          <div class="h-auto py-4 px-6">
-            <div class="font-bold text-xl mb-2">
-              <a href="store_product.html" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
-            </div>
-            <span class="flex flex-wrap mb-1">
-              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">42%</span>
-              <p class="mx-2 text-sm line-through self-center text-secondary">Rp1.500.000</p>              
-            </span>
-            <p class="text-lg font-semibold self-center">Rp14.999.999</p>
-          </div>
-        </div>
-
-        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
-          <div class="container top-0 absolute hover:cursor-default">
-            <div class="relative flex justify-center favorite">
-              <p class="self-center font-semibold text-white">Favorite</p>
-            </div>
-          </div>
-          <a href="store_product.html" class="">
-            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-contain h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
-            </div>
-          </a>
-          <div class="h-auto py-4 px-6">
-            <div class="font-bold text-xl mb-2">
-              <a href="store_product.html" class="hover:underline underline-offset-1">Polo Bear by Ralph Lauren M/L/XL/XXL</a>
-            </div>
-            <span class="flex flex-wrap mb-1">
-              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">38%</span>
-              <p class="mx-2 text-sm line-through self-center text-secondary">Rp2.430.000</p>              
-            </span>
-            <p class="text-lg font-semibold self-center">Rp20.999.999</p>
-          </div>
-        </div>
-
-        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
-          <div class="container top-0 absolute hover:cursor-default">
-              <div class="relative flex justify-center men">
-                <p class="self-center font-semibold text-white">Men</p>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
               </div>
-          </div>
-          <a href="store_product.html" class="">
-            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-contain h-full w-full" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
-            </div>
-          </a>
-          <div class="h-auto py-4 px-6">
-            <div class="font-bold text-xl mb-2">
-              <a href="store_product.html" class="hover:underline underline-offset-1">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
-            </div>
-            <span class="flex flex-wrap mb-1">
-              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">15%</span>
-              <p class="mx-2 text-sm line-through self-center text-secondary">Rp983.000</p>              
-            </span>
-            <p class="text-lg font-semibold self-center">Rp3.999.999</p>
-          </div>
-        </div>
-
-        <div class="col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
-          <div class="container absolute top-0">
-              <div class="women flex justify-center">
-                <p class="self-center font-semibold text-white">Women</p>
+            </a>
+            <div class="h-auto py-2 px-4 sm:py-4 sm:px-6">
+              <div class="font-bold text-lg sm:text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
               </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-1 sm:px-3 py-1 text-xs sm:text-sm font-semibold text-white">42%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp1.500.000</p>              
+              </span>
+              <p class="text-xl font-semibold self-center">Rp14.999.999</p>
+            </div>
           </div>
-          <a href="store_product.html" class="">
-            <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
-              <img class="object-contain h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
+  
+          <div class="w-64 sm:w-auto sm:col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container top-0 absolute hover:cursor-default">
+              <div class="relative flex justify-center favorite">
+                <p class="self-center font-semibold text-white">Favorite</p>
+              </div>
             </div>
-          </a>
-          <div class="h-auto py-4 px-6">
-            <div class="font-bold text-xl mb-2">
-              <a href="store_product.html" class="hover:underline underline-offset-1">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-2 px-4 sm:py-4 sm:px-6">
+              <div class="font-bold text-lg sm:text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">Polo Bear by Ralph Lauren M/L/XL/XXL</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-1 sm:px-3 py-1 text-xs sm:text-sm font-semibold text-white">38%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp2.430.000</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp20.999.999</p>
             </div>
-            <span class="flex flex-wrap mb-1">
-              <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">23%</span>
-              <p class="mx-2 text-sm line-through self-center text-secondary">Rp435.900</p>              
-            </span>
-            <p class="text-lg font-semibold self-center">Rp517.209.000</p>
+          </div>
+  
+          <div class="w-64 sm:w-auto col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container top-0 absolute hover:cursor-default">
+                <div class="relative flex justify-center men">
+                  <p class="self-center font-semibold text-white">Men</p>
+                </div>
+            </div>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-2 px-4 sm:py-4 sm:px-6">
+              <div class="font-bold text-lg sm:text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-1 sm:px-3 py-1 text-xs sm:text-sm font-semibold text-white">15%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp983.000</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp3.999.999</p>
+            </div>
+          </div>
+  
+          <div class="w-64 sm:w-auto col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container absolute top-0">
+                <div class="women flex justify-center">
+                  <p class="self-center font-semibold text-white">Women</p>
+                </div>
+            </div>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-2 px-4 sm:py-4 sm:px-6">
+              <div class="font-bold text-lg sm:text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-1 sm:px-3 py-1 text-xs sm:text-sm font-semibold text-white">23%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp435.900</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp517.209.000</p>
+            </div>
           </div>
         </div>
-      </div>
+        <!--<div class="flex w-full overflow-x-scroll sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 relative">
+          <div class="w-96 sm:col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container top-0 absolute hover:cursor-default">
+              <div class="relative flex justify-center seller" >
+                <p class="self-center font-semibold text-white">Best Seller</p>
+              </div> 
+            </div>
+            <a href="store_product.html" class="">
+              <div class="h-36 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/71jmjOxxE3L.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-1 px-2 sm:py-4 sm:px-6">
+              <div class="font-bold text-md sm:text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">Google Pixel 7 Pro 12/512GB</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-1 sm:px-3 py-1 text-xs sm:text-sm font-semibold text-white">42%</span>
+                <p class="mx-2 text-xs line-through self-center text-secondary">Rp1.500.000</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp14.999.999</p>
+            </div>
+          </div>
+  
+          <div class="w-96 sm:w-auto sm:col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container top-0 absolute hover:cursor-default">
+              <div class="relative flex justify-center favorite">
+                <p class="self-center font-semibold text-white">Favorite</p>
+              </div>
+            </div>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-4 px-6">
+              <div class="font-bold text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">Polo Bear by Ralph Lauren M/L/XL/XXL</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">38%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp2.430.000</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp20.999.999</p>
+            </div>
+          </div>
+  
+          <div class="w-96 col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container top-0 absolute hover:cursor-default">
+                <div class="relative flex justify-center men">
+                  <p class="self-center font-semibold text-white">Men</p>
+                </div>
+            </div>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/nike-jordan.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-4 px-6">
+              <div class="font-bold text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">Air Jordan 7 Retro SE Men's Shoes 40-47</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">15%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp983.000</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp3.999.999</p>
+            </div>
+          </div>
+  
+          <div class="w-96 col-span-1 rounded-lg shadow-md bg-white mt-4 md:mt-1 mx-2 relative">
+            <div class="container absolute top-0">
+                <div class="women flex justify-center">
+                  <p class="self-center font-semibold text-white">Women</p>
+                </div>
+            </div>
+            <a href="store_product.html" class="">
+              <div class="h-64 sm:h-3/5 md:h-2/4 xl:h-3/5">
+                <img class="object-contain h-full w-full" src="../public/img/Hermes-Kelly.jpg" alt="Sunset in the mountains">
+              </div>
+            </a>
+            <div class="h-auto py-4 px-6">
+              <div class="font-bold text-xl mb-2">
+                <a href="store_product.html" class="hover:underline underline-offset-1">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</a>
+              </div>
+              <span class="flex flex-wrap mb-1">
+                <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">23%</span>
+                <p class="mx-2 text-sm line-through self-center text-secondary">Rp435.900</p>              
+              </span>
+              <p class="text-lg font-semibold self-center">Rp517.209.000</p>
+            </div>
+          </div>
+        </div>-->
+      </section>
     </section>
+
 
     <section class="w-full h-auto mx-auto mt-12" id="daily-offer">
       <h1 class="text-3xl font-semibold mb-2 ml-4">Daily Offers</h1>
