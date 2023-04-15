@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>MarketEer</title>
     <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
+    <link rel="stylesheet" type="text/css"  href="../public/src/store.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
@@ -15,10 +16,10 @@
 <body class="bg-slate-100 max-w-screen-2xl mx-auto">
     <nav class="top-0 z-10 bg-main flex flex-col text-white sticky" id="navMain">
         <div class="h-5 w-full flex bg-gray-300 top-0 sticky">
-          <div class="flex ml-auto mr-4 text-black text-sm"> 
+          <div class="flex ml-auto mr-1 sm:mr-4 text-black text-sm"> 
             <a href="store_ToU.html" class="mr-2 hover:text-[#ff2f00]">About</a>
             <a href="store_ToU.html" class="mr-2 hover:text-[#ff2f00]">Help Center</a>
-            <a href="" class="flex mr-2 hover:text-[#ff2f00]">
+            <a href="store_login.html" class="flex mr-2 hover:text-[#ff2f00]">
               <span class="self-center" id="">        
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -29,9 +30,12 @@
           </div>
         </div>
     
-        <div class="flex justify-between h-20 w-auto px-6 md:px-16 lg:px-24 font-semibold ">
+        <div class="flex justify-between h-20 w-auto px-2 sm:px-6 md:px-16 lg:px-24 font-semibold ">
           <div class="trirong self-center">
-            <a href="store.html" class="text-3xl sm:text-4xl">MarketEer</a>
+            <a href="store.html" class="text-3xl hidden sm:block sm:text-4xl">MarketEer</a>
+            <a href="store.html" class="h-full flex w-12 block sm:hidden">
+              <img src="../public/img/MARKETEER_CROPED.png" alt="" class="w-full self-center object-cover">
+            </a>
           </div>
           <form class="w-8/12 h-full">
             <div class="h-full flex relative mx-4">
@@ -91,23 +95,23 @@
         </div>
       </nav>
     
-    <main class="w-full grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 bg-gray-200 ">
+    <main class="w-full grid lg:grid-cols-3 bg-gray-200">
+
         <section class="col-span-2">
-            <div class="grid grid-cols-2 gap-x-6 px-4 py-4">
-                <div class="col-span-1 flex mx-auto max-h-96 sticky top-28">
-                    <div class="grid grid-rows-4 w-20 gap-y-1 mr-2">
-                        <img src="../public/img/air_jordan_7_3.jpg" alt="" class="row-span-1 object-cover border border-sky-500 mb-2 h-full w-full">
-                        <img src="../public/img/air_jordan_7_2.jpg" alt="" class="row-span-1 object-cover border border-sky-500 mb-2 h-full w-full">
-                        <img src="../public/img/air_jordan_7.jpg" alt="" class="row-span-1 object-cover border border-sky-500 mb-2 h-full w-full">
-                        
+            <div class="sm:grid sm:grid-cols-2 gap-x-6 px-2 sm:px-4 py-4">
+                <div class="sm:col-span-1 flex justify-center h-full max-h-72 sm:auto sm:sticky top-28">
+                    <div class="w-16 h-full overflow-y-scroll space-y-1 scrollbar-hide ">
+                        <img src="../public/img/air_jordan_7_3.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
+                        <img src="../public/img/air_jordan_7_2.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
+                        <img src="../public/img/air_jordan_7.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
                     </div>
-                    <div class="w-full h-full flex justify-center">
-                        <img src="../public/img/nike-jordan.jpg" alt="" class="object-cover">
+                    <div class="w-3/4 sm:w-full h-full ml-2">
+                        <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover">
                     </div>
                 </div>
-                <div class="col-span-1 relative">
+                <div class="col-span-1 relative mx-6 sm:mx-0 mt-4">
                     <div class="">
-                        <h1 class="text-2xl font-bold">Air Jordan 7 Retro SE Men's Shoes 40-47</h1>
+                        <h1 class="text-xl sm:text-2xl font-bold">Air Jordan 7 Retro SE Men's Shoes 40-47</h1>
                         <div class="mt-1 flex">
                             <p class="mr-1">Terjual 10 |</p>
                             <span>
@@ -173,26 +177,43 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-5">
-                            <p>Deskripsi :</p>
-                            <ul class="list-disc list-inside">
-                                <li>Full-length Nike Air technology provides lightweight cushioning</li>
-                                <li>Leather and textile materials in the upper add durability</li>
-                                <li>Rubber outsole gives your style traction</li>
-                                <li>Colour Shown: Vachetta Tan/Taxi/Dark Concord/Black</li>
-                                <li>Style: DZ4729-200</li>
-                                <li>Country/Region of Origin: China</li>
-                            </ul>
+                        <div class="hidden sm:block" id="detail-item">
+                            <div class="mt-5">
+                                <p>Deskripsi :</p>
+                                <ul class="list-disc list-inside">
+                                    <li>Full-length Nike Air technology provides lightweight cushioning</li>
+                                    <li>Leather and textile materials in the upper add durability</li>
+                                    <li>Rubber outsole gives your style traction</li>
+                                    <li>Colour Shown: Vachetta Tan/Taxi/Dark Concord/Black</li>
+                                    <li>Style: DZ4729-200</li>
+                                    <li>Country/Region of Origin: China</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6">
+                                <p>CATATAN :</p>
+                                <ul class="list-disc list-inside">
+                                    <li>Barang yang sudah dibeli tidak dapat dikembalikan atau ditukar dengan alasan apapun, kecuali:</li>
+                                    <li>Kami pihak seller salah mengirim barang sehingga tidak sesuai dengan pesanan.</li>
+                                    <li>Barang yang kita kirim tidak sesuai dengan gambar maupun deskripsi.</li>
+                                    <li>Ketersediaan size sudah update di pilihan warna dan ukuran, jika masih bisa di pesan berarti ready.</li>
+                                    <li>Pemesanan akan kami proses maksimal 2x24 jam kerja, tidak termasuk hari sabtu, minggu, dan tanggal merah.</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="mt-6">
-                            <p>CATATAN :</p>
-                            <ul class="list-disc list-inside">
-                                <li>Barang yang sudah dibeli tidak dapat dikembalikan atau ditukar dengan alasan apapun, kecuali:</li>
-                                <li>Kami pihak seller salah mengirim barang sehingga tidak sesuai dengan pesanan.</li>
-                                <li>Barang yang kita kirim tidak sesuai dengan gambar maupun deskripsi.</li>
-                                <li>Ketersediaan size sudah update di pilihan warna dan ukuran, jika masih bisa di pesan berarti ready.</li>
-                                <li>Pemesanan akan kami proses maksimal 2x24 jam kerja, tidak termasuk hari sabtu, minggu, dan tanggal merah.</li>
-                            </ul>
+                        <div class="mt-4 border-b border-sky-400" id="detail-click" onclick="detail()">
+                            <div id="detil" class="flex sm:hidden justify-center mx-auto">
+                                <span class="self-center mr-1">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </span>
+                                <p class="font-semibold">selengkapnya</p>
+                            </div>
+
+                            <div id="tutup" class="hidden flex sm:hidden justify-center mx-auto">
+                                <span class="self-center mr-1">
+                                    <i class="fa-solid fa-angle-up"></i>
+                                </span>
+                                <p class="font-semibold">lebih sedikit</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -273,7 +294,7 @@
         </section>
 
 
-        <div class="col-span-1 p-4">
+        <section class="col-span-1 p-4">
             <div class="border-2 border-sky-400 p-4 rounded-sm sticky top-28">
                 <h1 class="text-xl font-semibold mb-2">Atur jumlah</h1>
                 <div class="flex font-semibold mb-2">
@@ -332,7 +353,7 @@
                     <button class="py-2 mb-2 border border-sky-600 bg-sky-100 w-full font-semibold text-xl hover:border-sky-600 hover:bg-sky-300">beli</button>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="mt-16 pt-16 bg-main"> 
@@ -375,6 +396,23 @@
     </footer>
 
     <script>
+        function detail() {
+            var detail = document.getElementById('detail-click');
+            var item   = document.getElementById('detail-item');
+            var detil = document.getElementById('detil');
+            var tutup = document.getElementById('tutup');
+
+            if (item.style.display === 'none') {
+                item.style.display = 'block';
+                detil.style.display = 'block';
+                tutup.style.display = 'none';
+            } else {
+                item.style.display = 'none';
+                detil.style.display = 'none';
+                tutup.style.display = 'block';
+            }
+        }
+
         function myFunction() {
             document.getElementById("dropdown-category").classList.toggle("hidden");
             }
