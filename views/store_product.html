@@ -95,10 +95,9 @@
         </div>
       </nav>
     
-    <main class="w-full grid lg:grid-cols-3 bg-gray-200">
-
-        <section class="col-span-2">
-            <div class="sm:grid sm:grid-cols-2 gap-x-6 px-2 sm:px-4 py-4">
+    <main class="w-full bg-gray-200">
+        <section class="col-span-2 md:grid md:grid-cols-3">
+            <div class="sm:grid sm:grid-cols-2 md:col-span-2 gap-x-6 px-2 sm:px-4 py-4">
                 <div class="sm:col-span-1 flex justify-center h-full max-h-72 sm:auto sm:sticky top-28">
                     <div class="w-16 h-full overflow-y-scroll space-y-1 scrollbar-hide ">
                         <img src="../public/img/air_jordan_7_3.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
@@ -109,7 +108,7 @@
                         <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover">
                     </div>
                 </div>
-                <div class="col-span-1 relative mx-6 sm:mx-0 mt-4">
+                <div class="sm:col-span-1 relative mx-6 sm:mx-0 mt-4">
                     <div class="">
                         <h1 class="text-xl sm:text-2xl font-bold">Air Jordan 7 Retro SE Men's Shoes 40-47</h1>
                         <div class="mt-1 flex">
@@ -200,157 +199,161 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="mt-4 border-b border-sky-400" id="detail-click" onclick="detail()">
-                            <div id="detil" class="flex sm:hidden justify-center mx-auto">
-                                <span class="self-center mr-1">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </span>
-                                <p class="font-semibold">selengkapnya</p>
+                        <div class="mt-4" id="detail-click" onclick="detail()">
+                            <div id="detil" class="sm:hidden border-b border-sky-400">
+                                <div class="flex justify-center mx-auto">
+                                    <span class="self-center mr-1">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </span>
+                                    <p class="font-semibold">selengkapnya</p>
+                                </div>
                             </div>
 
-                            <div id="tutup" class="hidden flex sm:hidden justify-center mx-auto">
-                                <span class="self-center mr-1">
-                                    <i class="fa-solid fa-angle-up"></i>
-                                </span>
-                                <p class="font-semibold">lebih sedikit</p>
+                            <div id="tutup" class="hidden border-b border-sky-400">
+                                <div class="flex justify-center mx-auto">
+                                    <span class="self-center mr-1">
+                                        <i class="fa-solid fa-angle-up"></i>
+                                    </span>
+                                    <p class="font-semibold">lebih sedikit</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-full bg-gray-200">
-                <div class="w-5/6 mb-8 mx-auto divide-y-2 divide-gray-300">
-                    <h1 class="mt-10 text-3xl font-semibold">Ulasan</h1>
-                    <div class="w-full h-auto px-5 pt-2 pb-6 mt-4 bg-white">
-                        <div class="flex mb-3">
-                            <span>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                            </span>
-                            <p class="ml-2 font-semibold">· 16 JUL</p>
+
+            <div class="md:col-span-1 mt-4 sm:mt-2">
+                <div class="w-5/6 h-auto mx-auto border-2 border-sky-400 p-4 rounded-sm sticky top-28">
+                    <h1 class="text-xl font-semibold mb-2">Atur jumlah</h1>
+                    <div class="flex font-semibold mb-2 flex-wrap">
+                        <p class="text-lg">Air Jordan 7 Retro SE Men's</p>
+                        <p class="text-lg">, 40</p>
+                    </div>
+                    <div class="flex flex-wrap mb-3">
+                        <div class="w-28 h-10 flex bg-white rounded-md">
+                            <button class="mr-auto px-3 hover:bg-slate-100" id="buttonDec">
+                                <i class="fa-solid fa-minus text-[#fa4f00]"></i>
+                            </button>
+                            <div class="self-center">
+                                <p class="font-bold text-xl" id="hasil"></p>
+                            </div>
+                            <button class="ml-auto px-3 hover:bg-slate-100" id="buttonInc">
+                                <i class="fa-solid fa-plus text-[#fa4f00]"></i>
+                            </button>
                         </div>
-                        <div class="flex">
-                            <span class="flex justify-center bg-slate-400 rounded-full w-8 h-8">
-                                <i class="self-center fa-solid fa-user fa-md text-[#fff]"></i>
-                            </span>
-                            <h2 class="ml-1 self-center text-lg font-semibold">Mykhailo Mudryk</h2>
-                        </div>
-                        <div class="mt-1">
-                            <p class="text-sm">Air Jordan 7 Retro SE Men's, 44</p>
-                            <p class="mt-2 text-lg">jangan belanja disini nanti ketagihan!!!</p>
+                        <div class="ml-2 self-center">
+                            <p class="text-lg font-bold">stok 10</p>
                         </div>
                     </div>
-    
-                    <div class="w-full h-auto px-5 pt-2 pb-6 bg-white">
-                        <div class="flex mb-3">
-                            <span>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-gray-400"></i>
-                            </span>
-                            <p class="ml-2 font-semibold">· 11 JUN</p>
-                        </div>
+                    <div class="mb-6">
                         <div class="flex">
-                            <span class="flex justify-center bg-slate-400 rounded-full w-8 h-8">
-                                <i class="self-center fa-solid fa-user fa-md text-[#fff]"></i>
+                            <span class="self-center">
+                                <i class="fa-solid fa-pencil"></i>
                             </span>
-                            <h2 class="ml-1 self-center text-lg font-semibold">Andreas Christensen</h2>
+                            <p class="ml-1">tambah catatan</p>
                         </div>
-                        <div class="mt-1">
-                            <p class="text-sm">Air Jordan 7 Retro SE Men's, 41</p>
-                            <p class="mt-2 text-lg">Pengiriman cepat, barang bagus dan nyaman dipakai</p>
+                        <input type="text" class="w-3/4 py-1 px-2 rounded-lg">
+                    </div>
+                    <div class="border-t border-gray-500">
+                        <div class="flex flex-wrap mt-1">
+                            <p class="text-lg lg:text-xl font-semibold">Subtotal</p>
+                            <span class="block ml-auto">
+                                <p class="text-sm float-right line-through self-center text-secondary">Rp1.500.000</p>              
+                                <p class="text-lg lg:text-xl font-semibold ml-auto">Rp14.999.999</p>
+                            </span>
                         </div>
                     </div>
-    
-                    <div class="w-full h-auto px-5 pt-2 pb-6 bg-white">
-                        <div class="flex mb-3">
-                            <span>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-amber-500"></i>
-                                <i class="fa-solid fa-star text-gray-400"></i>
-                            </span>
-                            <p class="ml-2 font-semibold">· 23 MAY</p>
+                    <div class="mt-5 px-4">
+                        <div class="flex justify-center mb-2">
+                            <button class="lg:flex justify-center py-2 px-4 mr-2 w-full bg-amber-300 hover:bg-amber-400 font-semibold text-lg">
+                                <span class="self-center mr-1">
+                                    <i class="fa-solid fa-heart"></i>
+                                </span>
+                                <p class="sm:block md:hidden lg:block">wishlist</p>
+                            </button>
+                            <button class="lg:flex justify-center py-2 px-4 ml-2 w-full bg-amber-300 hover:bg-amber-400 font-semibold text-lg">
+                                <span class="self-center mr-1">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </span>
+                                <p class="sm:block md:hidden lg:block">keranjang</p>
+                            </button>
                         </div>
-                        <div class="flex">
-                            <span class="flex justify-center bg-slate-400 rounded-full w-8 h-8">
-                                <i class="self-center fa-solid fa-user fa-md text-[#fff]"></i>
-                            </span>
-                            <h2 class="ml-1 self-center text-lg font-semibold">Carney Chukwuemeka</h2>
-                        </div>
-                        <div class="mt-1">
-                            <p class="text-sm">Air Jordan 7 Retro SE Men's, 43</p>
-                            <p class="mt-2 text-lg">harga murah dan terjangkau</p>
-                        </div>
+                        <button class="py-2 mb-2 border border-sky-600 bg-sky-100 w-full font-semibold text-xl hover:border-sky-600 hover:bg-sky-300">beli</button>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <section class="col-span-1 p-4">
-            <div class="border-2 border-sky-400 p-4 rounded-sm sticky top-28">
-                <h1 class="text-xl font-semibold mb-2">Atur jumlah</h1>
-                <div class="flex font-semibold mb-2">
-                    <p class="text-lg">Air Jordan 7 Retro SE Men's</p>
-                    <p class="text-lg">, 40</p>
-                </div>
-                <div class="flex mb-3">
-                    <div class="w-28 h-10 flex bg-white rounded-md">
-                        <button class="mr-auto px-3 hover:bg-slate-100" id="buttonDec">
-                            <i class="fa-solid fa-minus text-[#fa4f00]"></i>
-                        </button>
-                        <div class="self-center">
-                            <p class="font-bold text-xl" id="hasil"></p>
-                        </div>
-                        <button class="ml-auto px-3 hover:bg-slate-100" id="buttonInc">
-                            <i class="fa-solid fa-plus text-[#fa4f00]"></i>
-                        </button>
-                    </div>
-                    <div class="ml-2 self-center">
-                        <p class="text-xl font-semibold">stok 10</p>
-                    </div>
-                </div>
-                <div class="mb-6">
-                    <div class="flex">
-                        <span class="self-center">
-                            <i class="fa-solid fa-pencil"></i>
+        <section class="col-span-1 w-full bg-gray-200 p-2">
+            <div class="w-full sm:w-5/6 mb-8 mx-auto divide-y-2 divide-gray-300">
+                <h1 class="mt-10 text-3xl font-semibold">Ulasan</h1>
+                <div class="w-full h-auto px-5 pt-2 pb-6 mt-4 bg-white">
+                    <div class="flex mb-3">
+                        <span>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
                         </span>
-                        <p class="ml-1">tambah catatan</p>
+                        <p class="ml-2 font-semibold">· 16 JUL</p>
                     </div>
-                    <input type="text" class="w-3/4 py-1 px-2 rounded-lg">
+                    <div class="flex">
+                        <span class="flex justify-center bg-slate-400 rounded-full w-8 h-8">
+                            <i class="self-center fa-solid fa-user fa-md text-[#fff]"></i>
+                        </span>
+                        <h2 class="ml-1 self-center text-lg font-semibold">Mykhailo Mudryk</h2>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-sm">Air Jordan 7 Retro SE Men's, 44</p>
+                        <p class="mt-2 text-lg">jangan belanja disini nanti ketagihan!!!</p>
+                    </div>
                 </div>
-                <div class="border-t border-gray-500">
-                    <div class="flex flex-wrap mt-1">
-                        <p class="ml-auto text-sm line-through self-center text-secondary">Rp1.500.000</p>              
+    
+                <div class="w-full h-auto px-5 pt-2 pb-6 bg-white">
+                    <div class="flex mb-3">
+                        <span>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-gray-400"></i>
+                        </span>
+                        <p class="ml-2 font-semibold">· 11 JUN</p>
                     </div>
-                    <div class="flex text-xl font-semibold">
-                        <p>Subtotal</p>
-                        <p class="ml-auto">Rp14.999.999</p>
+                    <div class="flex">
+                        <span class="flex justify-center bg-slate-400 rounded-full w-8 h-8">
+                            <i class="self-center fa-solid fa-user fa-md text-[#fff]"></i>
+                        </span>
+                        <h2 class="ml-1 self-center text-lg font-semibold">Andreas Christensen</h2>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-sm">Air Jordan 7 Retro SE Men's, 41</p>
+                        <p class="mt-2 text-lg">Pengiriman cepat, barang bagus dan nyaman dipakai</p>
                     </div>
                 </div>
-                <div class="mt-5 px-4">
-                    <div class="flex justify-center mb-2">
-                        <button class="py-2 px-4 mr-2 w-full bg-amber-300 hover:bg-amber-400 font-semibold text-lg">
-                            <span>
-                                <i class="fa-solid fa-heart"></i>
-                            </span>
-                            wishlist
-                        </button>
-                        <button class="py-2 px-4 ml-2 w-full bg-amber-300 hover:bg-amber-400 font-semibold text-lg">
-                            <span>
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </span>
-                            keranjang
-                        </button>
+    
+                <div class="w-full h-auto px-5 pt-2 pb-6 bg-white">
+                    <div class="flex mb-3">
+                        <span>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <i class="fa-solid fa-star text-gray-400"></i>
+                        </span>
+                        <p class="ml-2 font-semibold">· 23 MAY</p>
                     </div>
-                    <button class="py-2 mb-2 border border-sky-600 bg-sky-100 w-full font-semibold text-xl hover:border-sky-600 hover:bg-sky-300">beli</button>
+                    <div class="flex">
+                        <span class="flex justify-center bg-slate-400 rounded-full w-8 h-8">
+                            <i class="self-center fa-solid fa-user fa-md text-[#fff]"></i>
+                        </span>
+                        <h2 class="ml-1 self-center text-lg font-semibold">Carney Chukwuemeka</h2>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-sm">Air Jordan 7 Retro SE Men's, 43</p>
+                        <p class="mt-2 text-lg">harga murah dan terjangkau</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -402,14 +405,20 @@
             var detil = document.getElementById('detil');
             var tutup = document.getElementById('tutup');
 
-            if (item.style.display === 'none') {
-                item.style.display = 'block';
-                detil.style.display = 'block';
-                tutup.style.display = 'none';
+            if (item.classList.contains('hidden')) {
+                item.classList.add('block');
+                item.classList.remove('hidden');
+
+                detil.classList.add('hidden');
+                tutup.classList.remove('hidden');
+                tutup.classList.add('flex');
             } else {
-                item.style.display = 'none';
-                detil.style.display = 'none';
-                tutup.style.display = 'block';
+                item.classList.add('hidden');
+                item.classList.remove('block');
+
+                detil.classList.remove('hidden');
+                tutup.classList.remove('flex');
+                tutup.classList.add('hidden');
             }
         }
 
