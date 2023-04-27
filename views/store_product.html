@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../public/src/js-image-zoom.js"></script>
+    <style>
+        .aktif {
+            border-color: #38bdf8;
+            border-width: 1px;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-100 max-w-screen-2xl mx-auto">
@@ -98,17 +105,18 @@
     <main class="w-full bg-gray-200">
         <section class="col-span-2 md:grid md:grid-cols-3">
             <div class="sm:grid sm:grid-cols-2 md:col-span-2 gap-x-6 px-2 sm:px-4 py-4">
-                <div class="sm:col-span-1 flex justify-center h-full max-h-72 sm:auto sm:sticky top-28">
-                    <div class="w-16 h-full overflow-y-scroll space-y-1 scrollbar-hide ">
-                        <img src="../public/img/air_jordan_7_3.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
-                        <img src="../public/img/air_jordan_7_2.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
-                        <img src="../public/img/air_jordan_7.jpg" alt="" class="row-span-1 object-cover border border-sky-500 w-full">
+                <div class="sm:col-span-1 flex justify-center h-full max-h-72 sm:sticky top-28">
+                    <div class="w-16 h-full overflow-y-scroll space-y-1 scrollbar-hide" id="img-thumb">
+                        <img src="../public/img/nike-jordan.jpg" alt="" class="row-span-1 object-cover aktif w-full">
+                        <img src="../public/img/air_jordan_7_3.jpg" alt="" class="row-span-1 object-cover w-full">
+                        <img src="../public/img/air_jordan_7_2.jpg" alt="" class="row-span-1 object-cover w-full">
+                        <img src="../public/img/air_jordan_7.jpg" alt="" class="row-span-1 object-cover w-full">
                     </div>
-                    <div class="w-3/4 sm:w-full h-full ml-2">
+                    <div class="w-3/4 sm:w-full h-full ml-2" id="img-container">
                         <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover">
                     </div>
                 </div>
-                <div class="sm:col-span-1 relative mx-6 sm:mx-0 mt-4">
+                <div class="sm:col-span-1 mx-6 sm:mx-0 mt-4">
                     <div class="">
                         <h1 class="text-xl sm:text-2xl font-bold">Air Jordan 7 Retro SE Men's Shoes 40-47</h1>
                         <div class="mt-1 flex">
@@ -287,353 +295,355 @@
         <section class="col-span-1 w-full bg-gray-200 p-2">
             <div class="h-auto container relative flex mx-auto mt-10">
                 <div class="self-center absolute hidden" id="button-prev"> 
-                    <div class="w-20 h-20 flex justify-center rounded-full bg-[#fa4f00]">
-                        <span class="self-center">
-                            <i class="fa-solid fa-chevron-left fa-3x text-white"></i>
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex justify-center rounded-full bg-[#fa4f00]">
+                        <span class="self-center cursor-pointer">
+                            <i class="fa-solid fa-chevron-left fa-2xl text-white block sm:hidden"></i>
+                            <i class="fa-solid fa-chevron-left fa-3x text-white hidden sm:block"></i>
                         </span>
                     </div>
                 </div>
                 <div class="self-center absolute right-0 " id="button-next"> 
-                    <div class="w-20 h-20 flex justify-center rounded-full bg-[#fa4f00] cursor-pointer">
-                        <span class="self-center">
-                            <i class="fa-solid fa-chevron-right fa-3x text-white"></i>
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex justify-center rounded-full bg-[#fa4f00]">
+                        <span class="self-center cursor-pointer">
+                            <i class="fa-solid fa-chevron-right fa-2xl text-white block sm:hidden"></i>
+                            <i class="fa-solid fa-chevron-right fa-3x text-white hidden sm:block"></i>
                         </span>
                     </div>
                 </div>
                 <div class="overflow-hidden scroll-smooth" id="carousel">
-                    <div class="grid grid-flow-col box-border" style="grid-gap: 16px;"  id="content">
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-                
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
-                        <a href="store_product.html" class="">
-                            <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                            <img class="object-cover h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
-                            </div>
-                        </a>
-                        <div class="px-3 md:px-6">
-                            <div class="my-2">
-                            <p class="font-semibold text-md md:text-lg">
-                                <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                            </p>
-                            </div>
-                            <div class="mb-1">
-                            <span class="flex flex-wrap">
-                                <i class="fa fa-star self-center text-[#fac800]"></i>
-                                <p class="self-center mx-1">4.8</p>
-                                <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                            </span>
-                            </div>
-                            <div class="mt-1">
-                            <span class="flex flex-wrap mb-2">  
-                                <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                            </span>
-                            </div>
-                        </div>
-                        </div>
-    
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
+                    <div class="grid grid-flow-col box-border gap-3 sm:gap-4"  id="content">
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64 h-auto ">
                             <a href="store_product.html" class="">
-                                <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                                <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
                                 </div>
                             </a>
                             <div class="px-3 md:px-6">
                                 <div class="my-2">
-                                <p class="font-semibold text-md md:text-lg">
-                                    <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                                </p>
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
                                 </div>
                                 <div class="mb-1">
-                                <span class="flex flex-wrap">
-                                    <i class="fa fa-star self-center text-[#fac800]"></i>
-                                    <p class="self-center mx-1">4.8</p>
-                                    <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                                </span>
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
                                 </div>
                                 <div class="mt-1">
-                                <span class="flex flex-wrap mb-2">  
-                                    <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                    <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                                </span>
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
                             <a href="store_product.html" class="">
-                                <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                                <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
                                 </div>
                             </a>
                             <div class="px-3 md:px-6">
                                 <div class="my-2">
-                                <p class="font-semibold text-md md:text-lg">
-                                    <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                                </p>
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
                                 </div>
                                 <div class="mb-1">
-                                <span class="flex flex-wrap">
-                                    <i class="fa fa-star self-center text-[#fac800]"></i>
-                                    <p class="self-center mx-1">4.8</p>
-                                    <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                                </span>
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
                                 </div>
                                 <div class="mt-1">
-                                <span class="flex flex-wrap mb-2">  
-                                    <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                    <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                                </span>
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
                             <a href="store_product.html" class="">
-                                <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                                <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
                                 </div>
                             </a>
                             <div class="px-3 md:px-6">
                                 <div class="my-2">
-                                <p class="font-semibold text-md md:text-lg">
-                                    <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                                </p>
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
                                 </div>
                                 <div class="mb-1">
-                                <span class="flex flex-wrap">
-                                    <i class="fa fa-star self-center text-[#fac800]"></i>
-                                    <p class="self-center mx-1">4.8</p>
-                                    <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/2208_w023_n003_2842b_p1_2842.jpg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
                                 </span>
                                 </div>
                                 <div class="mt-1">
-                                <span class="flex flex-wrap mb-2">  
-                                    <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                    <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                                </span>
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/ss21710829165003_1x.jpg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
+                            <a href="store_product.html" class="">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                </div>
+                            </a>
+                            <div class="px-3 md:px-6">
+                                <div class="my-2">
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="rounded shadow-xl bg-white pb-2 w-64">
+                        <div class="rounded shadow-xl bg-white pb-2 w-40 sm:w-48 md:w-64">
                             <a href="store_product.html" class="">
-                                <div class="h-48 sm:h-3/5 md:h-2/4 xl:h-3/5">
-                                <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
+                                <div class="h-48 sm:h-1/2 md:h-2/4 xl:h-3/5">
+                                    <img class="object-cover h-full w-full" src="../public/img/1655699125.jpeg" alt="Sunset in the mountains">
                                 </div>
                             </a>
                             <div class="px-3 md:px-6">
                                 <div class="my-2">
-                                <p class="font-semibold text-md md:text-lg">
-                                    <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
-                                </p>
+                                    <p class="font-semibold text-md md:text-lg">
+                                        <a href="store_product.html" class="hover:underline underline-offset-1">Scarlett Whitening Body Lotion by Felicya Angelista Romansa</a>
+                                    </p>
                                 </div>
                                 <div class="mb-1">
-                                <span class="flex flex-wrap">
-                                    <i class="fa fa-star self-center text-[#fac800]"></i>
-                                    <p class="self-center mx-1">4.8</p>
-                                    <p class="self-center text-sm text-black/[.7]">(161290)</p>
-                                </span>
+                                    <span class="flex flex-wrap">
+                                        <i class="fa fa-star self-center text-[#fac800]"></i>
+                                        <p class="self-center mx-1">4.8</p>
+                                        <p class="self-center text-sm text-black/[.7]">(161290)</p>
+                                    </span>
                                 </div>
                                 <div class="mt-1">
-                                <span class="flex flex-wrap mb-2">  
-                                    <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
-                                    <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
-                                </span>
+                                    <span class="flex flex-wrap mb-2">  
+                                        <p class="text-xl font-bold text-[#fa4f00] self-center">Rp75.000</p> 
+                                        <p class="mx-2 text-sm line-through self-center text-secondary">Rp150.000</p> 
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -853,7 +863,7 @@
     </script>
 
     <script>
-        const gap = 16;
+        const gap = 0;
 
         const carousel = document.getElementById("carousel"),
         content = document.getElementById("content"),
@@ -881,6 +891,34 @@
 
         let width = carousel.offsetWidth;
         window.addEventListener("resize", e => (width = carousel.offsetWidth));
+    </script>
+
+    <script>
+        var options1 = {
+            width: 400,
+            zoomWidth: 600,
+            offset: {vertical: 0, horizontal: 10}
+        };
+        
+        // If the width and height of the image are not known or to adjust the image to the container of it
+        var options2 = {
+            fillContainer: true,
+            offset: {vertical: 0, horizontal: 10}
+        };
+        new ImageZoom(document.getElementById("img-container"), options2);
+
+
+        var main  = document.getElementById('img-container');
+        var image = document.getElementById('img-thumb');
+        var thumb = image.getElementsByTagName('img');
+        var counter = 0;
+
+        for(let i=0; i<thumb.length; i++){
+            let img = thumb[i]
+            img.addEventListener('click', function(){
+                main.src = this.src
+            })
+        }
     </script>
 </body>
 </html>
