@@ -113,7 +113,7 @@
                         <img src="../public/img/air_jordan_7.jpg" alt="" class="row-span-1 object-cover w-full">
                     </div>
                     <div class="w-3/4 sm:w-full h-full ml-2" id="img-container">
-                        <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover">
+                        <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover" id="img-main">
                     </div>
                 </div>
                 <div class="sm:col-span-1 mx-6 sm:mx-0 mt-4">
@@ -908,17 +908,18 @@
         new ImageZoom(document.getElementById("img-container"), options2);
 
 
-        var main  = document.getElementById('img-container');
+        var main  = document.getElementById('img-main');
         var image = document.getElementById('img-thumb');
         var thumb = image.getElementsByTagName('img');
-        var counter = 0;
 
-        for(let i=0; i<thumb.length; i++){
+        for( i = 0; i < thumb.length; i++){
             let img = thumb[i]
-            img.addEventListener('click', function(){
+            
+            img.addEventListener("click", function() { 
                 main.src = this.src
-            })
+            });
         }
+        console.log(main.src);
     </script>
 </body>
 </html>
