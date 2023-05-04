@@ -171,7 +171,40 @@
             data.zoomLens.element.pointerEvents = 'none';
         }
 
+
+
         function setup() {
+
+            var main  = document.getElementById('img-main');
+            var image = document.getElementById('img-thumb');
+            var thumb = image.getElementsByTagName('img');
+    
+            for( i = 0; i < thumb.length; i++){
+                let img = thumb[i]
+                
+                img.addEventListener("click", function(e) { 
+                    main.src = this.src;
+                    data.zoomedImg.element.style.backgroundImage = "url('" + this.src + "')";
+
+                    let item = Array.prototype.indexOf.call(
+                        e.target.parentNode.children,
+                        e.target
+                    );
+
+                    aktif(item);
+                });
+                
+            }
+
+            function aktif(item) {
+                if (image.querySelector('.w-full.aktif') != null)
+                    image.querySelector('.w-full.aktif').classList.remove('aktif');
+                    image.querySelectorAll('.w-full')[item].classList.add('aktif');
+            }
+
+
+            
+            
             // create sourceImg element
             if (options.img) {
                 var img = document.createElement('img');
@@ -202,7 +235,7 @@
             data.zoomedImg.element.classList.add('js-image-zoom__zoomed-image');
             data.zoomedImg.element.style.backgroundRepeat = 'no-repeat';
             data.zoomedImg.element.style.display = 'none';
-            data.zoomedImg.element.style.backgroundImage = "url('" + data.sourceImg.element.src + "')";
+            
             
             switch (data.zoomPosition) {
                 case 'left':
