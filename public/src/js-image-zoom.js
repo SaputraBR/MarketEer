@@ -235,6 +235,7 @@
             data.zoomedImg.element.classList.add('js-image-zoom__zoomed-image');
             data.zoomedImg.element.style.backgroundRepeat = 'no-repeat';
             data.zoomedImg.element.style.display = 'none';
+            data.zoomedImg.element.style.backgroundImage = "url('" + data.sourceImg.element.src + "')";
             
             
             switch (data.zoomPosition) {
