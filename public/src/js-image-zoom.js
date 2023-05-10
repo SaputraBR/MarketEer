@@ -114,6 +114,7 @@
             }
         }
 
+
         function onSourceImgLoad() {
             // use height determined by browser if height is not set in options
             options.height = options.height || data.sourceImg.element.height;
@@ -170,7 +171,7 @@
             data.zoomLens.element.style.height = data.zoomLens.height + 'px';
             data.zoomLens.element.pointerEvents = 'none';
         }
-
+        
 
 
         function setup() {
@@ -179,7 +180,7 @@
             var image = document.getElementById('img-thumb');
             var thumb = image.getElementsByTagName('img');
     
-            for( i = 0; i < thumb.length; i++){
+            for(i = 0; i < thumb.length; i++){
                 let img = thumb[i]
                 
                 img.addEventListener("click", function(e) { 

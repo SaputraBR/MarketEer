@@ -106,7 +106,7 @@
     <main class="w-full bg-gray-200">
         <section class="col-span-2 md:grid md:grid-cols-3">
             <div class="sm:grid sm:grid-cols-2 md:col-span-2 gap-x-6 px-2 sm:px-4 py-4">
-                <div class="sm:col-span-1 flex justify-center h-full max-h-72 sm:sticky top-28">
+                <div class="sm:col-span-1 hidden sm:flex justify-center h-full max-h-72 sm:sticky top-28">
                     <div class="w-16 h-full overflow-y-scroll space-y-0.5 scrollbar-hide bg-black/[.2] p-0.5" id="img-thumb">
                         <img src="../public/img/nike-jordan.jpg" alt="" class="row-span-1 object-cover w-full aktif">
                         <img src="../public/img/air_jordan_7_3.jpg" alt="" class="row-span-1 object-cover w-full">
@@ -117,6 +117,22 @@
                         <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover" id="img-main">
                     </div>
                 </div>
+
+                <div class="sm:hidden h-auto">
+                    <div class="w-full h-96 mb-2">
+                        <img src="../public/img/nike-jordan.jpg" alt="" class="h-full w-full object-cover" id="gambar-utama">
+                    </div>
+                    <div class="scrolling-wrapper flex w-full h-auto mx-auto">
+                        <div class="inline-flex mx-auto h-24 w-auto space-x-1" id="gambar-thumb">
+                            <img src="../public/img/nike-jordan.jpg" alt="" class="object-cover w-24 h-full aktif">
+                            <img src="../public/img/air_jordan_7_3.jpg" alt="" class="object-cover w-24 h-full">
+                            <img src="../public/img/air_jordan_7_2.jpg" alt="" class="object-cover w-24 h-full">
+                            <img src="../public/img/air_jordan_7.jpg" alt="" class="object-cover w-24 h-full">
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="sm:col-span-1 mx-6 sm:mx-0 mt-4">
                     <div class="">
                         <h1 class="text-xl sm:text-2xl font-bold">Air Jordan 7 Retro SE Men's Shoes 40-47</h1>
@@ -131,12 +147,12 @@
                             <p class="text-3xl font-bold self-center">Rp<span id="harga">14,999,999</span></p>
                             <span class="flex flex-wrap mt-1">
                                 <span class="bg-[#ca0101] px-3 py-1 text-sm font-semibold text-white">42%</span>
-                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp1,500,000</p>              
+                                <p class="mx-2 text-sm line-through self-center text-secondary">Rp<span id="diskon-harga">1,500,000</span></p>              
                             </span>
                         </div>                    
                         <div class="mt-4">
                             <div class="">
-                                <div class="col-span-2 self-center mb-2">Pilih ukuran : 40</div>
+                                <div class="col-span-2 self-center mb-2">Pilih ukuran : <span id="ukuran-size"></span></div>
                                 <div class="col-span-10 flex" id="ukuran">
                                     <input type="button" class="btn w-8 h-8 border-2 border-sky-500 rounded-sm mr-2 cursor-pointer" value="40">
                                     <input type="button" class="btn w-8 h-8 border-2 border-sky-500 rounded-sm mr-2 cursor-pointer" value="41">
@@ -208,7 +224,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="mt-4" id="detail-click" onclick="detail()">
+                        <div class="mt-4 cursor-pointer" id="detail-click" onclick="detail()">
                             <div id="detil" class="sm:hidden border-b border-sky-400">
                                 <div class="flex justify-center mx-auto">
                                     <span class="self-center mr-1">
@@ -230,13 +246,14 @@
                     </div>
                 </div>
             </div>
+            
 
             <div class="md:col-span-1 mt-4 sm:mt-2">
                 <div class="w-5/6 h-auto mx-auto border-2 border-sky-400 p-4 rounded-sm sticky top-28">
                     <h1 class="text-xl font-semibold mb-2">Atur jumlah</h1>
                     <div class="flex font-semibold mb-2 flex-wrap">
                         <p class="text-lg">Air Jordan 7 Retro SE Men's</p>
-                        <p class="text-lg">, 40</p>
+                        <p class="text-lg">, <span id="size-out"></span></p>
                     </div>
                     <div class="flex flex-wrap mb-3">
                         <div class="w-28 h-10 flex bg-white rounded-md">
@@ -267,7 +284,7 @@
                         <div class="flex flex-wrap mt-1">
                             <p class="text-lg lg:text-xl font-semibold">Subtotal</p>
                             <span class="block ml-auto">
-                                <p class="text-sm float-right line-through self-center text-secondary">Rp1,500,000</p>              
+                                <p class="text-sm float-right line-through self-center text-secondary">Rp<span id="diskon-hasil">1,500,000</span></p>              
                                 <p class="text-lg lg:text-xl font-semibold ml-auto">Rp<span id="sub-hasil">14,999,999</span></p>
                             </span>
                         </div>
@@ -809,31 +826,47 @@
 
 
         //pilih ukuran
-        let btn = document.getElementsByClassName("btn");
-        for (var i = 0; i < btn.length; i++) {
-        (function (index) {
-            btn[index].addEventListener("click", function () {
-                console.log("Clicked Button: " + index);
+        let btn        = document.getElementsByClassName("btn");
+        var ukuran     = document.getElementById("ukuran");
+        var input      = ukuran.getElementsByTagName("input");
+        var size       = document.getElementById("ukuran-size");
+        var out        = document.getElementById("size-out");
+        let prevButton = null;
 
-            let isPresent = false;
+        for (i = 0; i < btn.length; i++) {
+            
+            (function (index) {
+                btn[index].addEventListener("click", function () {
+                    //console.log(btn[index].value);
+                    size.innerHTML = btn[index].value;
+                    out.innerHTML = btn[index].value;
 
-            //   Check if the class is present or not
-            this.classList.forEach(function (e, i) {
-                if (e == "ukuran-focus") {
-                isPresent = true;
-                } else {
-                isPresent = false;
-                }
-            });
+                    for (var i = 0; i < btn.length; i++){
+                        btn[i].classList.remove("ukuran-focus");
+                        
+                    };
 
-            //   toggle the presence of class on the basis of the isPresent variable
-            if (isPresent) {
-                this.classList.remove("ukuran-focus");
-            } else {
-                this.classList.add("ukuran-focus");
-            }
-            });
-        })(i);
+                    let isPresent = false;
+                    //   Check if the class is present or not
+                    this.classList.forEach(function (e) {
+                        if (e == "ukuran-focus") {
+                            isPresent = true;
+                            
+                            
+                        } else {
+                            isPresent = false;
+                        }                                            
+                    });                    
+
+                    //   toggle the presence of class on the basis of the isPresent variable
+                    if (isPresent) {
+                        this.classList.remove("ukuran-focus");
+                    } else {
+                        this.classList.add("ukuran-focus");
+                        
+                    }
+                });
+            })(i);
         }
 
         
@@ -844,11 +877,17 @@
         const harga = document.getElementById("harga");
         const sub = document.getElementById("sub-hasil");
         const stock = document.getElementById("stock");
+        const diskon = document.getElementById("diskon-harga");
+        const disc = document.getElementById("diskon-hasil");
+        
         var count = 0;
         
         var a = harga.innerHTML;
         var b = a.replace(/[^0-9]/g,"");
         var stokNumb = stock.innerHTML.replace(/[^0-9]/g,"");
+
+        var v = diskon.innerHTML;
+        var w = v.replace(/[^0-9]/g,"");        
 
         totalCount.innerHTML = count;
 
@@ -860,6 +899,11 @@
                 var d = new Intl.NumberFormat('en-US');
                 var e = d.format(c);
                 sub.innerHTML = e;
+                
+                var x = count * w;
+                var y = d.format(x);
+                disc.innerHTML = y;
+                
             }
             totalCount.innerHTML = count;
         };
@@ -874,6 +918,12 @@
                 var i = new Intl.NumberFormat('en-US');
                 var j = i.format(h);
                 sub.innerHTML = j; 
+
+                var z = disc.innerHTML.replace(/[^0-9]/g,"");
+                var t = z - w;
+                var u = i.format(t);
+                disc.innerHTML = u;
+                
             }
             totalCount.innerHTML = count;
         };
@@ -930,8 +980,33 @@
         };
         new ImageZoom(document.getElementById("img-container"), options2);
 
-        document.getElementById("img-main").onclick = null;
-        
+    </script>
+
+    <script>
+        var gambar = document.getElementById("gambar-utama");
+        var gmbr = document.getElementById("gambar-thumb");
+        var imgThumb = gmbr.getElementsByTagName("img");
+
+        for(i = 0; i < imgThumb.length; i++){
+            var image = imgThumb[i];
+
+            image.addEventListener("click", function(e) {
+                gambar.src = this.src;
+
+                let b = Array.prototype.indexOf.call(
+                    e.target.parentNode.children,
+                    e.target
+                );
+
+                aktif(b);
+            });
+        };
+
+        function aktif(b){
+            if (gmbr.querySelector('.h-full.aktif') != null)
+                gmbr.querySelector('.h-full.aktif').classList.remove('aktif');
+                gmbr.querySelectorAll('.h-full')[b].classList.add('aktif');
+        }
     </script>
 </body>
 </html>
