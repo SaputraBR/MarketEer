@@ -105,4 +105,12 @@
     }
   }
 
-  
+.checkbox-main{
+    accent-color: #ff4800;
+    width: 18px;
+    height: 18px;
+}
+
+  .dsk{
+      color: #ff662a;
+  }

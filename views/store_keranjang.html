@@ -1,0 +1,301 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover, shrink-to-fit=no' />
+    <title>MarketEer</title>
+    <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
+    <link rel="stylesheet" type="text/css"  href="../public/src/store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../public/src/js-image-zoom.js"></script>
+</head>
+
+<body class="bg-slate-100 max-w-screen-2xl mx-auto">
+    <nav class="top-0 z-10 bg-main flex flex-col text-white sticky" id="navMain">
+        <div class="h-5 w-full flex bg-gray-300 top-0 sticky">
+          <div class="flex ml-auto mr-1 sm:mr-4 text-black text-sm"> 
+            <a href="store_ToU.html" class="mr-2 hover:text-[#ff2f00]">About</a>
+            <a href="store_ToU.html" class="mr-2 hover:text-[#ff2f00]">Help Center</a>
+            <a href="store_login.html" class="flex mr-2 hover:text-[#ff2f00]">
+              <span class="self-center" id="">        
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg> 
+              </span>
+              <p class="">Akun</p>
+            </a>
+          </div>
+        </div>
+    
+        <div class="flex justify-between h-20 w-auto px-2 sm:px-6 md:px-16 lg:px-24 font-semibold ">
+          <div class="trirong self-center">
+            <a href="store.html" class="text-3xl hidden sm:block sm:text-4xl">MarketEer</a>
+            <a href="store.html" class="h-full flex w-12 block sm:hidden">
+              <img src="../public/img/MARKETEER_CROPED.png" alt="" class="w-full self-center object-cover">
+            </a>
+          </div>
+          <form class="w-8/12 h-full">
+            <div class="h-full flex relative mx-4">
+                <button id="dropdown-button" onclick="myFunction()" data-dropdown-toggle="dropdown" class="self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+                  <p class="hidden sm:block">All categories</p>
+                  <p class="block sm:hidden">All</p>
+                  <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div id="dropdown-category" class="w-36 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow left-0 absolute mt-16">
+                  <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">fashion</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">personal care</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">gadgets</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">electronics</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">home</button>
+                    </li>
+                    <li>
+                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">tools</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="relative w-full self-center">
+                  <form action="">
+                    <input type="text" name="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border border-gray-300 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" placeholder="Cari barang..." required>
+                    <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                  </form>
+                </div>
+            </div>
+          </form>
+          <div class="flex trirong self-center text-white">
+            <a href="#" class="mr-1 sm:ml-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 sm:w-9 sm:h-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+              </svg>          
+            </a>
+            <a href="#" class="ml-1 sm:ml-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 sm:w-9 sm:h-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+              </svg>  
+            </a>
+          </div>
+        </div>
+      </nav>
+    
+    <main class="w-full">
+        <div class="grid grid-cols-5 mt-6">
+            <div class="col-span-3 px-16">
+                <h1 class="text-3xl font-semibold">Keranjang</h1>
+                <div class="mt-4">
+                    <form action="" id="form-keranjang">
+                        <div class="w-full border-b border-sky-300 flex pb-1 top-0 ">
+                            <input type="checkbox" value="all" class="checkbox-main self-center" id="pilih-all"> 
+                            <label for="pilih-all" class="text-lg font-semibold ml-2">Pilih semua</label>
+
+                            <span class="mr-1 ml-auto hover:text-[#ff4800] hidden">
+                                <i class="fa-solid fa-trash-can fa-lg"></i>
+                            </span> 
+                        </div>
+
+                        <div class="w-auto mt-4 pb-4 border-b border-sky-300 grid grid-cols-4" id="item-container">
+                            <div class="col-span-1 flex">
+                                <input type="checkbox" value="all" class="checkbox-main" id="pilih-item"> 
+                                <div class="w-32 h-32 border border-sky-200 mx-auto"> 
+                                    <img src="../public/img/nike-jordan.jpg" alt="" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <h2 class="font-semibold text-xl">Air Jordan 7 Retro SE Men's Shoes 40-47</h2>
+                                <div class="mt-1 flex">                                    
+                                    <span class="flex flex-wrap mt-1">
+                                        <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">15%</span>
+                                        <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span id="diskon-harga">Rp983.000</span></p>              
+                                    </span>
+                                    <p class="text-lg font-bold self-center">Rp<span id="harga">Rp3.999.999</span></p>
+                                </div>  
+                                <div class="flex mt-2">
+                                    <p class="mr-1">Jumlah :</p>
+                                    <p id="qty">1</p>
+                                </div>
+                                <div class="mt-3 flex">
+                                    <button class="ml-auto hover:text-[#ff4800]">Add to wishlist</button>
+                                    <p class="mx-4 text-xl">|</p>
+                                    <span class="hover:text-[#ff4800] self-center">
+                                        <i class="fa-solid fa-trash-can fa-lg"></i>
+                                    </span>                             
+                                </div>
+                            </div>
+                        </div>     
+                        
+                        <div class="w-auto mt-4 pb-4 border-b border-sky-300 grid grid-cols-4" id="item-container">
+                            <div class="col-span-1 flex">
+                                <input type="checkbox" value="all" class="checkbox-main" id="pilih-item"> 
+                                <div class="w-32 h-32 border border-sky-200 mx-auto"> 
+                                    <img src="../public/img/Google-Pixel-7-Pro.jpg" alt="" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <h2 class="font-semibold text-xl">Google Pixel 7 Pro 12/512GB</h2>
+                                <div class="mt-1 flex">                                    
+                                    <span class="flex flex-wrap mt-1">
+                                        <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">42%</span>
+                                        <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span id="diskon-harga">1,500,000</span></p>              
+                                    </span>
+                                    <p class="text-lg font-bold self-center">Rp<span id="harga">14,999,999</span></p>
+                                </div>  
+                                <div class="flex mt-2">
+                                    <p class="mr-1">Jumlah :</p>
+                                    <p id="qty">1</p>
+                                </div>
+                                <div class="mt-3 flex">
+                                    <button class="ml-auto hover:text-[#ff4800]">Add to wishlist</button>
+                                    <p class="mx-4 text-xl">|</p>
+                                    <span class="hover:text-[#ff4800] self-center">
+                                        <i class="fa-solid fa-trash-can fa-lg"></i>
+                                    </span>                             
+                                </div>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-span-2">
+                <div class="w-3/4 h-80 bg-white border-sky-400 border-2 p-6">
+                    <h1 class="font-bold text-2xl pb-1 border-b border-gray-300">Total Belanja</h1>
+                    <div class="flex mt-5 text-lg font-semibold">
+                        <p class="">Total Harga<span class="text-sm ml-1">(2 barang)</span> </p>
+                        <p class="ml-auto">Rp18.999.998</p>
+                    </div>
+                    <div class="flex mt-1 text-lg font-semibold border-b border-gray-300 pb-5">
+                        <p class="">Total Diskon</p>
+                        <p class="ml-auto">
+                            <span>-</span>
+                            Rp2.403.000
+                        </p>
+                    </div>
+                    <div class="flex font-semibold text-2xl mt-5 mb-8">
+                        <p class="">Subtotal</p>
+                        <p class="ml-auto">Rp16.596.998</p>
+                    </div>
+                    
+                    <button class="w-full py-2 rounded-md font-semibold text-xl text-white bg-[#ff4800] hover:bg-white hover:border border-[#ff4800] hover:text-[#ff4800]">
+                        Bayar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-16 pt-16 bg-main"> 
+        <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 gap-6">
+            <div class="col-span-1 md:col-span-3 lg:col-span-2">
+                <img class="w-52 h-52 self-center" src="../public/img/1.png" alt="">
+            </div>
+          
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">Products</h1>
+                <div class="flex flex-col">
+                    <a href="#">Foods</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Gadgets</a>
+                    <a href="#">Personal care</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Home</a>
+                    <a href="#">Tools</a>
+                </div>
+            </div>
+    
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">Customer Services</h1>
+                <div class="flex flex-col">
+                    <a href="store_ToU.html">Help Center</a>
+                    <a href="store_ToU.html">Privacy & Security</a>
+                    <a href="store_ToU.html">Terms of Use</a>
+                </div>
+            </div>
+    
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">MarketEer</h1>
+                <div class="flex flex-col">
+                    <a href="store_ToU.html">About Us</a>
+                    <a href="store_ToU.html">Contacts</a>
+                </div>
+            </div>
+        </div>
+        <div class="text white text-sm font-semibold border-t max-w-7xl mx-auto py-6 mt-16 text-center">kopirek &copy; MarketEer 2022</div>
+    </footer>
+
+    <script>
+        function detail() {
+            var detail = document.getElementById('detail-click');
+            var item   = document.getElementById('detail-item');
+            var detil = document.getElementById('detil');
+            var tutup = document.getElementById('tutup');
+
+            if (item.classList.contains('hidden')) {
+                item.classList.add('block');
+                item.classList.remove('hidden');
+
+                detil.classList.add('hidden');
+                tutup.classList.remove('hidden');
+                tutup.classList.add('flex');
+            } else {
+                item.classList.add('hidden');
+                item.classList.remove('block');
+
+                detil.classList.remove('hidden');
+                tutup.classList.remove('flex');
+                tutup.classList.add('hidden');
+            }
+        }
+
+        function myFunction() {
+            document.getElementById("dropdown-category").classList.toggle("hidden");
+            }
+
+        //dropdown tutup
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                var dropdowns = document.getElementsByClassName("drop-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+
+        
+    </script>
+
+    <script>
+        var form = document.getElementById("form-keranjang");
+        var input = form.getElementsByTagName("input");
+        
+        if(input.checked){
+            console.log(this.index);
+        }
+        
+    </script>
+</body>
+</html>
