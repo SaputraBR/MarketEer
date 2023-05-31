@@ -993,16 +993,16 @@
             image.addEventListener("click", function(e) {
                 gambar.src = this.src;
 
-                let b = Array.prototype.indexOf.call(
+                let x = Array.prototype.indexOf.call(
                     e.target.parentNode.children,
                     e.target
-                );
-
-                aktif(b);
-            });
+                );                
+                aktif(x);                
+            });                        
         };
+        
 
-        function aktif(b){
+        function aktif(x){
             if (gmbr.querySelector('.h-full.aktif') != null)
                 gmbr.querySelector('.h-full.aktif').classList.remove('aktif');
                 gmbr.querySelectorAll('.h-full')[b].classList.add('aktif');
