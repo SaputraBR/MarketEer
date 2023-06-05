@@ -112,7 +112,7 @@
                         </div>
 
                         <div class="w-auto mt-4 pb-4 border-b border-sky-300 flex relative contoltainer" id="contoltainer"> 
-                            <input type="checkbox" value="" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
+                            <input type="checkbox" value="item1" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
                             <div class="grid grid-cols-4 gap-4 ml-4 item-container" id="item-container">
                                 <div class="col-span-1 flex">                                
                                     <div class="w-32 h-32 border border-sky-200 mx-auto"> 
@@ -124,9 +124,9 @@
                                     <div class="mt-1 flex">                                    
                                         <span class="flex flex-wrap mt-1">
                                             <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">15%</span>
-                                            <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span id="diskon-harga">Rp983.000</span></p>              
+                                            <p class="mx-1 text-xs line-through self-center text-secondary diskon-harga">Rp<span id="diskon-harga">983.000</span></p>              
                                         </span>
-                                        <p class="text-lg font-bold self-center">Rp<span class="harga-brg" id="harga-brg">3.999.999</span></p>
+                                        <p class="text-lg font-bold self-center">Rp<span class="harga-brg" id="harga-brg">3,999,999</span></p>
                                     </div>  
                                     <div class="flex mt-2">
                                         <p class="mr-1">Jumlah :</p>
@@ -144,7 +144,7 @@
                         </div>     
                         
                         <div class="w-auto mt-4 pb-4 border-b border-sky-300 flex relative contoltainer" id="contoltainer"> 
-                            <input type="checkbox" value="all2" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
+                            <input type="checkbox" value="item2" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
                             <div class="grid grid-cols-4 gap-4 ml-4 item-container" id="item-container">
                                 <div class="col-span-1 flex">
                                     <div class="w-32 h-32 border border-sky-200 mx-auto"> 
@@ -156,7 +156,7 @@
                                     <div class="mt-1 flex">                                    
                                         <span class="flex flex-wrap mt-1">
                                             <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">42%</span>
-                                            <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span id="diskon-harga">1,500,000</span></p>              
+                                            <p class="mx-1 text-xs line-through self-center text-secondary diskon-harga">Rp<span id="diskon-harga">1,500,000</span></p>              
                                         </span>
                                         <p class="text-lg font-bold self-center">Rp<span class="harga-brg" id="harga-brg">14,999,999</span></p>
                                     </div>  
@@ -174,6 +174,7 @@
                                 </div>
                             </div>
                         </div>  
+
                     </form>
                 </div>
             </div>
@@ -182,19 +183,28 @@
                 <div class="w-3/4 h-auto bg-white border-sky-400 border-2 p-6 sticky top-28">
                     <h1 class="font-bold text-2xl pb-1 border-b border-gray-300">Total Belanja</h1>
                     <div class="flex mt-5 text-lg font-semibold">
-                        <p class="">Total Harga<span class="text-sm ml-1">(2 barang)</span> </p>
-                        <p class="ml-auto">Rp<span id="total-harga">18.999.998</span></p>
+                        <p class="">Total Harga<span class="text-sm ml-1 hidden" id="hidden-jml">(<span id="jml-brg"></span> barang)</span> </p>
+                        <p class="ml-auto">Rp<span id="total-harga">0</span></p>
                     </div>
                     <div class="flex mt-1 text-lg font-semibold border-b border-gray-300 pb-5">
                         <p class="">Total Diskon</p>
-                        <p class="ml-auto">
-                            <span>-</span>
-                            Rp2.403.000
+                        <p class="ml-auto flex">
+                            <span class="self-center mr-1">
+                                <i class="fa-solid fa-minus self-center"></i>
+                            </span>
+                            <span>
+                                <p>Rp</p>
+                                <p id="total-diskon">0</p>    
+                            </span>
+                            
                         </p>
                     </div>
                     <div class="flex font-semibold text-2xl mt-5 mb-8">
                         <p class="">Subtotal</p>
-                        <p class="ml-auto">Rp16.596.998</p>
+                        <p class="ml-auto">                            
+                            <span>Rp</span>
+                            <span id="total-belanja">0</span>
+                        </p>
                     </div>
                     
                     <button class="w-full py-2 rounded-md font-semibold text-xl text-white bg-[#ff4800] hover:bg-white hover:border border-[#ff4800] hover:text-[#ff4800]">
@@ -203,7 +213,7 @@
                 </div>
             </div>
         </div>
-
+        
     </main>
 
     <footer class="mt-16 pt-16 bg-main"> 
@@ -294,29 +304,89 @@
     <script>        
         var keranjang   = document.getElementById("form-keranjang");
         var hargaBrg    = document.querySelectorAll(".harga-brg");
+        var diskonBrg   = document.querySelectorAll(".diskon-harga");
         var valueInp    = document.querySelectorAll("input[name='check']");
         var input       = keranjang.querySelectorAll("input");
-        var cekAll      = document.getElementById("pilih-all")
+        var cekAll      = document.getElementById("pilih-all");
+        var kontainer   = keranjang.querySelectorAll(".contoltainer");
+        var hiddenJml   = document.getElementById("hidden-jml")
+        var jmlBrg      = document.getElementById("jml-brg");
+        var totalHrg    = document.getElementById("total-harga");
+        var totalDskn   = document.getElementById("total-diskon");
+        var totalBlnj   = document.getElementById("total-belanja");
+        var number      = new Intl.NumberFormat('en-US');
+        let fungHarga   = "";
+        let fungDiskon  = "";
+        
+
+        function harga(){
+            let cost = 0;
+            for (var i = 0; i < hargaBrg.length; i++){
+                var inner   = hargaBrg[i].innerHTML;
+                var format  = inner.replace(/[^0-9]/g,"");
+
+                cost += parseInt(format);
+            }     
+            totalHrg.innerHTML = number.format(cost);                  
+            fungHarga = totalHrg.innerHTML = number.format(cost);
+        }
+
+        function diskon(){
+            let cost = 0;
+            for (var i = 0; i < diskonBrg.length; i++){
+                var inner   = diskonBrg[i].innerHTML;
+                var format  = inner.replace(/[^0-9]/g,"");
+
+                cost += parseInt(format)
+            }
+            totalDskn.innerHTML = number.format(cost); 
+            fungDiskon = totalDskn.innerHTML = number.format(cost);
+        }
+
+        function jumlah(){
+            jmlBrg.innerHTML = kontainer.length;
+            hiddenJml.classList.remove("hidden");
+
+            //total-belanja
+            var harga   = fungHarga.replace(/[^0-9]/g,"");
+            var diskon  = fungDiskon.replace(/[^0-9]/g,"");
+            var hasil   = parseInt(harga) - parseInt(diskon);
+            totalBlnj.innerHTML = number.format(hasil);
+        }
+
 
         for( var i = 0; i < input.length; i++){
-            (function(klik){
-                input[klik].addEventListener("click", function(){
+            (function(index){
+                input[index].addEventListener("click", function(){
                     if(!this.classList.contains("pilih-item")){                        
                         for (var i = 0; i < valueInp.length; i++){
                             valueInp[i].checked = this.checked;
                         }
+
+                        if (this.checked){
+                            harga(), diskon(), jumlah()
+
+                        } else {
+                            hiddenJml.classList.add("hidden");
+                            totalHrg.innerHTML = "0";
+                            totalDskn.innerHTML = "0";
+                            totalBlnj.innerHTML = "0";                            
+                        }
+                        
                     } else {
                         var count = 0;
                         for (var i = 0; i < valueInp.length; i++){
-                            if(valueInp[i].checked)
-                            count++
-                        } 
+                            if (valueInp[i].checked)
+                                count++
+                        };
+
                         if (valueInp.length == count){
                             cekAll.checked = this.checked;
                         } else {
                             cekAll.checked = false;
-                        }
-                    }                    
+                        };
+                    }   
+                    
                 })
             })(i);
         }        
