@@ -41,32 +41,32 @@
           </div>
           <form class="w-8/12 h-full">
             <div class="h-full flex relative mx-4">
-                <button id="dropdown-button" onclick="myFunction()" data-dropdown-toggle="dropdown" class="self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
-                  <p class="hidden sm:block">All categories</p>
-                  <p class="block sm:hidden">All</p>
-                  <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                  </svg>
+                <button id="dropdown-button" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+                    <p class="hidden sm:block">All categories</p>
+                    <p class="block sm:hidden">All</p>
+                    <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
                 </button>
                 <div id="dropdown-category" class="w-36 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow left-0 absolute mt-16">
                   <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
                     <li>
-                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">fashion</button>
+                        <a href="#" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">fashion</a>
                     </li>
                     <li>
-                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">personal care</button>
+                        <a href="#" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">personal care</a>
                     </li>
                     <li>
-                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">gadgets</button>
+                        <a href="#" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">gadgets</a>
                     </li>
                     <li>
-                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">electronics</button>
+                        <a href="#" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">electronics</a>
                     </li>
                     <li>
-                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">home</button>
+                        <a href="#" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">home</a>
                     </li>
                     <li>
-                        <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">tools</button>
+                        <a href="#" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">tools</a>
                     </li>
                   </ul>
                 </div>
@@ -215,7 +215,7 @@
                 <div class="w-full lg:w-3/4 h-auto xl:h-80 bg-white border-sky-400 border-2 p-6 md:sticky md:top-28" id="kontainer-first">
                     <h1 class="font-bold text-xl sm:text-2xl pb-1 mb-4 border-b border-gray-300" id="bel-tot">Total Belanja</h1>
                     <div class="md:flex mt-3 sm:mt-5 md:text-lg font-semibold md:flex-wrap" id="harga-cont">
-                        <p class="">Total Harga<span class="text-sm ml-1 hidden" id="hidden-jml">(<span id="jml-brg"></span> barang)</span> </p>
+                        <p class="">Total Harga<span class="hidden md:text-sm lg:text-base" id="hidden-jml"> (<span id="jml-brg"></span> barang)</span></p>
                         <p class="ml-auto">Rp<span id="total-harga">0</span></p>
                     </div>
                     <div class="md:flex mt-1 md:text-lg font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap"id="diskon-cont">
@@ -302,46 +302,22 @@
     </footer>
 
     <script>
-        function detail() {
-            var detail = document.getElementById('detail-click');
-            var item   = document.getElementById('detail-item');
-            var detil = document.getElementById('detil');
-            var tutup = document.getElementById('tutup');
+        var dropbtn     = document.getElementById("dropdown-button");
+        var clasDrop    = document.querySelectorAll(".dropbtn")
+        var dropCtg     = document.getElementById("dropdown-category");
+        let isClicked   = false;
 
-            if (item.classList.contains('hidden')) {
-                item.classList.add('block');
-                item.classList.remove('hidden');
-
-                detil.classList.add('hidden');
-                tutup.classList.remove('hidden');
-                tutup.classList.add('flex');
-            } else {
-                item.classList.add('hidden');
-                item.classList.remove('block');
-
-                detil.classList.remove('hidden');
-                tutup.classList.remove('flex');
-                tutup.classList.add('hidden');
-            }
-        }
-
-        function myFunction() {
-            document.getElementById("dropdown-category").classList.toggle("hidden");
-            }
-
-        //dropdown tutup
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropdown-button')) {
-                var dropdowns = document.getElementsByClassName("drop-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
+        window.onclick = function(e){
+            isClicked   = true; 
+                if (clasDrop[0].contains(e.target)){
+                    dropCtg.classList.remove("hidden");
+                } else {
+                    dropCtg.classList.add("hidden");
                 }
-            }
         }
+
+    
+        
 
 
         
