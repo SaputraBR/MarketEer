@@ -103,16 +103,22 @@
                 <h1 class="ml-1 sm:ml-0 text-2xl sm:text-3xl font-semibold">Keranjang</h1>
                 <div class="mt-1 w-full">
                     <form action="" class="form-keranjang" id="form-keranjang">
-                        <div class="w-full h-14 px-2 bg-slate-100 border-b border-sky-300 flex pb-1 sticky" style="top: 100px;">
-                            <input type="checkbox" value="all" name="check-all" class="checkbox-main self-center" id="pilih-all"> 
-                            <label for="pilih-all" class="text-lg font-semibold ml-2 self-center">Pilih semua</label>
-                            <span class="mr-1 ml-auto hover:text-[#ff4800] hidden">
+                        <div class="w-full h-14 pl-2 bg-slate-100 border-b border-sky-300 flex pb-1 sticky z-10" style="top: 100px;"> 
+                            <label for="pilih-all" class="text-lg font-semibold self-center incont">
+                                <input type="checkbox" value="all" name="check-all" class="checkbox-main self-center" id="pilih-all">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p class="font-semibold text-lg ml-2 self-center">Pilih Semua</p>
+                            <span class="ml-auto mr-4 md:mr-0 self-center hover:text-[#ff4800] hidden" id="sampah-hidden">
                                 <i class="fa-solid fa-trash-can fa-lg"></i>
                             </span> 
                         </div>
 
                         <div class="w-auto mt-4 ml-2 border-b border-sky-300 flex contoltainer" id="contoltainer"> 
-                            <input type="checkbox" value="item" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
+                            <label class="incont">
+                                <input type="checkbox" value="item" name="check" class="pilih-item" id="pilih-item"> 
+                                <span class="checkmark"></span>
+                            </label>
                             <div class="w-full grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 ml-1 sm:ml-4 pb-4 item-container" id="item-container">
                                 <div class="col-span-1 flex">                                
                                     <div class="w-28 h-28 sm:w-32 sm:h-32 border border-sky-200 mx-auto"> 
@@ -144,7 +150,10 @@
                         </div>     
 
                         <div class="w-auto mt-4 ml-2 border-b border-sky-300 flex contoltainer" id="contoltainer"> 
-                            <input type="checkbox" value="item" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
+                            <label class="incont">
+                                <input type="checkbox" value="item" name="check" class="pilih-item" id="pilih-item"> 
+                                <span class="checkmark"></span>
+                              </label>
                             <div class="w-full grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 ml-1 sm:ml-4 pb-4 item-container" id="item-container">
                                 <div class="col-span-1 flex">                                
                                     <div class="w-28 h-28 sm:w-32 sm:h-32 border border-sky-200 mx-auto"> 
@@ -176,7 +185,10 @@
                         </div> 
                         
                         <div class="w-auto mt-4 ml-2 border-b border-sky-300 flex contoltainer" id="contoltainer"> 
-                            <input type="checkbox" value="item" name="check" class="checkbox-main pilih-item" id="pilih-item"> 
+                            <label class="incont">
+                                <input type="checkbox" value="item" name="check" class="pilih-item" id="pilih-item"> 
+                                <span class="checkmark"></span>
+                              </label>
                             <div class="w-full grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 ml-1 sm:ml-4 pb-4 item-container" id="item-container">
                                 <div class="col-span-1 flex">
                                     <div class="w-28 h-28 sm:w-32 sm:h-32 border border-sky-200 mx-auto"> 
@@ -386,16 +398,18 @@
                             valueInp[i].checked = this.checked;
 
                             if(valueInp[i].checked){
-                                valueInp[i].classList.add("ceklisty");
+                                valueInp[i].parentNode.classList.add("ceklisty");
                             } else {
-                                valueInp[i].classList.remove("ceklisty");
+                                valueInp[i].parentNode.classList.remove("ceklisty");
                             }
                         }
                         
                         if (this.checked){
                             harga(), diskon(), jumlah()
+                            document.getElementById("sampah-hidden").classList.remove("hidden");
 
                         } else{
+                            document.getElementById("sampah-hidden").classList.add("hidden");
                             hiddenJml.classList.add("hidden");
                             totalHrg.innerHTML  = "0";
                             totalDskn.innerHTML = "0";
@@ -415,9 +429,9 @@
                         };                        
 
                         if (this.checked){
-                            this.classList.add("ceklisty")
+                            this.parentNode.classList.add("ceklisty")
                         } else {
-                            this.classList.remove("ceklisty")
+                            this.parentNode.classList.remove("ceklisty")
                         }
                         
                         var ceklisty    = document.querySelectorAll(".ceklisty");
@@ -437,15 +451,18 @@
                         
                         if (valueInp.length == count){
                             cekAll.checked = this.checked;
-                            harga(), diskon(), jumlah()
+                            harga(), diskon(), jumlah();
+                            document.getElementById("sampah-hidden").classList.remove("hidden");
 
                         } else if (count == 0) {
                                 hiddenJml.classList.add("hidden");
+                                document.getElementById("sampah-hidden").classList.add("hidden");
 
                         } else {
                                 jmlBrg.innerHTML    = count;
                                 hiddenJml.classList.remove("hidden");
-                                cekAll.checked = false;    
+                                cekAll.checked = false;  
+                                document.getElementById("sampah-hidden").classList.remove("hidden");                                  
                         }
                     }                       
                 })
