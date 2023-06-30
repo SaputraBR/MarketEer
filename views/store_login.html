@@ -1,63 +1,33 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>MarketEer</title>
-  <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-      .box-main
-    {
-        position: relative;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: #2BC0E4;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #19bda7, #EAECC6);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #7bc5bd, #d1c891); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    }
-    
-    .content
-    {
-        position: fixed;
-        height: 460px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        background-color: #fff;
-        border-radius: 2%;
-        overflow: hidden;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MarketEer</title>
+    <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
+    <link rel="stylesheet" type="text/css" href="../public/src/store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="max-w-screen-2xl max-h-max mx-auto">
     <div class="box-main">
-        <div class="content w-72 sm:w-2/4">
-            <div class="relative h-full w-full bg-white">
-                <div class="flex w-full h-20 px-2">
-                    <div class="h-1/2 sm:h-4/5 self-center">
-                        <img src="../public/img/MARKETEER_crop.png" alt="" class="object-cover h-full w-full">            
-                    </div>
+        <div class="content">
+            <div class="relative w-full h-full bg-white pt-4">
+                <div class="flex justify-center w-full h-auto">
+                    <div class="exo text-3xl text-[#ff4800]">MarketEer</div>
                 </div>
-                <form action="" class="w-3/4 mx-auto mt-3">
-                    <label for="user" class="font-semibold">Nama</label>
-                    <input type="text" name="user" class="block w-full mb-5 mt-1 rounded-lg bg-slate-100 py-1 px-2 mx-auto border focus:border-sky-300 focus:ring-sky-300 focus:ring-1 focus:outline-none">
+                <form action="" class="w-4/5 mx-auto mt-6 sm:pb-4">
+                    <input type="text" name="user" placeholder="username, email atau no telepon" class="block w-full mb-5 mt-1 rounded-sm bg-slate-100 py-1 px-2 mx-auto border focus:border-sky-300 focus:ring-sky-300 focus:ring-1 focus:outline-none">
 
-                    <label for="password" class="font-semibold">Password</label>
-                    <input type="password" name="password" class="block w-full mt-1 rounded-lg bg-slate-100 py-1 px-2 mx-auto border focus:border-sky-300 focus:ring-sky-300 focus:ring-1 focus:outline-none">
+                    <input type="password" name="password" placeholder="password" class="block w-full mt-1 rounded-sm bg-slate-100 py-1 px-2 mx-auto border focus:border-sky-300 focus:ring-sky-300 focus:ring-1 focus:outline-none">
 
-                    <div class="flex justify-center mt-7">
-                        <button type="submit" class="px-4 py-2 rounded-lg font-semibold border-2 border-sky-400 bg-slate-100  hover:bg-sky-400">Login</button>
+                    <div class="flex justify-center mt-4 sm:mt-7">
+                        <button type="submit" class="px-3 py-1 rounded-lg font-semibold text-white border-2 border-[#0059ff] bg-[#0059ff] hover:">Login</button>
                     </div>
                 </form>
                 <div class="flex border-t-2 border-slate-300 w-3/4 mx-auto">
