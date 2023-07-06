@@ -88,20 +88,154 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
-        <section class="w-full h-full py-8 px-12 rounded-lg bg-slate-400">
+        <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
             <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
-                <h1 class="text-xl">Pilhian Pengiriman</h1>
-                <p>JNE</p>
-                <p>JNT</p>
-                <p>SICEPAT</p>
-                <p>FEDEX</p>
+                <form action="" class="">
+                    <div class="flex mb-4">
+                        <label for="nama" class="w-1/5 self-center">No Pesanan</label>
+                        <input type="text" name="nama" class="w-2/4 rounded-md px-3 py-2 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    </div>
+                    <div class="flex mb-2">
+                        <label for="nama" class="w-1/5 self-center">No Resi</label>
+                        <input type="text" name="nama" class="w-2/4 rounded-md px-3 py-2 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    </div>
+                    <div class="flex mb-2">
+                        <label for="nama" class="w-1/5 self-center">Alamat Pengiriman</label>
+                        <input type="text" name="nama" class="w-2/4 rounded-md px-3 py-2 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    </div>
+                    <div class="flex mb-2">
+                        <label for="nama" class="w-1/5 self-center">Alamat Tujuan</label>
+                        <input type="text" name="nama" class="w-2/4 rounded-md px-3 py-2 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    </div>
+                    <div class="flex mb-4">
+                        <label for="nama" class="w-1/5 self-center">Pengiriman</label>
+                        <select type="text" name="nama" class="w-2/4 rounded-md px-3 py-2 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                            <option value="p" class="py-2">JNE</option>
+                            <option value="c" class="py-2">J&T</option>
+                            <option value="c" class="py-2">SICEPAT</option>
+                            <option value="c" class="py-2">FEDEX</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="mt-4 p-2 rounded-lg bg-[#fa8c00] hover:bg-[#fda127]">
+                       <p class="font-semibold text-slate-100">Simpan</p>
+                    </button>
+                </form>
             </div>
             <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <div class="flex">
+                    <h1 class="text-xl">Daftar Pengiriman</h1>
+                    <button onclick="check()" class="ml-auto text-blue-800" id="edit">
+                        <i class="self-center fa-solid fa-pencil"></i>
+                        edit
+                    </button>
+                </div>
+
+                <div class="grid grid-rows-3 grid-flow-col">
+                    <div class="flex row-span-1">
+                        <p>JNE</p>
+                        <input type="checkbox" name="checkbox" id="checkbox" class="ml-1 hidden">
+                    </div>
+                    <div class="flex row-span-1">
+                        <p>JNT</p>
+                        <input type="checkbox" name="checkbox" id="checkbox" class="ml-1 hidden">
+                    </div>
+                    <div class="flex row-span-1">
+                        <p>SICEPAT</p>
+                        <input type="checkbox" name="checkbox" id="checkbox" class="ml-1 hidden">
+                    </div>
+                    <div class="flex row-span-1">
+                        <p>FEDEX</p>
+                        <input type="checkbox" name="checkbox" id="checkbox" class="ml-1 hidden">
+                    </div>   
+                </div> 
+                
+                <div class="flex space-x-3 mt-4 hidden" id="offin">
+                    <button id="button-filter" type="button" class="py-2 px-3 rounded-lg hover:bg-slate-100 bg-[#fa8c00] border-2 border-[#fa8c00] hover:text-black text-white">
+                        <p class="font-semibold">Tambah</p>
+                     </button>
+
+                    <button type="button" class="py-2 px-3 rounded-lg bg-slate-100 hover:bg-[#ff0000] border-2 border-[#ff0000] hover:text-white">
+                        <p class="font-semibold">Hapus</p>
+                     </button>
+                </div>
             </div>
+
             <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <div class="grid grid-cols-12 border-b-2 border-slate-400">
+                    <h1 class="col-span-2 p-2 flex justify-center border-r-2 border-slate-400">No Pesan</h1>
+                    <h1 class="col-span-2 p-2 flex justify-center border-r-2 border-slate-400">No Resi</h1>
+                    <h1 class="col-span-3 p-2 flex justify-center border-r-2 border-slate-400">Dari</h1>
+                    <h1 class="col-span-3 p-2 flex justify-center border-r-2 border-slate-400">Tujuan</h1>
+                    <h1 class="col-span-2 p-2 flex justify-center">Kurir</h1>
+                </div>
+                <div class="grid grid-cols-12 border-b-2 border-slate-400">
+                    <p class="col-span-2 p-2 flex justify-center">FK23010603</p>
+                    <p class="col-span-2 p-2 flex justify-center">10001844339414</p>
+                    <p class="col-span-3 p-2 flex justify-center">Jl Heleneborgsgatan 16, 117 32 Stockholm, Swedia</p>
+                    <p class="col-span-3 p-2 flex justify-center">Beco da Cruz Vermelha 2, Portimão, Portugal</p>
+                    <p class="col-span-2 p-2 flex justify-center">FEDEX</p>
+                </div>
+
             </div>
         </section>
     </main>
+
+    <section class="modal-filter" id="modal-filter">
+        <div class="content-modal py-8 px-10">
+            <div class="flex">
+                <h1 class="font-bold text-lg mb-1">Tambah</h1>
+                <button class="ml-auto" id="close-button">
+                    <i class="fa-solid fa-xmark fa-xl hover:text-[red]"></i>
+                </button>
+            </div>
+            
+            <form action="" id="form-summit" class="mt-12">
+                <div class="flex mb-4">
+                    <label for="nama" class="w-auto self-center">Nama Pengiriman</label>
+                    <input type="text" name="merek-pengiriman" class="w-4/5 rounded-md px-3 py-2 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                </div>
+                <div class="flex justify-center">
+                    <button id="summit" type="button" class="py-1 px-4 bg-[#fa8c00] rounded-lg text-white hover:bg-[#f89f2b] text-lg font-semibold">save</button>
+                </div>
+            </form>
+
+
+            
+        </div>
+    </section>
     <script type="text/javascript" src="../public/src/admin.js"></script>
+    <script>
+
+        var cekbok  = document.querySelectorAll("input[type='checkbox']");
+        var offin   = document.getElementById("offin");
+
+        function check() {
+            cekbok.forEach(e => {
+                e.classList.toggle("hidden")
+            })
+            offin.classList.toggle("hidden")
+            
+        }
+
+
+        var modal   = document.getElementById('modal-filter');
+        var button  = document.getElementById('close-button');
+        var filter  = document.getElementById('button-filter');
+
+        filter.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        button.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
   
