@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover, shrink-to-fit=no' />
     <title>MarketEer</title>
+    <link rel="stylesheet" type="text/css" href="../public/dist/tailwind.css">
     <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
     <link rel="stylesheet" type="text/css"  href="../public/src/store.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,12 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="../public/src/js-image-zoom.js"></script>
     <style>
+        #chevron path {
+            fill: #fff;
+        }
+
         .aktif {
             border-color: #38bdf8;
-            border-width: 2px;
+            border-width: 2px;            
         }
     </style>
 </head>
@@ -317,17 +321,26 @@
             <div class="h-auto container relative flex mx-auto mt-10">
                 <div class="self-center absolute hidden" id="button-prev"> 
                     <div class="w-16 h-16 sm:w-20 sm:h-20 flex justify-center rounded-full bg-[#fa4f00]">
-                        <span class="self-center cursor-pointer">
-                            <i class="fa-solid fa-chevron-left fa-2xl text-white block sm:hidden"></i>
-                            <i class="fa-solid fa-chevron-left fa-3x text-white hidden sm:block"></i>
+                        <span class="self-center cursor-pointer" id="chevron">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 block sm:hidden" viewBox="0 0 320 512">
+                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 hidden sm:block" viewBox="0 0 320 512">
+                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                            </svg>
                         </span>
                     </div>
                 </div>
                 <div class="self-center absolute right-0 " id="button-next"> 
                     <div class="w-16 h-16 sm:w-20 sm:h-20 flex justify-center rounded-full bg-[#fa4f00]">
-                        <span class="self-center cursor-pointer">
-                            <i class="fa-solid fa-chevron-right fa-2xl text-white block sm:hidden"></i>
-                            <i class="fa-solid fa-chevron-right fa-3x text-white hidden sm:block"></i>
+                        <span class="self-center cursor-pointer" id="chevron">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 block sm:hidden" viewBox="0 0 320 512">
+                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 hidden sm:block" viewBox="0 0 320 512">
+                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                            </svg>
                         </span>
                     </div>
                 </div>
