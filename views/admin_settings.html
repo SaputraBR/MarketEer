@@ -120,7 +120,7 @@
                                 <i class="self-center fa-solid fa-pencil mr-1"></i>
                                 <p>edit</p>    
                             </button>
-                            <div class="absolute mt-1 bg-slate-200 rounded-sm hidden drop-content" id="drop-content">
+                            <div class="absolute mt-1 bg-slate-200 rounded-sm drop-content hidden" id="drop-content">
                                 <button class="w-full py-1 font-semibold hover:bg-slate-300">change</button>
                                 <button class="w-full py-1 font-semibold hover:bg-slate-300">delete</button>
                             </div>
@@ -182,20 +182,19 @@
     <script>
 
         function myFunction() {
-            document.getElementById("drop-content").classList.toggle("hidden");
-            }
+            var content     = document.querySelectorAll(".drop-content"); 
+            var button      = document.querySelectorAll(".dropbtn");
 
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("drop-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-                }
+            content[0].classList.toggle("hidden");
+
+            window.onclick = function(e){
+                if(!button[0].contains(e.target)){
+                    for(var i = 0; i < content.length; i++){
+                        if (!content[i].classList.contains("hidden")){
+                            content[i].classList.add("hidden")
+                        }
+                    }
+                }    
             }
         }
 

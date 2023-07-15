@@ -733,17 +733,19 @@
 
         function kilik(){
             dropCtg.classList.toggle("hidden");
+
+            window.onclick = function(e){
+                if(!clasDrop[0].contains(e.target)){
+                    for(var i = 0; i < drpdwn.length; i++){
+                        if (!drpdwn[i].classList.contains("hidden")){
+                            drpdwn[i].classList.add("hidden")
+                        }
+                    }
+                }    
+            }
         }
 
-        window.onclick = function(e){
-            if(!clasDrop[0].contains(e.target)){
-                for(var i = 0; i < drpdwn.length; i++){
-                    if (!drpdwn[i].classList.contains("hidden")){
-                        drpdwn[i].classList.add("hidden")
-                    }
-                }
-            }                            
-        }  
+  
 
 
     document.addEventListener('DOMContentLoaded', () => {

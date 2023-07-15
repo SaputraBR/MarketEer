@@ -1,0 +1,378 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover, shrink-to-fit=no' />
+    <title>MarketEer</title>
+    <link rel="stylesheet" type="text/css" href="../public/dist/tailwind.css">
+    <link rel="stylesheet" type="text/css" href="../public/src/custom.css">
+    <link rel="stylesheet" type="text/css"  href="../public/src/store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/js-image-zoom.js"></script>
+    <style>
+    .custom-select {
+        position: relative;
+        font-family: Arial;
+      }
+      
+      .custom-select select {
+        display: none; /*hide original SELECT element:*/
+      }
+      
+      .select-selected {
+        background-color: DodgerBlue;
+      }
+      
+      /*style the arrow inside the select element:*/
+      .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+      }
+      
+      /*point the arrow upwards when the select box is open (active):*/
+      .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+      }
+      
+      /*style the items (options), including the selected item:*/
+      .select-items div,.select-selected {
+        color: #ffffff;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+      }
+      
+      /*style items (options):*/
+      .select-items {
+        position: absolute;
+        background-color: #1e90ff;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+      }
+      
+      /*hide the items when the select box is closed:*/
+      .select-hide {
+        display: none;
+      }
+      
+      .select-items div:hover, .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      </style>
+</head>
+
+<body class="bg-slate-100 max-w-screen-2xl mx-auto">
+    <nav class="top-0 z-20 bg-main flex flex-col text-white sticky" id="navMain">
+        <div class="flex justify-between h-20 w-auto px-2 sm:px-6 md:px-16 lg:px-24 font-semibold ">
+            <div class="trirong self-center">
+                <a href="store.html" class="text-3xl hidden sm:block sm:text-4xl">MarketEer</a>
+                <a href="store.html" class="h-full flex w-12 block sm:hidden">
+                    <img src="../public/img/MARKETEER_CROPED.png" alt="" class="w-full self-center object-cover">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main class="w-full bg-gray-200 pb-4 px-10 pt-6 md:pt-0 md:px-0">
+        <section class="md:grid md:grid-cols-5 w-auto sm:w-full lg:w-5/6 sm:mx-auto mx-4 sm:px-0 gap-4">
+            <div class="md:col-span-3 px-8 sm:px-16 md:px-10 py-6 md:py-4 md:mt-8 bg-slate-100">
+                <div class="sm:col-span-1">
+                    <h1 class="font-bold text-2xl">Checkout</h1>
+                    <div class="mt-6 mb-4 pb-4 border-b border-sky-400">
+                        <p class="border-b border-sky-400 font-semibold ">Alamat</p>
+                        <div class="flex mt-4">
+                            <p class="font-semibold">Emon Lusk</p>
+                            <p class="mx-2 font-bold">·</p>
+                            <p class="font-semibold">085268732122</p>
+                        </div>
+                        <p class="font-semibold">Isla Trinidad 1548, V9410FFH Ushuaia, Tierra del Fuego, Argentina</p>
+                        <button class="px-4 py-2 mt-3 bg-[#1e90ff] text-white hover:bg-[#1971c9]">Ganti Alamat</button>
+                    </div>                    
+                </div>
+
+
+                <div class="sm:col-span-1 mt-8 border-b border-sky-400">
+                    <div class="w-auto mt-4 contoltainer" id="contoltainer"> 
+                        <div class="w-full flex pb-4 mb-4 item-container" id="item-container">
+                            <div class="self-center">                                
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
+                                    <img src="../public/img/nike-jordan.jpg" alt="" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="ml-2">
+                                <h2 class="font-semibold text-base sm:text-xl">Air Jordan 7 Retro SE Men's Shoes 40-47</h2>
+                                <p class="text-xs sm:text-sm font-semibold">360 gram (1 item)</p>
+                                <div class="mt-1 flex">                                    
+                                    <span class="flex flex-wrap mt-1">
+                                        <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">15%</span>
+                                        <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span class="diskon-harga" id="diskon-harga">3,999,999</span></p>              
+                                    </span>
+                                    <p class="text-sm sm:text-lg font-bold self-center">Rp<span class="harga-brg" id="harga-brg">3,400,000</span></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="w-full flex pb-4 mb-4 item-container" id="item-container">
+                            <div class="self-center">                                
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
+                                    <img src="../public/img/ss21710829165003_1x.jpg" alt="" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="ml-2">
+                                <h2 class="font-semibold text-base sm:text-xl">Polo Bear by Ralph Lauren M/L/XL/XXL</h2>
+                                <p class="text-xs sm:text-sm font-semibold">700 gram (1 item)</p>
+                                <div class="mt-1 flex">                                    
+                                    <span class="flex flex-wrap mt-1">
+                                        <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">38%</span>
+                                        <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span class="diskon-harga" id="diskon-harga">20,999,999</span></p>
+                                    </span>
+                                    <p class="text-sm sm:text-lg font-bold self-center">Rp<span class="harga-brg" id="harga-brg">13,020,000</span></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="w-full flex pb-4 mb-4 item-container" id="item-container">
+                            <div class="self-center">                                
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
+                                    <img src="../public/img/Google-Pixel-7-Pro.jpg" alt="" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="ml-2">
+                                <h2 class="font-semibold text-base sm:text-xl">Google Pixel 7 Pro 12/512GB</h2>
+                                <p class="text-xs sm:text-sm font-semibold">212 g  gram (1 item)</p>
+                                <div class="mt-1 flex">                                    
+                                    <span class="flex flex-wrap mt-1">
+                                        <span class="bg-[#ca0101] px-2 py-1 text-xs font-semibold text-white">42%</span>
+                                        <p class="mx-1 text-xs line-through self-center text-secondary">Rp<span class="diskon-harga" id="diskon-harga">14,999,999</span></p>              
+                                    </span>
+                                    <p class="text-sm sm:text-lg font-bold self-center">Rp<span class="harga-brg" id="harga-brg">9,119,999</span></p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+
+                <div class="mt-4 custom-select" style="width:200px;">
+                    <select type="text" name="nama" class="w-2/4 rounded-md px-3 py-2 bg-gray-200 border border-slate-500 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        <option value="p" class="py-2" disabled selected>Pilih Pengiriman</option>
+                        <option value="p" class="py-2">JNE</option>
+                        <option value="c" class="py-2">J&T</option>
+                        <option value="c" class="py-2">SICEPAT</option>
+                        <option value="c" class="py-2">FEDEX</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            <div class="md:col-span-2 mt-4 md:mt-2 w-full">
+                <div class="w-auto lg:w-5/6 h-auto mx-auto border border-sky-400 p-4 rounded-sm sticky top-28 bg-slate-100" >
+                    <h1 class="font-bold text-lg sm:text-xl sm:text-2xl pb-1 mb-4 border-b border-gray-300">Total Belanja</h1>
+                    <div class="flex mt-5 text-sm sm:text-lg sm:font-semibold md:flex-wrap" id="harga-cont">
+                        <p class="">Total Harga<span class="md:text-sm lg:text-base"> (3 item)</span></p>
+                        <p class="ml-auto">Rp39,999,997</p>
+                    </div>
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap"id="diskon-cont">
+                        <p class="">Total Diskon</p>
+                        <p class="ml-auto flex">
+                            <span class="self-center mr-1">
+                                <i class="fa-solid fa-minus self-center"></i>
+                            </span>
+                            <span>
+                                Rp14,459,998
+                            </span>
+                        </p>
+                    </div>
+                    <div class="w-full mb-6">
+                        <div class="flex font-bold sm:font-semibold text-base sm:text-xl sm:text-2xl mt-2 md:mt-5 md:mb-8 self-center md:flex-wrap" id="kontainer-sub">
+                            <p class="md:block">Subtotal</p>
+                            <p class="ml-auto">                            
+                                Rp25,539,999
+                            </p>
+                        </div>
+                        
+                    </div>     
+
+                    <a href="store_beli.html" class="font-semibold text-sm sm:text-lg sm:text-xl text-white flex">
+                        <button class="w-2/5 md:w-full px-2 py-1.5 rounded-md bg-[#ff4800] hover:bg-white mx-auto hover:border border-[#ff4800] hover:text-[#ff4800]">
+                            Bayar
+                        </button>
+                    </a>
+                </div>
+
+                <div class="w-full bg-white rounded-t-lg overflow-hidden relative" id="slide-total" style="height: 0px;">
+                    <div class="w-full h-8 bg-slate-300 absolute top-0 left-0 flex justify-center">
+                        <span class="self-center" id="chevron-down">
+                            <i class="fa-solid fa-chevron-down fa-xl"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-gray-200 p-2">
+        </section>
+    </main>
+
+    <footer class="pt-16 bg-main"> 
+        <div class="container lg:max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 gap-6">
+            <div class="col-span-1 md:col-span-3 lg:col-span-2">
+                <img class="w-52 h-52 self-center" src="../public/img/1.png" alt="">
+            </div>
+          
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">Products</h1>
+                <div class="flex flex-col">
+                    <a href="#">Foods</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Gadgets</a>
+                    <a href="#">Personal care</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Home</a>
+                    <a href="#">Tools</a>
+                </div>
+            </div>
+    
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">Customer Services</h1>
+                <div class="flex flex-col">
+                    <a href="store_ToU.html">Help Center</a>
+                    <a href="store_ToU.html">Privacy & Security</a>
+                    <a href="store_ToU.html">Terms of Use</a>
+                </div>
+            </div>
+    
+            <div class="text-white">
+                <h1 class="text-xl font-bold mb-2">MarketEer</h1>
+                <div class="flex flex-col">
+                    <a href="store_ToU.html">About Us</a>
+                    <a href="store_ToU.html">Contacts</a>
+                </div>
+            </div>
+        </div>
+        <div class="text white text-sm font-semibold border-t max-w-7xl mx-auto py-6 mt-16 text-center">kopirek &copy; MarketEer 2022</div>
+    </footer>
+
+    <script>
+        var dropbtn     = document.getElementById("dropdown-button");
+        var clasDrop    = document.querySelectorAll(".dropbtn")
+        var dropCtg     = document.getElementById("dropdown-category");
+        var drpdwn      = document.querySelectorAll(".dropdown-category");
+        let isClicked   = false;
+
+        function kilik(){
+            dropCtg.classList.toggle("hidden");
+
+            window.onclick = function(e){
+                if(!clasDrop[0].contains(e.target)){
+                    for(var i = 0; i < drpdwn.length; i++){
+                        if (!drpdwn[i].classList.contains("hidden")){
+                            drpdwn[i].classList.add("hidden")
+                        }
+                    }
+                }                            
+            }  
+
+        }
+    </script>
+
+    <script>
+    var x, i, j, l, ll, selElmnt, a, b, c;
+
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    
+    for (i = 0; i < l; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      console.log(x[i])
+      ll = selElmnt.length;
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+
+      x[i].appendChild(a);
+
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+
+      for (j = 1; j < ll; j++) {
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+        c.addEventListener("click", function(e) {
+
+            var y, i, k, s, h, sl, yl;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            sl = s.length;
+            h = this.parentNode.previousSibling;
+
+            for (i = 0; i < sl; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                yl = y.length;
+                for (k = 0; k < yl; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
+              }
+            }
+            h.click();
+        });
+        b.appendChild(c);
+      }
+
+      x[i].appendChild(b);
+
+      a.addEventListener("click", function(e) {
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+        });
+    }
+
+    function closeAllSelect(elmnt) {
+      var x, y, i, xl, yl, arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      xl = x.length;
+      yl = y.length;
+
+      for (i = 0; i < yl; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i)
+        } else {
+          y[i].classList.remove("select-arrow-active");
+        }
+      }
+
+      for (i = 0; i < xl; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("select-hide");
+        }
+      }
+    }
+
+    document.addEventListener("click", closeAllSelect);
+    </script>
+</body>
+</html>
