@@ -1105,6 +1105,10 @@ video {
   width: 50%;
 }
 
+.w-2\/5 {
+  width: 40%;
+}
+
 .w-20 {
   width: 5rem;
 }
@@ -1191,14 +1195,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-3\/5 {
-  width: 60%;
-}
-
-.w-2\/5 {
-  width: 40%;
 }
 
 .max-w-4xl {
@@ -2605,6 +2601,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-800:hover {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
@@ -2686,10 +2687,6 @@ video {
     position: sticky;
   }
 
-  .sm\:z-0 {
-    z-index: 0;
-  }
-
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -2724,6 +2721,10 @@ video {
 
   .sm\:ml-4 {
     margin-left: 1rem;
+  }
+
+  .sm\:ml-auto {
+    margin-left: auto;
   }
 
   .sm\:mr-4 {
@@ -2810,6 +2811,10 @@ video {
     width: 83.333333%;
   }
 
+  .sm\:w-64 {
+    width: 16rem;
+  }
+
   .sm\:w-9 {
     width: 2.25rem;
   }
@@ -2867,9 +2872,9 @@ video {
     padding-right: 0px;
   }
 
-  .sm\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  .sm\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .sm\:px-3 {
@@ -2890,26 +2895,6 @@ video {
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .sm\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .sm\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
-  .sm\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   .sm\:pb-4 {
@@ -2953,6 +2938,10 @@ video {
 
   .sm\:font-bold {
     font-weight: 700;
+  }
+
+  .sm\:font-normal {
+    font-weight: 400;
   }
 
   .sm\:font-semibold {
@@ -3070,10 +3059,6 @@ video {
     width: 100%;
   }
 
-  .md\:w-5\/6 {
-    width: 83.333333%;
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3122,6 +3107,11 @@ video {
     padding-right: 0.25rem;
   }
 
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -3147,26 +3137,12 @@ video {
     padding-bottom: 1rem;
   }
 
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .md\:pb-5 {
     padding-bottom: 1.25rem;
   }
 
   .md\:pr-14 {
     padding-right: 3.5rem;
-  }
-
-  .md\:pb-4 {
-    padding-bottom: 1rem;
   }
 
   .md\:pt-0 {

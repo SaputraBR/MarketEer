@@ -926,9 +926,6 @@
 
         incrementCount.addEventListener("click", handleIncrement);
         decrementCount.addEventListener("click", handleDecrement);
-
-
-
     </script>
 
     <script>
@@ -984,16 +981,15 @@
         var imgThumb = gmbr.getElementsByTagName("img");
 
         for(i = 0; i < imgThumb.length; i++){
-            var image = imgThumb[i];
-
+            var image = imgThumb[i];            
+            console.log(image)
             image.addEventListener("click", function(e) {
                 gambar.src = this.src;
-
                 let x = Array.prototype.indexOf.call(
                     e.target.parentNode.children,
                     e.target
                 );                
-                aktif(x);                
+                aktif(x);  
             });                        
         };
         
