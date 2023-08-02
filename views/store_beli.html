@@ -128,10 +128,7 @@
                     </button>
                     <div id="dropdown-category" class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow left-0 absolute dropdown-category hidden">
                         <div class="text-sm text-gray-700 w-full" aria-labelledby="dropdown-button" id="ul-reg">
-                            <img src="" class="w-24 h-24 bg-slate-400 haha" alt="">
-                            <img src="" class="w-24 h-24 bg-slate-400 haha" alt="">
-                            <img src="" class="w-24 h-24 bg-slate-400 haha" alt="">
-                            <section class="cursor-pointer w-64 aktif" id="diveg">
+                            <section class="cursor-pointer w-64" id="diveg">
                                 <div class="px-4 py-2 hover:bg-gray-200">
                                     <div class="flex">
                                         <p class="font-semibold sm:font-normal sm:text-lg jenis-srv">Reguler</p>
@@ -242,9 +239,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="w-full bg-gray-200 p-2">
-        </section>
     </main>
 
     <footer class="pt-16 bg-main"> 
@@ -291,29 +285,31 @@
         var dropbtn     = document.getElementById("dropdown-button");
         var peng        = document.getElementById("pengiriman");
         var dropCtg     = document.getElementById("dropdown-category");
-        var diveg       = dropCtg.querySelectorAll(".haha");
+        var diveg       = dropCtg.getElementsByClassName("cursor-pointer");
         var estimasi    = document.getElementById("ubah-est");
-        
+        console.log(diveg)
         
         for (i = 0; i < diveg.length; i++){
-            
-            diveg[i].addEventListener("click", function(e){
-                let x = Array.prototype.indexOf.call(
-                    e.target.parentNode.children,
-                    e.target
-                );                
-                aktif(x)  
-                
-                console.log(x)
+            diveg[i].addEventListener("click", function(){
+                a   = this.querySelectorAll(".jenis-srv")[0].innerHTML;
+                peng.innerHTML = a
+
+                b   = this.querySelectorAll("#estimasi")[0].innerHTML;
+                estimasi.innerHTML = b
+
+                document.getElementById("kurir-hide").classList.remove("hidden");
+
+                var el  = diveg[0];
+                while(el) {
+                    if(el.tagName === "SECTION" ){
+                        el.classList.remove("aktif")
+                    }
+
+                    el  = el.nextSibling;
+                }
+
+                this.classList.add("aktif")
             })            
-        }
-
-        function aktif(x){
-            if (dropCtg.querySelector('.cursor-pointer.aktif') != null)
-                dropCtg.querySelector('.cursor-pointer.aktif').classList.remove('aktif');
-                dropCtg.querySelectorAll('.cursor-pointer')[x].classList.add('aktif');
-
-            
         }
 
         function kilik()
@@ -379,7 +375,23 @@
         }
 
         
+        var modal   = document.getElementById('modal-edit');
+        var button  = document.getElementById('close-button');
+        var filter  = document.getElementById('button-edit');
 
+        filter.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        button.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
 </body>
