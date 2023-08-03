@@ -142,32 +142,32 @@
                 </div> 
 
                 <div class="grid grid-cols-6 items-center border-b-2 border-slate-400 py-1">
-                    <div class="col-span-1 flex">
+                    <div class="col-span-1 flex kurir-merk" id="kurir-merk">
                         <p class="mx-auto">JNE</p>
                     </div>
-                    <div class="col-span-3 grid grid-cols-3">
-                        <div class="col-span-1 flex justify-center">Rp20.000</div>
-                        <div class="col-span-1 flex justify-center">Rp18.000</div>
-                        <div class="col-span-1 flex justify-center">Rp51.000</div>
+                    <div class="col-span-3 grid grid-cols-3" id="ongkos-kurir">
+                        <div class="col-span-1 flex justify-center ongkos-kurir">Rp20.000</div>
+                        <div class="col-span-1 flex justify-center ongkos-kurir">Rp18.000</div>
+                        <div class="col-span-1 flex justify-center ongkos-kurir">Rp51.000</div>
                     </div>
-                    <div class="col-span-1 flex justify-center">ON</div>
-                    <div class="col-span-1 flex justify-center">
+                    <div class="col-span-1 flex justify-center on" id="status">ON</div>
+                    <div class="col-span-1 flex justify-center sss">
                         <button class="hover:text-[#fa8c00]" id="button-pen">
                             <i class="self-center fa-solid fa-pencil mr-1"></i>
                         </button>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-6 items-center border-b-2 border-slate-400 py-1">
-                    <div class="col-span-1 flex">
+                <div class="grid grid-cols-6 items-center border-b-2 border-slate-400 py-1 grid-kurir">
+                    <div class="col-span-1 flex kurir-merk" id="kurir-merk">
                         <p class="mx-auto">J&T</p>
                     </div>
-                    <div class="col-span-3 grid grid-cols-3">
-                        <div class="col-span-1 flex justify-center">Rp18.000</div>
-                        <div class="col-span-1 flex justify-center">Rp20.000</div>
-                        <div class="col-span-1 flex justify-center">Rp54.000</div>
+                    <div class="col-span-3 grid grid-cols-3" id="ongkos-kurir">
+                        <div class="col-span-1 flex justify-center ongkos-kurir">Rp18.000</div>
+                        <div class="col-span-1 flex justify-center ongkos-kurir">Rp20.000</div>
+                        <div class="col-span-1 flex justify-center ongkos-kurir">Rp54.000</div>
                     </div>
-                    <div class="col-span-1 flex justify-center">ON</div>
+                    <div class="col-span-1 flex justify-center off" id="status">OFF</div>
                     <div class="col-span-1 flex justify-center">
                         <button class="hover:text-[#fa8c00]" id="button-pen">
                             <i class="self-center fa-solid fa-pencil mr-1"></i>
@@ -216,28 +216,28 @@
             <form action="" id="form-summit" class="mt-3">
                 <div class="grid grid-cols-6 font-semibold">
                     <label for="nama" class="col-span-1 self-center">Nama</label>
-                    <input type="text" name="nama" class="col-span-5 w-2/3 rounded-md px-3 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="text" name="nama"  id="nama-kurir" class="col-span-5 w-2/3 rounded-md px-3 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                 </div>
                 <div class="grid grid-cols-6 mt-4 font-semibold">
                     <p class="col-span-1">Tarif</p>
-                    <div class="col-span-5">
+                    <div class="col-span-5"  id="mod-tarif">
                         <div class="grid grid-cols-10 mb-2">
                             <label for="reguler" class="col-span-1 self-center block">Reguler</label>
-                            <input type="text" name="reguler" class="col-span-9 w-2/3 rounded-md px-3 ml-12 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                            <input type="text" name="reguler" id="tarif-reg" class="col-span-9 w-2/3 rounded-md px-3 ml-12 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                         </div>
                         <div class="grid grid-cols-10 mb-2">
                             <label for="ekonomi" class="col-span-1 self-center block">Ekonomi</label>
-                            <input type="text" name="ekonomi" class="col-span-9 flex w-2/3 rounded-md px-3 ml-12 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                            <input type="text" name="ekonomi" id="tarif-eko" class="col-span-9 flex w-2/3 rounded-md px-3 ml-12 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                         </div>
                         <div class="grid grid-cols-10">
                             <label for="kargo" class="col-span-1 self-center block">Kargo</label>
-                            <input type="text" name="kargo" class="col-span-9 flex w-2/3 rounded-md px-3 ml-12 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                            <input type="text" name="kargo" id="tarif-kar" class="col-span-9 flex w-2/3 rounded-md px-3 ml-12 bg-gray-200 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                         </div>
                     </div>
                 </div>
                 <div class="grid grid-cols-6 mt-4 font-semibold">
                     <h1 class="col-span-1">Status</h1>
-                    <div class="flex col-span-5">
+                    <div class="flex col-span-5" id="status-modal">
                         <div class="flex">
                             <label class="incont self-center">
                                 <input type="checkbox" value="on" name="status" class="pilih-item" id="pilih-item"> 
@@ -268,6 +268,11 @@
         var modal   = document.getElementById('modal-edit');
         var button  = document.getElementById('close-button');
         var filter  = document.getElementById('button-edit');
+        var nam     = document.getElementById("nama-kurir");
+        var tar     = document.getElementById("mod-tarif").querySelectorAll("input[type='text']");
+        var stts    = document.getElementById("status-modal");
+        var named   = stts.querySelectorAll("input[name='status']");
+        var pen     = document.querySelectorAll("#button-pen");
 
         filter.onclick = function() {
             modal.style.display = "block";
@@ -275,13 +280,60 @@
 
         button.onclick = function() {
             modal.style.display = "none";
+            nam.setAttribute("value", "");
+            tar.forEach(es => es.setAttribute("value", ""))
+            named.forEach(es => es.checked = false)
         }
 
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                nam.setAttribute("value", "")
+                tar.forEach(es => es.setAttribute("value", ""))
+                named.forEach(es => es.checked = false)
             }
+        }    
+        
+        for(i = 0; i < named.length; i++){
+            named[i].addEventListener("click", function(){
+                for(i = 0; i < named.length; i++){
+                    if(named[i] != this && this.checked){
+                        named[i].checked = false;
+                    }
+                    
+                }
+            })
         }
+
+        for(i = 0; i < pen.length; i++){
+            pen[i].addEventListener("click", function(){
+                var a   = this.parentNode;
+                var b   = a.parentNode;
+                var c   = b.getElementsByClassName("kurir-merk");
+                var d   = b.querySelectorAll(".ongkos-kurir");
+                var e   = b.querySelectorAll("#status");
+                e[0].classList.contains("on")
+
+                for( i = 0; i < c.length; i++){
+                    nam.setAttribute("value", c[i].innerText)
+                }
+
+                if (e[0].classList.contains("on")){
+                    stts.querySelectorAll("input[name='status']")[0].checked = true;
+                } else {
+                    stts.querySelectorAll("input[name='status']")[1].checked = true;
+                }
+
+                tar[0].setAttribute("value", d[0].innerHTML)
+                tar[1].setAttribute("value", d[1].innerHTML)
+                tar[2].setAttribute("value", d[2].innerHTML)
+
+                modal.style.display = "block";
+            })
+        }
+
+        
+
     </script>
 </body>
   
