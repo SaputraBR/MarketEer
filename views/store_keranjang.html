@@ -458,7 +458,7 @@
                             harga(), diskon(), jumlah();
                             document.getElementById("sampah-hidden").classList.remove("hidden");
 
-                        } else if (count == 0) {
+                        } else if (count <= 1) {
                                 hiddenJml.classList.add("hidden");
                                 document.getElementById("sampah-hidden").classList.add("hidden");
 
@@ -466,7 +466,7 @@
                                 jmlBrg.innerHTML    = count;
                                 hiddenJml.classList.remove("hidden");
                                 cekAll.checked = false;  
-                                document.getElementById("sampah-hidden").classList.remove("hidden");                                  
+                                document.getElementById("sampah-hidden").classList.remove("hidden");                   
                         }
                     }                       
                 })

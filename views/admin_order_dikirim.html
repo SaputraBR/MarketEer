@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-6 items-center border-b-2 border-slate-400 py-1 grid-kurir">
+                <div class="grid grid-cols-6 items-center border-b-2 border-slate-400 py-1">
                     <div class="col-span-1 flex kurir-merk" id="kurir-merk">
                         <p class="mx-auto">J&T</p>
                     </div>
@@ -176,7 +176,7 @@
                 </div>
                 
                 <div class="flex space-x-3 mt-8" id="offin">
-                    <button id="button-edit" type="button" class="py-2 px-3 rounded-lg hover:bg-slate-100 bg-[#fa8c00] hover:text-[#fa8c00] border-2 border-[#fa8c00] hover:text-black text-white">
+                    <button id="button-tambah" type="button" class="py-2 px-3 rounded-lg hover:bg-slate-100 bg-[#fa8c00] hover:text-[#fa8c00] border-2 border-[#fa8c00] text-white">
                         <p class="font-semibold">Tambah</p>
                      </button>
                 </div>
@@ -199,7 +199,6 @@
                     <p class="col-span-3 p-2 flex justify-center">Beco da Cruz Vermelha 2, Portimão, Portugal</p>
                     <p class="col-span-1 p-2 flex justify-center">FEDEX</p>
                 </div>
-
             </div>
         </section>
     </main>
@@ -255,24 +254,28 @@
                     </div>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <button id="summit" type="submit" class="py-1 px-4 bg-[#fa8c00] rounded-lg text-white hover:bg-[#f89f2b] text-lg font-semibold">save</button>
+                    <button id="summit" type="submit" class="py-2 px-4 bg-[#fa8c00] rounded-lg text-white hover:bg-[#f89f2b] text-lg font-semibold">save</button>
+
+                    <button id="button-hapus" type="button" class="hidden ml-3 py-2 px-4 rounded-lg hover:bg-slate-100 bg-[#f30000] hover:text-[#f30000] border-2 border-[#f30000] text-white">
+                        <p class="font-semibold">Hapus</p>
+                     </button>
                 </div>
             </form>
         </div>
     </section>
-
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
 
     <script>
         var modal   = document.getElementById('modal-edit');
         var button  = document.getElementById('close-button');
-        var filter  = document.getElementById('button-edit');
+        var filter  = document.getElementById('button-tambah');
         var nam     = document.getElementById("nama-kurir");
         var tar     = document.getElementById("mod-tarif").querySelectorAll("input[type='text']");
         var stts    = document.getElementById("status-modal");
         var named   = stts.querySelectorAll("input[name='status']");
         var pen     = document.querySelectorAll("#button-pen");
+        var hps     = document.getElementById("button-hapus")
 
         filter.onclick = function() {
             modal.style.display = "block";
@@ -283,6 +286,7 @@
             nam.setAttribute("value", "");
             tar.forEach(es => es.setAttribute("value", ""))
             named.forEach(es => es.checked = false)
+            hps.classList.add("hidden")
         }
 
         window.onclick = function(event) {
@@ -291,8 +295,13 @@
                 nam.setAttribute("value", "")
                 tar.forEach(es => es.setAttribute("value", ""))
                 named.forEach(es => es.checked = false)
+                hps.classList.add("hidden")
             }
         }    
+
+        hps.onclick = function(){
+            alert()
+        }
         
         for(i = 0; i < named.length; i++){
             named[i].addEventListener("click", function(){
@@ -328,6 +337,7 @@
                 tar[1].setAttribute("value", d[1].innerHTML)
                 tar[2].setAttribute("value", d[2].innerHTML)
 
+                hps.classList.remove("hidden")
                 modal.style.display = "block";
             })
         }
