@@ -924,10 +924,6 @@ video {
   margin-top: 2.25rem;
 }
 
-.mr-0 {
-  margin-right: 0px;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -1748,6 +1744,11 @@ video {
   background-color: rgb(30 144 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#2658e2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 88 226 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#7cf49a\] {
   --tw-bg-opacity: 1;
   background-color: rgb(124 244 154 / var(--tw-bg-opacity));
@@ -1947,21 +1948,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#1d4ed8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#2658e2\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 88 226 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -2381,6 +2367,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .line-through {
   text-decoration-line: line-through;
 }
@@ -2425,6 +2415,10 @@ video {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 1024px) {
@@ -2508,6 +2502,11 @@ video {
 .hover\:bg-\[\#1971c9\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(25 113 201 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#1d4ed8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#71df8c\]:hover {
@@ -2659,9 +2658,14 @@ video {
   background-color: rgb(255 255 255 / .8);
 }
 
-.hover\:bg-\[\#1d4ed8\]:hover {
+.hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .hover\:text-\[\#0029ce\]:hover {

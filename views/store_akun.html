@@ -12,6 +12,13 @@
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../public/dist/tailwind.css">
     <style>
+        .navbio-aktif {
+            text-decoration-line: underline;
+            text-decoration-color: #2200ff;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 4px;
+        }
+
         .alamat-off {
             border-color: #64748b;
             border-width: 1px;
@@ -136,15 +143,15 @@
             </div>
         </div>
         <div class="col-span-2 mr-4">
-            <div class="w-full h-auto bg-white border-2 border-slate-300 ">
-                <div class="flex bg-gray-300 divide-x-2 divide-gray-100">
-                    <span class="px-6 py-2 self-center hover:cursor-pointer nav-bio">Biodata Diri</span>
+            <section class="w-full h-auto bg-white border-2 border-slate-300 relative">
+                <div class="flex bg-gray-300 divide-x-2 divide-gray-100" id="navbar-bio">
+                    <span class="px-6 py-2 self-center hover:cursor-pointer nav-bio navbio-aktif">Biodata Diri</span>
                     <span class="px-6 py-2 self-center hover:cursor-pointer nav-bio">Daftar Alamat</span>
                     <span class="px-6 py-2 self-center hover:cursor-pointer nav-bio">Keamanan</span>
                 </div>
 
-                <div class="flex relative h-full py-4 w-full">
-                    <div class="flex w-full h-auto px-8 shrink-0 hidden">
+                <div class="flex relative h-full py-4 w-full absolute">
+                    <div class="flex w-full h-auto px-8 shrink-0" id="biodata-diri">
                         <div class="w-1/3 h-48 ml-4 relative">
                             <p class="ml-auto mb-1 font-semibold">Photo Profil</p>
                             <img src="../public/img/Johnny_Depp.jpg" id="PP" class="rounded-full border-2 border-slate-800 h-full w-48 object-cover mt-2" alt="">
@@ -192,7 +199,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full h-auto bg-white shrink-0 hidden">
+                    <div class="w-full h-auto bg-white shrink-0 hidden" id="data-alamat">
                         <div class="alamat-aktif w-2/3 px-8 py-4 mx-24 mt-4 relative rounded-lg">
                             <p>Rumah</p>
                             <h1>John Christopher Depp</h1>
@@ -208,7 +215,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full h-auto flex bg-white shrink-0">
+                    <div class="w-full h-auto flex bg-white shrink-0 hidden" id="keamanan">
                         <div class="w-auto space-y-2 pl-4 self-center" id="tombol-ubah">
                             <button class="button-ubah w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah Password</button>
                             <button class="button-ubah w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah Email</button>
@@ -269,8 +276,11 @@
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
+            <section class="w-full h-auto"> 
+
+            </section>
         </div>
     </main>
 
@@ -313,95 +323,149 @@
         <div class="text white text-sm font-semibold border-t max-w-7xl mx-auto py-6 mt-16 text-center">kopirek &copy; MarketEer 2022</div>
     </footer>
 
-  <script>
-        var dropbtn     = document.getElementById("dropdown-button");
-        var clasDrop    = document.querySelectorAll(".dropbtn")
-        var dropCtg     = document.getElementById("dropdown-category");
-        var drpdwn      = document.querySelectorAll(".dropdown-category");
-        let isClicked   = false;
+    <script>
+            var dropbtn     = document.getElementById("dropdown-button");
+            var clasDrop    = document.querySelectorAll(".dropbtn")
+            var dropCtg     = document.getElementById("dropdown-category");
+            var drpdwn      = document.querySelectorAll(".dropdown-category");
 
-        function kilik(){
-            dropCtg.classList.toggle("hidden");
 
-            window.onclick = function(e){
-                if(!clasDrop[0].contains(e.target)){
-                    for(var i = 0; i < drpdwn.length; i++){
-                        if (!drpdwn[i].classList.contains("hidden")){
-                            drpdwn[i].classList.add("hidden")
+            function kilik(){
+                dropCtg.classList.toggle("hidden");
+
+                window.onclick = function(e){
+                    if(!clasDrop[0].contains(e.target)){
+                        for(var i = 0; i < drpdwn.length; i++){
+                            if (!drpdwn[i].classList.contains("hidden")){
+                                drpdwn[i].classList.add("hidden")
+                            }
                         }
-                    }
-                }    
-            }
-        }
-
-        function myFunction() {
-            var content     = document.querySelectorAll(".drop-conteng"); 
-            var button      = document.querySelectorAll(".dropbn");
-
-            content[0].classList.toggle("hidden");
-
-            window.onclick = function(e){
-                if(!button[0].contains(e.target)){
-                    for(var i = 0; i < content.length; i++){
-                        if (!content[i].classList.contains("hidden")){
-                            content[i].classList.add("hidden")
-                        }
-                    }
-                }    
-            }
-        }
-  </script>
-
-  <script>
-        var butt        = document.querySelectorAll(".button-ubah")
-        var boll        = document.getElementById("tombol-ubah")
-        var pass        = document.getElementById("form-pass")
-        var mail        = document.getElementById("form-email")
-        var ntel        = document.getElementById("form-notel")
-
-        for(i = 0; i < butt.length; i++){
-            var bud = butt[i];            
-
-            bud.addEventListener("click", function(e) {
-  
-                let x = Array.prototype.indexOf.call(
-                    e.target.parentNode.children,
-                    e.target
-                );                
-                aktif(x); 
-                
-                if (x == 0){
-                    pass.classList.remove("hidden")
-                    pass.classList.add("block")
-                    mail.classList.remove("block")
-                    mail.classList.add("hidden")
-                    ntel.classList.remove("block")
-                    ntel.classList.add("hidden")
-                } else if (x == 1){
-                    pass.classList.remove("block")
-                    pass.classList.add("hidden")
-                    mail.classList.remove("hidden")
-                    mail.classList.add("block")
-                    ntel.classList.remove("block")
-                    ntel.classList.add("hidden")                    
-                } else if (x == 2){
-                    pass.classList.remove("block")
-                    pass.classList.add("hidden")
-                    mail.classList.remove("block")
-                    mail.classList.add("hidden")
-                    ntel.classList.remove("hidden")
-                    ntel.classList.add("block")
+                    }    
                 }
-            });                        
-        };
-        
+            }
 
-        function aktif(x){
-            if (boll.querySelector('.button-ubah.ubah-aktif') != null)
-                boll.querySelector('.button-ubah.ubah-aktif').classList.remove('ubah-aktif');
-                boll.querySelectorAll('.button-ubah')[x].classList.add('ubah-aktif');                   
-        }
-  </script>
+            function myFunction() {
+                var content     = document.querySelectorAll(".drop-conteng"); 
+                var button      = document.querySelectorAll(".dropbn");
+
+                content[0].classList.toggle("hidden");
+
+                window.onclick = function(e){
+                    if(!button[0].contains(e.target)){
+                        for(var i = 0; i < content.length; i++){
+                            if (!content[i].classList.contains("hidden")){
+                                content[i].classList.add("hidden")
+                            }
+                        }
+                    }    
+                }
+            }
+    </script>
+
+    <script>
+        var navBar      = document.getElementById("navbar-bio")
+        var navbio      = document.querySelectorAll(".nav-bio")
+        var diri        = document.getElementById("biodata-diri")
+        var alamat      = document.getElementById("data-alamat")
+        var aman        = document.getElementById("keamanan")
+
+        for(i = 0; i < navbio.length; i++){
+                var navb = navbio[i];            
+
+                navb.addEventListener("click", function(e) {
+    
+                    let y = Array.prototype.indexOf.call(
+                        e.target.parentNode.children,
+                        e.target
+                    );        
+
+                    nabio(y); 
+                    
+                    if (y == 0){
+                        diri.classList.remove("hidden")
+                        diri.classList.add("block")
+                        alamat.classList.add("hidden")
+                        alamat.classList.remove("block")
+                        aman.classList.remove("block")
+                        aman.classList.add("hidden")
+
+                    } else if (y == 1){
+                        diri.classList.add("hidden")
+                        diri.classList.remove("block")
+                        alamat.classList.remove("hidden")
+                        alamat.classList.add("block")
+                        aman.classList.remove("block")
+                        aman.classList.add("hidden")
+
+                    } else if (y == 2) {
+                        diri.classList.add("hidden")
+                        diri.classList.remove("block")
+                        alamat.classList.add("hidden")
+                        alamat.classList.remove("block")
+                        aman.classList.add("block")
+                        aman.classList.remove("hidden")
+                    }
+                });                        
+            };
+            
+
+            function nabio(y){
+                if (navBar.querySelector('.nav-bio.navbio-aktif') != null)
+                    navBar.querySelector('.nav-bio.navbio-aktif').classList.remove('navbio-aktif');
+                    navBar.querySelectorAll('.nav-bio')[y].classList.add('navbio-aktif');                   
+            }
+    </script>
+
+    <script>
+            var butt        = document.querySelectorAll(".button-ubah")
+            var boll        = document.getElementById("tombol-ubah")
+            var pass        = document.getElementById("form-pass")
+            var mail        = document.getElementById("form-email")
+            var ntel        = document.getElementById("form-notel")
+
+            for(i = 0; i < butt.length; i++){
+                var bud = butt[i];            
+
+                bud.addEventListener("click", function(e) {
+    
+                    let x = Array.prototype.indexOf.call(
+                        e.target.parentNode.children,
+                        e.target
+                    );                
+                    aktif(x); 
+                    
+                    if (x == 0){
+                        pass.classList.remove("hidden")
+                        pass.classList.add("block")
+                        mail.classList.remove("block")
+                        mail.classList.add("hidden")
+                        ntel.classList.remove("block")
+                        ntel.classList.add("hidden")
+                    } else if (x == 1){
+                        pass.classList.remove("block")
+                        pass.classList.add("hidden")
+                        mail.classList.remove("hidden")
+                        mail.classList.add("block")
+                        ntel.classList.remove("block")
+                        ntel.classList.add("hidden")                    
+                    } else if (x == 2){
+                        pass.classList.remove("block")
+                        pass.classList.add("hidden")
+                        mail.classList.remove("block")
+                        mail.classList.add("hidden")
+                        ntel.classList.remove("hidden")
+                        ntel.classList.add("block")
+                    }
+                });                        
+            };
+            
+
+            function aktif(x){
+                if (boll.querySelector('.button-ubah.ubah-aktif') != null)
+                    boll.querySelector('.button-ubah.ubah-aktif').classList.remove('ubah-aktif');
+                    boll.querySelectorAll('.button-ubah')[x].classList.add('ubah-aktif');                   
+            }
+    </script>
 
 </body>
 </html>
