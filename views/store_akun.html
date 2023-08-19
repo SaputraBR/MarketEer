@@ -25,6 +25,7 @@
         }
 
         .alamat-aktif {
+            background-color: rgba(255, 72, 0, 0.04);
             border-color: #ff4800;
             border-width: 1px;
         }
@@ -39,6 +40,7 @@
             border-bottom-left-radius: 0;
             position: absolute;
             left: 0;
+            top: 15%;
             color: #2658e2;
         }
 
@@ -200,24 +202,35 @@
                     </div>
 
                     <div class="w-full h-auto bg-white shrink-0 hidden" id="data-alamat">
-                        <div class="alamat-aktif w-2/3 px-8 py-4 mx-24 mt-4 relative rounded-lg">
-                            <p>Rumah</p>
-                            <h1>John Christopher Depp</h1>
-                            <p>Jl. Nologaten Gg. Kenari No.191, Nologaten, Caturtunggal, Depok, Sleman, DI Yogyakarta</p>
-                            <p>6285756168468</p>
+                        <div class="w-2/3 h-auto mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address alamat-aktif">
+                            <!--<span class="right-0 absolute">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+                                </svg>
+                            </span>-->
+                            <div class="w-full h-full bg-transparent absolute alamats"></div>
+                            <div class="mx-8 my-4">
+                                <p>Rumah</p>
+                                <h1>John Christopher Depp</h1>
+                                <p>Jl. Nologaten Gg. Kenari No.191, Nologaten, Caturtunggal, Depok, Sleman, DI Yogyakarta</p>
+                                <p>6285756168468</p>
+                            </div>
                         </div>
 
-                        <div class="alamat-off w-2/3 px-8 py-4 mx-24 mt-4 relative rounded-lg">
-                            <p>Kantor</p>
-                            <h1>John Christopher Depp</h1>
-                            <p>Jl. Rambutan Raya I, Perumnas, Tonogoro, Kalinegoro, Mertoyudan, Magelang, Jawa Tengah</p>
-                            <p>6284746845535</p>
+                        <div class="w-2/3 h-auto mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address">
+                            <div class="w-full h-full bg-transparent absolute alamats"></div>
+                            <div class="mx-8 my-4">
+                                <p>Kantor</p>
+                                <h1>John Christopher Depp</h1>
+                                <p>Jl. Rambutan Raya I, Perumnas, Tonogoro, Kalinegoro, Mertoyudan, Magelang, Jawa Tengah</p>
+                                <p>6284746845535</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="w-full h-auto flex bg-white shrink-0 hidden" id="keamanan">
                         <div class="w-auto space-y-2 pl-4 self-center" id="tombol-ubah">
-                            <button class="button-ubah w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah Password</button>
+                            <button class="button-ubah w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block ubah-aktif">Ubah Password</button>
                             <button class="button-ubah w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah Email</button>
                             <button class="button-ubah w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah No Telp</button>
                         </div>
@@ -408,25 +421,22 @@
                 });                        
             };
             
+        function nabio(y){
+            if (navBar.querySelector('.nav-bio.navbio-aktif') != null)
+                navBar.querySelector('.nav-bio.navbio-aktif').classList.remove('navbio-aktif');
+                navBar.querySelectorAll('.nav-bio')[y].classList.add('navbio-aktif');            
+        }
 
-            function nabio(y){
-                if (navBar.querySelector('.nav-bio.navbio-aktif') != null)
-                    navBar.querySelector('.nav-bio.navbio-aktif').classList.remove('navbio-aktif');
-                    navBar.querySelectorAll('.nav-bio')[y].classList.add('navbio-aktif');                   
-            }
-    </script>
+        var butt        = document.querySelectorAll(".button-ubah")
+        var boll        = document.getElementById("tombol-ubah")
+        var pass        = document.getElementById("form-pass")
+        var mail        = document.getElementById("form-email")
+        var ntel        = document.getElementById("form-notel")
 
-    <script>
-            var butt        = document.querySelectorAll(".button-ubah")
-            var boll        = document.getElementById("tombol-ubah")
-            var pass        = document.getElementById("form-pass")
-            var mail        = document.getElementById("form-email")
-            var ntel        = document.getElementById("form-notel")
+        for(i = 0; i < butt.length; i++){
+            var bud = butt[i];            
 
-            for(i = 0; i < butt.length; i++){
-                var bud = butt[i];            
-
-                bud.addEventListener("click", function(e) {
+            bud.addEventListener("click", function(e) {
     
                     let x = Array.prototype.indexOf.call(
                         e.target.parentNode.children,
@@ -457,14 +467,36 @@
                         ntel.classList.add("block")
                     }
                 });                        
-            };
+        };
             
+        function aktif(x){
+            if (boll.querySelector('.button-ubah.ubah-aktif') != null)
+                boll.querySelector('.button-ubah.ubah-aktif').classList.remove('ubah-aktif');
+                boll.querySelectorAll('.button-ubah')[x].classList.add('ubah-aktif');                   
+        }
+    </script>
 
-            function aktif(x){
-                if (boll.querySelector('.button-ubah.ubah-aktif') != null)
-                    boll.querySelector('.button-ubah.ubah-aktif').classList.remove('ubah-aktif');
-                    boll.querySelectorAll('.button-ubah')[x].classList.add('ubah-aktif');                   
-            }
+    <script>
+        var dataAlamat  = alamat.querySelectorAll(".alamats")
+        for(i = 0; i < dataAlamat.length; i++){
+
+            dataAlamat[i].addEventListener("click", function(e){
+                var theese  = this.parentNode
+                let z       =  Array.prototype.indexOf.call(
+                                theese.parentNode.children,
+                                e.target.parentNode
+                            );             
+                    
+                alamats(z)
+            })
+        }
+
+        
+        function alamats(z){
+            if (alamat.querySelector('.address.alamat-aktif') != null)
+                alamat.querySelector('.address.alamat-aktif').classList.remove('alamat-aktif')
+                alamat.querySelectorAll('.address')[z].classList.add('alamat-aktif')
+        }
     </script>
 
 </body>
