@@ -618,6 +618,18 @@ video {
   top: 8rem;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
+.-right-4 {
+  right: -1rem;
+}
+
+.-right-6 {
+  right: -1.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -628,10 +640,6 @@ video {
 
 .z-20 {
   z-index: 20;
-}
-
-.z-\[-10\] {
-  z-index: -10;
 }
 
 .col-span-1 {
@@ -1222,6 +1230,10 @@ video {
   width: 100%;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1417,6 +1429,18 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -1958,10 +1982,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2131,6 +2151,10 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .pl-2 {
