@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="mt-4 custom-select" id="custom-select">
-                    <button id="dropdown-button" onclick="kilik()" data-dropdown-toggle="dropdown" class="justify-center dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-3 sm:px-4 text-sm font-medium text-white bg-[#1e90ff] rounded-lg hover:bg-[#1971c9] w-64" type="button">
+                    <button id="dropdown-button" onclick="kiriman()" data-dropdown-toggle="dropdown" class="justify-center dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-3 sm:px-4 text-sm font-medium text-white bg-[#1e90ff] rounded-lg hover:bg-[#1971c9] w-64" type="button">
                         <p class="text-base pengiriman" id="pengiriman">Pengiriman</p>
                         <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -174,7 +174,7 @@
                             <button class="text-sm font-semibold hover:text-blue-600 ubah-btn" id="ubah-btn" onclick="ubah()">Ubah</button>
                         </div>
                     </div>
-                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-drop" id="ubah-drop">
+                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-reguler" id="ubah-reguler">
                         <div class="text-sm font-semibold text-gray-700 w-full">
                             <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
                                 <p class="merk">JNE</p>
@@ -190,10 +190,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-ekonomi" id="ubah-ekonomi">
+                        <div class="text-sm font-semibold text-gray-700 w-full">
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p class="merk">JNE</p>
+                                <p class="ml-2 harga">(Rp18.000)</p>
+                            </div>
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p>J&T</p>
+                                <p class="ml-2">(Rp15.000)</p>
+                            </div>
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p>SICEPAT</p>
+                                <p class="ml-2">(Rp20.000)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-kargo" id="ubah-kargo">
+                        <div class="text-sm font-semibold text-gray-700 w-full">
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p class="merk">JNE</p>
+                                <p class="ml-2 harga">(Rp55.000)</p>
+                            </div>
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p>J&T</p>
+                                <p class="ml-2">(Rp50.000)</p>
+                            </div>
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p>SICEPAT</p>
+                                <p class="ml-2">(Rp58.000)</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-            
+            </div>            
 
             <div class="md:col-span-2 mt-4 md:mt-2 w-full">
                 <div class="w-auto lg:w-5/6 h-auto mx-auto border border-sky-400 p-4 rounded-sm sticky top-28 bg-slate-100" >
@@ -202,12 +233,20 @@
                         <p class="">Total Harga<span class="md:text-sm lg:text-base"> (3 item)</span></p>
                         <p class="ml-auto">Rp39,999,997</p>
                     </div>
-                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap"id="diskon-cont">
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold md:flex-wrap"id="diskon-cont">
                         <p class="">Total Diskon</p>
                         <p class="ml-auto flex">
                             <span class="self-center mr-1">
                                 <i class="fa-solid fa-minus self-center"></i>
                             </span>
+                            <span>
+                                Rp14,459,998
+                            </span>
+                        </p>
+                    </div>
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap"id="diskon-cont">
+                        <p class="">Total Ongkir</p>
+                        <p class="ml-auto flex">
                             <span>
                                 Rp14,459,998
                             </span>
@@ -281,13 +320,12 @@
     </footer>
 
     <script>
-        var a, b;
+        var a, b, c;
         var dropbtn     = document.getElementById("dropdown-button");
         var peng        = document.getElementById("pengiriman");
         var dropCtg     = document.getElementById("dropdown-category");
         var diveg       = dropCtg.getElementsByClassName("cursor-pointer");
         var estimasi    = document.getElementById("ubah-est");
-        console.log(diveg)
         
         for (i = 0; i < diveg.length; i++){
             diveg[i].addEventListener("click", function(){
@@ -300,25 +338,27 @@
                 document.getElementById("kurir-hide").classList.remove("hidden");
 
                 var el  = diveg[0];
-                while(el) {
+                if(el) {
                     if(el.tagName === "SECTION" ){
                         el.classList.remove("aktif")
                     }
 
-                    el  = el.nextSibling;
+                    el  = el.nextSibling;                    
                 }
+                
+                c = this
 
                 this.classList.add("aktif")
             })            
         }
 
-        function kilik()
-        {
-            
+
+        function kiriman()
+        {            
             var clasDrop    = document.querySelectorAll(".dropbtn")
             var dropCtg     = document.getElementById("dropdown-category");
             var drpdwn      = document.querySelectorAll(".dropdown-category");
-            var ubahDrp     = document.getElementById("ubah-drop");
+            var ubahDrp     = document.getElementById("ubah-reguler");
 
             ubahDrp.classList.add("hidden")
 
@@ -334,28 +374,52 @@
                     }
                 }                            
             }
-        }
+        } 
 
-        
-    </script>
-
-    <script>
         function ubah()
         {
             var btnUbah     = document.querySelectorAll(".ubah-btn");
-            var drpUbah     = document.querySelectorAll(".ubah-drop");
-            var ubahDrp     = document.getElementById("ubah-drop");
+            var drpUbah     = document.querySelectorAll(".ubah-reguler");
+            var ubahDrp     = document.getElementById("ubah-reguler");
+            var ubahEkn     = document.querySelectorAll(".ubah-ekonomi");
+            var ubahKar     = document.querySelectorAll(".ubah-kargo");
 
-            ubahDrp.classList.toggle("hidden")
 
             window.onclick = function(e){
-                if(!btnUbah[0].contains(e.target)){
-                    for(var i = 0; i < drpUbah.length; i++){
-                        if (!drpUbah[i].classList.contains("hidden")){
-                            drpUbah[i].classList.add("hidden")
+                if(c == diveg[0])
+                {
+                    drpUbah[0].classList.toggle("hidden")
+                    if(!btnUbah[0].contains(e.target)){                                
+                        for(var i = 0; i < drpUbah.length; i++){
+                            if (!drpUbah[i].classList.contains("hidden")){
+                                drpUbah[i].classList.add("hidden")
+                            }
+                        }
+                    } 
+                }
+                else if (c == diveg[1]) 
+                {
+                    ubahEkn[0].classList.toggle("hidden")
+                    if(!btnUbah[0].contains(e.target)){                                
+                        for(var i = 0; i < ubahEkn.length; i++){
+                            if (!ubahEkn[i].classList.contains("hidden")){
+                                ubahEkn[i].classList.add("hidden")
+                            }
                         }
                     }
-                }                            
+                }
+                else if (c == diveg[2]) 
+                {
+                    ubahKar[0].classList.toggle("hidden")
+                    if(!btnUbah[0].contains(e.target)){                                
+                        for(var i = 0; i < ubahKar.length; i++){
+                            if (!ubahKar[i].classList.contains("hidden")){
+                                ubahKar[i].classList.add("hidden")
+                            }
+                        }
+                    }
+                }
+                           
             } 
         }
 
@@ -365,6 +429,7 @@
         var merk        = document.getElementById("merk");
         var hargaMrk    = document.getElementById("harga");
         for (i = 0; i < kurir.length; i++){
+            
             kurir[i].addEventListener("click", function(e){
                 a   = this.children[0].innerText;
                 b   = this.children[1].innerText;
@@ -376,22 +441,15 @@
 
         
         var modal   = document.getElementById('modal-edit');
-        var button  = document.getElementById('close-button');
-        var filter  = document.getElementById('button-edit');
-
-        filter.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        button.onclick = function() {
-            modal.style.display = "none";
-        }
 
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+
+        var ulReg   = document.getElementById('ul-reg')
+
     </script>
 
 </body>
