@@ -354,8 +354,7 @@
         var totalBlnj   = document.getElementById("total-belanja");
         let number      = new Intl.NumberFormat('en-US');
         let fungHarga   = "";
-        let fungDiskon  = "";
-        
+        let fungDiskon  = "";      
 
         function harga(){
             let cost = 0;
@@ -367,6 +366,9 @@
             }     
             totalHrg.innerHTML = number.format(cost);                  
             fungHarga = totalHrg.innerHTML = number.format(cost);
+            localStorage.setItem("harga", fungHarga)
+            totalHrg.innerHTML = localStorage.getItem("harga")
+
         }
 
         function diskon(){

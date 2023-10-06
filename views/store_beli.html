@@ -129,7 +129,7 @@
                     <div id="dropdown-category" class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow left-0 absolute dropdown-category hidden">
                         <div class="text-sm text-gray-700 w-full" aria-labelledby="dropdown-button" id="ul-reg">
                             <section class="cursor-pointer w-64" id="diveg">
-                                <div class="px-4 py-2 hover:bg-gray-200">
+                                <div class="px-4 py-2 hover:bg-gray-200 sousse">
                                     <div class="flex">
                                         <p class="font-semibold sm:font-normal sm:text-lg jenis-srv">Reguler</p>
                                         <p class="ml-4 text-sm sm:ml-auto self-center">(Rp18,000 - Rp23,000)</p>
@@ -138,7 +138,7 @@
                                 </div>
                             </section>
                             <section class="cursor-pointer w-64" id="diveg">
-                                <div class="px-4 py-2 hover:bg-gray-200">
+                                <div class="px-4 py-2 hover:bg-gray-200 sousse">
                                     <div class="flex">
                                         <p class="font-semibold sm:font-normal sm:text-lg jenis-srv">Ekonomi</p>
                                         <p class="ml-4 text-sm sm:ml-auto self-center">(Rp15,000 - Rp20,000)</p>
@@ -147,7 +147,7 @@
                                 </div>
                             </section>
                             <section class="cursor-pointer w-64" id="diveg">
-                                <div class="px-4 py-2 hover:bg-gray-200">
+                                <div class="px-4 py-2 hover:bg-gray-200 sousse">
                                     <div class="flex">
                                         <p class="font-semibold sm:font-normal sm:text-lg jenis-srv">Kargo</p>
                                         <p class="ml-4 text-sm sm:ml-auto self-center">(Rp50,000 - Rp58,000)</p>
@@ -174,51 +174,51 @@
                             <button class="text-sm font-semibold hover:text-blue-600 ubah-btn" id="ubah-btn" onclick="ubah()">Ubah</button>
                         </div>
                     </div>
-                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-reguler" id="ubah-reguler">
-                        <div class="text-sm font-semibold text-gray-700 w-full">
-                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p class="merk">JNE</p>
-                                <p class="ml-2 harga">(Rp20.000)</p>
+                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden daftar ubah-reguler" id="ubah-reguler">
+                        <div class="text-sm font-semibold text-gray-700 w-full kurir-reguler" id="kurir-reguler">
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir aktif" id="kurir">
+                                <p class="merk" id="merk">JNE</p>
+                                <p class="ml-2 harga" id="harga">(Rp20.000)</p>
                             </div>
                             <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p>J&T</p>
-                                <p class="ml-2">(Rp23.000)</p>
+                                <p class="merk" id="merk">J&T</p>
+                                <p class="ml-2 harga" id="harga">(Rp23.000)</p>
                             </div>
                             <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p>SICEPAT</p>
-                                <p class="ml-2">(Rp18.000)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-ekonomi" id="ubah-ekonomi">
-                        <div class="text-sm font-semibold text-gray-700 w-full">
-                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p class="merk">JNE</p>
-                                <p class="ml-2 harga">(Rp18.000)</p>
-                            </div>
-                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p>J&T</p>
-                                <p class="ml-2">(Rp15.000)</p>
-                            </div>
-                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p>SICEPAT</p>
-                                <p class="ml-2">(Rp20.000)</p>
+                                <p class="merk" id="merk">SICEPAT</p>
+                                <p class="ml-2 harga" id="harga">(Rp18.000)</p>
                             </div>
                         </div>
                     </div>
-                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden ubah-kargo" id="ubah-kargo">
-                        <div class="text-sm font-semibold text-gray-700 w-full">
-                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p class="merk">JNE</p>
-                                <p class="ml-2 harga">(Rp55.000)</p>
+                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden daftar ubah-ekonomi" id="ubah-ekonomi">
+                        <div class="text-sm font-semibold text-gray-700 w-full kurir-ekonomi" id="kurir-ekonomi">
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir aktif" id="kurir">
+                                <p class="merk" id="merk">JNE</p>
+                                <p class="ml-2 harga" id="harga">(Rp18.000)</p>
                             </div>
                             <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p>J&T</p>
-                                <p class="ml-2">(Rp50.000)</p>
+                                <p class="merk" id="merk">J&T</p>
+                                <p class="ml-2 harga" id="harga">(Rp15.000)</p>
                             </div>
                             <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
-                                <p>SICEPAT</p>
-                                <p class="ml-2">(Rp58.000)</p>
+                                <p class="merk" id="merk">SICEPAT</p>
+                                <p class="ml-2 harga" id="harga">(Rp20.000)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden w-auto sm:w-64 z-10 bg-slate-300 divide-y divide-gray-100 rounded-lg shadow absolute hidden daftar ubah-kargo" id="ubah-kargo">
+                        <div class="text-sm font-semibold text-gray-700 w-full kurir-kargo" id="kurir-kargo">
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir aktif" id="kurir">
+                                <p class="merk" id="merk">JNE</p>
+                                <p class="ml-2 harga" id="harga">(Rp55.000)</p>
+                            </div>
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p class="merk" id="merk">J&T</p>
+                                <p class="ml-2 harga" id="harga">(Rp50.000)</p>
+                            </div>
+                            <div class="cursor-pointer flex py-2 px-3 hover:bg-slate-100 kurir" id="kurir">
+                                <p class="merk" id="merk">SICEPAT</p>
+                                <p class="ml-2 harga" id="harga">(Rp58.000)</p>
                             </div>
                         </div>
                     </div>
@@ -229,26 +229,38 @@
             <div class="md:col-span-2 mt-4 md:mt-2 w-full">
                 <div class="w-auto lg:w-5/6 h-auto mx-auto border border-sky-400 p-4 rounded-sm sticky top-28 bg-slate-100" >
                     <h1 class="font-bold text-lg sm:text-xl sm:text-2xl pb-1 mb-4 border-b border-gray-300">Total Belanja</h1>
-                    <div class="flex mt-5 text-sm sm:text-lg sm:font-semibold md:flex-wrap" id="harga-cont">
+                    <div class="flex mt-5 text-sm sm:text-lg sm:font-semibold md:flex-wrap">
                         <p class="">Total Harga<span class="md:text-sm lg:text-base"> (3 item)</span></p>
-                        <p class="ml-auto">Rp39,999,997</p>
+                        <p class="ml-auto" id="total-harga">Rp39,999,997</p>
                     </div>
-                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold md:flex-wrap"id="diskon-cont">
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold md:flex-wrap">
                         <p class="">Total Diskon</p>
                         <p class="ml-auto flex">
                             <span class="self-center mr-1">
                                 <i class="fa-solid fa-minus self-center"></i>
                             </span>
-                            <span>
+                            <span id="total-diskon">
                                 Rp14,459,998
                             </span>
                         </p>
                     </div>
-                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap"id="diskon-cont">
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold md:flex-wrap">
                         <p class="">Total Ongkir</p>
                         <p class="ml-auto flex">
-                            <span>
-                                Rp14,459,998
+                            Rp
+                            <span id="total-ongkir">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap">
+                        <p class="">Dison Ongkir</p>
+                        <p class="ml-auto flex">
+                            <span class="self-center mr-1">
+                                <i class="fa-solid fa-minus self-center"></i>
+                            </span>
+                            <span id="diskon-ongkir">
+                                Rp2,000
                             </span>
                         </p>
                     </div>
@@ -256,7 +268,7 @@
                         <div class="flex font-bold sm:font-semibold text-base sm:text-xl sm:text-2xl mt-2 md:mt-5 md:mb-8 self-center md:flex-wrap" id="kontainer-sub">
                             <p class="md:block">Subtotal</p>
                             <p class="ml-auto">                            
-                                Rp25,539,999
+                                Rp<span id="subtotal">0</span>
                             </p>
                         </div>
                         
@@ -326,32 +338,8 @@
         var dropCtg     = document.getElementById("dropdown-category");
         var diveg       = dropCtg.getElementsByClassName("cursor-pointer");
         var estimasi    = document.getElementById("ubah-est");
-        
-        for (i = 0; i < diveg.length; i++){
-            diveg[i].addEventListener("click", function(){
-                a   = this.querySelectorAll(".jenis-srv")[0].innerHTML;
-                peng.innerHTML = a
-
-                b   = this.querySelectorAll("#estimasi")[0].innerHTML;
-                estimasi.innerHTML = b
-
-                document.getElementById("kurir-hide").classList.remove("hidden");
-
-                var el  = diveg[0];
-                if(el) {
-                    if(el.tagName === "SECTION" ){
-                        el.classList.remove("aktif")
-                    }
-
-                    el  = el.nextSibling;                    
-                }
-                
-                c = this
-
-                this.classList.add("aktif")
-            })            
-        }
-
+        var daaf        = document.querySelectorAll(".daftar")
+        let number      = new Intl.NumberFormat('en-US'); 
 
         function kiriman()
         {            
@@ -361,9 +349,9 @@
             var ubahDrp     = document.getElementById("ubah-reguler");
 
             ubahDrp.classList.add("hidden")
-
+            ekn.classList.add("hidden")
+            kar.classList.add("hidden")
             dropCtg.classList.toggle("hidden");
-
 
             window.onclick = function(e){
                 if(!clasDrop[0].contains(e.target)){
@@ -376,6 +364,84 @@
             }
         } 
 
+        for (i = 0; i < diveg.length; i++){            
+            diveg[i].addEventListener("click", function(){
+                let x = Array.prototype.indexOf.call(
+                    this.parentNode.children,
+                    this                   
+                )                
+
+                if (x == 0){
+                    a = daaf[0].querySelector(".aktif")
+                    if (a){
+                        document.getElementById("jenis-kurir").innerHTML = a.querySelector(".merk").innerHTML
+                        document.getElementById("harga-kurir").innerHTML = a.querySelector(".harga").innerHTML
+                    }
+                }
+                else if (x == 1){
+                    a = daaf[1].querySelector(".aktif")
+                    if (a){
+                        document.getElementById("jenis-kurir").innerHTML = a.querySelector(".merk").innerHTML
+                        document.getElementById("harga-kurir").innerHTML = a.querySelector(".harga").innerHTML
+                    }
+                }
+                else {
+                    a = daaf[2].querySelector(".aktif")
+                    if (a){
+                        document.getElementById("jenis-kurir").innerHTML = a.querySelector(".merk").innerHTML
+                        document.getElementById("harga-kurir").innerHTML = a.querySelector(".harga").innerHTML
+                    }
+                }
+
+                a   = this.querySelectorAll(".jenis-srv")[0].innerHTML;
+                peng.innerHTML = a
+
+                b   = this.querySelectorAll("#estimasi")[0].innerHTML;
+                estimasi.innerHTML = b
+                
+                document.getElementById("kurir-hide").classList.remove("hidden");
+
+                var el  = diveg[0];
+                
+                while (el) {
+                    if (el.tagName === "SECTION" ){
+                        el.classList.remove("aktif")
+                    }
+
+                    el  = el.nextSibling               
+                }   
+                this.classList.add("aktif")            
+                c = this
+
+                document.getElementById("total-ongkir").innerHTML = number.format(hrgKurir.innerHTML.replace(/[^0-9]/g,""))       
+
+                var hrg     = document.getElementById("total-harga")
+                var dsk     = document.getElementById("total-diskon")
+                var tod     = document.getElementById("total-ongkir")
+                var sub     = document.getElementById("subtotal")
+                var ong     = document.getElementById("diskon-ongkir")
+
+                d = hrg.innerHTML.replace(/[^0-9]/g,"")
+                e = dsk.innerHTML.replace(/[^0-9]/g,"")
+                f = tod.innerHTML.replace(/[^0-9]/g,"")
+                g = ong.innerHTML.replace(/[^0-9]/g,"")
+
+                var minDiskon = parseInt(d) - parseInt(e)
+                var hasil     = parseInt(minDiskon) + parseInt(f) - parseInt(g)
+
+                sub.innerHTML = number.format(hasil)
+            })            
+        }       
+
+        var jnsKurir    = document.getElementById("jenis-kurir");
+        var hrgKurir    = document.getElementById("harga-kurir");
+        var kurir       = document.querySelectorAll(".kurir")
+        var merk        = document.getElementById("merk");
+        var hargaMrk    = document.getElementById("harga");
+        var reg         = document.getElementById("ubah-reguler")
+        var ekn         = document.getElementById("ubah-ekonomi")
+        var kar         = document.getElementById("ubah-kargo")
+
         function ubah()
         {
             var btnUbah     = document.querySelectorAll(".ubah-btn");
@@ -384,11 +450,11 @@
             var ubahEkn     = document.querySelectorAll(".ubah-ekonomi");
             var ubahKar     = document.querySelectorAll(".ubah-kargo");
 
-
             window.onclick = function(e){
+                
                 if(c == diveg[0])
                 {
-                    drpUbah[0].classList.toggle("hidden")
+                    drpUbah[0].classList.toggle("hidden")                 
                     if(!btnUbah[0].contains(e.target)){                                
                         for(var i = 0; i < drpUbah.length; i++){
                             if (!drpUbah[i].classList.contains("hidden")){
@@ -399,7 +465,7 @@
                 }
                 else if (c == diveg[1]) 
                 {
-                    ubahEkn[0].classList.toggle("hidden")
+                    ubahEkn[0].classList.toggle("hidden")                    
                     if(!btnUbah[0].contains(e.target)){                                
                         for(var i = 0; i < ubahEkn.length; i++){
                             if (!ubahEkn[i].classList.contains("hidden")){
@@ -419,27 +485,71 @@
                         }
                     }
                 }
-                           
             } 
         }
 
-        var jnsKurir    = document.getElementById("jenis-kurir");
-        var hrgKurir    = document.getElementById("harga-kurir");
-        var kurir       = document.querySelectorAll(".kurir")
-        var merk        = document.getElementById("merk");
-        var hargaMrk    = document.getElementById("harga");
-        for (i = 0; i < kurir.length; i++){
-            
+        for (i = 0; i < kurir.length; i++){            
             kurir[i].addEventListener("click", function(e){
                 a   = this.children[0].innerText;
                 b   = this.children[1].innerText;
 
                 jnsKurir.innerHTML = a;
                 hrgKurir.innerHTML = b;
+
+                let x = Array.prototype.indexOf.call(
+                    this.parentNode.children,
+                    this
+                )
+
+                if (this.parentNode.classList.contains("kurir-reguler")){
+                    onreg(x)
+                } else if (this.parentNode.classList.contains("kurir-ekonomi")){
+                    onekn(x)
+                } else if (this.parentNode.classList.contains("kurir-kargo")){
+                    onkar(x)
+                }        
+
+                document.getElementById("total-ongkir").innerHTML = number.format(hrgKurir.innerHTML.replace(/[^0-9]/g,""))
+                
+                var hrg     = document.getElementById("total-harga")
+                var dsk     = document.getElementById("total-diskon")
+                var tod     = document.getElementById("total-ongkir")
+                var sub     = document.getElementById("subtotal")
+                var ong     = document.getElementById("diskon-ongkir")
+
+                d = hrg.innerHTML.replace(/[^0-9]/g,"")
+                e = dsk.innerHTML.replace(/[^0-9]/g,"")
+                f = tod.innerHTML.replace(/[^0-9]/g,"")
+                g = ong.innerHTML.replace(/[^0-9]/g,"")
+
+                var minDiskon = parseInt(d) - parseInt(e)
+                var hasil     = parseInt(minDiskon) + parseInt(f) - parseInt(g)
+
+                sub.innerHTML = number.format(hasil)
             })
         }
 
+        function onreg(x){
+            if (reg.querySelector('.kurir.aktif') != null){
+                reg.querySelector('.kurir.aktif').classList.remove('aktif');
+                reg.querySelectorAll('.kurir')[x].classList.add('aktif');
+            } 
+        }
         
+        function onekn(x){
+            if (ekn.querySelector('.kurir.aktif') != null){
+                ekn.querySelector('.kurir.aktif').classList.remove('aktif');
+                ekn.querySelectorAll('.kurir')[x].classList.add('aktif');
+            }
+        }
+        
+        function onkar(x){
+            if (kar.querySelector('.kurir.aktif') != null){
+                kar.querySelector('.kurir.aktif').classList.remove('aktif');
+                kar.querySelectorAll('.kurir')[x].classList.add('aktif');
+            }
+        }
+
         var modal   = document.getElementById('modal-edit');
 
         window.onclick = function(event) {
@@ -447,8 +557,6 @@
                 modal.style.display = "none";
             }
         }
-
-        var ulReg   = document.getElementById('ul-reg')
 
     </script>
 
