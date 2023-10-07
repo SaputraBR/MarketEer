@@ -107,7 +107,7 @@
                     <form action="" class="form-keranjang" id="form-keranjang">
                         <div class="w-full h-14 pl-2 bg-slate-100 border-b border-sky-300 flex pb-1 sticky z-10" style="top: 100px;"> 
                             <label for="pilih-all" class="text-lg font-semibold self-center incont">
-                                <input type="checkbox" value="all" name="check-all" class="checkbox-main self-center" id="pilih-all">
+                                <input type="checkbox" value="all" name="check-all" autocomplete="off" class="checkbox-main self-center" id="pilih-all">
                                 <span class="checkmark"></span>
                             </label>
                             <p class="font-semibold text-lg ml-2 self-center">Pilih Semua</p>
@@ -118,7 +118,7 @@
 
                         <div class="w-auto mt-4 ml-2 border-b border-sky-300 flex contoltainer" id="contoltainer"> 
                             <label class="incont">
-                                <input type="checkbox" value="item" name="check" class="pilih-item" id="pilih-item"> 
+                                <input type="checkbox" value="item" name="check" autocomplete="off" class="pilih-item" id="pilih-item"> 
                                 <span class="checkmark"></span>
                             </label>
                             <div class="w-full grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 ml-1 sm:ml-4 pb-4 item-container" id="item-container">
@@ -153,7 +153,7 @@
 
                         <div class="w-auto mt-4 ml-2 border-b border-sky-300 flex contoltainer" id="contoltainer"> 
                             <label class="incont">
-                                <input type="checkbox" value="item" name="check" class="pilih-item" id="pilih-item"> 
+                                <input type="checkbox" value="item" name="check" autocomplete="off" class="pilih-item" id="pilih-item"> 
                                 <span class="checkmark"></span>
                               </label>
                             <div class="w-full grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 ml-1 sm:ml-4 pb-4 item-container" id="item-container">
@@ -188,7 +188,7 @@
                         
                         <div class="w-auto mt-4 ml-2 border-b border-sky-300 flex contoltainer" id="contoltainer"> 
                             <label class="incont">
-                                <input type="checkbox" value="item" name="check" class="pilih-item" id="pilih-item"> 
+                                <input type="checkbox" value="item" name="check" autocomplete="off" class="pilih-item" id="pilih-item"> 
                                 <span class="checkmark"></span>
                               </label>
                             <div class="w-full grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 ml-1 sm:ml-4 pb-4 item-container" id="item-container">
@@ -220,7 +220,6 @@
                                 </div>
                             </div>
                         </div>  
-
                     </form>
                 </div>
             </div>
@@ -367,8 +366,7 @@
             totalHrg.innerHTML = number.format(cost);                  
             fungHarga = totalHrg.innerHTML = number.format(cost);
             localStorage.setItem("harga", fungHarga)
-            totalHrg.innerHTML = localStorage.getItem("harga")
-
+            totalHrg.innerHTML = localStorage.getItem("harga")            
         }
 
         function diskon(){
@@ -471,7 +469,7 @@
                                 document.getElementById("sampah-hidden").classList.remove("hidden");                   
                         }
                     }                       
-                })
+                })                
             })(i);
         }        
     </script>

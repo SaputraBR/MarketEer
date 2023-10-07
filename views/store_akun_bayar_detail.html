@@ -14,42 +14,80 @@
 
 <body>
 
-    <main class="w-full h-full py-24 flex bg-slate-400 relative top-0 bottom-0">
-        <section class="fixed right-0 bottom-0 left-0 top-0 m-auto w-1/2 h-2/3">
-            <div class="bg-slate-100 py-4 px-8 rounded-t-lg font-semibold space-y-1">
-                <h1 class="text-lg mb-1">Detail Pembayaran</h1>
-                <p>Harga Barang</p>
-                <p>Biaya Aplikasi</p>
-                <p>Ongkos Kirim</p>
-                <p>Total Diskon</p>
-                <div class="flex border-t border-gray-300 mt-2">
-                    <div class="font-semibold">
-                        <p>BRIVA</p>
-                        <p>80777087813796688</p>
+    <main class="w-full h-full flex bg-slate-400 relative top-0 bottom-0">
+        <section class="absolute right-0 bottom-0 left-0 top-0 mx-auto w-1/2 h-auto">
+            <div class="w-full">
+                <div class="bg-slate-100 py-4 px-8 rounded-t-lg font-semibold space-y-1">
+                    <h1 class="text-lg mb-1">Detail Pembayaran</h1>
+                    <div class="flex">
+                        <p>Harga Barang</p>
+                        <p class="ml-auto font-semibold">Rp<span id="harga-barang">504,193,425</span></p>
                     </div>
-                    <div class="ml-auto self-center">
-                        <p class="text-lg font-semibold">Rp388,228,938</p>
+                    <div class="flex">
+                        <p>Biaya Admin</p>
+                        <p class="ml-auto font-semibold">Rp<span id="biaya-adm">1,500</span></p>
                     </div>
-                </div> 
-            </div>
-            <div class="mt-1 bg-slate-100 py-4 px-8 font-semibold">
-                <h1 class="text-lg mb-1">Detail Barang</h1>
-                <div class="flex">
-                    <div>
-                        <p class="font-semibold">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</p>
-                        <p class="text-sm font-light">Rp388,228,938 X 1</p>
+                    <div class="flex">
+                        <p>Ongkos Kirim</p>
+                        <p class="ml-auto font-semibold">Rp<span id="ongkos-kirim">23,000</span></p>
                     </div>
-                    <div class="ml-auto">
-                        <p class="font-semibold text-lg">Rp388,228,938</p>
+                    <div class="flex">
+                        <p>Diskon Barang</p>
+                        <p class="ml-auto font-semibold">-Rp<span id="diskon-barang">115,964,487</span></p>
+                    </div>
+                    <div class="flex">
+                        <p>Diskon Ongkir</p>
+                        <p class="ml-auto font-semibold">-Rp<span id="diskon-ongkir">2,000</span></p>
+                    </div>
+                                                                
+                    <div class="flex border-t border-gray-300 mt-2">
+                        <div class="font-semibold">
+                            <p>BRIVA</p>
+                            <p>80777087813796688</p>
+                        </div>
+                        <div class="ml-auto self-center">
+                            <p class="text-lg font-semibold">Rp <span id="sub-bayar">388,228,938</span></p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="mt-1 bg-slate-100 py-4 px-8 font-semibold">
+                    <h1 class="text-lg mb-1">Detail Barang</h1>
+                    <div class="flex">
+                        <div>
+                            <p class="font-semibold">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</p>
+                            <p class="text-sm">Rp388,228,938 X 1</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold rounded-b-lg">
-                <h1 class="text-lg mb-1">Detail Alamat</h1>
-                <p class="font-semibold">Thorin Oakenshield</p>
-                <p class="font-semibold">3VJM+8R, Ilimanaq, Greenland</p>
+                <div class="mt-1 bg-slate-100 py-4 px-8 font-semibold rounded-b-lg">
+                    <h1 class="text-lg mb-1">Detail Alamat</h1>
+                    <p class="font-semibold">Thorin Oakenshield</p>
+                    <p class="font-semibold">3VJM+8R, Ilimanaq, Greenland</p>
+                </div>
             </div>
         </section>
     </main>
+
+    <script>
+        var a, b, c, d, e
+        var harga   = document.getElementById("harga-barang").innerHTML
+        var admin   = document.getElementById("biaya-adm").innerHTML
+        var ongkir  = document.getElementById("ongkos-kirim").innerHTML
+        var disBrg  = document.getElementById("diskon-barang").innerHTML
+        var disOng  = document.getElementById("diskon-ongkir").innerHTML
+        var bayar   = document.getElementById("sub-bayar")
+        let number  = new Intl.NumberFormat('en-US')        
+
+        a = harga.replace(/[^0-9]/g,"")
+        b = admin.replace(/[^0-9]/g,"")
+        c = ongkir.replace(/[^0-9]/g,"")
+        d = disBrg.replace(/[^0-9]/g,"")
+        e = disOng.replace(/[^0-9]/g,"")
+
+        var plus    = parseInt(a) + parseInt(b) + parseInt(c)
+        var min     = parseInt(plus) - parseInt(d) - parseInt(e)
+
+        bayar.innerHTML = number.format(min)
+    </script>
 </body>
   

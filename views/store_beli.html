@@ -253,13 +253,21 @@
                             </span>
                         </p>
                     </div>
-                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap">
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold md:flex-wrap">
                         <p class="">Dison Ongkir</p>
                         <p class="ml-auto flex">
                             <span class="self-center mr-1">
                                 <i class="fa-solid fa-minus self-center"></i>
                             </span>
                             <span id="diskon-ongkir">
+                                Rp2,000
+                            </span>
+                        </p>
+                    </div>
+                    <div class="flex mt-1 text-sm sm:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap">
+                        <p class="">Biaya Admin</p>
+                        <p class="ml-auto flex">
+                            <span id="administrasi">
                                 Rp2,000
                             </span>
                         </p>
@@ -420,14 +428,17 @@
                 var tod     = document.getElementById("total-ongkir")
                 var sub     = document.getElementById("subtotal")
                 var ong     = document.getElementById("diskon-ongkir")
+                var adm     = document.getElementById("administrasi")
 
                 d = hrg.innerHTML.replace(/[^0-9]/g,"")
                 e = dsk.innerHTML.replace(/[^0-9]/g,"")
                 f = tod.innerHTML.replace(/[^0-9]/g,"")
                 g = ong.innerHTML.replace(/[^0-9]/g,"")
+                h = adm.innerHTML.replace(/[^0-9]/g,"")
 
                 var minDiskon = parseInt(d) - parseInt(e)
-                var hasil     = parseInt(minDiskon) + parseInt(f) - parseInt(g)
+                var disOngkir = parseInt(f) - parseInt(g)
+                var hasil     = parseInt(minDiskon) + parseInt(disOngkir) + parseInt(h)
 
                 sub.innerHTML = number.format(hasil)
             })            
@@ -516,14 +527,17 @@
                 var tod     = document.getElementById("total-ongkir")
                 var sub     = document.getElementById("subtotal")
                 var ong     = document.getElementById("diskon-ongkir")
+                var adm     = document.getElementById("administrasi")
 
                 d = hrg.innerHTML.replace(/[^0-9]/g,"")
                 e = dsk.innerHTML.replace(/[^0-9]/g,"")
                 f = tod.innerHTML.replace(/[^0-9]/g,"")
                 g = ong.innerHTML.replace(/[^0-9]/g,"")
+                h = adm.innerHTML.replace(/[^0-9]/g,"")
 
                 var minDiskon = parseInt(d) - parseInt(e)
-                var hasil     = parseInt(minDiskon) + parseInt(f) - parseInt(g)
+                var disOngkir = parseInt(f) - parseInt(g)
+                var hasil     = parseInt(minDiskon) + parseInt(disOngkir) + parseInt(h)
 
                 sub.innerHTML = number.format(hasil)
             })
