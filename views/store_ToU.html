@@ -27,11 +27,11 @@
     <main class="w-full bg-gray-100">
         <div class="sm:grid sm:grid-cols-4">
             <div class="col-span-1 content-center px-4 md:px-6 mt-8 relative">
-                <div class="justify-items-center sm:justify-items-start grid grid-cols-4 sm:grid-cols-none border-2 border-sky-300 divide-x sm:divide-x-0 sm:divide-y divide-gray-400 overflow-hidden bg-white top-28 sticky">
-                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="aboutBtn" onclick="aboutScroll()">About</div>  
-                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="termBtn" onclick="termScroll()">Terms of Use</div>  
-                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="privacyBtn" onclick="privacyScroll()">Privacy & Security</div>  
-                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="helpBtn" onclick="helpScroll()">Help & Contact</div>  
+                <div class="justify-items-center sm:justify-items-start grid grid-cols-4 sm:grid-cols-none border-2 border-sky-300 divide-x sm:divide-x-0 sm:divide-y divide-gray-400 overflow-hidden bg-white top-28 sticky" id="navigation">
+                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="aboutBtn">About</div>  
+                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="termBtn">Terms of Use</div>  
+                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="privacyBtn">Privacy & Security</div>  
+                    <div class="px-3 py-2 sm:w-full font-semibold hover:bg-slate-200" id="helpBtn">Help & Contact</div>  
                 </div>
             </div>
             <div class="col-span-3 mt-8 pr-2 md:pr-14 px-4 md:px-0 sm:h-full">
@@ -144,52 +144,41 @@
     </footer>
 
     <script>
-        function aboutScroll() {
-            var about = document.getElementById('about');
-            var headerOffset = 110;
-            var elementPosition = about.getBoundingClientRect().top;
-            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        var about   = document.getElementById('about');
+        var term    = document.getElementById('term');
+        var privacy = document.getElementById('privacy');
+        var helping = document.getElementById('help');
+        var navi    = document.getElementById('navigation')
+        var a       = navi.children
 
-            window.scrollTo({
-                top:  offsetPosition,
-                behavior: "smooth"
-            });
-        }
-        
-        function termScroll() {
-            var term = document.getElementById('term');
-            var headerOffset = 110;
-            var elementPosition = term.getBoundingClientRect().top;
-            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        for(i = 0; i < a.length; i++){
+            a[i].addEventListener("click", function(){
+                let x = Array.prototype.indexOf.call(
+                            this.parentNode.children,
+                            this
+                        )
 
-            window.scrollTo({
-                top:  offsetPosition,
-                behavior: "smooth"
-            });
-        }
+                var help
+                if (x == 0){
+                    help = about
+                } else if (x == 1){
+                    help = term
+                } else if (x == 2){
+                    help = privacy
+                } else if (x == 3){
+                    help = helping
+                }
 
-        function privacyScroll() {
-            var privacy = document.getElementById('privacy');
-            var headerOffset = 110;
-            var elementPosition = privacy.getBoundingClientRect().top;
-            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                var headerOffset = 110;
+                var elementPosition = help.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            window.scrollTo({
-                top:  offsetPosition,
-                behavior: "smooth"
-            });
-        }
+                window.scrollTo({
+                    top:  offsetPosition,
+                    behavior: "smooth"
+                });
+            })
 
-        function helpScroll() {
-            var term = document.getElementById('help');
-            var headerOffset = 110;
-            var elementPosition = help.getBoundingClientRect().top;
-            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top:  offsetPosition,
-                behavior: "smooth"
-            });
         }
     </script>
 </body>

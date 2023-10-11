@@ -228,7 +228,9 @@
                 <div class="w-auto lg:w-3/4 h-auto xl:h-80 bg-white border-t-2 md:border-2 border-sky-300 p-4 md:sticky md:top-28" id="kontainer-first">
                     <h1 class="font-bold text-lg sm:text-xl sm:text-2xl pb-1 mb-4 border-b border-gray-300" id="bel-tot">Total Belanja</h1>
                     <div class="md:flex mt-5 text-sm md:text-lg sm:font-semibold md:flex-wrap" id="harga-cont">
-                        <p class="">Total Harga<span class="hidden md:text-sm lg:text-base" id="hidden-jml"> (<span id="jml-brg"></span> item)</span></p>
+                        <p class="">Total Harga
+                            <span class="hidden md:text-sm lg:text-base" id="hidden-jml"> (<span id="jml-brg"></span> item)</span>
+                        </p>
                         <p class="ml-auto">Rp<span id="total-harga">0</span></p>
                     </div>
                     <div class="md:flex mt-1 text-sm md:text-lg sm:font-semibold sm:border-b border-gray-300 pb-1 md:pb-5 md:flex-wrap"id="diskon-cont">
@@ -458,7 +460,7 @@
                             harga(), diskon(), jumlah();
                             document.getElementById("sampah-hidden").classList.remove("hidden");
 
-                        } else if (count <= 1) {
+                        } else if (count < 1) {
                                 hiddenJml.classList.add("hidden");
                                 document.getElementById("sampah-hidden").classList.add("hidden");
 

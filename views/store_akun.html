@@ -143,17 +143,16 @@
     <main class="grid grid-cols-3 mt-10">
         <div class="col-span-1">
             <div class="w-full sticky top-32">
-                <ul class="w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 overflow-hidden">
+                <ul class="w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 overflow-hidden" id="main-navbar">
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Data Pribadi</li>    
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Pesan</li>                
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Menunggu Pembayaran</li>
-                    <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Beri Penilaian</li>
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Riwayat Pembelian</li>
-                    <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Log Out</li>
                 </ul>
+                <div class="mt-4 w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Log Out</div>
             </div>
         </div>
-        <div class="col-span-2 mr-4">
+        <div class="col-span-2 mr-4" id="main-section">
             <section class="w-full h-auto bg-white border-2 border-slate-300 relative pb-8" id="data-pribadi">
                 <div class="flex bg-gray-300 divide-x-2 divide-gray-100" id="navbar-bio">
                     <span class="px-6 py-2 self-center hover:cursor-pointer nav-bio navbio-aktif">Biodata Diri</span>
@@ -212,8 +211,8 @@
 
                     <div class="w-full h-auto bg-white shrink-0 hidden" id="data-alamat">
                         <div class="w-2/3 h-auto mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address alamat-aktif">
-                            <div class="mx-8 my-4 relative alamats">
-                                <span class="right-0 absolute check-corner">
+                            <div class="px-8 py-4 relative alamats">
+                                <span class="right-0 mr-4 absolute check-corner">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="w-7 h-7" id="centang">
                                         <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
                                     </svg>
@@ -226,8 +225,8 @@
                         </div>
 
                         <div class="w-2/3 h-auto mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address">
-                            <div class="mx-8 my-4 relative alamats">
-                                <span class="right-0 absolute check-corner hidden">
+                            <div class="px-8 py-4 relative alamats">
+                                <span class="right-0 mr-4 absolute check-corner hidden">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="w-7 h-7" id="centang">
                                         <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
                                     </svg>
@@ -303,7 +302,7 @@
                 </div>
             </section>
 
-            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-4">
+            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-10" id="pesan">
                 <div class="flex bg-gray-300 px-4 py-1">
                     <p class="font-semibold text-2xl">Pesan</p>
                 </div> 
@@ -340,13 +339,13 @@
                 </div>
             </section>
 
-            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-4">
+            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-10" id="menunggu-pembayaran">
                 <div class="flex bg-gray-300 px-4 py-1">
                     <p class="font-semibold text-2xl">Menunggu Pembayaran</p>
                 </div> 
                 <div class="space-y-4 p-4">
                     <div class="w-2/3 bg-gray-300 rounded-sm pb-2">
-                        <a href="store_akun_bayar_detail.html">
+                        <a href="store_akun_bayar_detail.html" class="cursor-default">
                             <div class="flex px-4 py-2 font-semibold">
                                 <p>31 Maret 2023</p>
                                 <div class="ml-auto flex">
@@ -370,7 +369,7 @@
                                     <p class="text-sm sm:text-lg font-bold self-center">Rp388,228,938</span></p>
                                 </div>
                                 <div class="ml-auto self-center">
-                                    <button class="ml-auto flex bg-[#ff9c9c] px-2 py-1 rounded-md text-[#ce0000] text-base font-semibold">
+                                    <button class="ml-auto flex bg-[#ff9c9c] hover:bg-[#f78282] px-2 py-1 rounded-md text-[#ce0000] text-base font-semibold">
                                         Batalkan
                                     </button>
                                 </div>
@@ -380,24 +379,13 @@
                 </div>                
             </section>
 
-            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-4">
-                <div class="flex bg-gray-300 px-4 py-1">
-                    <p class="font-semibold text-2xl">Beri Penilaian</p>
-                </div> 
-                <div>
-                    <div>
-                        
-                    </div>
-                </div>                
-            </section>
-
-            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-4">
+            <section class="w-full h-auto bg-white border-2 border-slate-300 relative mt-10" id="riwayat-pembelian">
                 <div class="flex bg-gray-300 px-4 py-1">
                     <p class="font-semibold text-2xl">Riwayat Pembelian</p>
                 </div> 
                 <div class="p-4 space-y-4">
-                    <div class="w-2/3 bg-gray-300 rounded-sm pb-2">
-                        <div class="flex px-4 py-2 font-semibold">
+                    <div class="w-2/3 bg-gray-300 rounded-sm">
+                        <div class="flex px-4 py-1 font-semibold border-b border-white">
                             <p >12 Mei 2023</p>
                             <div class="ml-auto flex bg-[#74ff9b] px-1 rounded-md">
                                 <span class="self-center fill-[#00a22e] mr-1">
@@ -416,7 +404,7 @@
                                 <p class="text-[#ce0000] text-sm self-center">Gagal</p>
                             </div>
                         </div>
-                        <div class="flex px-4 py-2 border-t border-white">
+                        <div class="flex px-4 py-2">
                             <div class="self-center">                                
                                 <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
                                     <img src="../public/img/nike-jordan.jpg" alt="" class="w-full h-full object-cover">
@@ -429,7 +417,7 @@
                                 </div>
                             </div>                            
                         </div>
-                        <div class="flex px-4 py-2 border-t border-white">
+                        <div class="flex px-4 py-2">
                             <div class="self-center">                                
                                 <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
                                     <img src="../public/img/ss21710829165003_1x.jpg" alt="" class="w-full h-full object-cover">
@@ -442,7 +430,7 @@
                                 </div>
                             </div>                            
                         </div>
-                        <div class="flex px-4 py-2 border-t border-white">
+                        <div class="flex px-4 py-2">
                             <div class="self-center">                                
                                 <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
                                     <img src="../public/img/Google-Pixel-7-Pro.jpg" alt="" class="w-full h-full object-cover">
@@ -455,14 +443,19 @@
                                 </div>
                             </div>                            
                         </div>
-                        <div class="px-4">
-                            <p>Total Harga</p>                            
-                            <p class="text-sm sm:text-lg font-bold self-center">Rp25,539,999</span></p>
+                        <div class="px-4 py-1 flex border-t border-white">
+                            <div class="block">
+                                <p>Total Harga</p>                            
+                                <p class="text-sm sm:text-lg font-bold self-center">Rp25,539,999</span></p>
+                            </div>
+                            <div class="ml-auto self-center">
+                                <button class="px-2 py-1 bg-amber-300 hover:bg-amber-400">Beri Penilaian</button>
+                            </div>
                         </div>                 
                     </div>
 
-                    <div class="w-2/3 bg-gray-300 rounded-sm pb-2">
-                        <div class="flex px-4 py-2 font-semibold">
+                    <div class="w-2/3 bg-gray-300 rounded-sm">
+                        <div class="flex px-4 py-2 font-semibold border-b border-white">
                             <p>02 April 2023</p>
                             <div class="ml-auto flex bg-[#ff9c9c] px-1 rounded-md">
                                 <span class="self-center fill-[#ce0000] mr-1">
@@ -473,7 +466,7 @@
                                 <p class="text-[#ce0000] text-sm self-center">Gagal</p>
                             </div>
                         </div>
-                        <div class="flex px-4 py-2 border-t border-white">
+                        <div class="flex px-4 py-2">
                             <div class="self-center">                                
                                 <div class="w-16 h-16 sm:w-20 sm:h-20 border border-sky-200"> 
                                     <img src="../public/img/Hermes-Kelly.jpg" alt="" class="w-full h-full object-cover">
@@ -486,9 +479,14 @@
                                 </div>
                             </div>                            
                         </div>
-                        <div class="px-4">
-                            <p>Total Harga</p>                            
-                            <p class="text-sm sm:text-lg font-bold self-center">Rp388,228,938</span></p>
+                        <div class="px-4 py-1 flex border-t border-white">
+                            <div class="block">
+                                <p>Total Harga</p>                            
+                                <p class="text-sm sm:text-lg font-bold self-center">Rp388,228,938</span></p>
+                            </div>
+                            <div class="ml-auto self-center hidden">
+                                <button class="px-2 py-1 bg-amber-300 hover:bg-amber-400">Beri Penilaian</button>
+                            </div>
                         </div>                 
                     </div>
                 </div>                
@@ -578,7 +576,6 @@
         var navBar      = document.getElementById("navbar-bio")
         var navbio      = document.querySelectorAll(".nav-bio")
         var diri        = document.getElementById("biodata-diri")
-        var alamat      = document.getElementById("data-alamat")
         var aman        = document.getElementById("keamanan")
 
         for(i = 0; i < navbio.length; i++){
@@ -676,21 +673,20 @@
     </script>
 
     <script>
+        var alamat      = document.getElementById("data-alamat")
         var dataAlamat  = alamat.querySelectorAll(".alamats")
         var corner      = document.querySelectorAll(".check-corner")
         var those
-
+   
         for(i = 0; i < dataAlamat.length; i++){
             dataAlamat[i].addEventListener("click", function(e){
                 var theese  = this.parentNode
-                those   = theese.parentNode.children
-                let z       =  Array.prototype.indexOf.call(
-                                theese.parentNode.children,
-                                e.target.parentNode.parentNode
-                            );             
-                    
+                those       = theese.parentNode.children
+                let z       = Array.prototype.indexOf.call(
+                              theese.parentNode.children,
+                              this.parentNode
+                            );          
                 alamats(z)
-                
                 for (i = 0; i < those.length; i++){
                     if(those[i].classList.contains("alamat-aktif")){
                         this.querySelector(".check-corner").classList.remove("hidden")
@@ -713,7 +709,44 @@
     </script>
 
     <script>
-        document.getElementById("data-pribadi")
+        var maiNav      = document.getElementById("main-navbar")
+        var main        = document.getElementById("main-section")
+        var dataPribadi = document.getElementById("data-pribadi")
+        var dataPesan   = document.getElementById("pesan")
+        var dataTunggu  = document.getElementById("menunggu-pembayaran")
+        var dataRiwayat = document.getElementById("riwayat-pembelian")
+        var a = maiNav.children
+
+        for(i = 0; i < a.length; i++){
+            a[i].addEventListener("click", function() {
+                var ehem = Array.prototype.indexOf.call(
+                            this.parentNode.children,
+                            this
+                         )
+                var term
+
+                if (ehem == 0 ){
+                    term = dataPribadi
+                } else if (ehem == 1) {
+                    term = dataPesan
+                } else if (ehem == 2) {
+                    term = dataTunggu
+                } else if (ehem == 3) {
+                    term = dataRiwayat
+                }
+
+                var headerOffset = 110
+                var elementPosition = term.getBoundingClientRect().top
+                var offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+                window.scrollTo({
+                    top:  offsetPosition,
+                    behavior: "smooth"
+                });
+            })
+        }
+
+
     </script>
 </body>
 </html>
