@@ -136,22 +136,22 @@
                 <h2 class="font-semibold text-xl mb-3">Change Password</h2>
                 <form action="">
                     <label for="op" class="font-semibold">Old Password</label>
-                    <div class="flex relative mb-6 w-3/4">
-                        <button class="absolute self-center right-0 mr-2" id="fa-eye" type="button" onclick="pas()">
+                    <div class="flex relative mb-6 w-3/4" id="container-input">
+                        <button class="absolute self-center right-0 mr-2" id="fa-eye" type="button"">
                             <i class="fa-solid fa-eye"></i>
                         </button>
-                        <button class="absolute self-center right-0 mr-2" id="fa-eye-slash" type="button" onclick="pas()" hidden>
+                        <button class="absolute self-center right-0 mr-2" id="fa-eye-slash" type="button" hidden>
                             <i class="fa-solid fa-eye-slash"></i>
                         </button>
                         <input type="password" name="op" id="password" class="block w-full mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                     </div>
 
                     <label for="np" class="font-semibold">New Password</label>
-                    <div class="flex relative mb-6 w-3/4">
-                        <button class="absolute self-center right-0 mr-2" id="fa-ey" type="button" onclick="show()">
+                    <div class="flex relative mb-6 w-3/4" id="container-input">
+                        <button class="absolute self-center right-0 mr-2" id="fa-eye" type="button">
                             <i class="fa-solid fa-eye"></i>
                         </button>
-                        <button class="absolute self-center right-0 mr-2" id="fa-eye-slas" type="button" onclick="show()" hidden>
+                        <button class="absolute self-center right-0 mr-2" id="fa-eye-slash" type="button" hidden>
                             <i class="fa-solid fa-eye-slash"></i>
                         </button>
                         <input type="password" name="np" id="passw" class="block w-full mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
@@ -159,11 +159,11 @@
                     
 
                     <label for="cnp" class="font-semibold">Confirm New Password</label>
-                    <div class="flex relative mb-6 w-3/4">
-                        <button class="absolute self-center right-0 mr-2" id="fa-e" type="button" onclick="hide()">
+                    <div class="flex relative mb-6 w-3/4" id="container-input">
+                        <button class="absolute self-center right-0 mr-2" id="fa-eye" type="button">
                             <i class="fa-solid fa-eye"></i>
                         </button>
-                        <button class="absolute self-center right-0 mr-2" id="fa-eye-sl" type="button" onclick="hide()" hidden>
+                        <button class="absolute self-center right-0 mr-2" id="fa-eye-slash" type="button" hidden>
                             <i class="fa-solid fa-eye-slash"></i>
                         </button>
                         <input type="password" name="cnp" id="pass" class="block w-full mt-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
@@ -180,7 +180,6 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-
         function myFunction() {
             var content     = document.querySelectorAll(".drop-content"); 
             var button      = document.querySelectorAll(".dropbtn");
@@ -198,52 +197,22 @@
             }
         }
 
-        function pas() {
-            var eye   = document.getElementById('fa-eye');
-            var slash = document.getElementById('fa-eye-slash');
-            var pass  = document.getElementById('password');
-
-            if (pass.type === 'password'){
-                pass.type       = 'text';
-                eye.hidden      = true;
-                slash.hidden    = false;
-            } else {
-                pass.type       = 'password';
-                eye.hidden      = false;
-                slash.hidden    = true;
-            }
-        }
-
-        function show(){
-            var eye   = document.getElementById('fa-ey');
-            var slash = document.getElementById('fa-eye-slas');
-            var pass  = document.getElementById('passw');
-
-            if (pass.type === 'password'){
-                pass.type       = 'text';
-                eye.hidden      = true;
-                slash.hidden    = false;
-            } else {
-                pass.type       = 'password';
-                eye.hidden      = false;
-                slash.hidden    = true;
-            }
-        }
-
-        function hide(){
-            var eye   = document.getElementById('fa-e');
-            var slash = document.getElementById('fa-eye-sl');
-            var pass  = document.getElementById('pass');
-
-            if (pass.type === 'password'){
-                pass.type       = 'text';
-                eye.hidden      = true;
-                slash.hidden    = false;
-            } else {
-                pass.type       = 'password';
-                eye.hidden      = false;
-                slash.hidden    = true;
-            }
+        var contain     = document.querySelectorAll("#container-input")
+        for (i = 0; i < contain.length; i++){
+            var button  = contain[i].querySelectorAll("button")            
+            button.forEach(ex => {
+                ex.addEventListener("click", function(){
+                   if (!this.parentNode.querySelectorAll("#fa-eye")[0].hidden){
+                        this.parentNode.querySelectorAll("#fa-eye")[0].hidden = true
+                        this.parentNode.querySelectorAll("#fa-eye-slash")[0].hidden = false
+                        this.parentNode.querySelectorAll("input")[0].setAttribute("type", "text")
+                   } else {
+                        this.parentNode.querySelectorAll("#fa-eye")[0].hidden = false
+                        this.parentNode.querySelectorAll("#fa-eye-slash")[0].hidden = true
+                        this.parentNode.querySelectorAll("input")[0].setAttribute("type", "password")
+                   }
+                })
+            })
         }
     </script>
 </body>
