@@ -143,13 +143,21 @@
     <main class="grid grid-cols-3 mt-10">
         <div class="col-span-1">
             <div class="w-full sticky top-32">
-                <ul class="w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 overflow-hidden" id="main-navbar">
+                <ul class="w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 overflow-hidden font-semibold" id="main-navbar">
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Data Pribadi</li>    
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Pesan</li>                
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Menunggu Pembayaran</li>
                     <li class="py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Riwayat Pembelian</li>
                 </ul>
-                <div class="mt-4 w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 py-2 px-4 hover:bg-slate-100 hover:cursor-pointer">Log Out</div>
+                <div class="flex mt-4 w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 hover:bg-slate-100 hover:cursor-pointer">
+                    <div class="py-2 px-4 font-semibold">Log Out</div>
+                    <span class="ml-auto mr-4 self-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style="fill: #ff4800">
+                            <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/>
+                        </svg>
+                    </span>
+                </div>
+                
             </div>
         </div>
         <div class="col-span-2 mr-4" id="main-section">
