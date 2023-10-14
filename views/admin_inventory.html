@@ -87,7 +87,6 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-
         <section class="">
             <div class="mb-4" id="adminArea">
                 <p class="text-4xl font-bold self-center w-full text-[#fa8c00] border-b-2 border-slate-800">Product</p>
@@ -109,6 +108,7 @@
                     </button>
                 </div>
             </div>
+
             <div class="flex mb-8">
                 <h1 class="text-2xl mr-2">1</h1>
                 <div class="grid grid-cols-4 gap-4 bg-[#89a7b1] p-2 rounded-lg overflow-hidden">
@@ -150,10 +150,10 @@
                                     delete
                                 </a>
                                 <div class="mr-3 buttons r" id="button-1">
-                                    <input type="checkbox" class="checkbox">
+                                    <input type="checkbox" class="checkbox" value="" id="input-on">
                                     <div class="knobs"></div>
                                     <div class="layer"></div>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                                     delete
                                 </a>
                                 <div class="mr-3 buttons r" id="button-1">
-                                    <input type="checkbox" class="checkbox">
+                                    <input type="checkbox" class="checkbox" value="" id="input-on">
                                     <div class="knobs"></div>
                                     <div class="layer"></div>
                                   </div>
@@ -252,7 +252,7 @@
                                     delete
                                 </a>
                                 <div class="mr-3 buttons r" id="button-1">
-                                    <input type="checkbox" class="checkbox">
+                                    <input type="checkbox" class="checkbox" value="" id="input-on">
                                     <div class="knobs"></div>
                                     <div class="layer"></div>
                                   </div>
@@ -303,7 +303,7 @@
                                     delete
                                 </a>
                                 <div class="mr-3 buttons r" id="button-1">
-                                    <input type="checkbox" class="checkbox">
+                                    <input type="checkbox" class="checkbox" value="" id="input-on">
                                     <div class="knobs"></div>
                                     <div class="layer"></div>
                                   </div>
@@ -393,7 +393,7 @@
         var modal   = document.getElementById('modal-filter');
         var button  = document.getElementById('close-button');
         var filter  = document.getElementById('button-filter');
-
+        
         filter.onclick = function() {
             modal.style.display = "block";
         }
@@ -407,6 +407,20 @@
                 modal.style.display = "none";
             }
         }
+        
+        var statusButton = document.querySelectorAll("#button-1")
+        for (i = 0; i < statusButton.length; i++){
+            var a = statusButton[i].querySelector("#input-on")
+            a.addEventListener("click", function(){
+                if (this.checked){
+                    this.value = "off"
+                } else {
+                    this.value = "on"
+                }
+                console.log(this.value)
+            })
+        }
+        
     </script>
 </body>
 
