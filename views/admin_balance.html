@@ -8,6 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <style>
+        #slide {
+            height: auto;
+            width: 0px;
+            opacity: 0;
+            transition: all .55s ease;
+            
+        }
+
+        #slide.active {
+            height: auto;
+            width: 66.666667%;
+            opacity: 1;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,13 +66,13 @@
                     </span>
                     <p class="hidden md:block">Order</p>
                 </a>
-                <a href="admin_wallet.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_balance.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
                         </svg>                                                                                                            
                     </span>
-                    <p class="hidden md:block">Wallet</p>
+                    <p class="hidden md:block">Balance</p>
                 </a>
 
                 <a href="admin_settings.html" id="menuSide" class="flex mt-10 mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
@@ -86,86 +102,68 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <section class="bg-slate-300 w-full h-auto">
-            <div class="bg-[#0033ff] h-40 flex justify-center relative">
-                <div class="w-24 h-24 bg-white rounded-full bottom-0 absolute flex justify-center z-10">
-                    <i class="fa-solid fa-check fa-3x self-center"></i>
+        <header class="h-44 bg-[#0033ff] rounded-lg p-2">
+            <div class="h-full w-full flex border-white border-2 rounded-lg">
+                <div class="self-center w-full">
+                    <p class="flex justify-center text-xl text-white font-bold">Penjualan Hari Ini</p>
+                    <p class="flex justify-center text-4xl text-white font-bold">Rp 29.735.720.462,00</p>
                 </div>
-               <div class="d w-3/4 md:w-2/3 h-64 bottom-0 absolute"></div>
             </div>
-            <div class="bg-slate-300 h-auto pb-24 relative ">
-                <div class="bg-[#f1f5f9] w-3/4 md:w-2/3 h-auto mx-auto">                
-                    <div class="h-auto pt-4 relative">
-                        <div class="px-10">
-                            <h1 class="mb-10 text-3xl font-bold flex justify-center">Transaksi Berhasil</h1>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Tanggal</p>
-                                <p class="font-semibold col-span-9 ml-auto">20 Jan 2023 | 14:55</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">No Transaksi</p>
-                                <p class="font-semibold col-span-9 ml-auto">202301200001</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Jenis Transaksi</p>
-                                <p class="font-semibold col-span-9 ml-auto">Topup Saldo DANA</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Bank Tujuan</p>
-                                <p class="font-semibold col-span-9 ml-auto">BRI</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Nomor Tujuan</p>
-                                <p class="font-semibold col-span-9 ml-auto">02153331546</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Nama Tujuan</p>
-                                <p class="font-semibold col-span-9 ml-auto">SINGODIMEDJO</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Keterangan</p>
-                                <p class="font-semibold col-span-9 ml-auto">Kurang Terang</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-4 text-xl">
-                                <p class="font-semibold col-span-3">Nominal</p>
-                                <p class="font-semibold col-span-9 ml-auto">Rp50.000.000.000,00</p>
-                            </div>
-                            <div class="grid grid-cols-12 mb-8 text-xl">
-                                <p class="font-semibold col-span-3">Biaya Admin</p>
-                                <p class="font-semibold col-span-9 ml-auto">Rp49.999.999.999,00</p>
-                            </div>
-        
-                            <div class="w-full border-2 border-dashed border-black"></div>
-        
-                            <div class="grid grid-cols-12 mt-4 text-2xl font-bold">
-                                <p class="col-span-3">Total</p>
-                                <p class="col-span-9 ml-auto mb-12">Rp1</p>
-                            </div>
-                        </div>
-                        <div class="w-full c bottom-0 absolute"></div>
-                    </div>
+        </header>
+
+        <section class="mt-4 p-2 h-auto rounded-lg">
+            <div class="flex justify-center w-full mt-2" id="button-club">
+                <div class="w-auto mr-4 relative">
+                    <button class="bg-[#0033ff] w-full hover:bg-[#0029ce] rounded-xl p-4 text-white hover:text-gray-200">
+                        <i class="fa-solid fa-money-bill-wave fa-2x"></i>
+                    </button>
+                    <p class="flex mx-auto font-semibold cursor-default mx-auto">Penjualan</p>
+                </div>
+                <div class="w-auto self-center mr-4">
+                    <button class="bg-[#0033ff] w-full hover:bg-[#0029ce] rounded-xl p-4 text-white hover:text-gray-200">
+                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                    </button>
+                    <p class="flex justify-center font-semibold cursor-default">Pembelian</p>
                 </div>
             </div>
         </section>
 
+        <section id="contains-lap">
+            <div class="h-auto bg-slate-100 border-2 border-[#0033ff] divide-y divide-[#0033ff] font-semibold active" id="slide">
+                <div class="py-2 px-3 hover:bg-slate-200">Laporan Penjualan</div>
+                <div class="py-2 px-3 hover:bg-slate-200">Laporan Penjualan Detail</div>
+                <div class="py-2 px-3 hover:bg-slate-200">Laporan Margin Penjualan</div>
+                <div class="py-2 px-3 hover:bg-slate-200">Laporan Margin Penjualan Detail</div>
+                <div class="py-2 px-3 hover:bg-slate-200">Nielsen</div>
+            </div>
+
+            <div class="h-auto bg-slate-100 border-2 border-[#0033ff] divide-y divide-[#0033ff] font-semibold active" id="slide">
+                <div class="py-2 px-3 hover:bg-slate-200">Rekap Pembelian</div>
+                <div class="py-2 px-3 hover:bg-slate-200">Pembelian Detail</div>
+                <div class="py-2 px-3 hover:bg-slate-200">Pembelian Per Barang</div>
+            </div>
+        </section>
     </main>
 
-    <style>
-        .c{
-            --size: 11.8px;
-            height: 50px;
-            
-            background:
-                radial-gradient(var(--size) at 50% 37px, #cbd5e1 99%, #f1f5f9 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
-        }
-
-        .d{
-            --size: 11.8px;
-            height: 50px;
-            
-            background:
-                radial-gradient(var(--size) at 50% 0px,#0033ff 99%, #f1f5f9 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
-        }
-    </style>
     <script type="text/javascript" src="../public/src/admin.js"></script>
+    <script>
+        var a = document.getElementById("button-club")
+        var b = a.querySelectorAll("button")
+
+        for (i = 0; i < b.length; i++){
+            b[i].addEventListener("click", function(){
+                var c = Array.prototype.indexOf.call(
+                        this.parentNode.parentNode.children,
+                        this.parentNode
+                )
+                
+                var d = document.querySelectorAll("#slide")
+                if (c == 0){
+                    d[0].classList.toggle("active")
+                } else {
+                    d[1].classList.toggle("active")
+                }
+            })
+        }
+    </script>
 </body>
