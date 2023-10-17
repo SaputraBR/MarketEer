@@ -7,13 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"></script>
-    <style>
-        .on {
-            background-color: #0029ce;
-        }
-    </style>
 </head>
 
 <body>
@@ -56,13 +52,13 @@
                     </span>
                     <p class="hidden md:block">Order</p>
                 </a>
-                <a href="admin_balance.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_wallet.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
                         </svg>                                                                                                            
                     </span>
-                    <p class="hidden md:block">Balance</p>
+                    <p class="hidden md:block">Wallet</p>
                 </a>
 
                 <a href="admin_settings.html" id="menuSide" class="flex mt-10 mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
@@ -91,93 +87,45 @@
         </aside>
     </nav>
 
-    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
-        <header class="h-44 bg-[#0033ff] rounded-lg p-2">
-            <div class="h-full w-full flex border-white border-2 rounded-lg">
-                <div class="self-center w-full">
-                    <p class="flex justify-center text-xl text-white font-bold">Penjualan Hari Ini</p>
-                    <p class="flex justify-center text-4xl text-white font-bold">Rp 29.735.720.462,00</p>
-                </div>
+    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
+        <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
+            <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
+                <form>
+                    <label for="period" class="block mb-2">Pilih Periode :</label>
+                    <input type="date" id="period" name="period" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period" name="period" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <button class="block mt-4 px-4 py-2 bg-amber-300 font-semibold rounded-md" type="submit">Submit</button>
+                </form>
             </div>
-        </header>
-
-        <section class="mt-4 p-2 h-auto rounded-lg">
-            <div class="flex justify-center w-full mt-2" id="button-club">
-                <div class="w-auto mr-4 relative">
-                    <button class="bg-[#0033ff] w-full hover:bg-[#0029ce] rounded-xl text-white hover:text-gray-200 p-4 on">
-                        <i class="fa-solid fa-money-bill-wave fa-2x"></i>
-                    </button>
-                    <p class="flex mx-auto font-semibold cursor-default mx-auto">Penjualan</p>
+            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <div class="flex">
+                    <div>
+                        <h1 class="text-xl">Laporan Penjualan</h1>
+                        <p>Periode 01 Oktober 2023 - 31 Oktober 2023</p>
+                    </div>
+                    <p class="ml-auto self-center text-3xl hidden sm:block text-[#ff4800]">MarketEer</p>
                 </div>
-                <div class="w-auto self-center mr-4">
-                    <button class="bg-[#0033ff] w-full hover:bg-[#0029ce] rounded-xl text-white hover:text-gray-200 p-4">
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
-                    </button>
-                    <p class="flex justify-center font-semibold cursor-default">Pembelian</p>
-                </div>
-            </div>
-        </section>
+                <div class="mt-4">
 
-        <section class="w-full overflow-hidden" id="contains-lap">
-            <div class="grid grid-cols-2 gap-4 w-full" id="translate" style="transform: translateX(25%);">
-                <div class="col-span-1 w-full font-semibold" id="slide" style="transition: opacity 0.3s; opacity: 1;">
-                    <div class="bg-slate-100 border-2 border-[#0033ff] divide-y divide-[#0033ff]">
-                        <a href="admin_balance_penjualan.html">
-                            <div class="py-2 px-3 hover:bg-slate-200">Laporan Penjualan</div>
-                        </a>
-                        <div class="py-2 px-3 hover:bg-slate-200">Laporan Penjualan Detail</div>
-                        <div class="py-2 px-3 hover:bg-slate-200">Laporan Margin Penjualan</div>
-                        <div class="py-2 px-3 hover:bg-slate-200">Laporan Margin Penjualan Detail</div>
-                        <div class="py-2 px-3 hover:bg-slate-200">Nielsen</div>
+                    <div class="grid grid-cols-4 border-2 border-slate-400">
+                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Tanggal</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Jual</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Margin</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center ">%</h1>
+                    </div>
+                    <div class="grid grid-cols-4 border-x-2 border-slate-400">
+                        <h1 class="col-span-1 p-2 flex justify-center">1 Oktober 2023</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center">32,000,091</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center">5,000,000</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center ">15.62</h1>
                     </div>
                 </div>
-    
-                <div class="col-span-1 w-full font-semibold" id="slide" style="transition: opacity 0.3s; opacity: 0;">
-                    <div class="bg-slate-100 border-2 border-[#0033ff] divide-y divide-[#0033ff]">
-                        <div class="py-2 px-3 hover:bg-slate-200">Rekap Pembelian</div>
-                        <div class="py-2 px-3 hover:bg-slate-200">Pembelian Detail</div>
-                        <div class="py-2 px-3 hover:bg-slate-200">Pembelian Per Barang</div>
-                    </div>                    
-                </div>
+            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
 
+            </div>
         </section>
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
-    <script>
-        var a = document.getElementById("button-club")
-        var b = a.querySelectorAll("button")
-        var c
-
-        for (i = 0; i < b.length; i++){
-            b[i].addEventListener("click", function(){
-                var d = Array.prototype.indexOf.call(
-                        this.parentNode.parentNode.children,
-                        this.parentNode
-                )
-                
-                c = this.parentNode.parentNode
-                button(d)
-
-                console.log(c.querySelectorAll(".on")[0])
-                if (d == 0) {
-                    document.getElementById("translate").style.transform = "translateX(25%)"
-                    document.getElementById("translate").style.transition = "all .4s ease-out"
-                    document.querySelectorAll("#slide")[0].style.opacity = 1
-                    document.querySelectorAll("#slide")[1].style.opacity = 0
-                } else {
-                    document.getElementById("translate").style.transform = "translateX(-25%)"
-                    document.getElementById("translate").style.transition = "all .4s ease-out"
-                    document.querySelectorAll("#slide")[0].style.opacity = 0
-                    document.querySelectorAll("#slide")[1].style.opacity = 1
-                }
-            })
-        }
-
-        function button(d){
-            if (c.querySelector(".p-4.on") != null)
-                c.querySelector(".p-4.on").classList.remove("on")
-                c.querySelectorAll(".p-4")[d].classList.add("on")
-        }
-    </script>
 </body>
+  
