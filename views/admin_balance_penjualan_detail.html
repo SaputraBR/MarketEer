@@ -114,29 +114,29 @@
                         <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Margin</h1>
                         <h1 class="col-span-1 p-2 flex justify-center ">%</h1>
                     </div>
-                    <div class="grid grid-cols-6 text-sm" id="grid-main">
+                    <div class="grid grid-cols-6 text-sm">
                         <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">1 Okt 2023</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="jual">3.999.999</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="aktual">3.400.000</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">3.000.123</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="margin"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin"></h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="margin">399.877</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin">11.76</h1>
                     </div>
-                    <div class="grid grid-cols-6 text-sm" id="grid-main">
+                    <div class="grid grid-cols-6 text-sm">
                         <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">2 Okt 2023</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="jual">14.999.999</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="aktual">9.119.999</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">8.311.100</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="margin"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin"></h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="margin">808.899</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin">8.86</h1>
                     </div>
-                    <div class="grid grid-cols-6 text-sm" id="grid-main">
+                    <div class="grid grid-cols-6 text-sm">
                         <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">3 Okt 2023</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="jual">504.193.425</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">938</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">388.228.938</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">293.313.012</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="margin"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin"></h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="margin">94.915.926</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin">24.44</h1>
                     </div>
                 </div>
                 <div class="h-auto w-full mt-1 border-2 border-slate-400">
@@ -178,54 +178,51 @@
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
         let number      = new Intl.NumberFormat('en-US')
-        var sumJual = sumAktual = sumHapepe = sumMargin = rtrPersen = b = c = d = e = f = g = 0
+        var sumJual = sumAktual = sumHapepe = sumMargin = rtrPersen = 0
+        var jual        = document.querySelectorAll("#jual")
+        var aktual      = document.querySelectorAll("#aktual")
+        var hpp         = document.querySelectorAll("#harga-pokok")
+        var margin      = document.querySelectorAll("#margin")
         var persen      = document.querySelectorAll("#persen-margin")
         var jmlJual     = document.getElementById("jumlah-jual")
         var jmlAkt      = document.getElementById("jumlah-aktual")
         var jmlHpp      = document.getElementById("jumlah-hpp")
         var jmlMrg      = document.getElementById("jumlah-margin")
         var rataMrg     = document.getElementById("rata-margin")
-        
-        document.querySelectorAll("#grid-main").forEach(as => {
-            b = as.querySelectorAll("#aktual")
-            c = as.querySelectorAll("#harga-pokok")
 
-            as.querySelectorAll("#jual").forEach(n => {
-                var a = n.innerHTML.replace(/[^0-9]/g,"")
-                sumJual += parseInt(a)
-            })
-
-            for(i = 0; i < b.length; i++){
-                d = b[i].innerHTML.replace(/[^0-9]/g,"")
-                sumAktual += parseInt(d)
-            }
-
-            for (i = 0; i < c.length; i++){
-                e = c[i].innerHTML.replace(/[^0-9]/g,"")
-                sumHapepe += parseInt(e)
-            }            
-
-            as.querySelectorAll("#margin").forEach(n => {
-                n.innerHTML = number.format(parseInt(d) - parseInt(e)).replaceAll(",", ".")
-                f = n.innerHTML.replace(/[^0-9]/g,"")
-                sumMargin += parseInt(f)
-            })
-
-            as.querySelectorAll("#persen-margin").forEach(n => {
-                n.innerHTML = (parseInt(f) / parseInt(d) * 100).toFixed(2).replaceAll(",", ".")
-                rtrPersen += parseFloat(n.innerHTML)
-                console.log(parseInt(f))
-            })
-                
+        jual.forEach(ex => {
+            var a = ex.innerHTML.replace(/[^0-9]/g,"")
+            sumJual += parseInt(a)
         })
-        
-        var leng = rtrPersen / persen.length
-        rataMrg.innerHTML = leng.toFixed(2)
-        
+
+        aktual.forEach(ex => {
+            var a = ex.innerHTML.replace(/[^0-9]/g,"")
+            sumAktual += parseInt(a)
+        })
+
+        hpp.forEach(ex => {
+            var a = ex.innerHTML.replace(/[^0-9]/g,"")
+            sumHapepe += parseInt(a)
+        })
+
+        margin.forEach(ex => {
+            var a = ex.innerHTML.replace(/[^0-9]/g,"")
+            sumMargin += parseInt(a)
+        })
+
+        persen.forEach(ex => {
+            var a = ex.innerHTML
+            rtrPersen += parseFloat(a)            
+        })
+
         jmlJual.innerHTML = number.format(sumJual).replaceAll(",", ".")
         jmlAkt.innerHTML  = number.format(sumAktual).replaceAll(",", ".")
         jmlHpp.innerHTML  = number.format(sumHapepe).replaceAll(",", ".")
         jmlMrg.innerHTML  = number.format(sumMargin).replaceAll(",", ".")
+        
+        var leng = rtrPersen / persen.length
+        rataMrg.innerHTML = leng.toFixed(2)
+
     </script>
 </body>
   
