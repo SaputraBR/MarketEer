@@ -52,13 +52,13 @@
                     </span>
                     <p class="hidden md:block">Order</p>
                 </a>
-                <a href="admin_wallet.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_balance.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
                         </svg>                                                                                                            
                     </span>
-                    <p class="hidden md:block">Wallet</p>
+                    <p class="hidden md:block">Balance</p>
                 </a>
 
                 <a href="admin_settings.html" id="menuSide" class="flex mt-10 mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
@@ -87,8 +87,8 @@
         </aside>
     </nav>
 
-    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
-        <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
+    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-8 md:py-4">
+        <section class="w-full h-auto py-4 px-4 rounded-lg bg-slate-400">
             <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
                 <form>
                     <label for="period" class="block mb-2">Pilih Periode :</label>
@@ -97,56 +97,64 @@
                     <button class="block mt-4 px-4 py-2 border-2 bg-[#ff950b] hover:bg-[#f38a00] text-white rounded-lg font-semibold" type="submit">Submit</button>
                 </form>
             </div>
-            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+            <div class="mt-1 bg-slate-100 p-4">
                 <div class="flex">
-                    <div>
+                    <div class="font-semibold mb-3">
                         <h1 class="text-xl">Laporan Penjualan</h1>
                         <p>Periode 01 Oktober 2023 - 3 Oktober 2023</p>
                     </div>
                     <p class="ml-auto self-center text-3xl hidden sm:block text-[#ff4800]">MarketEer</p>
                 </div>
-                <div class="mt-4 border-2 border-slate-400 rounded-sm">
-                    <div class="grid grid-cols-6 border-b-2 border-slate-400 font-bold">
-                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Tanggal</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Jual</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Aktual</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">HPP</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center border-r-2 border-slate-400">Margin</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center ">%</h1>
+                <div class="flex space-x-1 max-h-96">
+                    <div class="block w-1/4 border-2 border-slate-400 overflow-auto">
+                        <div class="grid grid-cols-2 border-b-2 border-slate-400 sticky top-0 bg-slate-100">
+                            <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Tanggal</div>
+                            <div class="col-span-1 flex justify-center">Total</div>
+                        </div>                        
+                        <div class="grid grid-cols-2 text-sm">
+                            <div class="col-span-1 flex justify-center border-r-2 border-slate-400">01/10/23</div>
+                            <div class="col-span-1 flex justify-center">3,400,000</div>
+                        </div>
                     </div>
-                    <div class="grid grid-cols-6 text-sm">
-                        <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">1 Okt 2023</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">3.999.999</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">3.400.000</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">3.000.123</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="margin">399.877</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin">11.76</h1>
-                    </div>
-                    <div class="grid grid-cols-6 text-sm">
-                        <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">2 Okt 2023</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">14.999.999</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">9.119.999</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">8.311.100</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="margin">808.899</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin">8.86</h1>
-                    </div>
-                    <div class="grid grid-cols-6 text-sm">
-                        <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">3 Okt 2023</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">504.193.425</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">388.228.938</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">293.313.012</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="margin">94.915.926</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin">24.44</h1>
-                    </div>
-                </div>
-                <div class="h-auto w-full mt-1 border-2 border-slate-400">
-                    <div class="grid grid-cols-6 text-sm">
-                        <h1 class="col-span-1 p-2 flex justify-center"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jumlah-jual"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jumlah-aktual"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jumlah-hpp"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jumlah-margin"></h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="rata-margin"></h1>
+                    <div class="block w-3/4 space-y-1">
+                        <div class="h-1/2 overflow-auto border-2 border-slate-400">
+                            <div class="grid grid-cols-6 border-b-2 border-slate-400 font-semibold sticky top-0 bg-slate-100">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Id Trans</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Total</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Discount</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Bayar</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Note</div>
+                                <div class="col-span-1 flex justify-center">Saved</div>
+                            </div>
+    
+                            <div class="grid grid-cols-6 text-sm">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">FK23100101</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3,999,999</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">599,999</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3,400,000</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">BRIVA</div>
+                                <div class="col-span-1 flex justify-center">01/10/23 10:23</div>
+                            </div>
+                            
+                        </div>
+                        <div class="h-1/2 overflow-auto border-2 border-slate-400">
+                            <div class="grid grid-cols-6 border-b-2 border-slate-400 font-semibold sticky top-0 bg-slate-100">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">No</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Nama</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">HPP</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Jual</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Margin</div>
+                                <div class="col-span-1 flex justify-center">Laba</div>
+                            </div>
+                            <div class="grid grid-cols-6 text-sm">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Air Jordan 7 Retro SE Men's Shoes</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3,999,999 </div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3,400,000</div>
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">11.76</div>
+                                <div class="col-span-1 flex justify-center">599,999</div>
+                            </div>                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,52 +185,6 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        let number      = new Intl.NumberFormat('en-US')
-        var sumJual = sumAktual = sumHapepe = sumMargin = rtrPersen = 0
-        var jual        = document.querySelectorAll("#jual")
-        var aktual      = document.querySelectorAll("#aktual")
-        var hpp         = document.querySelectorAll("#harga-pokok")
-        var margin      = document.querySelectorAll("#margin")
-        var persen      = document.querySelectorAll("#persen-margin")
-        var jmlJual     = document.getElementById("jumlah-jual")
-        var jmlAkt      = document.getElementById("jumlah-aktual")
-        var jmlHpp      = document.getElementById("jumlah-hpp")
-        var jmlMrg      = document.getElementById("jumlah-margin")
-        var rataMrg     = document.getElementById("rata-margin")
-
-        jual.forEach(ex => {
-            var a = ex.innerHTML.replace(/[^0-9]/g,"")
-            sumJual += parseInt(a)
-        })
-
-        aktual.forEach(ex => {
-            var a = ex.innerHTML.replace(/[^0-9]/g,"")
-            sumAktual += parseInt(a)
-        })
-
-        hpp.forEach(ex => {
-            var a = ex.innerHTML.replace(/[^0-9]/g,"")
-            sumHapepe += parseInt(a)
-        })
-
-        margin.forEach(ex => {
-            var a = ex.innerHTML.replace(/[^0-9]/g,"")
-            sumMargin += parseInt(a)
-        })
-
-        persen.forEach(ex => {
-            var a = ex.innerHTML
-            rtrPersen += parseFloat(a)            
-        })
-
-        jmlJual.innerHTML = number.format(sumJual).replaceAll(",", ".")
-        jmlAkt.innerHTML  = number.format(sumAktual).replaceAll(",", ".")
-        jmlHpp.innerHTML  = number.format(sumHapepe).replaceAll(",", ".")
-        jmlMrg.innerHTML  = number.format(sumMargin).replaceAll(",", ".")
-        
-        var leng = rtrPersen / persen.length
-        rataMrg.innerHTML = leng.toFixed(2)
-
     </script>
 </body>
   

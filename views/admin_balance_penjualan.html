@@ -52,13 +52,13 @@
                     </span>
                     <p class="hidden md:block">Order</p>
                 </a>
-                <a href="admin_wallet.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
+                <a href="admin_balance.html" id="menuSide" class="flex mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
                     <span class="mx-auto md:mr-2 md:ml-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
                         </svg>                                                                                                            
                     </span>
-                    <p class="hidden md:block">Wallet</p>
+                    <p class="hidden md:block">Balance</p>
                 </a>
 
                 <a href="admin_settings.html" id="menuSide" class="flex mt-10 mb-2 py-2 md:px-1 w-full rounded-sm item-nav">
@@ -92,8 +92,8 @@
             <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
                 <form>
                     <label for="period" class="block mb-2">Pilih Periode :</label>
-                    <input type="date" id="period" name="period" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
-                    <input type="date" id="period" name="period" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period-start" name="period-start" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period-end" name="period-end" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                     <button class="block mt-4 px-4 py-2 border-2 bg-[#ff950b] hover:bg-[#f38a00] text-white rounded-lg font-semibold" type="submit">Submit</button>
                 </form>
             </div>
@@ -116,25 +116,25 @@
                     </div>
                     <div class="grid grid-cols-6 text-sm" id="grid-main">
                         <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">1 Okt 2023</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">3.999.999</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">3.400.000</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">3.000.123</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">3,999,999</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">3,400,000</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">3,000,123</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="margin"></h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin"></h1>
                     </div>
                     <div class="grid grid-cols-6 text-sm" id="grid-main">
                         <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">2 Okt 2023</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">14.999.999</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">9.119.999</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">8.311.100</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">14,999,999</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">9,119,999</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">8,311,100</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="margin"></h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin"></h1>
                     </div>
                     <div class="grid grid-cols-6 text-sm" id="grid-main">
                         <h1 class="col-span-1 p-2 flex justify-center" id="tanggal-period">3 Okt 2023</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">504.193.425</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">938</h1>
-                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">293.313.012</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="jual">504,193,425</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="aktual">388,228,938</h1>
+                        <h1 class="col-span-1 p-2 flex justify-center" id="harga-pokok">293,313,012</h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="margin"></h1>
                         <h1 class="col-span-1 p-2 flex justify-center" id="persen-margin"></h1>
                     </div>
@@ -206,15 +206,15 @@
             }            
 
             as.querySelectorAll("#margin").forEach(n => {
-                n.innerHTML = number.format(parseInt(d) - parseInt(e)).replaceAll(",", ".")
-                f = n.innerHTML.replace(/[^0-9]/g,"")
+                n.innerHTML = number.format(parseInt(d) - parseInt(e))
+                f = n.innerHTML.replaceAll(",","")
                 sumMargin += parseInt(f)
+
             })
 
             as.querySelectorAll("#persen-margin").forEach(n => {
-                n.innerHTML = (parseInt(f) / parseInt(d) * 100).toFixed(2).replaceAll(",", ".")
+                n.innerHTML = number.format((parseFloat(f) / parseFloat(d) * 100).toFixed(2))
                 rtrPersen += parseFloat(n.innerHTML)
-                console.log(parseInt(f))
             })
                 
         })
@@ -222,10 +222,10 @@
         var leng = rtrPersen / persen.length
         rataMrg.innerHTML = leng.toFixed(2)
         
-        jmlJual.innerHTML = number.format(sumJual).replaceAll(",", ".")
-        jmlAkt.innerHTML  = number.format(sumAktual).replaceAll(",", ".")
-        jmlHpp.innerHTML  = number.format(sumHapepe).replaceAll(",", ".")
-        jmlMrg.innerHTML  = number.format(sumMargin).replaceAll(",", ".")
+        jmlJual.innerHTML = number.format(sumJual)
+        jmlAkt.innerHTML  = number.format(sumAktual)
+        jmlHpp.innerHTML  = number.format(sumHapepe)
+        jmlMrg.innerHTML  = number.format(sumMargin)
     </script>
 </body>
   
