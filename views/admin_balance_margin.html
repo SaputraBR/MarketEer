@@ -87,74 +87,52 @@
         </aside>
     </nav>
 
-    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-8 md:py-4">
-        <section class="w-full h-auto py-4 px-4 rounded-lg bg-slate-400">
+    <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
+        <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
             <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
                 <form>
                     <label for="period" class="block mb-2">Pilih Periode :</label>
-                    <input type="date" id="period" name="period" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
-                    <input type="date" id="period" name="period" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period-start" name="period-start" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period-end" name="period-end" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                     <button class="block mt-4 px-4 py-2 border-2 bg-[#ff950b] hover:bg-[#f38a00] text-white rounded-lg font-semibold" type="submit">Submit</button>
                 </form>
             </div>
-            <div class="mt-1 bg-slate-100 p-4">
-                <div class="flex">
-                    <div class="font-semibold mb-3">
+            <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
+                <div class="flex mb-2">
+                    <div>
                         <h1 class="text-xl">Laporan Penjualan</h1>
                         <p>Periode 01 Oktober 2023 - 3 Oktober 2023</p>
                     </div>
                     <p class="ml-auto self-center text-3xl hidden sm:block text-[#ff4800]">MarketEer</p>
                 </div>
-                <div class="flex space-x-1 h-72 max-h-96">
-                    <div class="block w-1/4 h-1/2 border-2 border-slate-400 overflow-auto">
-                        <div class="grid grid-cols-2 border-b-2 border-slate-400 sticky top-0 bg-slate-100">
-                            <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Tanggal</div>
-                            <div class="col-span-1 flex justify-center">Total</div>
-                        </div>                 
-                        <div class="grid grid-cols-2 text-sm border-b-2 border-slate-400 cursor-pointer">
-                            <div class="col-span-1 flex justify-center border-r-2 border-slate-400">01/10/23</div>
-                            <div class="col-span-1 flex justify-center">3,400,000</div>
-                        </div>
+                <div class="border-x-2 border-b-2 border-slate-400">
+                    <div class="grid grid-cols-12 border-y-2 border-slate-400">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">No</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">Nama</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Qty</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">HPP</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">Total</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">Laba</div>
+                        <div class="col-span-1 flex justify-center">Margin</div>
                     </div>
-                    <div class="block w-3/4 space-y-1">
-                        <div class="h-1/2 overflow-auto border-2 border-slate-400">
-                            <div class="grid grid-cols-6 border-b-2 border-slate-400 font-semibold sticky top-0 bg-slate-100">
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Id Trans</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Total</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Discount</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Bayar</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Note</div>
-                                <div class="col-span-1 flex justify-center">Saved</div>
-                            </div>    
-                            <div class="grid grid-cols-6 text-sm border-b-2 border-slate-400 cursor-pointer">
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">FK23100101</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3,999,999</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">599,999</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3,400,000</div>
-                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">BRIVA</div>
-                                <div class="col-span-1 flex justify-center">01/10/23 10:23</div>
-                            </div>                                                    
-                        </div>
-                        <div class="h-1/2 overflow-auto border-2 border-slate-400">
-                            <div class="grid grid-cols-12 divide-x-2 divide-slate-400 border-b-2 border-slate-400 font-semibold sticky top-0 bg-slate-100">
-                                <div class="col-span-1 flex justify-center">No</div>
-                                <div class="col-span-3 flex justify-center">Nama</div>
-                                <div class="col-span-2 flex justify-center">HPP</div>
-                                <div class="col-span-2 flex justify-center">Jual</div>
-                                <div class="col-span-2 flex justify-center">Margin</div>
-                                <div class="col-span-2 flex justify-center">Laba</div>
-                            </div>
-                            <div class="">
-                                <div class="grid grid-cols-12 text-sm border-b-2 border-slate-400 divide-x-2 divide-slate-400"> 
-                                    <div class="col-span-1 flex justify-center self-center">1</div>
-                                    <div class="col-span-3 flex justify-center p-1">Air Jordan 7 Retro SE Men's Shoes</div>
-                                    <div class="col-span-2 flex justify-center">3,000,123</div>
-                                    <div class="col-span-2 flex justify-center">3,400,000</div>
-                                    <div class="col-span-2 flex justify-center">11.76</div>
-                                    <div class="col-span-2 flex justify-center">399,877</div>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1">Air Jordan 7 Retro SE Men's Shoes</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">3,000,123</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">3,400,000</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">399,877</div>
+                        <div class="col-span-1 flex justify-center">11.76</div>
+                    </div>
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">2</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1">Polo Bear by Ralph Lauren M/L/XL/XXL</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">10,845,631</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">13,020,000</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">2,174,369</div>
+                        <div class="col-span-1 flex justify-center">16.70</div>
                     </div>
                 </div>
             </div>
@@ -184,7 +162,5 @@
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
-    <script>
-    </script>
 </body>
   
