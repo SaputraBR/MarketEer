@@ -116,23 +116,23 @@
                         <div class="col-span-1 flex justify-center">Margin</div>
                     </div>
 
-                    <div class="grid grid-cols-12">
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
-                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1">Air Jordan 7 Retro SE Men's Shoes</div>
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">3,000,123</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">3,400,000</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">399,877</div>
-                        <div class="col-span-1 flex justify-center">11.76</div>
+                    <div class="grid grid-cols-12" id="item-line">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="no">1</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1" id="item-name">Air Jordan 7 Retro SE Men's Shoes</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="qty">2</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="hpp">3,000,123</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="total">6,800,000</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="laba"></div>
+                        <div class="col-span-1 flex justify-center" id="margin"></div>
                     </div>
-                    <div class="grid grid-cols-12">
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">2</div>
-                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1">Polo Bear by Ralph Lauren M/L/XL/XXL</div>
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">10,845,631</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">13,020,000</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">2,174,369</div>
-                        <div class="col-span-1 flex justify-center">16.70</div>
+                    <div class="grid grid-cols-12" id="item-line">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="no">2</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1" id="item-name">Polo Bear by Ralph Lauren M/L/XL/XXL</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="qty">1</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="hpp">10,845,631</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="total">13,020,000</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="laba"></div>
+                        <div class="col-span-1 flex justify-center" id="margin"></div>
                     </div>
                 </div>
             </div>
@@ -162,5 +162,24 @@
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
+    <script>
+        var a, b, c, d, e, f, g, h
+        let number  = new Intl.NumberFormat('en-US')
+        var line    = document.querySelectorAll("#item-line")
+        for (i = 0; i < line.length; i++){
+            a = line[i].querySelector("#total").innerHTML
+            b = line[i].querySelector("#qty").innerHTML
+            c = parseInt(a.replace(/[^0-9]/g,"")) / parseInt(b.replace(/[^0-9]/g,""))
+            
+            d = line[i].querySelector("#hpp").innerHTML
+            e = line[i].querySelector("#laba")
+            f = line[i].querySelector("#margin")
+            g = (c - parseInt(d.replace(/[^0-9]/g,""))) * parseInt(b)
+            h = (g / parseInt(a.replace(/[^0-9]/g,""))) * 100
+
+            e.innerHTML = number.format(g)
+            f.innerHTML = h.toFixed(2)
+        }
+    </script>
 </body>
   
