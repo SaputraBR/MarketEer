@@ -182,38 +182,52 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        var a, b, c, d, e, f, g, h
+        var b, e, h, k
+        var c = f = j = l = o = r = 0
         let number  = new Intl.NumberFormat('en-US')
         var grid    = document.querySelectorAll("#grid-item")
+
         
         for (i = 0; i < grid.length; i++){
-            a = grid[i].querySelectorAll("#total")
-            a.forEach(ex => {
-                b = ex.innerHTML.replace(/[^0-9]/g,"")
-                h += parseInt(b)
+            var a = grid[i].querySelectorAll("#total")
+            var d = grid[i].querySelectorAll("#discount")
+            var g = grid[i].querySelectorAll("#bayar")
+            var q = grid[i].querySelectorAll("#struk")
+            
+            a.forEach(n => {
+                b = n.innerHTML.replace(/[^0-9]/g,"")
+                c += parseInt(b)
+            })
+            
+            d.forEach(p => {
+                e = p.innerHTML.replace(/[^0-9]/g,"")
+                f += parseInt(e)               
             })
 
-            c = grid[i].querySelectorAll("#discount")
-            c.forEach(ex => {
-                d = ex.innerHTML.replace(/[^0-9]/g,"")
+            g.forEach(m => {
+                h = m.innerHTML.replace(/[^0-9]/g,"")
+                j += parseInt(h)
             })
 
-            e = grid[i].querySelectorAll("#bayar")
-            e.forEach(ex => {
-                f = ex.innerHTML.replace(/[^0-9]/g,"")
+            grid[i].querySelectorAll("#struk").forEach(ex => {
+                k = ex.innerHTML.replace(/[^0-9]/g,"")
+                l += parseInt(k)
+                o = l / grid.length
             })
 
-            g = (parseInt(f) + parseInt(d)) - parseInt(b)
             grid[i].querySelectorAll("#variant").forEach(ex => {
-                ex.innerHTML = number.format(g)
+                var hasil = parseInt(b) - parseInt(e) - parseInt(h)
+                ex.innerHTML = number.format(hasil)
+                r += parseInt(hasil)
             })
-            
-            document.getElementById("jumlah-total").innerHTML
-            
-            console.log(parseInt(b))
         }
+    
+        document.getElementById("jumlah-total").innerHTML = number.format(c)
+        document.getElementById("jumlah-disc").innerHTML = number.format(f)
+        document.getElementById("jumlah-bayar").innerHTML = number.format(j)
+        document.getElementById("rata-struk").innerHTML = number.format(o.toFixed(2))
+        document.getElementById("jml-variant").innerHTML = number.format(r)
 
-        
     </script>
 </body>
   
