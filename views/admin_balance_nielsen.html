@@ -100,39 +100,45 @@
             <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
                 <div class="flex mb-2">
                     <div>
-                        <h1 class="text-xl">Laporan Margin Per Barang</h1>
+                        <h1 class="text-xl">Laporan Penjualan</h1>
                         <p>Periode 01 Oktober 2023 - 3 Oktober 2023</p>
                     </div>
                     <p class="ml-auto self-center text-3xl hidden sm:block text-[#ff4800]">MarketEer</p>
                 </div>
                 <div class="border-x-2 border-b-2 border-slate-400">
-                    <div class="grid grid-cols-12 border-y-2 border-slate-400">
+                    <div class="grid grid-cols-12 border-y-2 border-slate-400 text-sm">
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400">No</div>
-                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">Nama</div>
+                        <div class="col-span-4 flex justify-center border-r-2 border-slate-400">Nama</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">HPP</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Harga</div>
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Qty</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">HPP</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">Total</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">Laba</div>
-                        <div class="col-span-1 flex justify-center">Margin</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Total HPP</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Total</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">% Margin</div>
+                        <div class="col-span-1 flex justify-center">% Omzet</div>
                     </div>
 
-                    <div class="grid grid-cols-12" id="item-line">
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="no">1</div>
-                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1" id="item-name">Air Jordan 7 Retro SE Men's Shoes</div>
+                    <div class="grid grid-cols-12 text-sm" id="item-line">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
+                        <div class="col-span-4 flex justify-center border-r-2 border-slate-400" id="nama-brg">Air Jordan 7 Retro SE Men's Shoes</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="hpp">3,000,123</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="harga">3,400,000</div>
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="qty">2</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="hpp">3,000,123</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="total">6,800,000</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="laba"></div>
-                        <div class="col-span-1 flex justify-center" id="margin"></div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="thpp">6,000,246</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="tharga">6,800,000</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="thr/tpp">11.76</div>
+                        <div class="col-span-1 flex justify-center">% Omzet</div> 
                     </div>
-                    <div class="grid grid-cols-12" id="item-line">
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="no">2</div>
-                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400 p-1" id="item-name">Polo Bear by Ralph Lauren M/L/XL/XXL</div>
+                    <div class="grid grid-cols-12 text-sm" id="item-line">
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">2</div>
+                        <div class="col-span-4 flex justify-center border-r-2 border-slate-400" id="nama-brg">Google Pixel 7 Pro 12/512GB</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="hpp">8,311,100</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="harga">14,999,999</div>
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="qty">1</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="hpp">10,845,631</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="total">13,020,000</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400" id="laba"></div>
-                        <div class="col-span-1 flex justify-center" id="margin"></div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="thpp">8,311,100</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="tharga">14,999,999</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400" id="thr/tpp">8.87</div>
+                        <div class="col-span-1 flex justify-center">% Omzet</div> 
                     </div>
                 </div>
             </div>
@@ -162,24 +168,5 @@
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
-    <script>
-        var a, b, c, d, e, f, g, h
-        let number  = new Intl.NumberFormat('en-US')
-        var line    = document.querySelectorAll("#item-line")
-        for (i = 0; i < line.length; i++){
-            a = line[i].querySelector("#total").innerHTML
-            b = line[i].querySelector("#qty").innerHTML
-            c = parseInt(a.replace(/[^0-9]/g,"")) / parseInt(b.replace(/[^0-9]/g,""))
-            
-            d = line[i].querySelector("#hpp").innerHTML
-            e = line[i].querySelector("#laba")
-            f = line[i].querySelector("#margin")
-            g = (c - parseInt(d.replace(/[^0-9]/g,""))) * parseInt(b)
-            h = (g / parseInt(a.replace(/[^0-9]/g,""))) * 100
-
-            e.innerHTML = number.format(g)
-            f.innerHTML = h.toFixed(2)
-        }
-    </script>
 </body>
   
