@@ -90,45 +90,48 @@
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
         <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
             <div class="bg-slate-100 py-6 px-8 rounded-t-lg font-semibold">
-                <form>
+                <form class="mb-0">
+                    <label for="nama" class="block">Nama Barang :</label>
+                    <input type="text" name="nama" id="nama" class="rounded-md mb-2 px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                     <label for="period" class="block mb-2">Pilih Periode :</label>
-                    <input type="date" id="period-start" name="period-start" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
-                    <input type="date" id="period-end" name="period-end" class="px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period-start" name="period-start" class="rounded-md px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                    <input type="date" id="period-end" name="period-end" class="rounded-md px-2 py-1 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                     <button class="block mt-4 px-4 py-2 border-2 bg-[#ff950b] hover:bg-[#f38a00] text-white rounded-lg font-semibold" type="submit">Submit</button>
                 </form>
             </div>
             <div class="mt-1 bg-slate-100 py-6 px-8 font-semibold">
                 <div class="flex mb-2">
                     <div>
-                        <h1 class="text-xl">Laporan Pembelian Detail</h1>
+                        <h1 class="text-xl">Laporan Pembelian Perbarang</h1>
                         <p>Periode 01 Oktober 2023 - 2 Oktober 2023</p>
                     </div>
                     <p class="ml-auto self-center text-3xl hidden sm:block text-[#ff4800]">MarketEer</p>
                 </div>
+                <p class="font-semibold text-lg mb-1">Air Jordan 7 Retro SE Men's Shoes</p>
                 <div class="border-x-2 border-b-2 border-slate-400">
                     <div class="grid grid-cols-12 border-y-2 border-slate-400">
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">No</div>
-                        <div class="col-span-4 flex justify-center border-r-2 border-slate-400">Nama</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">No Nota</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">No</div>                
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">No Nota</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">Harga</div>
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400">Qty</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400"">Total</div>
-                        <div class="col-span-2 flex justify-center">Tanggal</div>                        
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">Total</div>
+                        <div class="col-span-3 flex justify-center">Tanggal</div>                        
                     </div>
                     <div class="grid grid-cols-12 text-sm" id="item-line">
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
-                        <div class="col-span-4 flex justify-center border-r-2 border-slate-400">Air Jordan 7 Retro SE Men's Shoes</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">FM231001001</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">FM231001001</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">3,000,123</div>
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400">5</div>
                         <div class="col-span-2 flex justify-center border-r-2 border-slate-400">15,000,615</div>
-                        <div class="col-span-2 flex justify-center">01/10/23</div>
+                        <div class="col-span-3 flex justify-center">01/10/23</div>
                     </div>
                     <div class="grid grid-cols-12 text-sm" id="item-line">
                         <div class="col-span-1 flex justify-center border-r-2 border-slate-400">2</div>
-                        <div class="col-span-4 flex justify-center border-r-2 border-slate-400">Google Pixel 7 Pro 12/512GB</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">FM231002001</div>
-                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">3</div>
-                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">24,933,300</div>
-                        <div class="col-span-2 flex justify-center">02/10/23</div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">RM231001001</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">3,000,123</div>
+                        <div class="col-span-1 flex justify-center border-r-2 border-slate-400">1</div>
+                        <div class="col-span-2 flex justify-center border-r-2 border-slate-400">-3,000,123</div>
+                        <div class="col-span-3 flex justify-center">02/10/23</div>
                     </div>
                 </div>
             </div>
