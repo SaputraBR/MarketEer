@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -267,83 +268,7 @@
     <script type="text/javascript" src="../public/src/admin.js"></script>
 
     <script>
-        var modal   = document.getElementById('modal-edit');
-        var button  = document.getElementById('close-button');
-        var filter  = document.getElementById('button-tambah');
-        var nam     = document.getElementById("nama-kurir");
-        var tar     = document.getElementById("mod-tarif").querySelectorAll("input[type='text']");
-        var stts    = document.getElementById("status-modal");
-        var named   = stts.querySelectorAll("input[name='status']");
-        var pen     = document.querySelectorAll("#button-pen");
-        var hps     = document.getElementById("button-hapus")
-
-        filter.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        button.onclick = function() {
-            modal.style.display = "none";
-            nam.setAttribute("value", "");
-            tar.forEach(es => es.setAttribute("value", ""))
-            named.forEach(es => es.checked = false)
-            hps.classList.add("hidden")
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                nam.setAttribute("value", "")
-                tar.forEach(es => es.setAttribute("value", ""))
-                named.forEach(es => es.checked = false)
-                hps.classList.add("hidden")
-            }
-        }    
-
-        hps.onclick = function(){
-            alert()
-        }
-        
-        for(i = 0; i < named.length; i++){
-            named[i].addEventListener("click", function(){
-                for(i = 0; i < named.length; i++){
-                    if(named[i] != this && this.checked){
-                        named[i].checked = false;
-                    }
-                    
-                }
-            })
-        }
-
-        for(i = 0; i < pen.length; i++){
-            pen[i].addEventListener("click", function(){
-                var a   = this.parentNode;
-                var b   = a.parentNode;
-                var c   = b.getElementsByClassName("kurir-merk");
-                var d   = b.querySelectorAll(".ongkos-kurir");
-                var e   = b.querySelectorAll("#status");
-                e[0].classList.contains("on")
-
-                for( i = 0; i < c.length; i++){
-                    nam.setAttribute("value", c[i].innerText)
-                }
-
-                if (e[0].classList.contains("on")){
-                    stts.querySelectorAll("input[name='status']")[0].checked = true;
-                } else {
-                    stts.querySelectorAll("input[name='status']")[1].checked = true;
-                }
-
-                tar[0].setAttribute("value", d[0].innerHTML)
-                tar[1].setAttribute("value", d[1].innerHTML)
-                tar[2].setAttribute("value", d[2].innerHTML)
-
-                hps.classList.remove("hidden")
-                modal.style.display = "block";
-            })
-        }
-
-        
-
+        orderKrm()
     </script>
 </body>
   

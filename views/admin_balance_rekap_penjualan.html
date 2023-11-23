@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -182,52 +183,7 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        var b, e, h, k
-        var c = f = j = l = o = r = 0
-        let number  = new Intl.NumberFormat('en-US')
-        var grid    = document.querySelectorAll("#grid-item")
-
-        
-        for (i = 0; i < grid.length; i++){
-            var a = grid[i].querySelectorAll("#total")
-            var d = grid[i].querySelectorAll("#discount")
-            var g = grid[i].querySelectorAll("#bayar")
-            var q = grid[i].querySelectorAll("#struk")
-            
-            a.forEach(n => {
-                b = n.innerHTML.replace(/[^0-9]/g,"")
-                c += parseInt(b)
-            })
-            
-            d.forEach(p => {
-                e = p.innerHTML.replace(/[^0-9]/g,"")
-                f += parseInt(e)               
-            })
-
-            g.forEach(m => {
-                h = m.innerHTML.replace(/[^0-9]/g,"")
-                j += parseInt(h)
-            })
-
-            grid[i].querySelectorAll("#struk").forEach(ex => {
-                k = ex.innerHTML.replace(/[^0-9]/g,"")
-                l += parseInt(k)
-                o = l / grid.length
-            })
-
-            grid[i].querySelectorAll("#variant").forEach(ex => {
-                var hasil = parseInt(b) - parseInt(e) - parseInt(h)
-                ex.innerHTML = number.format(hasil)
-                r += parseInt(hasil)
-            })
-        }
-    
-        document.getElementById("jumlah-total").innerHTML = number.format(c)
-        document.getElementById("jumlah-disc").innerHTML = number.format(f)
-        document.getElementById("jumlah-bayar").innerHTML = number.format(j)
-        document.getElementById("rata-struk").innerHTML = number.format(o.toFixed(2))
-        document.getElementById("jml-variant").innerHTML = number.format(r)
-
+        rekapJual()
     </script>
 </body>
   

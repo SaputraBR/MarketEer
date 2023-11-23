@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -181,55 +182,7 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        var a = b = c = d = e = f = 0
-        let number  = new Intl.NumberFormat('en-US')
-        var table   = document.getElementById("grid-table")
-        var item    = table.querySelectorAll("#item-table")
-        var omzet   = document.querySelectorAll("#omzet")
-        var omz = []
-        var mrg = []
-
-        for (i = 0; i < item.length; i++){
-            var hpp     = item[i].querySelector("#hpp-brg")
-            var hrg     = item[i].querySelector("#harga")
-            var qty     = item[i].querySelector("#quant")
-            var thpp    = item[i].querySelector("#total-hpp")
-            var total   = item[i].querySelector("#total")
-            var marg    = item[i].querySelector("#margin")
-
-            var hppCount = hpp.innerHTML.replace(/[^0-9]/g,"")
-            a = parseInt(hppCount)
-        
-            var hrgCount = hrg.innerHTML.replace(/[^0-9]/g,"")
-            b = parseInt(hrgCount)
-
-            var qtyCount = qty.innerHTML.replace(/[^0-9]/g,"")
-            c = parseInt(qtyCount)
-            
-            thpp.innerHTML = number.format(a * c)
-            
-            total.innerHTML = number.format(b * c)
-            
-            d = ((b * c) - (a * c)) / (b * c) * 100
-            marg.innerHTML = d.toFixed(2)
-
-            e = (b * c) - (a * c)
-            f += (b * c) - (a * c)
-            omz.push(number.format(e))            
-        }
-
-        for (i = 0; i < omz.length; i++){
-            var qwe = parseInt(omz[i].replace(/[^0-9]/g,""))
-            var asd = (qwe / f) * 100
-            mrg.push(asd.toFixed(2))
-        }
-       
-        for(i = 0; i < mrg.length; i++){
-            for(i = 0; i < omzet.length; i++){
-                omzet[i].innerHTML = mrg[i]
-            }
-        }
-
+        nielsen()
     </script>
 </body>
   

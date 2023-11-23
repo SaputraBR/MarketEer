@@ -150,54 +150,5 @@
     </main>
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
-    <script>
-        //   get all the elements on the basis of their class name
-        let btn = document.getElementsByClassName("btn");
-    
-        for (var i = 0; i < btn.length; i++) {
-          (function (index) {
-            btn[index].addEventListener("click", function () {
-                console.log("Clicked Button: " + index);
-
-              let isPresent = false;
-    
-              //   Check if the class is present or not
-              this.classList.forEach(function (e, i) {
-                if (e == "ukuran-focus") {
-                  isPresent = true;
-                } else {
-                  isPresent = false;
-                }
-              });
-    
-              //   toggle the presence of class on the basis of the isPresent variable
-              if (isPresent) {
-                this.classList.remove("ukuran-focus");
-              } else {
-                this.classList.add("ukuran-focus");
-              }
-            });
-          })(i);
-        }
-
-        function btndrop() {
-            document.getElementById("drop-content").classList.toggle("hidden");
-            }
-
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("drop-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-                }
-            }
-        }
-
-      </script>
 </body>
   

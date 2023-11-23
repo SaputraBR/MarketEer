@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../public/dist/tailwind.css">
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body class="bg-slate-100 max-w-screen-2xl mx-auto">
@@ -39,7 +40,7 @@
             </div>
           <form class="w-8/12 h-full">
             <div class="h-full flex relative mx-4">
-                <button id="dropdown-button" onclick="kilik()" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+                <button id="dropdown-button" onclick="dropKlik()" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
                     <p class="hidden sm:block">All categories</p>
                     <p class="block sm:hidden">All</p>
                     <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -730,104 +731,7 @@
 </footer>
 
   <script>
-        var dropbtn     = document.getElementById("dropdown-button");
-        var clasDrop    = document.querySelectorAll(".dropbtn")
-        var dropCtg     = document.getElementById("dropdown-category");
-        var drpdwn      = document.querySelectorAll(".dropdown-category");
-        let isClicked   = false;
-
-        function kilik(){
-            dropCtg.classList.toggle("hidden");
-
-            window.onclick = function(e){
-                if(!clasDrop[0].contains(e.target)){
-                    for(var i = 0; i < drpdwn.length; i++){
-                        if (!drpdwn[i].classList.contains("hidden")){
-                            drpdwn[i].classList.add("hidden")
-                        }
-                    }
-                }    
-            }
-        }
-
-  
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.carousel-slide').forEach((carousel) => {
-
-        carousel.querySelector('.prevButton').addEventListener('click', (e) => {
-          minusItem(carousel);
-        });
-
-        carousel.querySelector('.nextButton').addEventListener('click', () => {
-          plusItem(carousel);
-        });
-
-        insertDots(carousel);
-
-        carousel.querySelectorAll('.dot').forEach((dot) => {
-          dot.addEventListener('click', (e) => {
-            let item = Array.prototype.indexOf.call(
-              e.target.parentNode.children,
-              e.target
-            );
-
-            showItems(carousel, item);
-          });
-        });
-
-        showItems(carousel, 0);
-
-      });
-    });
-
-    function insertDots(carousel) {
-      const dots = document.createElement('div');
-      dots.classList.add('dots');
-
-      carousel.append(dots);
-
-      carousel.querySelectorAll('.slide').forEach((elem) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-
-        carousel.querySelector('.dots').append(dot)
-      });
-    }
-
-    function plusItem(carousel) {
-      let item = currentItem(carousel);
-
-      carousel.querySelectorAll('.slide')[item].nextElementSibling.classList.contains('slide')
-        ? showItems(carousel, item + 1)
-        : showItems(carousel, 0);
-    }
-
-    function minusItem(carousel) {
-      let item = currentItem(carousel);
-
-      carousel.querySelectorAll('.slide')[item].previousElementSibling != null
-      ? showItems(carousel, item - 1)
-      : showItems(carousel, carousel.querySelectorAll('.slide').length - 1);
-    }
-
-    function currentItem(carousel) {
-      return [...carousel.querySelectorAll('.slide')].findIndex(
-        (item) => item.style.display == "block"
-      );
-    }
-
-    function showItems(carousel, item) {
-      if (carousel.querySelectorAll('.slide')[currentItem(carousel)] != undefined)
-          carousel.querySelectorAll('.slide')[currentItem(carousel)].style.display = 'none';
-          carousel.querySelectorAll('.slide')[item].style.display = 'block';
-
-      if (carousel.querySelector('.dot.active') != null)
-          carousel.querySelector('.dot.active').classList.remove('active');
-          carousel.querySelectorAll('.dot')[item].classList.add('active');
-     }
-
+      store()
   </script>
 </body>
 </html>

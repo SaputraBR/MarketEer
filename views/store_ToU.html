@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body class="bg-slate-100 max-w-screen-2xl mx-auto">
@@ -144,42 +145,7 @@
     </footer>
 
     <script>
-        var about   = document.getElementById('about');
-        var term    = document.getElementById('term');
-        var privacy = document.getElementById('privacy');
-        var helping = document.getElementById('help');
-        var navi    = document.getElementById('navigation')
-        var a       = navi.children
-
-        for(i = 0; i < a.length; i++){
-            a[i].addEventListener("click", function(){
-                let x = Array.prototype.indexOf.call(
-                            this.parentNode.children,
-                            this
-                        )
-
-                var help
-                if (x == 0){
-                    help = about
-                } else if (x == 1){
-                    help = term
-                } else if (x == 2){
-                    help = privacy
-                } else if (x == 3){
-                    help = helping
-                }
-
-                var headerOffset = 110;
-                var elementPosition = help.getBoundingClientRect().top;
-                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top:  offsetPosition,
-                    behavior: "smooth"
-                });
-            })
-
-        }
+        tou()
     </script>
 </body>
 </html>

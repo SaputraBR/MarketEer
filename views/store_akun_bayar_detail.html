@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                             <p>80777087813796688</p>
                         </div>
                         <div class="ml-auto self-center">
-                            <p class="text-lg font-semibold">Rp <span id="sub-bayar">388,228,938</span></p>
+                            <p class="text-lg font-semibold">Rp <span id="sub-bayar"></span></p>
                         </div>
                     </div> 
                 </div>
@@ -69,25 +70,7 @@
     </main>
 
     <script>
-        var a, b, c, d, e
-        var harga   = document.getElementById("harga-barang").innerHTML
-        var admin   = document.getElementById("biaya-adm").innerHTML
-        var ongkir  = document.getElementById("ongkos-kirim").innerHTML
-        var disBrg  = document.getElementById("diskon-barang").innerHTML
-        var disOng  = document.getElementById("diskon-ongkir").innerHTML
-        var bayar   = document.getElementById("sub-bayar")
-        let number  = new Intl.NumberFormat('en-US')        
-
-        a = harga.replace(/[^0-9]/g,"")
-        b = admin.replace(/[^0-9]/g,"")
-        c = ongkir.replace(/[^0-9]/g,"")
-        d = disBrg.replace(/[^0-9]/g,"")
-        e = disOng.replace(/[^0-9]/g,"")
-
-        var plus    = parseInt(a) + parseInt(b) + parseInt(c)
-        var min     = parseInt(plus) - parseInt(d) - parseInt(e)
-
-        bayar.innerHTML = number.format(min)
+        bayarDtl()
     </script>
 </body>
   

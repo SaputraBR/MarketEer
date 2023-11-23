@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -163,23 +164,7 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        var a, b, c, d, e, f, g, h
-        let number  = new Intl.NumberFormat('en-US')
-        var line    = document.querySelectorAll("#item-line")
-        for (i = 0; i < line.length; i++){
-            a = line[i].querySelector("#total").innerHTML
-            b = line[i].querySelector("#qty").innerHTML
-            c = parseInt(a.replace(/[^0-9]/g,"")) / parseInt(b.replace(/[^0-9]/g,""))
-            
-            d = line[i].querySelector("#hpp").innerHTML
-            e = line[i].querySelector("#laba")
-            f = line[i].querySelector("#margin")
-            g = (c - parseInt(d.replace(/[^0-9]/g,""))) * parseInt(b)
-            h = (g / parseInt(a.replace(/[^0-9]/g,""))) * 100
-
-            e.innerHTML = number.format(g)
-            f.innerHTML = h.toFixed(2)
-        }
+        margin()
     </script>
 </body>
   

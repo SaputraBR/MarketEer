@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -177,55 +178,7 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        let number      = new Intl.NumberFormat('en-US')
-        var sumJual = sumAktual = sumHapepe = sumMargin = rtrPersen = b = c = d = e = f = g = 0
-        var persen      = document.querySelectorAll("#persen-margin")
-        var jmlJual     = document.getElementById("jumlah-jual")
-        var jmlAkt      = document.getElementById("jumlah-aktual")
-        var jmlHpp      = document.getElementById("jumlah-hpp")
-        var jmlMrg      = document.getElementById("jumlah-margin")
-        var rataMrg     = document.getElementById("rata-margin")
-        
-        document.querySelectorAll("#grid-main").forEach(as => {
-            b = as.querySelectorAll("#aktual")
-            c = as.querySelectorAll("#harga-pokok")
-
-            as.querySelectorAll("#jual").forEach(n => {
-                var a = n.innerHTML.replace(/[^0-9]/g,"")
-                sumJual += parseInt(a)
-            })
-
-            for(i = 0; i < b.length; i++){
-                d = b[i].innerHTML.replace(/[^0-9]/g,"")
-                sumAktual += parseInt(d)
-            }
-
-            for (i = 0; i < c.length; i++){
-                e = c[i].innerHTML.replace(/[^0-9]/g,"")
-                sumHapepe += parseInt(e)
-            }            
-
-            as.querySelectorAll("#margin").forEach(n => {
-                n.innerHTML = number.format(parseInt(d) - parseInt(e))
-                f = n.innerHTML.replaceAll(",","")
-                sumMargin += parseInt(f)
-
-            })
-
-            as.querySelectorAll("#persen-margin").forEach(n => {
-                n.innerHTML = number.format((parseFloat(f) / parseFloat(d) * 100).toFixed(2))
-                rtrPersen += parseFloat(n.innerHTML)
-            })
-                
-        })
-
-        var leng = rtrPersen / persen.length
-        rataMrg.innerHTML = leng.toFixed(2)
-        
-        jmlJual.innerHTML = number.format(sumJual)
-        jmlAkt.innerHTML  = number.format(sumAktual)
-        jmlHpp.innerHTML  = number.format(sumHapepe)
-        jmlMrg.innerHTML  = number.format(sumMargin)
+        penjualan()
     </script>
 </body>
   

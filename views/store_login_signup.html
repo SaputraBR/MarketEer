@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body class="max-w-screen-2xl max-h-max mx-auto">
@@ -72,21 +73,7 @@
     </div>
 
     <script>
-        var eyePass     = document.querySelectorAll("#password")
-        var eyeConf     = document.getElementById("confirm")
-        for (i = 0; i < eyePass.length; i++){
-            eyePass[i].addEventListener("click", function(){
-                if (!this.querySelector("#uye").classList.contains("hidden")){
-                    this.querySelector("#uye").classList.add("hidden")
-                    this.querySelector("#uye-hide").classList.remove("hidden")
-                    this.parentNode.querySelector("input").setAttribute("type", "text")
-                } else {
-                    this.querySelector("#uye").classList.remove("hidden")
-                    this.querySelector("#uye-hide").classList.add("hidden")
-                    this.parentNode.querySelector("input").setAttribute("type", "password")
-                }
-            })
-        }
+        signup()
     </script>
 </body>
 </html>

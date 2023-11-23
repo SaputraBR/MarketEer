@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
-    <script src="../public/src/js-image-zoom.js"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body class="bg-slate-100 max-w-screen-2xl mx-auto">
@@ -33,7 +33,7 @@
             </div>
           <form class="w-8/12 h-full">
             <div class="h-full flex relative mx-4">
-                <button id="dropdown-button" onclick="kilik()" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+                <button id="dropdown-button" onclick="dropKlik()" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
                     <p class="hidden sm:block">All categories</p>
                     <p class="block sm:hidden">All</p>
                     <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -316,215 +316,7 @@
     </footer>
 
     <script>
-        var dropbtn     = document.getElementById("dropdown-button");
-        var clasDrop    = document.querySelectorAll(".dropbtn")
-        var dropCtg     = document.getElementById("dropdown-category");
-        var drpdwn      = document.querySelectorAll(".dropdown-category");
-        let isClicked   = false;
-
-        function kilik(){
-            dropCtg.classList.toggle("hidden");
-        }
-
-        window.onclick = function(e){
-            if(!clasDrop[0].contains(e.target)){
-                for(var i = 0; i < drpdwn.length; i++){
-                    if (!drpdwn[i].classList.contains("hidden")){
-                        drpdwn[i].classList.add("hidden")
-                    }
-                }
-            }                            
-        }        
-    </script>
-
-    <script>        
-        var keranjang   = document.getElementById("form-keranjang");
-        var hargaBrg    = document.querySelectorAll(".harga-brg");
-        var diskonBrg   = document.querySelectorAll(".diskon-harga");
-        var valueInp    = document.querySelectorAll("input[name='check']");
-        var input       = keranjang.querySelectorAll("input");
-        var cekAll      = document.getElementById("pilih-all");
-        var kontainer   = keranjang.querySelectorAll(".contoltainer");
-        var hiddenJml   = document.getElementById("hidden-jml")
-        var jmlBrg      = document.getElementById("jml-brg");
-        var totalHrg    = document.getElementById("total-harga");
-        var totalDskn   = document.getElementById("total-diskon");
-        var totalBlnj   = document.getElementById("total-belanja");
-        let number      = new Intl.NumberFormat('en-US');
-        let fungHarga   = "";
-        let fungDiskon  = "";      
-
-        function harga(){
-            let cost = 0;
-            for (var i = 0; i < diskonBrg.length; i++){
-                var inner   = diskonBrg[i].innerHTML;
-                var format  = inner.replace(/[^0-9]/g,"");
-
-                cost += parseInt(format);
-            }     
-            totalHrg.innerHTML = number.format(cost);                  
-            fungHarga = totalHrg.innerHTML = number.format(cost);
-            localStorage.setItem("harga", fungHarga)
-            totalHrg.innerHTML = localStorage.getItem("harga")            
-        }
-
-        function diskon(){
-            let collet = 0;
-            kontainer.forEach(ex => {
-                var kecil   = ex.querySelector(".harga-brg").innerHTML.replace(/[^0-9]/g,"");
-                var gede    = ex.querySelector(".diskon-harga").innerHTML.replace(/[^0-9]/g,"");
-
-
-                collet += parseInt(gede) - parseInt(kecil);
-            })
-            totalDskn.innerHTML = number.format(collet); 
-            fungDiskon = totalDskn.innerHTML = number.format(collet);
-        }
-
-        function jumlah(){
-            jmlBrg.innerHTML = kontainer.length;
-            hiddenJml.classList.remove("hidden");
-
-            //total-belanja
-            var harga   = fungHarga.replace(/[^0-9]/g,"");
-            var diskon  = fungDiskon.replace(/[^0-9]/g,"");
-            var hasil   = parseInt(harga) - parseInt(diskon);
-            totalBlnj.innerHTML = number.format(hasil);
-        }
-
-        for( var i = 0; i < input.length; i++){
-            (function(index){
-                input[index].addEventListener("click", function(){
-                    
-                    if(!this.classList.contains("pilih-item")){                        
-                        for (var i = 0; i < valueInp.length; i++){
-                            valueInp[i].checked = this.checked;
-
-                            if(valueInp[i].checked){
-                                valueInp[i].parentNode.classList.add("ceklisty");
-                            } else {
-                                valueInp[i].parentNode.classList.remove("ceklisty");
-                            }
-                        }
-                        
-                        if (this.checked){
-                            harga(), diskon(), jumlah()
-                            document.getElementById("sampah-hidden").classList.remove("hidden");
-
-                        } else{
-                            document.getElementById("sampah-hidden").classList.add("hidden");
-                            hiddenJml.classList.add("hidden");
-                            totalHrg.innerHTML  = "0";
-                            totalDskn.innerHTML = "0";
-                            totalBlnj.innerHTML = "0";
-                        }
-                        
-                    } else {
-                        let count       = 0;
-                        let isCheck     = false;
-                        var cekHarga    = 0;
-                        var cekDiskon   = 0;
-
-                        for (var i = 0; i < valueInp.length; i++){
-                            if (valueInp[i].checked){
-                                count++
-                            }
-                        };                        
-
-                        if (this.checked){
-                            this.parentNode.classList.add("ceklisty")
-                        } else {
-                            this.parentNode.classList.remove("ceklisty")
-                        }
-                        
-                        var ceklisty    = document.querySelectorAll(".ceklisty");
-                        ceklisty.forEach(ex => {
-                            var authen  = ex.parentNode.querySelector(".diskon-harga").innerHTML;
-                            var within  = authen.replace(/[^0-9]/g,"");
-                            cekHarga += parseInt(within)  
-                            
-                            var pre = ex.parentNode.querySelector(".harga-brg").innerHTML;
-                            var und = pre.replace(/[^0-9]/g,"");
-                            cekDiskon += parseInt(und);
-                        })
-
-                        totalHrg.innerHTML  = number.format(cekHarga);
-                        totalDskn.innerHTML = number.format(cekHarga - cekDiskon);
-                        totalBlnj.innerHTML = number.format(cekDiskon);
-                        
-                        if (valueInp.length == count){
-                            cekAll.checked = this.checked;
-                            harga(), diskon(), jumlah();
-                            document.getElementById("sampah-hidden").classList.remove("hidden");
-
-                        } else if (count < 1) {
-                                hiddenJml.classList.add("hidden");
-                                document.getElementById("sampah-hidden").classList.add("hidden");
-
-                        } else {
-                                jmlBrg.innerHTML    = count;
-                                hiddenJml.classList.remove("hidden");
-                                cekAll.checked = false;  
-                                document.getElementById("sampah-hidden").classList.remove("hidden");                   
-                        }
-                    }                       
-                })                
-            })(i);
-        }        
-    </script>
-
-    <script>
-        var hrgCont     = document.getElementById("harga-cont");
-        var dskCont     = document.getElementById("diskon-cont");
-        var chevDown    = document.getElementById("chevron-down");
-        var chevUp      = document.getElementById("chevron-up");
-        var belTot      = document.getElementById("bel-tot");
-        var subTot      = document.getElementById("sub-tot");
-        var konTotal    = document.getElementById("kontainer-total");
-        var createDiv   = document.createElement("div");
-        var konFirst    = document.getElementById("kontainer-first");
-        var slideTot    = document.getElementById("slide-total");
-        var konSub      = document.getElementById("kontainer-sub");  
-        var butSub      = document.getElementById("button-sub");
-
-        hrgCont.classList.add("hidden");
-        dskCont.classList.add("hidden");
-        subTot.classList.add("hidden");
-
-
-        chevUp.addEventListener("click", function(){                        
-            hrgCont.classList.replace("hidden", "flex");
-            dskCont.classList.replace("hidden", "flex");
-            subTot.classList.remove("hidden");
-            chevUp.classList.add("hidden");
-            slideTot.classList.add("p-4");
-  
-            konFirst.style.height = "0";
-            konFirst.style.opacity = "0";
-            konFirst.classList.remove("p-4");
-            konFirst.style.transition = "opacity 0.1s ease-in";
-            slideTot.style.height = "130px";
-            slideTot.style.transition = "height 0.1s ease-out";
-
-            slideTot.append(hrgCont)
-            slideTot.append(dskCont)
-            slideTot.append(konSub)
-        })        
-
-        chevDown.addEventListener("click", function(){
-            subTot.classList.add("hidden");
-            chevUp.classList.remove("hidden");
-            slideTot.style.height = "0";
-            slideTot.style.transition = "height 0.1s ease-out";
-            slideTot.classList.remove("p-4");
-
-            konFirst.classList.add("p-4");
-            konFirst.style.height = "100%";
-            konFirst.style.opacity = "100%";
-            konFirst.style.transition = "opacity 0.1s ease-in";
-            butSub.prepend(konSub)
-
-        })
+        keranjang()
     </script>
 </body>
 </html>

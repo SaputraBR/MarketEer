@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="../public/src/js-image-zoom.js"></script>
+    <script src="../public/src/custom.js"></script>
     <style>
         #chevron path {
             fill: #fff;
@@ -43,7 +44,7 @@
             </div>
           <form class="w-8/12 h-full">
             <div class="h-full flex relative mx-4">
-                <button id="dropdown-button" onclick="kilik()" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
+                <button id="dropdown-button" onclick="dropKlik()" data-dropdown-toggle="dropdown" class="dropbtn self-center flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 sm:px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:border-blue-700 focus:ring-blue-700 focus:ring-1 focus:outline-none" type="button">
                     <p class="hidden sm:block">All categories</p>
                     <p class="block sm:hidden">All</p>
                     <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -286,7 +287,7 @@
                             <p class="text-lg lg:text-xl font-semibold">Subtotal</p>
                             <span class="block ml-auto">
                                 <p class="text-sm float-right line-through self-center text-secondary">Rp<span id="diskon-hasil">-</span></p>              
-                                <p class="text-lg lg:text-xl font-semibold ml-auto">Rp<span id="sub-hasil">-</span></p>
+                                <p class="text-lg lg:text-xl font-semibold ml-auto">Rp<span id="sub-hasil"></span></p>
                             </span>
                         </div>
                     </div>
@@ -794,162 +795,8 @@
     </footer>
 
     <script>
-        var dropbtn     = document.getElementById("dropdown-button");
-        var clasDrop    = document.querySelectorAll(".dropbtn")
-        var dropCtg     = document.getElementById("dropdown-category");
-        var drpdwn      = document.querySelectorAll(".dropdown-category");
-        let isClicked   = false;
-
-        function kilik(){
-            dropCtg.classList.toggle("hidden");
-        }
-
-        window.onclick = function(e){
-            if(!clasDrop[0].contains(e.target)){
-                for(var i = 0; i < drpdwn.length; i++){
-                    if (!drpdwn[i].classList.contains("hidden")){
-                        drpdwn[i].classList.add("hidden")
-                    }
-                }
-            }                            
-        }  
-
-        //pilih ukuran
-        let btn        = document.getElementsByClassName("btn");
-        var ukuran     = document.getElementById("ukuran");
-        var input      = ukuran.getElementsByTagName("input");
-        var size       = document.getElementById("ukuran-size");
-        var out        = document.getElementById("size-out");
-        let prevButton = null;
-
-        for (i = 0; i < btn.length; i++) {
-            
-            (function (index) {
-                btn[index].addEventListener("click", function () {
-                    //console.log(btn[index].value);
-                    size.innerHTML = btn[index].value;
-                    out.innerHTML = btn[index].value;
-
-                    for (var i = 0; i < btn.length; i++){
-                        btn[i].classList.remove("ukuran-focus");
-                        
-                    };
-
-                    let isPresent = false;
-                    //   Check if the class is present or not
-                    this.classList.forEach(function (e) {
-                        if (e == "ukuran-focus") {
-                            isPresent = true;                                                        
-                        } else {
-                            isPresent = false;
-                        }                                            
-                    });                    
-
-                    //   toggle the presence of class on the basis of the isPresent variable
-                    if (isPresent) {
-                        this.classList.remove("ukuran-focus");
-                    } else {
-                        this.classList.add("ukuran-focus");
-                        
-                    }
-                });
-            })(i);
-        }
-
-        //tambah kurang jumlah barang
-        const incrementCount = document.getElementById("buttonInc");
-        const decrementCount = document.getElementById("buttonDec");
-        const totalCount = document.getElementById("hasil");
-        const harga = document.getElementById("harga");
-        const sub = document.getElementById("sub-hasil");
-        const stock = document.getElementById("stock");
-        const diskon = document.getElementById("diskon-harga");
-        const disc = document.getElementById("diskon-hasil");
+        product()
         
-        var count = 0;
-        
-        var a = harga.innerHTML;
-        var b = a.replace(/[^0-9]/g,"");
-        var stokNumb = stock.innerHTML.replace(/[^0-9]/g,"");
-
-        var v = diskon.innerHTML;
-        var w = v.replace(/[^0-9]/g,"");        
-
-        totalCount.innerHTML = count;
-
-        const handleIncrement = () => {
-            if(this.count < stokNumb){
-                count++;
-
-                var c = count * b;
-                var d = new Intl.NumberFormat('en-US');
-                var e = d.format(c);
-                sub.innerHTML = e;
-                
-                var x = count * w;
-                var y = d.format(x);
-                disc.innerHTML = y;
-                
-            }
-            totalCount.innerHTML = count;
-        };
-
-        const handleDecrement = () => {
-            if(this.count > 0){
-                this.count -= 1
-                var f = count;
-                var g = sub.innerHTML.replace(/[^0-9]/g,"");
-                var h = g - b ;
-
-                var i = new Intl.NumberFormat('en-US');
-                var j = i.format(h);
-                sub.innerHTML = j; 
-
-                var z = disc.innerHTML.replace(/[^0-9]/g,"");
-                var t = z - w;
-                var u = i.format(t);
-                disc.innerHTML = u;
-                
-            }
-            totalCount.innerHTML = count;
-        };
-
-        incrementCount.addEventListener("click", handleIncrement);
-        decrementCount.addEventListener("click", handleDecrement);
-    </script>
-
-    <script>
-        const gap = 0;
-
-        const carousel = document.getElementById("carousel"),
-        content = document.getElementById("content"),
-        next = document.getElementById("button-next"),
-        prev = document.getElementById("button-prev");
-
-        next.addEventListener("click", e => {
-        carousel.scrollBy(width + gap, 0);
-        if (carousel.scrollWidth !== 0) {
-            prev.style.display = "flex";
-        }
-        if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-            next.style.display = "none";
-        }
-        });
-        prev.addEventListener("click", e => {
-        carousel.scrollBy(-(width + gap), 0);
-        if (carousel.scrollLeft - width - gap <= 0) {
-            prev.style.display = "none";
-        }
-        if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-            next.style.display = "flex";
-        }
-        });
-
-        let width = carousel.offsetWidth;
-        window.addEventListener("resize", e => (width = carousel.offsetWidth));
-    </script>
-
-    <script>
         var options1 = {
             width: 400,
             zoomWidth: 600,
@@ -963,31 +810,67 @@
         };
         new ImageZoom(document.getElementById("img-container"), options2);
 
-    </script>
-
-    <script>
-        var gambar = document.getElementById("gambar-utama");
-        var gmbr = document.getElementById("gambar-thumb");
-        var imgThumb = gmbr.getElementsByTagName("img");
-
-        for(i = 0; i < imgThumb.length; i++){
-            var image = imgThumb[i];            
-            image.addEventListener("click", function(e) {
-                gambar.src = this.src;
-                let x = Array.prototype.indexOf.call(
-                    e.target.parentNode.children,
-                    e.target
-                );                
-                aktif(x);  
-            });                        
-        };
-        
-
-        function aktif(x){
-            if (gmbr.querySelector('.h-full.aktif') != null)
-                gmbr.querySelector('.h-full.aktif').classList.remove('aktif');
-                gmbr.querySelectorAll('.h-full')[x].classList.add('aktif');
-        }
+            //tambah kurang jumlah barang
+            const incrementCount = document.getElementById("buttonInc");
+            const decrementCount = document.getElementById("buttonDec");
+            const totalCount = document.getElementById("hasil");
+            const harga = document.getElementById("harga");
+            const sub = document.getElementById("sub-hasil");
+            const stock = document.getElementById("stock");
+            const diskont = document.getElementById("diskon-harga");
+            const disc = document.getElementById("diskon-hasil");
+            
+            var count = 0;
+            
+            var a = harga.innerHTML;
+            var b = a.replace(/[^0-9]/g,"");
+            var stokNumb = stock.innerHTML.replace(/[^0-9]/g,"");
+    
+            var v = diskont.innerHTML;
+            var w = v.replace(/[^0-9]/g,"");        
+    
+            totalCount.innerHTML = count;
+    
+            const handleIncrement = () => {
+                if(this.count < stokNumb){
+                    count++;
+    
+                    var c = count * b;
+                    var d = new Intl.NumberFormat('en-US');
+                    var e = d.format(c);
+                    sub.innerHTML = e;
+                    
+                    var x = count * w;
+                    var y = d.format(x);
+                    disc.innerHTML = y;
+                    
+                }
+                totalCount.innerHTML = count;
+            };
+    
+            const handleDecrement = () => {
+                if(this.count > 0){
+                    this.count -= 1
+                    var f = count;
+                    var g = sub.innerHTML.replace(/[^0-9]/g,"");
+                    var h = g - b ;
+    
+                    var i = new Intl.NumberFormat('en-US');
+                    var j = i.format(h);
+                    sub.innerHTML = j; 
+    
+                    var z = disc.innerHTML.replace(/[^0-9]/g,"");
+                    var t = z - w;
+                    var u = i.format(t);
+                    disc.innerHTML = u;
+                    
+                }
+                totalCount.innerHTML = count;
+            };
+            
+            incrementCount.addEventListener("click", handleIncrement);
+            decrementCount.addEventListener("click", handleDecrement);
+            console.log(handleDecrement)
     </script>
 </body>
 </html>

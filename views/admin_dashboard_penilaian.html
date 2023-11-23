@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
 </head>
 
 <body>
@@ -224,23 +225,7 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        var modal   = document.getElementById('modal-filter');
-        var button  = document.getElementById('close-button');
-        var filter  = document.getElementById('button-filter');
-
-        filter.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        button.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        diskon()
     </script>
 </body>
 

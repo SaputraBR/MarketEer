@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
+    <script src="../public/src/custom.js"></script>
     <style>
         .show {
             display: block;
@@ -178,39 +179,6 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        function myFunction() {
-            var content     = document.querySelectorAll(".drop-content"); 
-            var button      = document.querySelectorAll(".dropbtn");
-
-            content[0].classList.toggle("hidden");
-
-            window.onclick = function(e){
-                if(!button[0].contains(e.target)){
-                    for(var i = 0; i < content.length; i++){
-                        if (!content[i].classList.contains("hidden")){
-                            content[i].classList.add("hidden")
-                        }
-                    }
-                }    
-            }
-        }
-
-        var contain     = document.querySelectorAll("#container-input")
-        for (i = 0; i < contain.length; i++){
-            var button  = contain[i].querySelectorAll("button")            
-            button.forEach(ex => {
-                ex.addEventListener("click", function(){
-                   if (!this.parentNode.querySelectorAll("#fa-eye")[0].hidden){
-                        this.parentNode.querySelectorAll("#fa-eye")[0].hidden = true
-                        this.parentNode.querySelectorAll("#fa-eye-slash")[0].hidden = false
-                        this.parentNode.querySelectorAll("input")[0].setAttribute("type", "text")
-                   } else {
-                        this.parentNode.querySelectorAll("#fa-eye")[0].hidden = false
-                        this.parentNode.querySelectorAll("#fa-eye-slash")[0].hidden = true
-                        this.parentNode.querySelectorAll("input")[0].setAttribute("type", "password")
-                   }
-                })
-            })
-        }
+        settings()
     </script>
 </body>

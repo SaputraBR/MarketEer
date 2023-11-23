@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20fcff0bce.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"></script>
+    <script src="../public/src/custom.js"></script>
     <style>
         .on {
             background-color: #0029ce;
@@ -156,39 +157,6 @@
 
     <script type="text/javascript" src="../public/src/admin.js"></script>
     <script>
-        var a = document.getElementById("button-club")
-        var b = a.querySelectorAll("button")
-        var c
-
-        for (i = 0; i < b.length; i++){
-            b[i].addEventListener("click", function(){
-                var d = Array.prototype.indexOf.call(
-                        this.parentNode.parentNode.children,
-                        this.parentNode
-                )
-                
-                c = this.parentNode.parentNode
-                button(d)
-
-                console.log(c.querySelectorAll(".on")[0])
-                if (d == 0) {
-                    document.getElementById("translate").style.transform = "translateX(25%)"
-                    document.getElementById("translate").style.transition = "all .4s ease-out"
-                    document.querySelectorAll("#slide")[0].style.opacity = 1
-                    document.querySelectorAll("#slide")[1].style.opacity = 0
-                } else {
-                    document.getElementById("translate").style.transform = "translateX(-25%)"
-                    document.getElementById("translate").style.transition = "all .4s ease-out"
-                    document.querySelectorAll("#slide")[0].style.opacity = 0
-                    document.querySelectorAll("#slide")[1].style.opacity = 1
-                }
-            })
-        }
-
-        function button(d){
-            if (c.querySelector(".p-4.on") != null)
-                c.querySelector(".p-4.on").classList.remove("on")
-                c.querySelectorAll(".p-4")[d].classList.add("on")
-        }
+        balance()
     </script>
 </body>
