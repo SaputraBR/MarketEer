@@ -1022,99 +1022,150 @@ function signup() {
 }
 
 function product() {
-            //pilih ukuran
-            let btn        = document.getElementsByClassName("btn");
-            var ukuran     = document.getElementById("ukuran");
-            var input      = ukuran.getElementsByTagName("input");
-            var size       = document.getElementById("ukuran-size");
-            var out        = document.getElementById("size-out");
+    //pilih ukuran
+    let btn        = document.getElementsByClassName("btn");
+    var ukuran     = document.getElementById("ukuran");
+    var input      = ukuran.getElementsByTagName("input");
+    var size       = document.getElementById("ukuran-size");
+    var out        = document.getElementById("size-out");
     
-            for (i = 0; i < btn.length; i++) {
-                
-                (function (index) {
-                    btn[index].addEventListener("click", function () {
-                        //console.log(btn[index].value);
-                        size.innerHTML = btn[index].value;
-                        out.innerHTML = btn[index].value;
+    for (i = 0; i < btn.length; i++) {                
+        (function (index) {
+            btn[index].addEventListener("click", function () {
+                //console.log(btn[index].value);
+                size.innerHTML = btn[index].value;
+                out.innerHTML = btn[index].value;
     
-                        for (var i = 0; i < btn.length; i++){
-                            btn[i].classList.remove("ukuran-focus");
-                            
-                        };
+                for (var i = 0; i < btn.length; i++){
+                    btn[i].classList.remove("ukuran-focus");                            
+                };
     
-                        let isPresent = false;
-                        //   Check if the class is present or not
-                        this.classList.forEach(function (e) {
-                            if (e == "ukuran-focus") {
-                                isPresent = true;                                                        
-                            } else {
-                                isPresent = false;
-                            }                                            
-                        });                    
+                let isPresent = false;
+                //   Check if the class is present or not
+                this.classList.forEach(function (e) {
+                    if (e == "ukuran-focus") {
+                        isPresent = true;                                                        
+                    } else {
+                        isPresent = false;
+                    }                                            
+                });                    
     
-                        //   toggle the presence of class on the basis of the isPresent variable
-                        if (isPresent) {
-                            this.classList.remove("ukuran-focus");
-                        } else {
-                            this.classList.add("ukuran-focus");
-                            
-                        }
-                    });
-                })(i);
-            }
-    
-
-
-            var gambar = document.getElementById("gambar-utama");
-            var gmbr = document.getElementById("gambar-thumb");
-            var imgThumb = gmbr.getElementsByTagName("img");
-    
-            for(i = 0; i < imgThumb.length; i++){
-                var image = imgThumb[i];            
-                image.addEventListener("click", function(e) {
-                    gambar.src = this.src;
-                    let x = Array.prototype.indexOf.call(
-                        e.target.parentNode.children,
-                        e.target
-                    );                
-                    aktif(x);  
-                });                        
-            };
-                
-            function aktif(x){
-                if (gmbr.querySelector('.h-full.aktif') != null)
-                    gmbr.querySelector('.h-full.aktif').classList.remove('aktif');
-                    gmbr.querySelectorAll('.h-full')[x].classList.add('aktif');
-            }
-    
-            const gap = 0;
-
-            const carousel = document.getElementById("carousel"),
-            content = document.getElementById("content"),
-            next = document.getElementById("button-next"),
-            prev = document.getElementById("button-prev");
-    
-            next.addEventListener("click", e => {
-            carousel.scrollBy(width + gap, 0);
-            if (carousel.scrollWidth !== 0) {
-                prev.style.display = "flex";
-            }
-            if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-                next.style.display = "none";
-            }
+                //   toggle the presence of class on the basis of the isPresent variable
+                if (isPresent) {
+                    this.classList.remove("ukuran-focus");
+                } else {
+                    this.classList.add("ukuran-focus");                            
+                }
             });
-            prev.addEventListener("click", e => {
-            carousel.scrollBy(-(width + gap), 0);
-            if (carousel.scrollLeft - width - gap <= 0) {
-                prev.style.display = "none";
-            }
-            if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-                next.style.display = "flex";
-            }
-            });
+        })(i);
+    }
     
-            let width = carousel.offsetWidth;
-            window.addEventListener("resize", e => (width = carousel.offsetWidth));
+    var gambar = document.getElementById("gambar-utama");
+    var gmbr = document.getElementById("gambar-thumb");
+    var imgThumb = gmbr.getElementsByTagName("img");
+    
+    for(i = 0; i < imgThumb.length; i++){
+        var image = imgThumb[i];            
+        image.addEventListener("click", function(e) {
+            gambar.src = this.src;
+            let x = Array.prototype.indexOf.call(
+                    e.target.parentNode.children,
+                    e.target
+                );                
+            aktif(x);  
+        });                        
+    };
+                
+    function aktif(x){
+        if (gmbr.querySelector('.h-full.aktif') != null)
+            gmbr.querySelector('.h-full.aktif').classList.remove('aktif');
+            gmbr.querySelectorAll('.h-full')[x].classList.add('aktif');
+    }
+    
+    const gap = 0;
+
+    const carousel = document.getElementById("carousel"),
+    content = document.getElementById("content"),
+    next = document.getElementById("button-next"),
+    prev = document.getElementById("button-prev");
+
+    next.addEventListener("click", e => {
+        carousel.scrollBy(width + gap, 0);
+        if (carousel.scrollWidth !== 0) {
+            prev.style.display = "flex";
+        }
+        if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+            next.style.display = "none";
+        }
+    });
+
+    prev.addEventListener("click", e => {
+        carousel.scrollBy(-(width + gap), 0);
+        if (carousel.scrollLeft - width - gap <= 0) {
+            prev.style.display = "none";
+        }
+        if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+            next.style.display = "flex";
+        }
+    });
+    
+    let width = carousel.offsetWidth;
+    window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+    //tambah kurang jumlah barang
+    const incrementCount = document.getElementById("buttonInc");
+    const decrementCount = document.getElementById("buttonDec");
+    const totalCount     = document.getElementById("hasil");
+    const harga          = document.getElementById("harga");
+    const sub            = document.getElementById("sub-hasil");
+    const stock          = document.getElementById("stock");
+    const diskont        = document.getElementById("diskon-harga");
+    const disc           = document.getElementById("diskon-hasil");
+    count = 0            
+                        
+    var a = harga.innerHTML;
+    var b = a.replace(/[^0-9]/g,"");
+    var stokNumb = stock.innerHTML.replace(/[^0-9]/g,"");
+                
+    var v = diskont.innerHTML;
+    var w = v.replace(/[^0-9]/g,"");        
+                
+    totalCount.innerHTML = count;            
+
+    incrementCount.onclick = () => {
+        if(this.count < stokNumb){
+            count++;
+                
+            var c = count * b;
+            var d = new Intl.NumberFormat('en-US');
+            var e = d.format(c);
+            sub.innerHTML = e;
+                                
+            var x = count * w;
+            var y = d.format(x);
+            disc.innerHTML = y;                                
+        }
+        totalCount.innerHTML = count;                            
+    };
+
+    decrementCount.onclick = () => {
+        if(this.count > 0){
+            this.count -= 1
+            var f = count;
+            var g = sub.innerHTML.replace(/[^0-9]/g,"");
+            var h = g - b ;
+                
+            var i = new Intl.NumberFormat('en-US');
+            var j = i.format(h);
+            sub.innerHTML = j; 
+                
+            var z = disc.innerHTML.replace(/[^0-9]/g,"");
+            var t = z - w;
+            var u = i.format(t);
+            disc.innerHTML = u;                                
+        }
+        totalCount.innerHTML = count;
+    };
 }
 
 function tou() {

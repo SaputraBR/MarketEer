@@ -259,13 +259,13 @@
                     </div>
                     <div class="flex flex-wrap mb-3">
                         <div class="w-28 h-10 flex bg-white rounded-md">
-                            <button class="mr-auto px-3 hover:bg-slate-100" id="buttonDec">
+                            <button class="mr-auto px-3 hover:bg-slate-100 buttonDec" id="buttonDec">
                                 <i class="fa-solid fa-minus text-[#fa4f00]"></i>
                             </button>
                             <div class="self-center">
-                                <p class="font-bold text-xl" id="hasil"></p>
+                                <p class="font-bold text-xl" id="hasil">0</p>
                             </div>
-                            <button class="ml-auto px-3 hover:bg-slate-100" id="buttonInc">
+                            <button class="ml-auto px-3 hover:bg-slate-100 buttonInc" id="buttonInc">
                                 <i class="fa-solid fa-plus text-[#fa4f00]"></i>
                             </button>
                         </div>
@@ -795,8 +795,10 @@
     </footer>
 
     <script>
-        product()
         
+        var count   = 0;
+        product()
+
         var options1 = {
             width: 400,
             zoomWidth: 600,
@@ -809,68 +811,6 @@
             offset: {vertical: 0, horizontal: 10}
         };
         new ImageZoom(document.getElementById("img-container"), options2);
-
-            //tambah kurang jumlah barang
-            const incrementCount = document.getElementById("buttonInc");
-            const decrementCount = document.getElementById("buttonDec");
-            const totalCount = document.getElementById("hasil");
-            const harga = document.getElementById("harga");
-            const sub = document.getElementById("sub-hasil");
-            const stock = document.getElementById("stock");
-            const diskont = document.getElementById("diskon-harga");
-            const disc = document.getElementById("diskon-hasil");
-            
-            var count = 0;
-            
-            var a = harga.innerHTML;
-            var b = a.replace(/[^0-9]/g,"");
-            var stokNumb = stock.innerHTML.replace(/[^0-9]/g,"");
-    
-            var v = diskont.innerHTML;
-            var w = v.replace(/[^0-9]/g,"");        
-    
-            totalCount.innerHTML = count;
-    
-            const handleIncrement = () => {
-                if(this.count < stokNumb){
-                    count++;
-    
-                    var c = count * b;
-                    var d = new Intl.NumberFormat('en-US');
-                    var e = d.format(c);
-                    sub.innerHTML = e;
-                    
-                    var x = count * w;
-                    var y = d.format(x);
-                    disc.innerHTML = y;
-                    
-                }
-                totalCount.innerHTML = count;
-            };
-    
-            const handleDecrement = () => {
-                if(this.count > 0){
-                    this.count -= 1
-                    var f = count;
-                    var g = sub.innerHTML.replace(/[^0-9]/g,"");
-                    var h = g - b ;
-    
-                    var i = new Intl.NumberFormat('en-US');
-                    var j = i.format(h);
-                    sub.innerHTML = j; 
-    
-                    var z = disc.innerHTML.replace(/[^0-9]/g,"");
-                    var t = z - w;
-                    var u = i.format(t);
-                    disc.innerHTML = u;
-                    
-                }
-                totalCount.innerHTML = count;
-            };
-            
-            incrementCount.addEventListener("click", handleIncrement);
-            decrementCount.addEventListener("click", handleDecrement);
-            console.log(handleDecrement)
     </script>
 </body>
 </html>
