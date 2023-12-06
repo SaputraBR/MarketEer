@@ -19,6 +19,16 @@
             fill: #ee8700;
             cursor: pointer;
         }
+
+        .putin input {
+          text-align: center;
+        }
+        ::-webkit-input-placeholder {
+          text-align: center;
+        }
+        :-moz-placeholder {
+          text-align: center;
+        }
     </style>
 </head>
 
@@ -100,34 +110,158 @@
     <main class="w-10/12 h-auto md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
         <section class="w-full h-auto rounded-lg bg-slate-300">
             <div class="py-6 px-14">
-                <form action="" enctype="multipart/form-data" id="text-editor">                    
-                    <label for="nama" class="font-semibold text-lg block">Nama barang</label>
-                    <input type="text" name="nama" id="nama-brg" value="Air Jordan 7 Retro SE Men's Shoes 40-47" class="mb-2 w-64 px-2 py-1 rounded-sm border focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
-                    <div class="grid grid-cols-3">
-                        <div class="col-span-1">
-                            <label for="nama" class="font-semibold text-lg block">HPP</label>
-                            <input type="text" name="hpp" id="nama-brg" value="Rp3,000,123" class="w-3/4 px-2 py-1 rounded-sm border focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                <form action="" enctype="multipart/form-data" id="text-editor" class="">
+                    <label for="judul" class="text-xl font-semibold">Judul</label>
+                    <input type="text" name="judul" id="judul" value="Air Jordan 7 Retro SE Men's Shoes 40-47" class="w-1/2 py-1 px-1 ml-2 bg-slate-50 rounded-md">
+                    <h1 class="text-xl font-semibold mt-3">Masukkan item</h1>
+                    <div class="h-auto w-full bg-slate-50 border-2 border-slate-400">
+                        <div class="grid grid-cols-12 border-b-2 border-slate-400">
+                            <div class="col-span-1 flex justify-center border-r-2 border-slate-400 py-2">no</div>
+                            <div class="col-span-2 flex justify-center border-r-2 border-slate-400 py-2">barcode</div>
+                            <div class="col-span-3 flex justify-center border-r-2 border-slate-400 py-2">nama</div>
+                            <div class="col-span-2 flex justify-center border-r-2 border-slate-400 py-2">hpp</div>
+                            <div class="col-span-2 flex justify-center border-r-2 border-slate-400 py-2">h jual</div>
+                            <div class="col-span-2 flex justify-center py-2">h markup</div>
                         </div>
-                        <div class="col-span-1">
-                            <label for="nama" class="font-semibold text-lg block">Harga markup</label>
-                            <input type="text" name="hjual" id="nama-brg" value="Rp3,999,999" class="w-3/4 px-2 py-1 rounded-sm border focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
-                        </div>
-                        <div class="col-span-1">
-                            <label for="nama" class="font-semibold text-lg block">Harga jual</label>
-                            <input type="text" name="hdisk" id="nama-brg" value="Rp3,400,000" class="w-3/4 px-2 py-1 rounded-sm border focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        <div class="putin">
+                            <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center">1</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <input type="text" name="barcode1" id="" value="08999999102586" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-3 flex border-r-2 border-slate-400">
+                                    <input type="text" name="nama1" id="nama" value="Air Jordan 7 Retro SE Men's, 40" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center px-1">3,000,123</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400" style="text-align: center;">
+                                    <input type="text" name="hpp1" id="hpp" value="3,400,000" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                    <input type="text" name="mark1" id="mark" value="3,999,999" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center">2</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <input type="text" name="barcode2" id="" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-3 flex border-r-2 border-slate-400">
+                                    <input type="text" name="nama2" id="nama" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center px-1"></p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400" style="text-align: center;">
+                                    <input type="text" name="hpp2" id="hpp" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                    <input type="text" name="mark2" id="mark" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center">3</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <input type="text" name="barcode2" id="" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-3 flex border-r-2 border-slate-400">
+                                    <input type="text" name="nama2" id="nama" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center px-1"></p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400" style="text-align: center;">
+                                    <input type="text" name="hpp2" id="hpp" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                    <input type="text" name="mark2" id="mark" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center">4</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <input type="text" name="barcode2" id="" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-3 flex border-r-2 border-slate-400">
+                                    <input type="text" name="nama2" id="nama" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center px-1"></p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400" style="text-align: center;">
+                                    <input type="text" name="hpp2" id="hpp" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                    <input type="text" name="mark2" id="mark" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center">5</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <input type="text" name="barcode2" id="" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-3 flex border-r-2 border-slate-400">
+                                    <input type="text" name="nama2" id="nama" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center px-1"></p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400" style="text-align: center;">
+                                    <input type="text" name="hpp2" id="hpp" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                    <input type="text" name="mark2" id="mark" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-12" id="grid-in">
+                                <div class="col-span-1 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center">6</p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <input type="text" name="barcode2" id="" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-3 flex border-r-2 border-slate-400">
+                                    <input type="text" name="nama2" id="nama" value="" class="w-full py-1 px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400">
+                                    <p class="self-center px-1"></p>
+                                </div>
+                                <div class="col-span-2 flex justify-center border-r-2 border-slate-400" style="text-align: center;">
+                                    <input type="text" name="hpp2" id="hpp" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                    <input type="text" name="mark2" id="mark" value="" class="w-full px-1 bg-slate-50 outline-none">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-64 h-auto relative hidden" id="search-gambar">
-                        <ul class="bg-gray-200 w-full divide-y divide-slate-400 border border-slate-400 mt-1 rounded-sm hover:cursor-pointer absolute top-0">
-                            <li class="px-2 py-1 hover:bg-gray-300">Air Jordan 7 Retro SE Men's Sh..</li>
-                            <li class="px-2 py-1 hover:bg-gray-300">Air Jordan 7 Retro SE Men's Sh..</li>
-                            <li class="px-2 py-1 hover:bg-gray-300">Air Jordan 7 Retro SE Men's Sh..</li>
-                            <li class="px-2 py-1 hover:bg-gray-300">Air Jordan 7 Retro SE Men's Sh..</li>
-                            <li class="px-2 py-1 hover:bg-gray-300">Air Jordan 7 Retro SE Men's Sh..</li>
-                        </ul>
+
+                    <div class="mt-4 flex">
+                        <div class="">
+                            <p class="font-semibold text-xl block">Kategori</p>
+                            <select type="text" name="nama" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                <option class="py-2 bg-slate-400" disabled></option>
+                                <option value="Best Seller" class="py-2">Best Seller</option>
+                                <option value="Favorite" class="py-2">Favorite</option>
+                                <option value="Men" class="py-2">Men</option>
+                                <option value="Women" class="py-2">Women</option>
+                            </select>
+                        </div>
                     </div>
+
                     <div class="w-full h-auto mt-4">
-                        <h1 class="font-semibold text-lg">Atur Gambar</h1>
+                        <h1 class="font-semibold text-xl">Atur Gambar</h1>
                         <div class="grid grid-cols-6">
                             <div class="col-span-1">
                                 <h2 class="font-semibold">Gambar 1</h2>
@@ -250,39 +384,8 @@
                         </div>                            
                     </div>
 
-                    <div class="mt-4 flex">
-                        <div class="" id="ukuran">
-                            <p class="font-semibold text-lg block">Ukuran</p>
-                            <input type="checkbox" id="40" value="40" name="Ukuran" class="w-4 h-4" checked>
-                            <label for="40" class="mr-2">40</label>
-                            <input type="checkbox" id="41" value="41" name="Ukuran" class="w-4 h-4" checked>
-                            <label for="41" class="mr-2">41</label>
-                            <input type="checkbox" id="42" value="42" name="Ukuran" class="w-4 h-4" checked>
-                            <label for="42" class="mr-2">42</label>
-                            <input type="checkbox" id="43" value="43" name="Ukuran" class="w-4 h-4" checked>
-                            <label for="43" class="mr-2">43</label>
-                            <input type="checkbox" id="44" value="44" name="Ukuran" class="w-4 h-4">
-                            <label for="43" class="mr-2">44</label>
-                            <input type="checkbox" id="45" value="45" name="Ukuran" class="w-4 h-4">
-                            <label for="43" class="mr-2">45</label>
-                            <input type="checkbox" id="46" value="46" name="Ukuran" class="w-4 h-4">
-                            <label for="43" class="mr-2">46</label>
-                            <input type="checkbox" id="47" value="47" name="Ukuran" class="w-4 h-4">
-                            <label for="43" class="mr-2">47</label>
-                        </div>
-                        <div class="ml-6">
-                            <p class="font-semibold text-lg block">Kategori</p>
-                            <select type="text" name="nama" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
-                                <option value="Best Seller" class="py-2">Best Seller</option>
-                                <option value="Favorite" class="py-2">Favorite</option>
-                                <option value="Men" class="py-2">Men</option>
-                                <option value="Women" class="py-2">Women</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <div class="mt-6">
-                        <p class="font-semibold text-lg block">Tambah Keterangan</p>
+                        <p class="font-semibold text-xl block mb-1">Tambah Keterangan</p>
                         <textarea name="content" id="editor1" class="" cols="" rows=""></textarea>
                     </div>
                     
