@@ -247,20 +247,44 @@
                         </div>
                     </div>
 
-                    <div class="mt-4 flex">
-                        <div class="">
+                    <div class="mt-8 grid grid-cols-4 gap-2">
+                        <div class="col-span-1">
                             <p class="font-semibold text-xl block">Kategori</p>
-                            <select type="text" name="nama" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                            <select type="text" name="kategori-post" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 <option class="py-2 bg-slate-400" disabled></option>
-                                <option value="Best Seller" class="py-2">Best Seller</option>
-                                <option value="Favorite" class="py-2">Favorite</option>
-                                <option value="Men" class="py-2">Men</option>
-                                <option value="Women" class="py-2">Women</option>
+                                <option value="Best Seller" class="py-2">Best Offers - Best Seller</option>
+                                <option value="Favorite" class="py-2">Best Offers - Favorite</option>
+                                <option value="Men" class="py-2">Best Offers - Men</option>
+                                <option value="Women" class="py-2">Best Offers - Women</option>
+                                <option value="Daily Offers" class="py-2">Daily Offers</option>
+                                <option value="Trends" class="py-2">Trends</option>
                             </select>
+                        </div>
+                        <div class="col-span-1">
+                            <label for="kategori-brg" class="text-xl font-semibold block">Kategori Barang</label>
+                            <input type="text" name="kategori-brg" id="" value="Fashion Pria" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
+                        <div class="col-span-1">
+                            <label for="dimensi" class="text-xl font-semibold block">Dimensi</label>
+                            <input type="text" name="dimensi" id="" value="30cm x 15cm x 10cm" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
+                        <div class="col-span-1">
+                            <label for="berat" class="text-xl font-semibold block">Berat</label>
+                            <input type="text" name="berat" id="" value="360gr" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="mt-4 grid grid-cols-4 gap-2">
+                        <div class="col-span-1">
+                            <label for="ongkir" class="text-xl font-semibold block">Ongkir</label>
+                            <input type="text" name="ongkir" id="" value="Ongkir 10 rb - 12 rb" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                        </div>
+                        <div class="col-span-1">
+                            <label for="estimasi" class="text-xl font-semibold block">Estimasi</label>
+                            <input type="text" name="estimasi" id="" value="Estimasi 12 Mei - 31 Des" class="rounded-md px-2 py-1 w-auto bg-slate-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                         </div>
                     </div>
 
-                    <div class="w-full h-auto mt-4">
+                    <div class="w-full h-auto mt-8">
                         <h1 class="font-semibold text-xl">Atur Gambar</h1>
                         <div class="grid grid-cols-6">
                             <div class="col-span-1">
@@ -280,16 +304,6 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="w-auto h-auto relative hidden" id="pilih-posisi">
-                                    <ul class="bg-gray-200 w-full divide-y divide-slate-400 border border-slate-400 mt-1 rounded-sm hover:cursor-pointer absolute top-0">
-                                        <li class="px-2 py-1 hover:bg-gray-300">Gambar 1</li>
-                                        <li class="px-2 py-1 hover:bg-gray-300">Gambar 2</li>
-                                        <li class="px-2 py-1 hover:bg-gray-300">Gambar 3</li>
-                                        <li class="px-2 py-1 hover:bg-gray-300">Gambar 4</li>
-                                        <li class="px-2 py-1 hover:bg-gray-300">Gambar 5</li>
-                                        <li class="px-2 py-1 hover:bg-gray-300">Gambar 6</li>
-                                    </ul>
-                                </div> 
                             </div>
                             <div class="col-span-1">
                                 <h2 class="font-semibold">Gambar 2</h2>
@@ -384,7 +398,7 @@
                         </div>                            
                     </div>
 
-                    <div class="mt-6">
+                    <div class="mt-8">
                         <p class="font-semibold text-xl block mb-1">Tambah Keterangan</p>
                         <textarea name="content" id="editor1" class="" cols="" rows=""></textarea>
                     </div>
