@@ -1188,6 +1188,27 @@ function product() {
         }
         totalCount.innerHTML = count;
     };
+
+    var detail = document.getElementById('detail-click');
+    var item   = document.getElementById('detail-item');
+    var detil = document.getElementById('detil');
+    var tutup = document.getElementById('tutup');
+    detail.addEventListener("click", function(){
+        if (item.classList.contains('hidden')) {
+            item.classList.add('block');
+            item.classList.remove('hidden');
+            detil.classList.add('hidden');
+            tutup.classList.remove('hidden');
+            tutup.classList.add('flex');
+        } else {
+            item.classList.add('hidden');
+            item.classList.remove('block');
+            detil.classList.remove('hidden');
+            tutup.classList.remove('flex');
+            tutup.classList.add('hidden');
+        }
+
+    })
 }
 
 function tou() {
