@@ -150,9 +150,9 @@
     </nav>
 
     <main class="flex sm:grid grid-cols-3 mt-4 sm:mt-10">
-        <div class="col-span-1 mr-2">
+        <div class="col-span-1 mx-1">
             <div class="w-full sticky top-28 sm:top-32">
-                <ul class="sm:w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 overflow-hidden font-semibold px-2 sm:px-0 py-1 sm:py-0 sm:text-base text-sm" id="main-navbar">
+                <ul class="sm:w-2/3 bg-white mx-auto rounded-sm border-2 border-slate-300 overflow-hidden font-semibold sm:text-base text-sm" id="main-navbar">
                     <li class="py-2 sm:px-4 hover:bg-slate-100 hover:cursor-pointer flex">
                         <p class="hidden sm:block">Data Pribadi</p>
                         <span class="sm:hidden mx-auto">
@@ -172,7 +172,7 @@
                     <li class="py-2 sm:px-4 hover:bg-slate-100 hover:cursor-pointer flex">
                         <p class="hidden sm:block">Menunggu Pembayaran</p>
                         <span class="sm:hidden mx-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512" style="fill: #eb0000">
                                 <path d="M535 41c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l64 64c4.5 4.5 7 10.6 7 17s-2.5 12.5-7 17l-64 64c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l23-23L384 112c-13.3 0-24-10.7-24-24s10.7-24 24-24l174.1 0L535 41zM105 377l-23 23L256 400c13.3 0 24 10.7 24 24s-10.7 24-24 24L81.9 448l23 23c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L7 441c-4.5-4.5-7-10.6-7-17s2.5-12.5 7-17l64-64c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM96 64H337.9c-3.7 7.2-5.9 15.3-5.9 24c0 28.7 23.3 52 52 52l117.4 0c-4 17 .6 35.5 13.8 48.8c20.3 20.3 53.2 20.3 73.5 0L608 169.5V384c0 35.3-28.7 64-64 64H302.1c3.7-7.2 5.9-15.3 5.9-24c0-28.7-23.3-52-52-52l-117.4 0c4-17-.6-35.5-13.8-48.8c-20.3-20.3-53.2-20.3-73.5 0L32 342.5V128c0-35.3 28.7-64 64-64zm64 64H96v64c35.3 0 64-28.7 64-64zM544 320c-35.3 0-64 28.7-64 64h64V320zM320 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/>
                             </svg>
                         </span>
@@ -186,7 +186,7 @@
                         </span>
                     </li>
                 </ul>
-                <div class="flex mt-4 sm:w-2/3 bg-white mx-auto rounded-lg border-2 border-slate-300 hover:bg-slate-100 hover:cursor-pointer flex py-2">
+                <div class="flex mt-4 sm:w-2/3 bg-white sm:mx-auto rounded-sm border-2 border-slate-300 hover:bg-slate-100 hover:cursor-pointer flex py-2 sm:py-0 px-2 sm:px-0">
                     <div class="py-2 px-4 font-semibold hidden sm:block">Log Out</div>
                     <span class="mx-auto sm:ml-auto sm:mr-4 self-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style="fill: #ff4800">
@@ -198,7 +198,7 @@
             </div>
         </div>
         <div class="col-span-2 sm:mr-4" id="main-section">
-            <section class="w-full h-auto bg-white border-2 border-slate-300 relative pb-8" id="data-pribadi">
+            <section class="w-full h-auto bg-white border-2 border-slate-300 relative pb-2 sm:pb-8" id="data-pribadi">
                 <div class="flex bg-gray-300 divide-x-2 divide-gray-100" id="navbar-bio">
                     <span class="px-6 py-2 self-center text-sm sm:text-base hover:cursor-pointer nav-bio navbio-aktif">Biodata</span>
                     <span class="px-6 py-2 self-center text-sm sm:text-base hover:cursor-pointer nav-bio">Alamat</span>
@@ -206,57 +206,59 @@
                 </div>
 
                 <div class="flex relative h-auto py-4 w-full absolute">
-                    <div class="flex w-full h-auto sm:px-8 shrink-0" id="biodata-diri">
-                        <div class="w-1/3 h-36 sm:h-48 ml-2 sm:ml-4 relative sm:text-base text-sm">
+                    <div class="w-full h-auto sm:px-8 shrink-0 sm:flex" id="biodata-diri">
+                        <div class="w-auto sm:w-1/3 h-36 sm:h-48 ml-2 sm:ml-4 relative sm:text-base text-sm">
                             <p class="ml-auto mb-1 font-semibold">Photo Profil</p>
-                            <img src="../public/img/Johnny_Depp.jpg" id="PP" class="rounded-full border-2 border-slate-800 h-24 w-24 sm:h-full sm:w-48 object-cover mt-2" alt="">
-                            <div class="absolute bottom-0">
-                                <button class="dropbn flex px-4 py-1 rounded-sm font-semibold bg-amber-300 shadow-xl hover:bg-amber-400" id="button-down" onclick="myFunctions()">
-                                    <i class="self-center fa-solid fa-pencil mr-1"></i>
-                                    <p>edit</p>    
-                                </button>
-                                <div class="absolute mt-1 bg-slate-200 rounded-sm drop-content hidden" id="drop-content">
-                                    <button class="w-full py-1 font-semibold hover:bg-slate-300">change</button>
-                                    <button class="w-full py-1 font-semibold hover:bg-slate-300">delete</button>
+                            <div class="w-full sm:w-auto flex justify-center sm:block">
+                                <img src="../public/img/Johnny_Depp.jpg" id="PP" class="rounded-full border-2 border-slate-800 h-24 w-24 sm:h-full sm:w-48 object-cover mt-2" alt="">
+                                <div class="absolute bottom-0">
+                                    <button class="dropbn flex px-2 sm:px-4 py-1 rounded-sm font-semibold bg-amber-300 shadow-xl hover:bg-amber-400" id="button-down" onclick="myFunctions()">
+                                        <i class="self-center fa-solid fa-pencil mr-1"></i>
+                                        <p>edit</p>    
+                                    </button>
+                                    <div class="absolute mt-1 bg-slate-200 rounded-sm drop-content hidden" id="drop-content">
+                                        <button class="w-full py-1 font-semibold hover:bg-slate-300">change</button>
+                                        <button class="w-full py-1 font-semibold hover:bg-slate-300">delete</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-auto ml-2 sm:text-base text-sm px-2 sm:px-0">
+                        <div class="w-auto ml-2 sm:text-base text-sm px-2 sm:px-0 mt-3 sm:mt-0">
                             <h1 class="font-semibold">Ubah Data Pribadi</h1>
-                            <div class="flex sm:grid grid-cols-12 gap-2 mt-2">
+                            <div class="grid grid-cols-12 gap-2 mt-2">
                                 <p class="col-span-4">Nama</p>
                                 <p class="col-span-1 sm:ml-auto">:</p>
                                 <p class="col-span-7">John Christopher Depp</p>
                             </div>
-                            <div class="flex sm:grid grid-cols-12 gap-2">
+                            <div class="grid grid-cols-12 gap-2">
                                 <p class="col-span-4">Tanggal Lahir</p>
                                 <p class="col-span-1 sm:ml-auto">:</p>
                                 <p class="col-span-7">16 SM</p>
                             </div>
-                            <div class="flex sm:grid grid-cols-12 gap-2">
+                            <div class="grid grid-cols-12 gap-2">
                                 <p class="col-span-4">Jenis Kelamin</p>
                                 <p class="col-span-1 sm:ml-auto">:</p>
                                 <p class="col-span-7">Pria</p>
                             </div>
-                            <div class="flex sm:grid grid-cols-12 gap-2 mt-2">
+                            <div class="grid grid-cols-12 gap-2 mt-2">
                                 <p class="col-span-4">Email</p>
                                 <p class="col-span-1 sm:ml-auto">:</p>
                                 <p class="col-span-7">JackSparrow@gmail.com</p>
                             </div>
-                            <div class="flex sm:grid grid-cols-12 gap-2">
+                            <div class="grid grid-cols-12 gap-2">
                                 <p class="col-span-4">No Telepon</p>
                                 <p class="col-span-1 sm:ml-auto">:</p>
                                 <p class="col-span-7">0871-2121-9435</p>
                             </div>
-                            <div class="mt-8 flex">
+                            <div class="mt-4 sm:mt-8 flex">
                                 <button class="px-4 py-2 text-white font-semibold bg-[#ff4800] hover:bg-[#dc3e00]">change</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-full h-auto bg-white shrink-0 hidden" id="data-alamat">
-                        <div class="w-2/3 h-auto mx-auto sm:mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address alamat-aktif">
-                            <div class="px-8 py-4 relative sm:text-base text-sm alamats">
+                    <div class="w-full h-auto bg-white px-4 sm:px-0 shrink-0 hidden" id="data-alamat">
+                        <div class="w-auto sm:w-2/3 h-auto mx-auto sm:mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address alamat-aktif">
+                            <div class="px-6 sm:px-8 py-4 relative sm:text-base text-sm alamats">
                                 <span class="right-0 mr-4 absolute check-corner">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="w-7 h-7" id="centang">
                                         <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
@@ -269,8 +271,8 @@
                             </div>
                         </div>
 
-                        <div class="w-2/3 h-auto mx-auto sm:mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address">
-                            <div class="px-8 py-4 relative sm:text-base text-sm alamats">
+                        <div class="w-auto sm:w-2/3 h-auto mx-auto sm:mx-24 mt-4 relative rounded-lg hover:cursor-pointer border border-slate-600 address">
+                            <div class="px-6 sm:px-8 py-4 relative sm:text-base text-sm alamats">
                                 <span class="right-0 mr-4 absolute check-corner hidden">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="w-7 h-7" id="centang">
                                         <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
@@ -293,17 +295,17 @@
                         <div class="w-auto sm:ml-20 p-4">
                             <form action="" class="relative" id="form-pass">
                                 <h1 class="text-lg font-semibold mb-3">Ubah Password</h1>
-                                <div class="grid grid-cols-12">
+                                <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3 text-sm sm:text-base">Password Lama</label>
-                                    <input type="password" name="nama" class="block col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                    <input type="password" name="nama" class="col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
-                                <div class="grid grid-cols-12">
+                                <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3 text-sm sm:text-base">Password Baru</label>
-                                    <input type="password" name="nama" class="block col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                    <input type="password" name="nama" class="col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
-                                <div class="grid grid-cols-12">
+                                <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3 text-sm sm:text-base">Verifikasi Password</label>
-                                    <input type="password" name="nama" class="block col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                    <input type="password" name="nama" class="col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
         
                                 <button type="submit" class="absolute right-0 rounded-md mt-2 px-3 py-1 bg-[#2658e2] hover:bg-[#1d4ed8]">
@@ -317,7 +319,7 @@
                                     <p class="self-center col-span-3 mr-3">Email</p>
                                     <p class="block col-span-9 w-auto m-1">JackSparrow@gmail.com</p>
                                 </div>
-                                <div class="grid grid-cols-12">
+                                <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3">Email Baru</label>
                                     <input type="password" name="nama" class="block col-span-9 w-auto m-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
@@ -333,7 +335,7 @@
                                     <p class="self-center col-span-3 mr-3">No Telp</p>
                                     <p class="block col-span-9 w-auto m-1">0871-2121-9435</p>
                                 </div>
-                                <div class="grid grid-cols-12">
+                                <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3">No Telp Baru</label>
                                     <input type="password" name="nama" class="block col-span-9 w-auto m-1 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
@@ -351,9 +353,9 @@
                 <div class="flex bg-gray-300 px-4 py-1">
                     <p class="font-semibold text-xl sm:text-2xl">Pesan</p>
                 </div> 
-                <div class="w-full h-auto px-4 pt-4 pb-2">
+                <div class="w-full h-auto pr-10 pl-2 sm:px-4 pt-4 pb-2">
                     <a href="store_akun_pesan.html">
-                        <div class="w-2/3 h-auto p-2 mb-2 flex relative bg-gray-200 rounded-sm hover:cursor-pointer">
+                        <div class="w-auto sm:w-2/3 h-auto p-2 mb-2 flex relative bg-gray-200 rounded-sm hover:cursor-pointer">
                             <div class="w-16 h-16">
                                 <img src="../public/img/3.png" alt="" class="h-auto w-full rounded-full object-scale-down">
                             </div>
@@ -369,7 +371,7 @@
                         </div>
                     </a>
                     <a href="store_akun_pesan.html">                        
-                        <div class="w-2/3 h-auto p-2 mb-2 flex relative bg-gray-200 rounded-sm hover:cursor-pointer">
+                        <div class="w-auto sm:w-2/3 h-auto p-2 mb-2 flex relative bg-gray-200 rounded-sm hover:cursor-pointer">
                             <div class="w-16 h-16">
                                 <img src="../public/img/3.png" alt="" class="h-auto w-full rounded-full object-scale-down">
                             </div>
@@ -407,7 +409,7 @@
                                     <span class="font-semibold text-base sm:text-xl ml-2">80777087813796688</span>
                                 </div>
                                 <div class="flex mt-1">
-                                    <h2 class="font-semibold text-sm sm:text-base">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold <span class="ml-1">X 1</span></h2>
+                                    <h2 class="sm:font-semibold text-sm sm:text-base">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold <span class="ml-1">X 1</span></h2>
                                 </div>                            
                             </div>
                             <div class="px-4 pt-2 border-t border-white flex">
@@ -450,7 +452,7 @@
                                 </div>
                             </div>
                             <div class="ml-2">
-                                <h2 class="font-semibold text-sm sm:text-xl">Air Jordan 7 Retro SE Men's Shoes 40-47</h2>
+                                <h2 class="sm:font-semibold text-sm sm:text-xl">Air Jordan 7 Retro SE Men's Shoes 40-47</h2>
                                 <div class="flex">
                                     <p class="text-sm sm:text-base font-semibold mr-1">Rp3,400,000 X 1 item</p>      
                                 </div>
@@ -463,7 +465,7 @@
                                 </div>
                             </div>
                             <div class="ml-2">
-                                <h2 class="font-semibold text-sm sm:text-xl">Polo Bear by Ralph Lauren M/L/XL/XXL</h2>
+                                <h2 class="sm:font-semibold text-sm sm:text-xl">Polo Bear by Ralph Lauren M/L/XL/XXL</h2>
                                 <div class="flex">
                                     <p class="text-sm sm:text-base font-semibold mr-1">Rp13,020,000 X 1 item</p>      
                                 </div>
@@ -476,7 +478,7 @@
                                 </div>
                             </div>
                             <div class="ml-2">
-                                <h2 class="font-semibold text-sm sm:text-xl">Google Pixel 7 Pro 12/512GB</h2>
+                                <h2 class="sm:font-semibold text-sm sm:text-xl">Google Pixel 7 Pro 12/512GB</h2>
                                 <div class="flex">
                                     <p class="text-sm sm:text-base font-semibold mr-1">Rp9,119,999 X 1 item</p>      
                                 </div>
@@ -512,7 +514,7 @@
                                 </div>
                             </div>
                             <div class="ml-2">
-                                <h2 class="font-semibold text-sm sm:text-xl">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</h2>
+                                <h2 class="sm:font-semibold text-sm sm:text-xl">(HSS) Kelly Sellier 28 Nata and Craie Epsom Gold</h2>
                                 <div class="flex">
                                     <p class="text-sm sm:text-base font-semibold mr-1">Rp388,228,938 X 1 item</p>      
                                 </div>

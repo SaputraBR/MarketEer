@@ -436,7 +436,7 @@ function akun() {
                 
                 if (y == 0){
                     diri.classList.remove("hidden")
-                    diri.classList.add("block")
+                    diri.classList.add("sm:flex")
                     alamat.classList.add("hidden")
                     alamat.classList.remove("block")
                     aman.classList.remove("block")
@@ -444,7 +444,7 @@ function akun() {
 
                 } else if (y == 1){
                     diri.classList.add("hidden")
-                    diri.classList.remove("block")
+                    diri.classList.remove("sm:flex")
                     alamat.classList.remove("hidden")
                     alamat.classList.add("block")
                     aman.classList.remove("block")
@@ -452,7 +452,7 @@ function akun() {
 
                 } else if (y == 2) {
                     diri.classList.add("hidden")
-                    diri.classList.remove("block")
+                    diri.classList.remove("sm:flex")
                     alamat.classList.add("hidden")
                     alamat.classList.remove("block")
                     aman.classList.add("block")
