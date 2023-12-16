@@ -149,8 +149,8 @@
         </div>
     </nav>
 
-    <main class="flex sm:grid grid-cols-3 mt-4 sm:mt-10">
-        <div class="col-span-1 mx-1">
+    <main class="flex w-auto sm:grid grid-cols-3 mt-4 sm:mt-10">
+        <div class="col-span-1">
             <div class="w-full sticky top-28 sm:top-32">
                 <ul class="sm:w-2/3 bg-white mx-auto rounded-sm border-2 border-slate-300 overflow-hidden font-semibold sm:text-base text-sm" id="main-navbar">
                     <li class="py-2 sm:px-4 hover:bg-slate-100 hover:cursor-pointer flex">
@@ -198,7 +198,7 @@
             </div>
         </div>
         <div class="col-span-2 sm:mr-4" id="main-section">
-            <section class="w-full h-auto bg-white border-2 border-slate-300 relative pb-2 sm:pb-8" id="data-pribadi">
+            <section class="w-auto sm:w-full h-auto bg-white border-2 border-slate-300 relative pb-2 sm:pb-8" id="data-pribadi">
                 <div class="flex bg-gray-300 divide-x-2 divide-gray-100" id="navbar-bio">
                     <span class="px-6 py-2 self-center text-sm sm:text-base hover:cursor-pointer nav-bio navbio-aktif">Biodata</span>
                     <span class="px-6 py-2 self-center text-sm sm:text-base hover:cursor-pointer nav-bio">Alamat</span>
@@ -287,7 +287,7 @@
                     </div>
 
                     <div class="w-full h-auto flex bg-white shrink-0 hidden" id="keamanan">
-                        <div class=" space-y-2 pl-4 self-center" id="tombol-ubah">
+                        <div class="space-y-2 pl-4 self-center" id="tombol-ubah">
                             <button class="button-ubah w-14 text-xs sm:text-base sm:w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block ubah-aktif">Ubah Password</button>
                             <button class="button-ubah w-14 text-xs sm:text-base sm:w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah Email</button>
                             <button class="button-ubah w-14 text-xs sm:text-base sm:w-36 py-2 bg-[#ff4800] hover:bg-[#dc3e00] text-white font-semibold block">Ubah No Telp</button>
@@ -297,15 +297,15 @@
                                 <h1 class="text-lg font-semibold mb-3">Ubah Password</h1>
                                 <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3 text-sm sm:text-base">Password Lama</label>
-                                    <input type="password" name="nama" class="col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                    <input type="password" name="nama" class="sm:col-span-9 w-32 sm:w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
                                 <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3 text-sm sm:text-base">Password Baru</label>
-                                    <input type="password" name="nama" class="col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                    <input type="password" name="nama" class="sm:col-span-9 w-32 sm:w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
                                 <div class="sm:grid grid-cols-12">
                                     <label for="nama" class="self-center col-span-3 mr-3 text-sm sm:text-base">Verifikasi Password</label>
-                                    <input type="password" name="nama" class="col-span-9 w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
+                                    <input type="password" name="nama" class="sm:col-span-9 w-32 sm:w-auto m-1 mb-2 rounded-md px-2 py-1 bg-gray-100 border border-slate-300 focus:border-sky-500 focus:ring-sky-500 focus:ring-1 focus:outline-none">
                                 </div>
         
                                 <button type="submit" class="absolute right-0 rounded-md mt-2 px-3 py-1 bg-[#2658e2] hover:bg-[#1d4ed8]">
