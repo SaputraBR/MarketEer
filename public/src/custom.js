@@ -435,24 +435,24 @@ function akun() {
                 nabio(y); 
                 
                 if (y == 0){
-                    diri.classList.remove("hidden")
-                    diri.classList.add("sm:flex")
+                    diri.classList.remove("hiden")
+                    diri.classList.add("md:flex")
                     alamat.classList.add("hidden")
                     alamat.classList.remove("block")
                     aman.classList.remove("block")
                     aman.classList.add("hidden")
 
                 } else if (y == 1){
-                    diri.classList.add("hidden")
-                    diri.classList.remove("sm:flex")
+                    diri.classList.add("hiden")
+                    diri.classList.remove("md:flex")
                     alamat.classList.remove("hidden")
                     alamat.classList.add("block")
                     aman.classList.remove("block")
                     aman.classList.add("hidden")
 
                 } else if (y == 2) {
-                    diri.classList.add("hidden")
-                    diri.classList.remove("sm:flex")
+                    diri.classList.add("hiden")
+                    diri.classList.remove("md:flex")
                     alamat.classList.add("hidden")
                     alamat.classList.remove("block")
                     aman.classList.add("block")
