@@ -108,6 +108,7 @@
     </nav>
 
     <main class="w-10/12 h-auto md:w-4/5 ml-auto px-2 py-3 md:px-12 md:py-4">
+        <button id="button-filter">jajalo</button>
         <section class="w-full h-auto rounded-lg bg-slate-300">
             <div class="py-6 px-14">
                 <form action="" enctype="multipart/form-data" id="text-editor" class="">
@@ -412,9 +413,86 @@
         </section>
     </main>
 
+    <section class="modal-filter" id="modal-filter" style="background-color: rgba( 0, 0, 0, .2);">
+        <div class="content-modal pb-4 px-6 overflow-auto">
+            <div class="sticky top-0 bg-white pt-4">
+                <div class="flex">
+                    <h1 class="font-bold text-lg mb-1">Hasil</h1>
+                    <button type="button" class="ml-auto" id="close-button">
+                        <i class="fa-solid fa-xmark fa-xl hover:text-[red]"></i>
+                    </button>
+                </div>
+    
+                <div class="grid grid-cols-12 border-y-2 border-slate-400 bg-slate-200">
+                    <div class="col-span-4 flex justify-center border-x-2 border-slate-400 py-1">barcode</div>
+                    <div class="col-span-5 flex justify-center border-r-2 border-slate-400 py-1">nama</div>
+                    <div class="col-span-3 flex justify-center border-r-2 border-slate-400 py-1">hpp</div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="putin hover:bg-slate-100 cursor-pointer">
+                    <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                        <div class="col-span-4 flex justify-center border-x-2 border-slate-400">
+                            <div id="barcode" class="py-1 px-1">08999999102586</div>
+                        </div>
+                        <div class="col-span-5 flex justify-center border-r-2 border-slate-400">
+                            <div id="nama" class="py-1 px-1 ">Air Jordan 7 Retro SE Men's, 40</div>
+                        </div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">
+                            <div id="hpp" class="self-center px-1">3,000,123</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="putin hover:bg-slate-100 cursor-pointer">
+                    <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                        <div class="col-span-4 flex justify-center border-x-2 border-slate-400">
+                            <div id="barcode" class="py-1 px-1">08999999102586</div>
+                        </div>
+                        <div class="col-span-5 flex justify-center border-r-2 border-slate-400">
+                            <div id="nama" class="py-1 px-1 ">Air Jordan 7</div>
+                        </div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">
+                            <div id="hpp" class="self-center px-1">3,000,123</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="putin hover:bg-slate-100 cursor-pointer">
+                    <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                        <div class="col-span-4 flex justify-center border-x-2 border-slate-400">
+                            <div id="barcode" class="py-1 px-1">08999999102586</div>
+                        </div>
+                        <div class="col-span-5 flex justify-center border-r-2 border-slate-400">
+                            <div id="nama" class="py-1 px-1 ">Air</div>
+                        </div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">
+                            <div id="hpp" class="self-center px-1">3,000,123</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="putin hover:bg-slate-100 cursor-pointer">
+                    <div class="grid grid-cols-12 border-b-2 border-slate-400 text-sm" id="grid-in">
+                        <div class="col-span-4 flex justify-center border-x-2 border-slate-400">
+                            <div id="barcode" class="py-1 px-1">08999999102586</div>
+                        </div>
+                        <div class="col-span-5 flex justify-center border-r-2 border-slate-400">
+                            <div id="nama" class="py-1 px-1 ">Air Jord</div>
+                        </div>
+                        <div class="col-span-3 flex justify-center border-r-2 border-slate-400">
+                            <div id="hpp" class="self-center px-1">3,000,123</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     <script type="text/javascript" src="../public/src/admin.js"></script>
+    <script type="text/javascript" src="../public/src/custom.js"></script>
     <script>
         CKEDITOR.replace( 'editor1' );
+        diskon()
 </script>
 </body>
 

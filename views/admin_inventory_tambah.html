@@ -14,6 +14,9 @@
         .show {
             display: block;
         }
+        .sh {
+            color: #f50000;
+        }
     </style>
 </head>
 
@@ -93,6 +96,14 @@
     </nav>
 
     <main class="w-10/12 md:w-4/5 ml-auto px-2 py-10 md:px-12 md:py-4">
+        <div class="flex w-full justify-center">
+            <div class="h-16 px-12 flex border-2 text-[#009b6a] border-[#00d08e] bg-[#d5f7ec] absolute rounded-md hidden">
+                <p class="self-center text-xl font-semibold">Data Berhasil Ditambahkan !</p>
+            </div>
+            <div class="h-16 px-12 flex border-2 text-[#ff0000] border-[#f50000] bg-[#fce3e3] absolute rounded-md">
+                <p class="self-center text-xl font-semibold">Data Gagal Ditambahkan !</p>
+            </div>
+        </div>
         <section class="w-full h-auto py-8 px-12 rounded-lg bg-slate-400">
             <div class="bg-slate-100 py-2 px-8 rounded-t-lg font-semibold">
                 <form action="">
